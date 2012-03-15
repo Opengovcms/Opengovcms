@@ -1,0 +1,11 @@
+bin
+buildout.cfg
+develop-eggs
+eggs
+var
+parts
+.installed.cfg
+.project
+.pydevproject
+.settings
+

@@ -8,4 +8,6 @@ parts
 .project
 .pydevproject
 .settings
+.mr.developer.cfg
+.yolk
 

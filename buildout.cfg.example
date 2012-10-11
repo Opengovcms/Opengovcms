@@ -1,5 +1,5 @@
 [buildout]
-#extends = profiles/base.cfg
+#extends = profiles/project.cfg
 #extends = profiles/production.cfg
 #extends = profiles/production_zeo.cfg
 #extends = profiles/testserver.cfg

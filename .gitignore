@@ -26,3 +26,5 @@ dist
 *.pyc
 *.pyo
 *.tmp*
+.DS_Store
+

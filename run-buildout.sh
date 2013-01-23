@@ -1,2 +1,2 @@
 #!/bin/sh
-./bin/buildout $@ | tee buildout.log
+./bin/buildout $@ 2>&1 | tee buildout.log

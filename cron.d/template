@@ -1,0 +1,22 @@
+# Linked to from /etc/cron.d. Owner has to be root. 
+# Name the file "<customer_id>_<project_id>".
+# When editing the file, this entry appears in the syslog: 
+# Oct 24 17:32:01 red /usr/sbin/cron[1649]: (*system*kejd_ep) RELOAD (/etc/cron.d/kejd_ep)
+# Check that for succesfull installation.
+
+# Template:
+# m h  dom mon dow user  command
+0 0 * * * root command
+
+# Example job:
+# check ejendomsportal data
+#15 7 * * * root /usr/local/www/kejd_plone4/bin/check_portal_data > /usr/local/www/kejd_plone4/var/log/kejd_check_portal_data.log
+
+#Example log format:
+2011-10-24 17:29:04.444560
+checking data on http://127.0.0.1:50004/site/ejendomsportal/ep/kunder
+OK
+Done.
+
+
+# Passwords for url access jobs? Don't use the usual, but create a new user/pw in zope if needed.

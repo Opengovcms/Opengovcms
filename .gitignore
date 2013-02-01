@@ -27,4 +27,4 @@ dist
 *.pyo
 *.tmp*
 .DS_Store
-
+mr-developer-src

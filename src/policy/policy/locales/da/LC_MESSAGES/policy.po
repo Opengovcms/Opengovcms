@@ -1,0 +1,243 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-05-13 10:53+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: policy\n"
+
+#: policy/policy/content/person.py:191
+msgid "A portrait of this person. This should be in standard portrait orientation."
+msgstr ""
+
+#: policy/policy/content/person.py:42
+msgid "Address"
+msgstr "Adresse"
+
+#: policy/policy/content/person.py:291
+msgid "Birthday"
+msgstr "Fødselsdag"
+
+#: policy/policy/content/person.py:242
+msgid "CV URL"
+msgstr ""
+
+#: policy/policy/content/person.py:150
+msgid "Cell"
+msgstr ""
+
+#: policy/policy/content/person.py:155
+msgid "Cell prefix"
+msgstr ""
+
+#: policy/policy/content/person.py:52
+msgid "City"
+msgstr ""
+
+#: policy/policy/content/person.py:302
+msgid "Company"
+msgstr ""
+
+#: policy/policy/content/person.py:248
+msgid "Competencies"
+msgstr ""
+
+#: policy/policy/content/person.py:57
+msgid "Country"
+msgstr ""
+
+#: policy/policy/content/person.py:174
+msgid "Danish Function title"
+msgstr ""
+
+#: policy/policy/content/person.py:162
+msgid "Danish Job title"
+msgstr ""
+
+#: policy/policy/content/person.py:25
+msgid "Department name"
+msgstr ""
+
+#: policy/policy/content/person.py:31
+msgid "Department short name"
+msgstr ""
+
+#: policy/policy/content/person.py:201
+msgid "Departments"
+msgstr ""
+
+#: policy/policy/content/person.py:37
+msgid "Description"
+msgstr ""
+
+#: policy/policy/profiles/default/types/Person.xml
+msgid "Edit"
+msgstr ""
+
+#: policy/policy/content/person.py:237
+msgid "Education"
+msgstr ""
+
+#: policy/policy/content/person.py:115
+msgid "Email"
+msgstr ""
+
+#: policy/policy/content/person.py:180
+msgid "English Function title"
+msgstr ""
+
+#: policy/policy/content/person.py:168
+msgid "English Job title"
+msgstr ""
+
+#: policy/policy/content/person.py:132
+msgid "Extension"
+msgstr ""
+
+#: policy/policy/content/person.py:138
+msgid "Fax"
+msgstr ""
+
+#: policy/policy/content/person.py:143
+msgid "Fax prefix"
+msgstr ""
+
+#: policy/policy/content/publication.py:14
+msgid "Files"
+msgstr ""
+
+#: policy/policy/content/person.py:87
+msgid "First name"
+msgstr ""
+
+#: policy/policy/content/person.py:260
+msgid "Homepage title"
+msgstr ""
+
+#: policy/policy/content/person.py:266
+msgid "Homepage url"
+msgstr ""
+
+#: policy/policy/content/person.py:303
+msgid "If an external consulent, his company name"
+msgstr ""
+
+#: policy/policy/content/person.py:109
+msgid "Initials"
+msgstr ""
+
+#: policy/policy/content/person.py:71
+msgid "Is department"
+msgstr ""
+
+#: policy/policy/content/person.py:66
+msgid "LDAP Id"
+msgstr ""
+
+#: policy/policy/content/person.py:93
+msgid "Last name"
+msgstr ""
+
+#: policy/policy/content/person.py:254
+msgid "Network"
+msgstr ""
+
+#: policy/policy/content/person.py:212
+msgid "Office location"
+msgstr ""
+
+#: policy/policy/content/person.py:296
+msgid "Other information"
+msgstr ""
+
+#: policy/policy/profiles/default/types/Person.xml
+msgid "Person"
+msgstr ""
+
+#: policy/policy/content/person.py:121
+msgid "Phone"
+msgstr ""
+
+#: policy/policy/content/person.py:126
+msgid "Phone prefix"
+msgstr ""
+
+#: policy/policy/content/person.py:190
+msgid "Portrait"
+msgstr ""
+
+#: policy/policy/content/person.py:271
+msgid "Private address"
+msgstr ""
+
+#: policy/policy/content/person.py:281
+msgid "Private cell phone"
+msgstr ""
+
+#: policy/policy/content/person.py:286
+msgid "Private email"
+msgstr ""
+
+#: policy/policy/content/person.py:276
+msgid "Private phone"
+msgstr ""
+
+#: policy/policy/content/person.py:231
+msgid "Projects"
+msgstr ""
+
+#: policy/policy/profiles/default/types/Publication.xml
+msgid "Publication"
+msgstr ""
+
+#: policy/policy/content/person.py:185
+msgid "QR code URL"
+msgstr ""
+
+#: policy/policy/content/person.py:219
+msgid "Responsibilities"
+msgstr ""
+
+#: policy/policy/content/person.py:76
+msgid "Source ID"
+msgstr ""
+
+#: policy/policy/content/person.py:225
+msgid "Tasks"
+msgstr ""
+
+#: policy/policy/content/person.py:62
+msgid "URL"
+msgstr ""
+
+#: policy/policy/content/person.py:77
+msgid "Used for syncing the department"
+msgstr ""
+
+#: policy/policy/content/person.py:309
+msgid "Used for syncing the profile. Do not touch.."
+msgstr ""
+
+#: policy/policy/profiles/default/types/Person.xml
+msgid "View"
+msgstr ""
+
+#: policy/policy/content/person.py:47
+msgid "Zip Code"
+msgstr ""
+
+#: policy/policy/content/person.py:213
+msgid "e.g. office number or department name."
+msgstr ""
+

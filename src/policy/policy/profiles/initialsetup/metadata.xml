@@ -16,6 +16,7 @@
     <dependency>profile-Products.PloneFormGen:default</dependency>
     <dependency>profile-Products.windowZ:default</dependency>
     <dependency>profile-collective.portlet.rich:default</dependency>
+    <dependency>profile-quintagroup.portlet.generichtml:default</dependency>
 
   </dependencies>
 </metadata>

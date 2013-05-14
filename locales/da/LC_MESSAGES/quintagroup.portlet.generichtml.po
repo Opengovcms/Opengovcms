@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: quintagroup.portlet.generichtml 0.1\n"
+"POT-Creation-Date: 2008-12-15 09:58+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: Bohdan Koval <koval@quintagroup.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: da\n"
+"Language-Name: Danish\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: quintagroup.portlet.generichtml\n"
+
+#: ./generichtmlportlet.py:65
+msgid "Add Generic HTML Portlet"
+msgstr "Tilføj HTML Portlet"
+
+#: ./generichtmlportlet.py:73
+msgid "Edit Generic HTML Portlet"
+msgstr "Redigér HTML Portlet"
+
+#: ./generichtmlportlet.py:40
+msgid "Generic HTML Portlet"
+msgstr "HTML Portlet"
+
+#: ./generichtmlportlet.py:20
+msgid "Generic HTML Portlet content"
+msgstr "Indhold"
+
+#: ./generichtmlportlet.py:66
+msgid "This portlet displays html content."
+msgstr "Denne portlet giver mulighed for at indtaste rå HTML"
+
+#. Default: "Enter your html code here. Please use '$categories', '$enc_categories' or '$encplus_categories' \nvariables to use categories from current context in your code.\nFor example: $categories will be substituted for 'some category1,some category2', \n$enc_categories will be substituted for 'some%20category1%2Csome%20category2', \n$encplus_categories will be substituted for 'some+category1%2Csome+category2',\nwhere some category1, some category2 are categories of your current content."
+#: ./generichtmlportlet.py:21
+msgid "content_field_description"
+msgstr "Indtast din HTML her. Du kan benytte variblerne '$categories', '$enc_categories' eller '$encplus_categories' til at indsætte kontekstens kategorier i koden.\nEksempel: $categories erstattes med 'kategori 1,kategori 2', \n$enc_categories erstattes med  'kategori%201%2Ckategori%202', \n$encplus_categories erstattes med 'kategori+1%2Ckategori+2'."
+
+msgid "Generic HTML portlet"
+msgstr "HTML Portlet"

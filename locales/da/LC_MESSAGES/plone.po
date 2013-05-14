@@ -1,0 +1,9 @@
+msgid "Generic HTML portlet"
+msgstr "HTML Portlet"
+
+msgid "Static text portlet"
+msgstr "Simpel editor portlet"
+
+msgid "Rich portlet"
+msgstr "Avanceret editor portlet"
+

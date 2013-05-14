@@ -2,4 +2,11 @@
     xmlns="http://namespaces.zope.org/browser"
     i18n_domain="policy">
 
+  <page
+      name="publication-csv-export"
+      for="*"
+      class=".publication.CSVExportView"
+      permission="zope2.View"
+      />
+
 </configure>

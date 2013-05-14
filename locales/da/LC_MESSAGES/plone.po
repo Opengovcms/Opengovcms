@@ -7,3 +7,6 @@ msgstr "Simpel editor portlet"
 msgid "Rich portlet"
 msgstr "Avanceret editor portlet"
 
+msgid "NG Collection"
+msgstr "Stylet dynamisk liste portlet"
+

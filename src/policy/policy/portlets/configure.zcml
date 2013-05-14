@@ -20,4 +20,11 @@
       editview=".contact.EditForm"
       />
 
+  <include package="collective.portlet.ngcollection" file="meta.zcml" />
+
+  <plone:portletTemplates
+      interface="collective.portlet.ngcollection.ngcollection.INGCollection"
+      directory="collection_templates"
+      />
+
 </configure>

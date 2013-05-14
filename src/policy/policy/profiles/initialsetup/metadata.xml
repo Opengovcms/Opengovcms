@@ -17,6 +17,7 @@
     <dependency>profile-Products.windowZ:default</dependency>
     <dependency>profile-collective.portlet.rich:default</dependency>
     <dependency>profile-quintagroup.portlet.generichtml:default</dependency>
+    <dependency>profile-collective.portlet.ngcollection:default</dependency>
 
   </dependencies>
 </metadata>

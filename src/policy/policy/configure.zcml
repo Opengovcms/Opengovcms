@@ -9,7 +9,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="policy.policy"
+      title="policy"
       directory="profiles/default"
       description="Installs the policy.policy package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -17,7 +17,7 @@
 
   <genericsetup:registerProfile
       name="initialsetup"
-      title="policy.policy"
+      title="policy initialsetup (run-once)"
       directory="profiles/initialsetup"
       description="Installs the policy.policy package with dependencies and run-once steps"
       provides="Products.GenericSetup.interfaces.EXTENSION"

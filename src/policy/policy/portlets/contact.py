@@ -60,7 +60,7 @@ class Assignment(base.Assignment):
         """This property is used to give the title of the portlet in the
         "manage portlets" screen.
         """
-        return self.header or _(u"Kontakt")
+        return self.header or _(u"Contact")
 
 
 class Renderer(base.Renderer):

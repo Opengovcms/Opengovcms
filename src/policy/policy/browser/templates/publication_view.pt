@@ -74,7 +74,7 @@
           <br/>
         </tal:block>
         <tal:block tal:condition="here/publication_year|nothing">
-          <label i18n:translate="label_publication_year">Publication year:</label>
+          <label i18n:translate="label_publicationyear">Publication year:</label>
           <span tal:content="here/publication_year">2012</span>
           <br/>
         </tal:block>

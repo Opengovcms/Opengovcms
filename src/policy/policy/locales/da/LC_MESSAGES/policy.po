@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-05-13 11:35+0000\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,13 +21,22 @@ msgstr ""
 msgid "A portrait of this person. This should be in standard portrait orientation."
 msgstr "Portrætbilleder bør være i alm. portræt-orientering."
 
-#: policy/policy/content/publication.py:107
+#: policy/policy/content/publication.py:108
 msgid "Add a link to Issuu version of the publication, e.g http://www.issuu.com/myaccount/docs/mypublication."
 msgstr "Du kan tilføje et link til en Issuu-version af publikationen, fx http://www.issuu.com/minkonto/docs/minpublikation."
 
-#: policy/policy/content/publication.py:18
+#: policy/policy/portlets/contact.py:63
+#: policy/policy/profiles/default/portlets.xml
+msgid "Contact"
+msgstr "Kontaktperson"
+
+#: policy/policy/content/publication.py:24
 msgid "Cover image"
 msgstr "Forsidebillede"
+
+#: policy/policy/browser/publication.py:37
+msgid "Cover image text is missing"
+msgstr "Tekst til forsidebillede mangler"
 
 #: policy/policy/content/person.py:69
 msgid "Danish Function title"
@@ -36,6 +45,10 @@ msgstr "Dansk funktionstitle"
 #: policy/policy/content/person.py:57
 msgid "Danish Job title"
 msgstr "Dansk jobtitel"
+
+#: policy/policy/browser/templates/publication_view.pt:27
+msgid "Download publication (PDF)"
+msgstr "Hent publikation (PDF)"
 
 #: policy/policy/profiles/default/types/Person.xml
 msgid "Edit"
@@ -53,9 +66,13 @@ msgstr "Engelsk funktionstitel"
 msgid "English Job title"
 msgstr "Engelsk funktionstitel"
 
-#: policy/policy/content/publication.py:55
+#: policy/policy/content/publication.py:56
 msgid "Enter version"
 msgstr "Indsæt udgave"
+
+#: policy/policy/portlets/contact.py:35
+msgid "Find the person to display"
+msgstr "Find en kontaktperson"
 
 #: policy/policy/content/person.py:22
 msgid "First name"
@@ -65,11 +82,11 @@ msgstr "Fornavn"
 msgid "Initials"
 msgstr "Initialer"
 
-#: policy/policy/content/publication.py:49
+#: policy/policy/content/publication.py:50
 msgid "Institution behind the publication."
 msgstr "Institutionen bag publikationen."
 
-#: policy/policy/content/publication.py:106
+#: policy/policy/content/publication.py:107
 msgid "Issuu URL"
 msgstr "Issuu URL"
 
@@ -77,15 +94,15 @@ msgstr "Issuu URL"
 msgid "Last name"
 msgstr "Efternavn"
 
-#: policy/policy/content/publication.py:43
+#: policy/policy/content/publication.py:44
 msgid "Name of the publication author, e.g. John Doe."
 msgstr "Navn på publikationens forfatter, fx Peter Hansen"
 
-#: policy/policy/content/publication.py:61
+#: policy/policy/content/publication.py:62
 msgid "Number of pages of the publication."
 msgstr "Antal af sider i publikationen."
 
-#: policy/policy/content/publication.py:60
+#: policy/policy/content/publication.py:61
 msgid "Page count"
 msgstr "Sideantal"
 
@@ -97,6 +114,14 @@ msgstr "Person"
 msgid "Phone"
 msgstr "Telefon"
 
+#: policy/policy/portlets/contact.py:29
+msgid "Portlet header"
+msgstr "Portlettens titel"
+
+#: policy/policy/profiles/default/portlets.xml
+msgid "Portlet to display contact information for a Person"
+msgstr "Portlet der viser en Persons kontaktinformation "
+
 #: policy/policy/content/person.py:85
 msgid "Portrait"
 msgstr "Portrætbillede"
@@ -105,15 +130,15 @@ msgstr "Portrætbillede"
 msgid "Publication"
 msgstr "Publikation"
 
-#: policy/policy/content/publication.py:42
+#: policy/policy/content/publication.py:43
 msgid "Publication author"
 msgstr "Forfatter"
 
-#: policy/policy/content/publication.py:31
+#: policy/policy/content/publication.py:37
 msgid "Publication file"
 msgstr "Publikations-fil"
 
-#: policy/policy/content/publication.py:48
+#: policy/policy/content/publication.py:49
 msgid "Publication publisher"
 msgstr "Udgiver"
 
@@ -121,19 +146,31 @@ msgstr "Udgiver"
 msgid "QR code URL"
 msgstr "URL til QR-kode"
 
+#: policy/policy/browser/templates/person_view.pt:68
+msgid "Scan QR code with your phone"
+msgstr "Skan QR-kode med din telefon"
+
+#: policy/policy/portlets/contact.py:34
+msgid "Target person"
+msgstr "Person"
+
 #: policy/policy/content/person.py:97
 msgid "Text"
 msgstr "Tekst"
 
-#: policy/policy/content/publication.py:19
+#: policy/policy/portlets/contact.py:30
+msgid "Title of the rendered portlet"
+msgstr "Portlettens titel"
+
+#: policy/policy/content/publication.py:25
 msgid "Upload the cover of the publication."
 msgstr "Upload et forside-billede af publikationen."
 
-#: policy/policy/content/publication.py:32
+#: policy/policy/content/publication.py:38
 msgid "Upload the publication file, e.g. a PDF file."
 msgstr "Upload publikationen som fil, fx en PDF-fil. Bemærk, at danske myndigheder anbefaler PDF/A-A1"
 
-#: policy/policy/content/publication.py:54
+#: policy/policy/content/publication.py:55
 msgid "Version"
 msgstr "Udgave"
 
@@ -142,62 +179,113 @@ msgid "View"
 msgstr "Vis"
 
 #. Default: "The Internet ISBN record identifier for this publication."
-#: policy/policy/content/publication.py:75
+#: policy/policy/content/publication.py:76
 msgid "help_internet_isbn"
 msgstr "Internet (digital) ISBN-nummer"
 
 #. Default: "The Internet ISSN record identifier for this publication."
-#: policy/policy/content/publication.py:91
+#: policy/policy/content/publication.py:92
 msgid "help_internet_issn"
 msgstr "Internet (digital) ISSN-nummer"
 
 #. Default: "The ISBN record identifier for this publication."
-#: policy/policy/content/publication.py:67
+#: policy/policy/content/publication.py:68
 msgid "help_isbn"
 msgstr "Publikationenens ISBN-nummer"
 
 #. Default: "The ISSN record identifier for this publication."
-#: policy/policy/content/publication.py:83
+#: policy/policy/content/publication.py:84
 msgid "help_issn"
 msgstr "Publikationenens ISSN-nummer"
 
 #. Default: "Caption for the cover image."
-#: policy/policy/content/publication.py:25
+#: policy/policy/content/publication.py:31
 msgid "help_publication_cover_caption"
 msgstr "Tekst til cover-billede"
 
 #. Default: "The year this publication was first published."
-#: policy/policy/content/publication.py:100
+#: policy/policy/content/publication.py:101
 msgid "help_publication_year"
 msgstr "Første publikationeår"
 
+#. Default: "ISBN:"
+#: policy/policy/browser/templates/publication_view.pt:52
+msgid "label_ISBN"
+msgstr "ISBN:"
+
+#. Default: "ISSN:"
+#: policy/policy/browser/templates/publication_view.pt:62
+msgid "label_ISSN"
+msgstr "ISSN:"
+
+#. Default: "Edition:"
+#: policy/policy/browser/templates/publication_view.pt:82
+msgid "label_edition"
+msgstr "Udgave:"
+
+#. Default: "Internet ISBN:"
+#: policy/policy/browser/templates/publication_view.pt:57
+msgid "label_internet_ISBN"
+msgstr "Internet ISBN:"
+
+#. Default: "Internet ISSN:"
+#: policy/policy/browser/templates/publication_view.pt:67
+msgid "label_internet_ISSN"
+msgstr "Internet ISSN:"
+
 #. Default: "Internet ISBN"
-#: policy/policy/content/publication.py:74
+#: policy/policy/content/publication.py:75
 msgid "label_internet_isbn"
 msgstr "Internet ISBN"
 
 #. Default: "Internet ISSN"
-#: policy/policy/content/publication.py:90
+#: policy/policy/content/publication.py:91
 msgid "label_internet_issn"
 msgstr "Internet ISSN"
 
 #. Default: "ISBN"
-#: policy/policy/content/publication.py:66
+#: policy/policy/content/publication.py:67
 msgid "label_isbn"
 msgstr "ISBN"
 
 #. Default: "ISSN"
-#: policy/policy/content/publication.py:82
+#: policy/policy/content/publication.py:83
 msgid "label_issn"
 msgstr "ISSN"
 
+#. Default: "Page count:"
+#: policy/policy/browser/templates/publication_view.pt:87
+msgid "label_page_count"
+msgstr "Sideantal:"
+
+#. Default: "Price:"
+#: policy/policy/browser/templates/publication_view.pt:92
+msgid "label_price"
+msgstr "Pris:"
+
 #. Default: "Cover caption"
-#: policy/policy/content/publication.py:24
+#: policy/policy/content/publication.py:30
 msgid "label_publication_cover_caption"
 msgstr "Tekst til forside-billede"
 
 #. Default: "Year of publication"
-#: policy/policy/content/publication.py:99
+#: policy/policy/content/publication.py:100
+#, fuzzy
 msgid "label_publication_year"
-msgstr "Publikationeår"
+msgstr "Udgivelsesår"
+
+#. Default: "Publication year:"
+#: policy/policy/browser/templates/publication_view.pt:77
+msgid "label_publicationyear"
+msgstr "Udgivelsesår:"
+
+#. Default: "Publisher:"
+#: policy/policy/browser/templates/publication_view.pt:72
+msgid "label_publisher"
+msgstr "Udgiver:"
+
+#. Default: "Employee information"
+#: policy/policy/browser/templates/person_view.pt:22
+msgid "summary_employee_information"
+msgstr "Medarbejderinformation"
 

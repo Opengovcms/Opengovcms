@@ -24,6 +24,10 @@ setup(name='policy',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'plone.app.dexterity',
+          'plone.directives.form',
+          'z3c.relationfield',
+          'collective.dexteritytextindexer',
           # -*- Extra requirements: -*-
       ],
       entry_points="""

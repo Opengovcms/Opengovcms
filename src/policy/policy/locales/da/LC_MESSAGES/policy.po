@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-05-13 10:53+0000\n"
+"POT-Creation-Date: 2013-05-13 11:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,227 +17,187 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: policy\n"
 
-#: policy/policy/content/person.py:191
+#: policy/policy/content/person.py:86
 msgid "A portrait of this person. This should be in standard portrait orientation."
-msgstr ""
+msgstr "Portrætbilleder bør være i alm. portræt-orientering."
 
-#: policy/policy/content/person.py:42
-msgid "Address"
-msgstr "Adresse"
+#: policy/policy/content/publication.py:107
+msgid "Add a link to Issuu version of the publication, e.g http://www.issuu.com/myaccount/docs/mypublication."
+msgstr "Du kan tilføje et link til en Issuu-version af publikationen, fx http://www.issuu.com/minkonto/docs/minpublikation."
 
-#: policy/policy/content/person.py:291
-msgid "Birthday"
-msgstr "Fødselsdag"
+#: policy/policy/content/publication.py:18
+msgid "Cover image"
+msgstr "Forsidebillede"
 
-#: policy/policy/content/person.py:242
-msgid "CV URL"
-msgstr ""
-
-#: policy/policy/content/person.py:150
-msgid "Cell"
-msgstr ""
-
-#: policy/policy/content/person.py:155
-msgid "Cell prefix"
-msgstr ""
-
-#: policy/policy/content/person.py:52
-msgid "City"
-msgstr ""
-
-#: policy/policy/content/person.py:302
-msgid "Company"
-msgstr ""
-
-#: policy/policy/content/person.py:248
-msgid "Competencies"
-msgstr ""
+#: policy/policy/content/person.py:69
+msgid "Danish Function title"
+msgstr "Dansk funktionstitle"
 
 #: policy/policy/content/person.py:57
-msgid "Country"
-msgstr ""
-
-#: policy/policy/content/person.py:174
-msgid "Danish Function title"
-msgstr ""
-
-#: policy/policy/content/person.py:162
 msgid "Danish Job title"
-msgstr ""
-
-#: policy/policy/content/person.py:25
-msgid "Department name"
-msgstr ""
-
-#: policy/policy/content/person.py:31
-msgid "Department short name"
-msgstr ""
-
-#: policy/policy/content/person.py:201
-msgid "Departments"
-msgstr ""
-
-#: policy/policy/content/person.py:37
-msgid "Description"
-msgstr ""
+msgstr "Dansk jobtitel"
 
 #: policy/policy/profiles/default/types/Person.xml
 msgid "Edit"
-msgstr ""
+msgstr "Redigér"
 
-#: policy/policy/content/person.py:237
-msgid "Education"
-msgstr ""
-
-#: policy/policy/content/person.py:115
+#: policy/policy/content/person.py:45
 msgid "Email"
-msgstr ""
+msgstr "E-mail"
 
-#: policy/policy/content/person.py:180
+#: policy/policy/content/person.py:75
 msgid "English Function title"
-msgstr ""
+msgstr "Engelsk funktionstitel"
 
-#: policy/policy/content/person.py:168
+#: policy/policy/content/person.py:63
 msgid "English Job title"
-msgstr ""
+msgstr "Engelsk funktionstitel"
 
-#: policy/policy/content/person.py:132
-msgid "Extension"
-msgstr ""
+#: policy/policy/content/publication.py:55
+msgid "Enter version"
+msgstr "Indsæt udgave"
 
-#: policy/policy/content/person.py:138
-msgid "Fax"
-msgstr ""
-
-#: policy/policy/content/person.py:143
-msgid "Fax prefix"
-msgstr ""
-
-#: policy/policy/content/publication.py:14
-msgid "Files"
-msgstr ""
-
-#: policy/policy/content/person.py:87
+#: policy/policy/content/person.py:22
 msgid "First name"
-msgstr ""
+msgstr "Fornavn"
 
-#: policy/policy/content/person.py:260
-msgid "Homepage title"
-msgstr ""
-
-#: policy/policy/content/person.py:266
-msgid "Homepage url"
-msgstr ""
-
-#: policy/policy/content/person.py:303
-msgid "If an external consulent, his company name"
-msgstr ""
-
-#: policy/policy/content/person.py:109
+#: policy/policy/content/person.py:39
 msgid "Initials"
-msgstr ""
+msgstr "Initialer"
 
-#: policy/policy/content/person.py:71
-msgid "Is department"
-msgstr ""
+#: policy/policy/content/publication.py:49
+msgid "Institution behind the publication."
+msgstr "Institutionen bag publikationen."
 
-#: policy/policy/content/person.py:66
-msgid "LDAP Id"
-msgstr ""
+#: policy/policy/content/publication.py:106
+msgid "Issuu URL"
+msgstr "Issuu URL"
 
-#: policy/policy/content/person.py:93
+#: policy/policy/content/person.py:28
 msgid "Last name"
-msgstr ""
+msgstr "Efternavn"
 
-#: policy/policy/content/person.py:254
-msgid "Network"
-msgstr ""
+#: policy/policy/content/publication.py:43
+msgid "Name of the publication author, e.g. John Doe."
+msgstr "Navn på publikationens forfatter, fx Peter Hansen"
 
-#: policy/policy/content/person.py:212
-msgid "Office location"
-msgstr ""
+#: policy/policy/content/publication.py:61
+msgid "Number of pages of the publication."
+msgstr "Antal af sider i publikationen."
 
-#: policy/policy/content/person.py:296
-msgid "Other information"
-msgstr ""
+#: policy/policy/content/publication.py:60
+msgid "Page count"
+msgstr "Sideantal"
 
 #: policy/policy/profiles/default/types/Person.xml
 msgid "Person"
-msgstr ""
+msgstr "Person"
 
-#: policy/policy/content/person.py:121
+#: policy/policy/content/person.py:51
 msgid "Phone"
-msgstr ""
+msgstr "Telefon"
 
-#: policy/policy/content/person.py:126
-msgid "Phone prefix"
-msgstr ""
-
-#: policy/policy/content/person.py:190
+#: policy/policy/content/person.py:85
 msgid "Portrait"
-msgstr ""
-
-#: policy/policy/content/person.py:271
-msgid "Private address"
-msgstr ""
-
-#: policy/policy/content/person.py:281
-msgid "Private cell phone"
-msgstr ""
-
-#: policy/policy/content/person.py:286
-msgid "Private email"
-msgstr ""
-
-#: policy/policy/content/person.py:276
-msgid "Private phone"
-msgstr ""
-
-#: policy/policy/content/person.py:231
-msgid "Projects"
-msgstr ""
+msgstr "Portrætbillede"
 
 #: policy/policy/profiles/default/types/Publication.xml
 msgid "Publication"
-msgstr ""
+msgstr "Publikation"
 
-#: policy/policy/content/person.py:185
+#: policy/policy/content/publication.py:42
+msgid "Publication author"
+msgstr "Forfatter"
+
+#: policy/policy/content/publication.py:31
+msgid "Publication file"
+msgstr "Publikations-fil"
+
+#: policy/policy/content/publication.py:48
+msgid "Publication publisher"
+msgstr "Udgiver"
+
+#: policy/policy/content/person.py:80
 msgid "QR code URL"
-msgstr ""
+msgstr "URL til QR-kode"
 
-#: policy/policy/content/person.py:219
-msgid "Responsibilities"
-msgstr ""
+#: policy/policy/content/person.py:97
+msgid "Text"
+msgstr "Tekst"
 
-#: policy/policy/content/person.py:76
-msgid "Source ID"
-msgstr ""
+#: policy/policy/content/publication.py:19
+msgid "Upload the cover of the publication."
+msgstr "Upload et forside-billede af publikationen."
 
-#: policy/policy/content/person.py:225
-msgid "Tasks"
-msgstr ""
+#: policy/policy/content/publication.py:32
+msgid "Upload the publication file, e.g. a PDF file."
+msgstr "Upload publikationen som fil, fx en PDF-fil. Bemærk, at danske myndigheder anbefaler PDF/A-A1"
 
-#: policy/policy/content/person.py:62
-msgid "URL"
-msgstr ""
-
-#: policy/policy/content/person.py:77
-msgid "Used for syncing the department"
-msgstr ""
-
-#: policy/policy/content/person.py:309
-msgid "Used for syncing the profile. Do not touch.."
-msgstr ""
+#: policy/policy/content/publication.py:54
+msgid "Version"
+msgstr "Udgave"
 
 #: policy/policy/profiles/default/types/Person.xml
 msgid "View"
-msgstr ""
+msgstr "Vis"
 
-#: policy/policy/content/person.py:47
-msgid "Zip Code"
-msgstr ""
+#. Default: "The Internet ISBN record identifier for this publication."
+#: policy/policy/content/publication.py:75
+msgid "help_internet_isbn"
+msgstr "Internet (digital) ISBN-nummer"
 
-#: policy/policy/content/person.py:213
-msgid "e.g. office number or department name."
-msgstr ""
+#. Default: "The Internet ISSN record identifier for this publication."
+#: policy/policy/content/publication.py:91
+msgid "help_internet_issn"
+msgstr "Internet (digital) ISSN-nummer"
+
+#. Default: "The ISBN record identifier for this publication."
+#: policy/policy/content/publication.py:67
+msgid "help_isbn"
+msgstr "Publikationenens ISBN-nummer"
+
+#. Default: "The ISSN record identifier for this publication."
+#: policy/policy/content/publication.py:83
+msgid "help_issn"
+msgstr "Publikationenens ISSN-nummer"
+
+#. Default: "Caption for the cover image."
+#: policy/policy/content/publication.py:25
+msgid "help_publication_cover_caption"
+msgstr "Tekst til cover-billede"
+
+#. Default: "The year this publication was first published."
+#: policy/policy/content/publication.py:100
+msgid "help_publication_year"
+msgstr "Første publikationeår"
+
+#. Default: "Internet ISBN"
+#: policy/policy/content/publication.py:74
+msgid "label_internet_isbn"
+msgstr "Internet ISBN"
+
+#. Default: "Internet ISSN"
+#: policy/policy/content/publication.py:90
+msgid "label_internet_issn"
+msgstr "Internet ISSN"
+
+#. Default: "ISBN"
+#: policy/policy/content/publication.py:66
+msgid "label_isbn"
+msgstr "ISBN"
+
+#. Default: "ISSN"
+#: policy/policy/content/publication.py:82
+msgid "label_issn"
+msgstr "ISSN"
+
+#. Default: "Cover caption"
+#: policy/policy/content/publication.py:24
+msgid "label_publication_cover_caption"
+msgstr "Tekst til forside-billede"
+
+#. Default: "Year of publication"
+#: policy/policy/content/publication.py:99
+msgid "label_publication_year"
+msgstr "Publikationeår"
 

@@ -14,6 +14,22 @@
       description="Installs the policy.policy package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+
+  <genericsetup:registerProfile
+      name="initialsetup"
+      title="policy.policy"
+      directory="profiles/initialsetup"
+      description="Installs the policy.policy package with dependencies and run-once steps"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <!-- -*- extra stuff goes here -*- -->
+
+  <includeDependencies package="." />
+
+  <i18n:registerTranslations directory="locales" />
+
+  <include package=".browser" />
+  <include package=".content" />
   
 </configure>

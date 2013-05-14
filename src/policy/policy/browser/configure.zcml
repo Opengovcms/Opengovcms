@@ -1,0 +1,5 @@
+<configure
+    xmlns="http://namespaces.zope.org/browser"
+    i18n_domain="policy">
+
+</configure>

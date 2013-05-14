@@ -28,6 +28,7 @@ setup(name='policy',
           'plone.directives.form',
           'z3c.relationfield',
           'collective.dexteritytextindexer',
+          'python-stdnum',
           # -*- Extra requirements: -*-
       ],
       entry_points="""

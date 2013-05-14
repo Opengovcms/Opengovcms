@@ -1,0 +1,34 @@
+<dl class="portlet NGCollectionPortlet"
+    i18n:domain="plone"
+    tal:define="collection_url view/collection_url;
+                plone_view context/@@plone;
+                toLocalizedTime nocall:plone_view/toLocalizedTime;
+                getIcon nocall:plone_view/getIcon;">
+
+    <dt class="portletHeader">
+        <a tal:attributes="href collection_url" tal:omit-tag="not:view/data/show_more">
+            <span tal:content="view/data/header" />
+        </a>
+    </dt>
+    
+    <tal:events tal:repeat="obj view/results">
+    <dd class="portletItem"
+        tal:define="oddrow repeat/obj/odd;
+                    item_icon python:getIcon(obj);"
+        tal:attributes="class python:oddrow and 'portletItem even' or 'portletItem odd'">
+            <span class="portletItemDetails"
+                  tal:condition="view/data/show_dates"
+                  tal:content="python:toLocalizedTime(obj.Date)">
+                Date
+            </span>
+        <a href="#"
+           class="tile"
+           tal:attributes="href obj/getURL;
+                           title obj/Description">
+            <span class="portletItemTitle" tal:content="obj/title">Title</span>
+            <span class="portletItemDescription" tal:content="obj/Description">Description</span>
+        </a>
+    </dd>
+    </tal:events>
+
+</dl>

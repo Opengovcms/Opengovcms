@@ -1,0 +1,21 @@
+<div class="portletDropDownLinks">
+  <div class="pddl-header"
+       tal:content="view/data/header" />
+  <div class="pddl-text"
+       tal:content="view/data/show_more_label" />
+  <dl class="dropDownLinks">
+    <dt class="ddl-title">Vælg ...<span class="ddl-icon"></span></dt>
+    <dd class="ddl-body">
+      <ul class="ddl-list">
+        <tal:i tal:repeat="obj view/results">
+          <li>
+            <a href="#"
+               class="ddl-item"
+               tal:attributes="href obj/getRemoteUrl|obj/getURL;"
+               tal:content="obj/pretty_title_or_id">Title</a>
+          </li>
+        </tal:i>
+      </ul>
+    </dd>
+  </dl>
+</div>

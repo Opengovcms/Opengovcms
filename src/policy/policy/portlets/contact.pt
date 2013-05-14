@@ -1,0 +1,33 @@
+<dl class="portlet portletSSTKontakt"
+    tal:define="person view/person;"
+    i18n:domain="policy">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <a tal:attributes="href view/url">
+            <span tal:content="view/data/title" />
+        </a>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem odd">
+      <a href="#"
+         class="kontaktImageLink"
+         tal:attributes="href view/url;
+                         title person/Title">
+	<tal:img tal:define="image nocall:person/image"
+		 tal:condition="python:image and image.getSize()">
+	  <img src="dummy.png" width="60" height="60" alt="" class="imgLeft"
+	       tal:define="scale person/@@images|nothing"
+	       tal:replace="structure python: scale.scale('image').tag(scale='portlet')" />
+	</tal:img>
+        <span class="kontaktTitle"
+              tal:content="person/Title">Title</span>
+      </a>
+      <div class="kontaktText"
+	   tal:condition="person/text"
+           tal:content="structure person/text/output">
+        Body text
+      </div>
+    </dd>
+</dl>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<portlets
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="policy">
+
+   <portlet
+     addview="policy.portlets.Contact"
+     title="Contact"
+     description="Portlet to display contact information for a Person"
+     i18n:attributes="title; description"
+   />
+
+</portlets>

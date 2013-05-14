@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import time
 import csv
 import StringIO
@@ -6,6 +7,42 @@ from Products.Five.browser import BrowserView
 from Products.CMFCore.utils import getToolByName
 from DateTime import DateTime
 from plone.app.textfield.interfaces import IRichTextValue
+
+from zope.component import getMultiAdapter
+
+from policy.i18n import MessageFactory as _
+
+
+class PublicationView(BrowserView):
+    """ """
+
+    @property
+    def has_image(self):
+        return self.context.publication_cover_image is not None
+
+    @property
+    def image_url(self):
+        scale = getMultiAdapter(
+            (self.context, self.context.REQUEST),
+            name='images'
+        )
+        url = scale.scale('publication_cover_image', scale='mini').url
+        return url
+
+    @property
+    def image_caption(self):
+        if hasattr(self.context, 'publication_cover_caption') and \
+                getattr(self.context, 'publication_cover_caption'):
+            return getattr(self.context, 'publication_cover_caption')
+        return _(u'Cover image text is missing')
+
+    def related_items(self):
+        '''Returns list of related items.
+        '''
+
+        context = self.context
+
+        return context.Schema()['relatedItems'].get(context)
 
 class CSVExportView(BrowserView):
 

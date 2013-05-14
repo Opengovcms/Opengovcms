@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+      name="PolicyLayer"
+      interface="policy.interfaces.IBrowserLayer"
+      />
+</layers>
+
+

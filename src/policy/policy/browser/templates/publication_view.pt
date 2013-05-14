@@ -1,0 +1,107 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="policy">
+  <body>
+
+    <metal:description fill-slot="content-description">
+      <div class="documentDescription">
+        <div class="descriptionImage">
+          <img id="publicationCover"
+               alt="publication cover" title="publication cover"
+               tal:condition="view/has_image"
+               tal:attributes="src view/image_url;
+                               alt view/image_caption;
+                               title view/image_caption" />
+        </div>
+        <div class="descriptionContent">
+          <div class="description"
+               tal:content="context/Description"
+               tal:condition="context/Description" />
+
+          <div class="publicationLinks"
+               tal:condition="context/files|nothing">
+	    <a href="#" title=""
+	       i18n:translate=""
+	       tal:define="file nocall:context/files"
+	       tal:attributes="href string:${context/absolute_url}/@@download/files/${file/filename};
+			       title file/Description|nothing">
+	      Download publication (PDF)
+	    </a>
+          </div>
+        </div>
+      </div>
+      <div class="visualClear"><!-- --></div>
+      <hr/>
+
+    </metal:description>
+
+    <metal:content-core fill-slot="content-core">
+      <metal:content-core define-macro="content-core">
+        <div class="publicationDetails">
+        <tal:block>
+	      <label i18n:domain="plone">Date of publication:</label>
+	      <span tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime"
+                tal:content="python: toLocalizedTime(here.effective_date,long_format=False)"></span>
+          <br/>
+        </tal:block>
+        <tal:block tal:condition="here/isbn|nothing">
+          <label i18n:translate="label_ISBN">ISBN:</label>
+          <span tal:content="here/isbn">12345678</span>
+          <br/>
+        </tal:block>
+        <tal:block tal:condition="here/iisbn|nothing">
+          <label i18n:translate="label_internet_ISBN">Internet ISBN:</label>
+          <span tal:content="here/iisbn">12345678</span>
+          <br/>
+        </tal:block>
+        <tal:block tal:condition="here/issn|nothing">
+          <label i18n:translate="label_ISSN">ISSN:</label>
+          <span tal:content="here/issn">12345678</span>
+          <br/>
+        </tal:block>
+        <tal:block tal:condition="here/iissn|nothing">
+          <label i18n:translate="label_internet_ISSN">Internet ISSN:</label>
+          <span tal:content="here/iissn">12345678</span>
+          <br/>
+        </tal:block>
+        <tal:block tal:condition="here/publisher|nothing">
+          <label i18n:translate="label_publisher">Publisher:</label>
+          <span tal:content="here/publisher">Penguin publishing</span>
+          <br/>
+        </tal:block>
+        <tal:block tal:condition="here/publication_year|nothing">
+          <label i18n:translate="label_publication_year">Publication year:</label>
+          <span tal:content="here/publication_year">2012</span>
+          <br/>
+        </tal:block>
+        <tal:block tal:condition="here/edition|nothing">
+          <label i18n:translate="label_edition">Edition:</label>
+          <span tal:content="here/edition">2nd</span>
+          <br/>
+        </tal:block>
+        <tal:block tal:condition="here/page_count|nothing">
+          <label i18n:translate="label_page_count">Page count:</label>
+          <span tal:content="here/page_count">100</span>
+          <br/>
+        </tal:block>
+        <tal:block tal:condition="here/price|nothing">
+          <label i18n:translate="label_price">Price:</label>
+          <span tal:content="here/price">kr. 200,-</span>
+        </tal:block>
+        </div>
+        <div class="visualClear"><!-- --></div>
+
+        <div id="parent-fieldname-text"
+             tal:condition="context/text|nothing"
+             tal:content="structure context/text/output" />
+
+
+      </metal:content-core>
+    </metal:content-core>
+
+  </body>
+</html>

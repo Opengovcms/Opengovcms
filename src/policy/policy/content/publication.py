@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 from zope import schema
-from z3c.relationfield.schema import RelationChoice
-
-from plone.formwidget.contenttree import ObjPathSourceBinder
 
 from plone.namedfile.field import NamedBlobImage, NamedBlobFile
 from plone.directives import form

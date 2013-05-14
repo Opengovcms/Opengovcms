@@ -29,6 +29,7 @@ setup(name='policy',
           'z3c.relationfield',
           'collective.dexteritytextindexer',
           'python-stdnum',
+          'vobject',
           # -*- Extra requirements: -*-
       ],
       entry_points="""

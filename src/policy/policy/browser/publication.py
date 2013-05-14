@@ -5,7 +5,7 @@ import StringIO
 from Products.Five.browser import BrowserView
 from Products.CMFCore.utils import getToolByName
 from DateTime import DateTime
-
+from plone.app.textfield.interfaces import IRichTextValue
 
 class CSVExportView(BrowserView):
 
@@ -28,8 +28,9 @@ class CSVExportView(BrowserView):
             line['url'] = obj.absolute_url()
 
             for field_id in export_fields:
-                field = obj.getField(field_id)
-                v = field.getAccessor(obj)()
+                v = getattr(obj, field_id, None)
+                if IRichTextValue.providedBy(v):
+                    v = v.output
                 line[field_id] = v
             res.append(line)
 
@@ -50,7 +51,7 @@ class CSVExportView(BrowserView):
         """ """
         export_fields = ('title', 'description', 'text', 'author', 'publisher',
                          'version', 'publication_year', 'pagecount', 'isbn', 
-                         'isbndigital', 'issn', 'issuu_url')
+                         'iisbn', 'issn', 'iissn', 'issuu_url')
 
         csv_fields = ('url',) + export_fields
         data = self.get_data(export_fields)

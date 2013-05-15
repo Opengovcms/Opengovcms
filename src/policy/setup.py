@@ -30,6 +30,7 @@ setup(name='policy',
           'collective.dexteritytextindexer',
           'python-stdnum',
           'vobject',
+          'plone.app.imagecropping',
           # -*- Extra requirements: -*-
       ],
       entry_points="""

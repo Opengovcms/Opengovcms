@@ -3,7 +3,6 @@
     tal:define="collection_url view/collection_url;
                 plone_view context/@@plone;
                 toLocalizedTime nocall:plone_view/toLocalizedTime;
-                areavocabulary python:getattr(context.portal_vocabularies,'fagomraader',None);
                 getIcon nocall:plone_view/getIcon;">
 
     <dt class="portletHeader">
@@ -12,38 +11,33 @@
         </a>
     </dt>
 
-    <tal:events tal:repeat="obj view/results">
+    <tal:events tal:repeat="item view/results">
     <dd class="portletItem"
-        tal:define="oddrow repeat/obj/odd;
-                    item_icon python:getIcon(obj);"
+        tal:define="oddrow repeat/item/odd;
+                    item_icon python:getIcon(item);"
         tal:attributes="class python:oddrow and 'portletItem even' or 'portletItem odd'">
       <a href="#"
          class="ng-image-block"
-         tal:attributes="href obj/getURL;
-                         title obj/Description">
-            <img tal:define="object obj/getObject" tal:condition="object/getImage" src="dummy.png" width="60" height="60" alt="" class="imgLeft"
-                 tal:replace="structure python:object.tag(scale='collage', css_class='ng-image')" />
+         tal:attributes="href item/getURL;
+                         title item/Description">
+            <img tal:define="obj item/getObject;
+			     image nocall:obj/image|nothing;
+			     scale obj/@@images|nothing"
+		 tal:condition="python: image and image.getSize()"
+		 src="dummy.png" width="60" height="60" alt="" class="imgLeft"
+                 tal:replace="structure python:scale.scale('image', scale='mini').tag()" />
             <span class="ng-image-title-wrapper">
               <span class="ng-image-title">
-                <span class="ng-image-title-inner" tal:content="obj/pretty_title_or_id">Title</span></span></span></a>
+                <span class="ng-image-title-inner" tal:content="item/title">Title</span></span></span></a>
       <div class="ng-image-details">
-        <span class="portletItemAtvareas"
-              tal:define="atvareas obj/atvareas|nothing"
-              tal:condition="atvareas">
-          <tal:repeat condition="python: areavocabulary is not None" repeat="atvarea atvareas">
-            <tal:atvarea define="areaname python:context.displayValue(areavocabulary.getDisplayList(context), atvarea)"
-                         condition="areaname"
-                         replace="areaname">Area</tal:atvarea><tal:separator condition="not: repeat/atvarea/end">, </tal:separator>
-          </tal:repeat> <span class="ng-separator">|</span>
-        </span>
         <span class="portletItemDetails"
               tal:condition="view/data/show_dates"
-              tal:content="python:toLocalizedTime(obj.Date)">
+              tal:content="python:toLocalizedTime(item.Date)">
             Date
         </span>
       </div>
       <div class="ng-image-description"
-           tal:content="obj/Description">Description</div>
+           tal:content="item/Description">Description</div>
     </dd>
     </tal:events>
 

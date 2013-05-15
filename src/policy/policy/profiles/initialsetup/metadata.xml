@@ -7,6 +7,7 @@
 
     <dependency>profile-plone.app.theming:default</dependency>
     <dependency>profile-plone.app.caching:default</dependency>
+    <dependency>profile-plone.app.imagecropping:default</dependency>
     
     <dependency>profile-plone.app.relationfield:default</dependency>
     <dependency>profile-collective.z3cform.datetimewidget:default</dependency>

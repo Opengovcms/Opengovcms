@@ -16,7 +16,7 @@
 	       tal:define="image nocall:context/image"
 	       tal:condition="python:image and image.getSize()">
 	      <img tal:define="scale context/@@images|nothing"
-		   tal:replace="structure python: scale.scale('image').tag()" />
+		   tal:replace="structure python: scale.scale('image', scale='mini').tag()" />
 	  </div>
 
 	  <table class="employeeInformation" 

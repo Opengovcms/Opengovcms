@@ -4,8 +4,6 @@
                 plone_view context/@@plone;
                 toLocalizedTime nocall:plone_view/toLocalizedTime;
                 DateTime python:modules['DateTime'].DateTime;
-                areavocabulary python:getattr(context.portal_vocabularies,'fagomraader',None);
-                subjectvocabulary python:getattr(context.portal_vocabularies,'fagemner',None);
                 getIcon nocall:plone_view/getIcon;">
 
     <dt class="portletHeader">
@@ -33,24 +31,6 @@
               </span>
             </span>
             <div class="eventItemContent">
-                <span class="portletItemAtvareas"
-                      tal:define="atvareas obj/atvareas|nothing"
-                      tal:condition="atvareas">
-                  <tal:repeat condition="python: areavocabulary is not None" repeat="atvarea atvareas">
-                    <tal:atvarea define="areaname python:context.displayValue(areavocabulary.getDisplayList(context), atvarea)"
-                                 condition="areaname"
-                                 replace="areaname">Area</tal:atvarea><tal:separator condition="not: repeat/atvarea/end">, </tal:separator>
-                  </tal:repeat>
-                </span>
-                <div class="portletItemSubject"
-                      tal:define="atvsubjects obj/atvsubjects|nothing"
-                      tal:condition="atvsubjects">
-                  <tal:repeat condition="python: subjectvocabulary is not None" repeat="atvsubject atvsubjects">
-                    <tal:atvsubject define="subjectname python:context.displayValue(subjectvocabulary.getDisplayList(context), atvsubject)"
-                                 condition="subjectname"
-                                 replace="subjectname">Subject</tal:atvsubject><tal:separator condition="not: repeat/atvsubject/end">, </tal:separator>
-                  </tal:repeat>
-                </div>
                 <div class="eventItemData">
                   <div class="eventItemStart">Start
                         <tal:start condition="view/data/show_dates"

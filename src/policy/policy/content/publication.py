@@ -9,8 +9,9 @@ from collective import dexteritytextindexer
 from policy import validators
 from policy.i18n import MessageFactory as _
 from Products.CMFPlone import PloneMessageFactory as _pmf
+from plone.app.imagecropping.interfaces import IImageCropping
 
-class IPublication(form.Schema):
+class IPublication(form.Schema, IImageCropping):
     """ Publication """
 
     dexteritytextindexer.searchable('text')

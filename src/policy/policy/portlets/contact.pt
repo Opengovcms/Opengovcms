@@ -19,7 +19,7 @@
 		 tal:condition="python:image and image.getSize()">
 	  <img src="dummy.png" width="60" height="60" alt="" class="imgLeft"
 	       tal:define="scale person/@@images|nothing"
-	       tal:replace="structure python: scale.scale('image').tag(scale='portlet')" />
+	       tal:replace="structure python: scale.scale('image', scale='mini').tag()" />
 	</tal:img>
         <span class="kontaktTitle"
               tal:content="person/Title">Title</span>

@@ -13,6 +13,7 @@ from plone.namedfile.field import NamedBlobImage
 from Products.CMFPlone import PloneMessageFactory as _pmf
 from policy.i18n import MessageFactory as _
 
+from plone.app.imagecropping.interfaces import IImageCropping
 
 class IMinimalPerson(form.Schema):
     """ Minimal """
@@ -29,7 +30,7 @@ class IMinimalPerson(form.Schema):
         required = True,
         )
 
-class IPerson(IMinimalPerson):
+class IPerson(IMinimalPerson, IImageCropping):
     """ Represents an Person.
         Displayed in a contacts portlet.
         """

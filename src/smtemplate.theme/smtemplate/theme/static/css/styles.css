@@ -1,0 +1,2649 @@
+@charset "UTF-8";
+/* ==========================================================================
+     Fonts
+     ========================================================================== */
+@font-face {}
+@media screen {
+  /* normalize.css v2.0.1 | MIT License | git.io/normalize */
+  /* ==========================================================================
+     HTML5 display definitions
+     ========================================================================== */
+  /*
+   * Corrects `block` display not defined in IE 8/9.
+   */
+  /* line 21, ../scss/parts/_normalize.scss */
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  nav,
+  section,
+  summary {
+    display: block;
+  }
+
+  /*
+   * Corrects `inline-block` display not defined in IE 8/9.
+   */
+  /* line 31, ../scss/parts/_normalize.scss */
+  audio,
+  canvas,
+  video {
+    display: inline-block;
+  }
+
+  /*
+   * Prevents modern browsers from displaying `audio` without controls.
+   * Remove excess height in iOS 5 devices.
+   */
+  /* line 40, ../scss/parts/_normalize.scss */
+  audio:not([controls]) {
+    display: none;
+    height: 0;
+  }
+
+  /*
+   * Addresses styling for `hidden` attribute not present in IE 8/9.
+   */
+  /* line 49, ../scss/parts/_normalize.scss */
+  [hidden] {
+    display: none;
+  }
+
+  /* ==========================================================================
+     Base
+     ========================================================================== */
+  /*
+   * 1. Sets default font family to sans-serif.
+   * 2. Prevents iOS text size adjust after orientation change, without disabling
+   *    user zoom.
+   */
+  /* line 63, ../scss/parts/_normalize.scss */
+  html {
+    font-family: sans-serif;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+    -ms-text-size-adjust: 100%;
+    /* 2 */
+  }
+
+  /*
+   * Removes default margin.
+   */
+  /* line 73, ../scss/parts/_normalize.scss */
+  body {
+    margin: 0;
+  }
+
+  /* ==========================================================================
+     Links
+     ========================================================================== */
+  /*
+   * Addresses `outline` inconsistency between Chrome and other browsers.
+   */
+  /* line 85, ../scss/parts/_normalize.scss */
+  a:focus {
+    outline: thin dotted;
+  }
+
+  /*
+   * Improves readability when focused and also mouse hovered in all browsers.
+   */
+  /* line 94, ../scss/parts/_normalize.scss */
+  a:active,
+  a:hover {
+    outline: 0;
+  }
+
+  /* ==========================================================================
+     Typography
+     ========================================================================== */
+  /*
+   * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
+   * Safari 5, and Chrome.
+   */
+  /* line 107, ../scss/parts/_normalize.scss */
+  h1 {
+    font-size: 2em;
+  }
+
+  /*
+   * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
+   */
+  /* line 115, ../scss/parts/_normalize.scss */
+  abbr[title] {
+    border-bottom: 1px dotted;
+  }
+
+  /*
+   * Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+   */
+  /* line 124, ../scss/parts/_normalize.scss */
+  b,
+  strong {
+    font-weight: bold;
+  }
+
+  /*
+   * Addresses styling not present in Safari 5 and Chrome.
+   */
+  /* line 132, ../scss/parts/_normalize.scss */
+  dfn {
+    font-style: italic;
+  }
+
+  /*
+   * Addresses styling not present in IE 8/9.
+   */
+  /* line 140, ../scss/parts/_normalize.scss */
+  mark {
+    background: #ff0;
+    color: #000;
+  }
+
+  /*
+   * Corrects font family set oddly in Safari 5 and Chrome.
+   */
+  /* line 153, ../scss/parts/_normalize.scss */
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+  }
+
+  /*
+   * Improves readability of pre-formatted text in all browsers.
+   */
+  /* line 162, ../scss/parts/_normalize.scss */
+  pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /*
+   * Sets consistent quote types.
+   */
+  /* line 172, ../scss/parts/_normalize.scss */
+  q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+  }
+
+  /*
+   * Addresses inconsistent and variable font size in all browsers.
+   */
+  /* line 180, ../scss/parts/_normalize.scss */
+  small {
+    font-size: 80%;
+  }
+
+  /*
+   * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+   */
+  /* line 189, ../scss/parts/_normalize.scss */
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  /* line 196, ../scss/parts/_normalize.scss */
+  sup {
+    top: -0.5em;
+  }
+
+  /* line 200, ../scss/parts/_normalize.scss */
+  sub {
+    bottom: -0.25em;
+  }
+
+  /* ==========================================================================
+     Embedded content
+     ========================================================================== */
+  /*
+   * Removes border when inside `a` element in IE 8/9.
+   */
+  /* line 212, ../scss/parts/_normalize.scss */
+  img {
+    border: 0;
+  }
+
+  /*
+   * Corrects overflow displayed oddly in IE 9.
+   */
+  /* line 220, ../scss/parts/_normalize.scss */
+  svg:not(:root) {
+    overflow: hidden;
+  }
+
+  /* ==========================================================================
+     Figures
+     ========================================================================== */
+  /*
+   * Addresses margin not present in IE 8/9 and Safari 5.
+   */
+  /* line 232, ../scss/parts/_normalize.scss */
+  figure {
+    margin: 0;
+  }
+
+  /* ==========================================================================
+     Forms
+     ========================================================================== */
+  /*
+   * Define consistent border, margin, and padding.
+   */
+  /* line 244, ../scss/parts/_normalize.scss */
+  fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+  }
+
+  /*
+   * 1. Corrects color not being inherited in IE 8/9.
+   * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+   */
+  /* line 255, ../scss/parts/_normalize.scss */
+  legend {
+    border: 0;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+  }
+
+  /*
+   * 1. Corrects font family not being inherited in all browsers.
+   * 2. Corrects font size not being inherited in all browsers.
+   * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+   */
+  /* line 269, ../scss/parts/_normalize.scss */
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 2 */
+    margin: 0;
+    /* 3 */
+  }
+
+  /*
+   * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
+   * the UA stylesheet.
+   */
+  /* line 281, ../scss/parts/_normalize.scss */
+  button,
+  input {
+    line-height: normal;
+  }
+
+  /*
+   * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+   *    and `video` controls.
+   * 2. Corrects inability to style clickable `input` types in iOS.
+   * 3. Improves usability and consistency of cursor style between image-type
+   *    `input` and others.
+   */
+  /* line 296, ../scss/parts/_normalize.scss */
+  button,
+  html input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    -webkit-appearance: button;
+    /* 2 */
+    cursor: pointer;
+    /* 3 */
+  }
+
+  /*
+   * Re-set default cursor for disabled elements.
+   */
+  /* line 306, ../scss/parts/_normalize.scss */
+  button[disabled],
+  input[disabled] {
+    cursor: default;
+  }
+
+  /*
+   * 1. Addresses box sizing set to `content-box` in IE 8/9.
+   * 2. Removes excess padding in IE 8/9.
+   */
+  /* line 316, ../scss/parts/_normalize.scss */
+  input[type="checkbox"],
+  input[type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+  }
+
+  /*
+   * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+   * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+   *    (include `-moz` to future-proof).
+   */
+  /* line 327, ../scss/parts/_normalize.scss */
+  input[type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    /* 2 */
+    box-sizing: content-box;
+  }
+
+  /*
+   * Removes inner padding and search cancel button in Safari 5 and Chrome
+   * on OS X.
+   */
+  /* line 340, ../scss/parts/_normalize.scss */
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  /*
+   * Removes inner padding and border in Firefox 4+.
+   */
+  /* line 349, ../scss/parts/_normalize.scss */
+  button::-moz-focus-inner,
+  input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  /*
+   * 1. Removes default vertical scrollbar in IE 8/9.
+   * 2. Improves readability and alignment in all browsers.
+   */
+  /* line 359, ../scss/parts/_normalize.scss */
+  textarea {
+    overflow: auto;
+    /* 1 */
+    vertical-align: top;
+    /* 2 */
+  }
+
+  /* ==========================================================================
+     Tables
+     ========================================================================== */
+  /*
+   * Remove most spacing between table cells.
+   */
+  /* line 372, ../scss/parts/_normalize.scss */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /* The 16-column Deco Grid System. 
+   * For the 12-column variant, see decogrids-12.css.
+   *
+   * Cells are 4% width, 1.125% left/right margin.
+   * 
+   * If page width is fixed to 960px width:
+   * Cell will be equivalent to 40px, left/right margin will be 10px.
+   */
+  /* line 10, ../scss/parts/_grid.scss */
+  div.row {
+    float: left;
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+
+  /* line 16, ../scss/parts/_grid.scss */
+  div.cell {
+    position: relative;
+    float: left;
+    left: 100%;
+  }
+
+  /* IE8: keeps livesearch from falling behind content area,
+     and display menu from falling behind footer
+     Keeping float for IE7, so the portlets don't fall */
+  /* line 24, ../scss/parts/_grid.scss */
+  .ie6 div.cell {
+    float: none;
+  }
+
+  /* Width classes. 
+     For a given cell width, the calculation is: width: (6.25*n - 2.25)% */
+  /* line 30, ../scss/parts/_grid.scss */
+  div.width-1 {
+    width: 4%;
+  }
+
+  /* line 31, ../scss/parts/_grid.scss */
+  div.width-2 {
+    width: 10.25%;
+  }
+
+  /* line 32, ../scss/parts/_grid.scss */
+  div.width-3 {
+    width: 16.5%;
+  }
+
+  /* line 33, ../scss/parts/_grid.scss */
+  div.width-4 {
+    width: 22.75%;
+  }
+
+  /* line 34, ../scss/parts/_grid.scss */
+  div.width-5 {
+    width: 29%;
+  }
+
+  /* line 35, ../scss/parts/_grid.scss */
+  div.width-6 {
+    width: 35.25%;
+  }
+
+  /* line 36, ../scss/parts/_grid.scss */
+  div.width-7 {
+    width: 41.5%;
+  }
+
+  /* line 37, ../scss/parts/_grid.scss */
+  div.width-8 {
+    width: 47.75%;
+  }
+
+  /* line 38, ../scss/parts/_grid.scss */
+  div.width-9 {
+    width: 54%;
+  }
+
+  /* line 39, ../scss/parts/_grid.scss */
+  div.width-10 {
+    width: 60.25%;
+  }
+
+  /* line 40, ../scss/parts/_grid.scss */
+  div.width-11 {
+    width: 66.5%;
+  }
+
+  /* line 41, ../scss/parts/_grid.scss */
+  div.width-12 {
+    width: 72.75%;
+  }
+
+  /* line 42, ../scss/parts/_grid.scss */
+  div.width-13 {
+    width: 79%;
+  }
+
+  /* line 43, ../scss/parts/_grid.scss */
+  div.width-14 {
+    width: 85.25%;
+  }
+
+  /* line 44, ../scss/parts/_grid.scss */
+  div.width-15 {
+    width: 91.5%;
+  }
+
+  /* line 45, ../scss/parts/_grid.scss */
+  div.width-16 {
+    width: 97.75%;
+  }
+
+  /* Positioning classes, these are subtracting from a rightmost 
+     position, which is why they seem the wrong way around */
+  /* For a given position, the calculation is margin-left: -100 + (6.25*n) + 1.125 */
+  /* line 51, ../scss/parts/_grid.scss */
+  div.position-0 {
+    margin-left: -98.875%;
+  }
+
+  /* line 52, ../scss/parts/_grid.scss */
+  div.position-1 {
+    margin-left: -92.625%;
+  }
+
+  /* line 53, ../scss/parts/_grid.scss */
+  div.position-2 {
+    margin-left: -86.375%;
+  }
+
+  /* line 54, ../scss/parts/_grid.scss */
+  div.position-3 {
+    margin-left: -80.125%;
+  }
+
+  /* line 55, ../scss/parts/_grid.scss */
+  div.position-4 {
+    margin-left: -73.875%;
+  }
+
+  /* line 56, ../scss/parts/_grid.scss */
+  div.position-5 {
+    margin-left: -67.625%;
+  }
+
+  /* line 57, ../scss/parts/_grid.scss */
+  div.position-6 {
+    margin-left: -61.375%;
+  }
+
+  /* line 58, ../scss/parts/_grid.scss */
+  div.position-7 {
+    margin-left: -55.125%;
+  }
+
+  /* line 59, ../scss/parts/_grid.scss */
+  div.position-8 {
+    margin-left: -48.875%;
+  }
+
+  /* line 60, ../scss/parts/_grid.scss */
+  div.position-9 {
+    margin-left: -42.625%;
+  }
+
+  /* line 61, ../scss/parts/_grid.scss */
+  div.position-10 {
+    margin-left: -36.375%;
+  }
+
+  /* line 62, ../scss/parts/_grid.scss */
+  div.position-11 {
+    margin-left: -30.125%;
+  }
+
+  /* line 63, ../scss/parts/_grid.scss */
+  div.position-12 {
+    margin-left: -23.875%;
+  }
+
+  /* line 64, ../scss/parts/_grid.scss */
+  div.position-13 {
+    margin-left: -17.625%;
+  }
+
+  /* line 65, ../scss/parts/_grid.scss */
+  div.position-14 {
+    margin-left: -11.375%;
+  }
+
+  /* line 66, ../scss/parts/_grid.scss */
+  div.position-15 {
+    margin-left: -5.125%;
+  }
+
+  /* End of the core Deco Grid System */
+  /* Convenience classes — ¼, ½, ¾ widths and ¼, ½, ¾ positions. 
+     Not strictly necessary. */
+  /* line 72, ../scss/parts/_grid.scss */
+  div.width-1\3a 2 {
+    width: 47.75%;
+  }
+
+  /* .width-1:2 */
+  /* line 73, ../scss/parts/_grid.scss */
+  div.width-1\3a 4 {
+    width: 22.75%;
+  }
+
+  /* .width-1:4 */
+  /* line 74, ../scss/parts/_grid.scss */
+  div.width-3\3a 4 {
+    width: 72.75%;
+  }
+
+  /* .width-3:4 */
+  /* line 75, ../scss/parts/_grid.scss */
+  div.width-full {
+    width: 97.75%;
+  }
+
+  /* line 76, ../scss/parts/_grid.scss */
+  div.position-1\3a 4 {
+    margin-left: -73.875%;
+  }
+
+  /* .position-1:4 */
+  /* line 77, ../scss/parts/_grid.scss */
+  div.position-1\3a 2 {
+    margin-left: -48.875%;
+  }
+
+  /* .position-1:2 */
+  /* line 78, ../scss/parts/_grid.scss */
+  div.position-3\3a 4 {
+    margin-left: -23.875%;
+  }
+
+  /* .position-3:4 */
+  /* Special classes for ⅓, ⅔ widths and ⅓, ⅔ positions. 
+  These do not strictly conform to the grid, but are useful for certain layouts. */
+  /* line 83, ../scss/parts/_grid.scss */
+  div.width-1\3a 3 {
+    width: 31.08%;
+  }
+
+  /* .width-1:3 */
+  /* line 84, ../scss/parts/_grid.scss */
+  div.width-2\3a 3 {
+    width: 64.42%;
+  }
+
+  /* .width-2:3 */
+  /* line 85, ../scss/parts/_grid.scss */
+  div.position-1\3a 3 {
+    margin-left: -65.545%;
+  }
+
+  /* .position-1:3 */
+  /* line 86, ../scss/parts/_grid.scss */
+  div.position-2\3a 3 {
+    margin-left: -32.205%;
+  }
+
+  /* .position-2:3 */
+  /* ==========================================================================
+       General Styles
+       ========================================================================== */
+  /* line 5, ../scss/parts/_general.scss */
+  body {
+    background-color: #fff;
+    color: #393939;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.81em;
+    margin: 0;
+  }
+
+  /* line 12, ../scss/parts/_general.scss */
+  a {
+    color: #00a19a;
+    text-decoration: none;
+  }
+
+  /* line 16, ../scss/parts/_general.scss */
+  a:visited {
+    color: #97a9a8;
+  }
+
+  /* line 19, ../scss/parts/_general.scss */
+  a:hover {
+    color: #ff8a00;
+  }
+
+  /* line 22, ../scss/parts/_general.scss */
+  h1 {
+    font-family: yorkvilleregular,sans-serif;
+    font-size: 2.32em;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0.67em 0;
+  }
+
+  /* line 29, ../scss/parts/_general.scss */
+  h2 {
+    font-size: 1.55em;
+    font-weight: normal;
+    margin: 0.83em 0;
+  }
+
+  /* line 34, ../scss/parts/_general.scss */
+  h3 {
+    font-size: 1.16em;
+    font-weight: normal;
+    margin: 1em 0;
+  }
+
+  /* line 39, ../scss/parts/_general.scss */
+  p, ul, ol, dt, dd {
+    line-height: 1.4;
+  }
+
+  /* line 42, ../scss/parts/_general.scss */
+  img {
+    border: 0;
+    vertical-align: text-bottom;
+  }
+
+  /* line 47, ../scss/parts/_general.scss */
+  #content img,
+  .portletStaticText img {
+    height: auto;
+    max-width: 100%;
+    width: auto;
+    /*fix to IE8*/
+  }
+
+  /* line 54, ../scss/parts/_general.scss */
+  menu,
+  ol,
+  ul {
+    padding: 0 0 0 27px;
+  }
+
+  /* line 58, ../scss/parts/_general.scss */
+  li ul,
+  li ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* line 62, ../scss/parts/_general.scss */
+  dd {
+    margin: 0 0 0 27px;
+  }
+
+  /* line 65, ../scss/parts/_general.scss */
+  pre {
+    background-color: #222;
+    color: #fff;
+    font-size: 12px;
+    font-family: monospace;
+    margin-bottom: 1em;
+    padding: 1em;
+    overflow-x: auto;
+  }
+
+  /* ==========================================================================
+       Theme styles
+       ========================================================================== */
+  /*----- Plone Elements -----*/
+  /* line 6, ../scss/parts/_main.scss */
+  .documentDescription {
+    color: #00a19a;
+    font-size: 1.32em;
+    line-height: 1.4;
+    margin: 0 0 1em;
+  }
+
+  /* line 12, ../scss/parts/_main.scss */
+  .discreet {
+    color: #666;
+    font-size: 85%;
+  }
+
+  /* line 16, ../scss/parts/_main.scss */
+  .visualHighlight {
+    background-color: #ffb;
+  }
+
+  /* line 19, ../scss/parts/_main.scss */
+  .pullquote {
+    border-left: 6px solid silver;
+    clear: right;
+    color: #444;
+    float: right;
+    font-size: 1.17em;
+    line-height: 1.42em;
+    margin: 0 1em 1.5em 2.5em;
+    padding-left: 10px;
+    width: 35%;
+  }
+
+  /* line 30, ../scss/parts/_main.scss */
+  .callout {
+    background-color: #eee;
+    border-left: 1em solid #ccc;
+    padding: 1em;
+  }
+
+  /* line 35, ../scss/parts/_main.scss */
+  .hiddenStructure {
+    background: none;
+    border: 0;
+    display: block;
+    height: 0.1em;
+    margin: -0.1em 0 0 -0.1em;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  /* line 46, ../scss/parts/_main.scss */
+  .visualClear {
+    clear: both;
+  }
+
+  /*
+   * TinyMCE Styles
+   */
+  /* line 53, ../scss/parts/_main.scss */
+  .mceContentBody a {
+    border: 0 !important;
+    color: #00a19a !important;
+  }
+
+  /* Image alignment classes */
+  /* line 59, ../scss/parts/_main.scss */
+  .image-left {
+    clear: left;
+    float: left;
+    margin: 0.5em 1em 0.5em 0;
+  }
+
+  /* line 64, ../scss/parts/_main.scss */
+  .image-right {
+    clear: right;
+    float: right;
+    margin: 0.5em 0 0.5em 1em;
+  }
+
+  /* line 69, ../scss/parts/_main.scss */
+  .image-inline {
+    float: none;
+  }
+
+  /* line 72, ../scss/parts/_main.scss */
+  .image-caption {
+    margin: 0;
+  }
+
+  /* line 75, ../scss/parts/_main.scss */
+  .newsImageContainer {
+    float: right;
+    margin: 0 0 0.5em 1em;
+  }
+
+  /* line 82, ../scss/parts/_main.scss */
+  img.tileImage {
+    float: right;
+    margin: 0 0 0.5em 0.5em;
+  }
+
+  /*----- General -----*/
+  /*
+   * Search Page
+   */
+  /* line 95, ../scss/parts/_main.scss */
+  #search-field {
+    border: 0;
+  }
+
+  /* line 98, ../scss/parts/_main.scss */
+  .searchPage[type="text"] {
+    border: 1px solid #8cc8be;
+    border: 1px solid rgba(4, 129, 98, 0.25);
+    border-radius: 19px;
+    padding: 5px 10px;
+  }
+
+  /* line 104, ../scss/parts/_main.scss */
+  .searchPage[type="text"]:focus {
+    outline: none;
+  }
+
+  /* line 107, ../scss/parts/_main.scss */
+  #search-results-bar a {
+    color: #00a19a;
+  }
+
+  /* line 110, ../scss/parts/_main.scss */
+  #search-results-bar dd {
+    background-color: #c0c0c0;
+  }
+
+  /* ==========================================================================
+       Forms
+       ========================================================================== */
+  /* line 7, ../scss/parts/_forms.scss */
+  button,
+  input,
+  select,
+  textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    margin: 0;
+    vertical-align: baseline;
+  }
+
+  /* line 14, ../scss/parts/_forms.scss */
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-right: 3px;
+  }
+
+  /* line 18, ../scss/parts/_forms.scss */
+  .label,
+  label {
+    font-weight: bold;
+  }
+
+  /* line 21, ../scss/parts/_forms.scss */
+  .field {
+    margin: 0 0 1em;
+  }
+
+  /* line 24, ../scss/parts/_forms.scss */
+  div.field.error {
+    background-color: #fdc;
+    border: 1px solid red;
+    padding: 0.5em;
+  }
+
+  /* line 29, ../scss/parts/_forms.scss */
+  .formControls {
+    margin: 1em 0;
+  }
+
+  /* line 32, ../scss/parts/_forms.scss */
+  .formControls input {
+    margin-right: 4px;
+  }
+
+  /* line 37, ../scss/parts/_forms.scss */
+  .context,
+  .standalone,
+  .destructive {
+    margin-right: 4px;
+  }
+
+  /* ==========================================================================
+       Viewlets
+       ========================================================================== */
+  /*
+   * Portal Globalnav
+   */
+  /* line 7, ../scss/parts/_viewlets.scss */
+  #theme-globalnav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 12, ../scss/parts/_viewlets.scss */
+  #theme-globalnav li {
+    display: inline;
+  }
+
+  /*
+   * Portal Search Box 
+   */
+  /* line 40, ../scss/parts/_viewlets.scss */
+  .LSResult {
+    position: relative;
+    z-index: 3;
+  }
+
+  /* line 44, ../scss/parts/_viewlets.scss */
+  .livesearchContainer {
+    background-color: #fff;
+    border: 1px solid #000;
+    left: 0;
+    margin: 2em 0 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  /* line 54, ../scss/parts/_viewlets.scss */
+  #livesearchLegend {
+    background-color: #fff;
+    border-color: #000;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    line-height: 1.18em;
+    margin-left: -1px;
+    padding: 4px 8px;
+    position: absolute;
+    top: -2em;
+  }
+
+  /* line 65, ../scss/parts/_viewlets.scss */
+  .LSIEFix {
+    padding: 4px 8px 10px;
+  }
+
+  /* line 68, ../scss/parts/_viewlets.scss */
+  .LSDescr {
+    margin-left: 7px;
+  }
+
+  /*
+   * Portal Logo 
+   */
+  /*
+   * Bread Crumbs & Language Selecto 
+   */
+  /*
+   * Personal Tools
+   */
+  /* line 98, ../scss/parts/_viewlets.scss */
+  ul#portal-personaltools {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 104, ../scss/parts/_viewlets.scss */
+  #portal-personaltools dt a,
+  #portal-personaltools li a {
+    color: #00a19a;
+  }
+
+  /* line 107, ../scss/parts/_viewlets.scss */
+  #portal-personaltools dd {
+    background-color: #fff;
+    margin: 0;
+    padding: 0 0 5px;
+    right: 0;
+    top: 100%;
+  }
+
+  /* line 114, ../scss/parts/_viewlets.scss */
+  #portal-personaltools.activated .actionMenuContent {
+    display: block;
+  }
+
+  /* line 117, ../scss/parts/_viewlets.scss */
+  #portal-personaltools li a:hover {
+    background-color: transparent;
+  }
+
+  /*
+   * Footer and Colophon
+   */
+  /* ==========================================================================
+       Portlets
+       ========================================================================== */
+  /*
+   * General Portlets Styles
+   */
+  /*
+   * Manage Portlets
+   */
+  /* line 29, ../scss/parts/_portlets.scss */
+  .managedPortlet {
+    margin: 10px 0;
+  }
+
+  /* line 32, ../scss/parts/_portlets.scss */
+  .managePortletsLink {
+    text-align: center;
+  }
+
+  /* line 35, ../scss/parts/_portlets.scss */
+  .managePortletsFallback {
+    display: block;
+    text-align: center;
+  }
+
+  /* line 39, ../scss/parts/_portlets.scss */
+  .managedPortletActions {
+    float: right;
+  }
+
+  /* line 42, ../scss/parts/_portlets.scss */
+  .managedPortletActions a {
+    margin: 0 2px;
+  }
+
+  /*
+   * Portlet Navigation
+   */
+  /*
+   * Portlet Static Text
+   */
+  /*
+   * Portlet Calendar
+   */
+  /* line 93, ../scss/parts/_portlets.scss */
+  .ploneCalendar {
+    width: 100%;
+  }
+
+  /* line 97, ../scss/parts/_portlets.scss */
+  .ploneCalendar th,
+  .ploneCalendar td {
+    text-align: center;
+  }
+
+  /* ==========================================================================
+       Plone styles
+       ========================================================================== */
+  /*----- Document Actions -----*/
+  /* line 5, ../scss/parts/_plone.scss */
+  .documentActions {
+    font-size: 0.92em;
+    text-align: right;
+  }
+
+  /* line 9, ../scss/parts/_plone.scss */
+  #content .documentActions ul {
+    list-style-type: none;
+  }
+
+  /* line 12, ../scss/parts/_plone.scss */
+  .documentActions li {
+    display: inline;
+  }
+
+  /* line 15, ../scss/parts/_plone.scss */
+  .documentActions a {
+    padding: 0 5px;
+    text-decoration: none;
+  }
+
+  /*----- Events -----*/
+  /* line 21, ../scss/parts/_plone.scss */
+  .eventDetails {
+    clear: right;
+    float: right;
+    margin: 0 0 0.5em 1em;
+  }
+
+  /* line 26, ../scss/parts/_plone.scss */
+  #content .eventDetails {
+    border: 1px solid #ccc;
+    margin-top: 1em;
+    width: 22em;
+  }
+
+  /* line 31, ../scss/parts/_plone.scss */
+  #content .eventDetails h2 {
+    background-color: #ddd;
+    font-size: 100%;
+    margin: 0;
+    padding: 0.5em 0.5em 0.5em 1em;
+  }
+
+  /* line 37, ../scss/parts/_plone.scss */
+  #content .eventDetails .eventDetail {
+    clear: both;
+  }
+
+  /* line 40, ../scss/parts/_plone.scss */
+  #content .eventDetails .eventDetail h3 {
+    float: left;
+    font-size: 100%;
+    margin: 0;
+    padding: 2%;
+    text-align: right;
+    width: 37%;
+  }
+
+  /* line 48, ../scss/parts/_plone.scss */
+  #content .eventDetails .eventDetail div {
+    float: left;
+    padding: 2%;
+    width: 55%;
+  }
+
+  /*----- Search Results -----*/
+  /* line 55, ../scss/parts/_plone.scss */
+  .highlightedSearchTerm {
+    background-color: #ff9;
+    padding: 0 2px;
+  }
+
+  /*----- Editing -----*/
+  /* line 61, ../scss/parts/_plone.scss */
+  body#content {
+    margin: 1em;
+  }
+
+  /* line 64, ../scss/parts/_plone.scss */
+  .fieldRequired {
+    color: #fff;
+  }
+
+  /* line 67, ../scss/parts/_plone.scss */
+  .fieldRequired:before {
+    color: #f00;
+    content: "■ ";
+  }
+
+  /* line 71, ../scss/parts/_plone.scss */
+  .formPanel {
+    padding: 1em 2px;
+  }
+
+  /* line 74, ../scss/parts/_plone.scss */
+  .formPanel textarea {
+    width: 100%;
+  }
+
+  /* line 77, ../scss/parts/_plone.scss */
+  #title {
+    font-size: 2em;
+    width: 100%;
+  }
+
+  /* line 81, ../scss/parts/_plone.scss */
+  #description {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+  }
+
+  /* line 85, ../scss/parts/_plone.scss */
+  .suppressVisualEditor {
+    margin: 0 !important;
+  }
+
+  /* line 88, ../scss/parts/_plone.scss */
+  .fieldUploadFile {
+    display: none;
+  }
+
+  /* line 91, ../scss/parts/_plone.scss */
+  .formHelp {
+    color: #555;
+    display: block;
+    font-weight: normal;
+    margin: 0 0 0.2em 0;
+  }
+
+  /* line 97, ../scss/parts/_plone.scss */
+  .documentByLine {
+    color: #76797c;
+    font-size: 0.85em;
+    font-weight: normal;
+    margin-bottom: 0.5em;
+  }
+
+  /* line 103, ../scss/parts/_plone.scss */
+  .documentFirstHeading + #viewlet-below-content-title .documentByLine {
+    margin-top: -1.46em;
+  }
+
+  /* line 106, ../scss/parts/_plone.scss */
+  .tileHeadline + .documentByLine {
+    display: block;
+    margin-top: -1.46em;
+  }
+
+  /* line 111, ../scss/parts/_plone.scss */
+  ul.configlets,
+  #content ul.configlets {
+    list-style: none;
+    margin: 1em 0;
+  }
+
+  /* line 115, ../scss/parts/_plone.scss */
+  ul.configlets li {
+    margin-bottom: 1em;
+  }
+
+  /* line 118, ../scss/parts/_plone.scss */
+  ul.configlets li a {
+    text-decoration: none;
+  }
+
+  /* line 121, ../scss/parts/_plone.scss */
+  #content ul.configletDetails {
+    margin: 0 1em 1em 4em;
+    list-style: none;
+  }
+
+  /* line 125, ../scss/parts/_plone.scss */
+  #content ul.configletDetails li {
+    margin-bottom: 1em;
+    display: inline;
+  }
+
+  /* line 129, ../scss/parts/_plone.scss */
+  #content ul.configletDetails li.configletDescription {
+    display: block;
+    color: #76797c;
+    margin: 0;
+  }
+
+  /* line 134, ../scss/parts/_plone.scss */
+  #kss-spinner {
+    background-position: 50% 50%;
+    display: none;
+    height: 20px;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    position: fixed;
+    top: 50%;
+    width: 20px;
+  }
+
+  /* line 145, ../scss/parts/_plone.scss */
+  .formlibInlineEditable,
+  .inlineEditable {
+    display: block;
+    padding: 1px;
+  }
+
+  /* line 150, ../scss/parts/_plone.scss */
+  body.kssActive .inlineEditable:hover,
+  body.kssActive .formlibInlineEditable:hover {
+    border: 1px solid #ddd;
+    border-color: #666 #ddd #ddd #666;
+    cursor: text;
+    padding: 0;
+  }
+
+  /* line 157, ../scss/parts/_plone.scss */
+  body.kssActive .inlineEditable a:hover,
+  body.kssActive .formlibInlineEditable a:hover {
+    cursor: pointer;
+  }
+
+  /* line 161, ../scss/parts/_plone.scss */
+  body.kssActive .formlibInlineForm:hover,
+  body.kssActive .formlibInlineForm a:hover {
+    border: 0;
+    cursor: default;
+    padding: 1px;
+  }
+
+  /* line 168, ../scss/parts/_plone.scss */
+  .inlineForm .formHelp,
+  .inlineForm .fieldRequired,
+  .inlineForm label {
+    display: none;
+  }
+
+  /* In inline selection widgets the label *must* be displayed, as
+     otherwise you only see identical radio buttons without text. */
+  /* line 173, ../scss/parts/_plone.scss */
+  .inlineForm .ArchetypesSelectionWidget label {
+    display: inline;
+  }
+
+  /* line 177, ../scss/parts/_plone.scss */
+  .inlineForm #archetypes-fieldname-title input,
+  .inlineForm #archetypes-fieldname-title {
+    font-size: 100%;
+  }
+
+  /* Workaround for abnormally large buttons in the h1 tag */
+  /* line 181, ../scss/parts/_plone.scss */
+  h1 div.formControls input {
+    font-size: 55% !important;
+  }
+
+  /*----- Edit Bar -----*/
+  /* line 186, ../scss/parts/_plone.scss */
+  #edit-bar {
+    background-color: #75ad0a;
+    margin: 0 0 1em;
+    padding: 3px;
+  }
+
+  /* line 191, ../scss/parts/_plone.scss */
+  #edit-bar:after {
+    clear: both;
+    content: "";
+    display: block;
+    visibility: hidden;
+  }
+
+  /* line 197, ../scss/parts/_plone.scss */
+  #content-views {
+    background-color: #75ad0a;
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 203, ../scss/parts/_plone.scss */
+  #content-views li {
+    display: inline;
+  }
+
+  /* line 206, ../scss/parts/_plone.scss */
+  #content-views a {
+    color: #fff;
+    display: inline-block;
+    line-height: 1.73em;
+    padding: 0 0.75em;
+    text-decoration: none;
+  }
+
+  /* line 214, ../scss/parts/_plone.scss */
+  #content-views li.selected a,
+  #content-views li a:hover {
+    background: #fff;
+    color: #000;
+  }
+
+  /* line 218, ../scss/parts/_plone.scss */
+  #content-views li.selected a {
+    font-weight: bold;
+  }
+
+  /*----- Content pulldowns -----*/
+  /* line 223, ../scss/parts/_plone.scss */
+  #contentActionMenus {
+    background-color: #75ad0a;
+    float: right;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 229, ../scss/parts/_plone.scss */
+  #contentActionMenus > li {
+    display: inline;
+  }
+
+  /* line 232, ../scss/parts/_plone.scss */
+  .actionMenu {
+    float: right;
+    margin: 0 0 0 0.5em;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  /* line 238, ../scss/parts/_plone.scss */
+  .actionMenu dt {
+    font-weight: normal;
+  }
+
+  /* line 241, ../scss/parts/_plone.scss */
+  .actionMenu a {
+    color: #fff;
+    display: block;
+    line-height: 1.73em;
+    text-decoration: none;
+  }
+
+  /* line 247, ../scss/parts/_plone.scss */
+  .actionMenu dt a {
+    padding: 0 3px;
+  }
+
+  /* line 250, ../scss/parts/_plone.scss */
+  .arrowDownAlternative {
+    font-size: 80%;
+  }
+
+  /* line 253, ../scss/parts/_plone.scss */
+  .actionMenu dd {
+    background-color: #75ad0a;
+    right: -3px;
+    margin: 0;
+    min-width: 100%;
+    padding: 0 3px 3px;
+    position: absolute;
+    width: auto;
+    z-index: 5;
+  }
+
+  /* line 263, ../scss/parts/_plone.scss */
+  .actionMenu.deactivated dd {
+    display: none;
+  }
+
+  /* line 266, ../scss/parts/_plone.scss */
+  .actionMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 272, ../scss/parts/_plone.scss */
+  .actionMenu dd a:hover,
+  .actionMenu dd .actionMenuSelected {
+    background-color: #fff;
+    color: #666;
+  }
+
+  /* line 276, ../scss/parts/_plone.scss */
+  .subMenuTitle {
+    display: block;
+    padding: 0 3px;
+  }
+
+  /*----- Form Tabs -----*/
+  /* line 282, ../scss/parts/_plone.scss */
+  #content .formTabs {
+    background-color: #ddd;
+    margin: 0;
+    padding: 3px 3px 0;
+  }
+
+  /* line 287, ../scss/parts/_plone.scss */
+  #content .formTab {
+    display: inline;
+    margin-right: 0.25em;
+  }
+
+  /* line 291, ../scss/parts/_plone.scss */
+  #content li.formTab a {
+    display: inline-block;
+    line-height: 2em;
+    padding: 0 0.75em;
+    text-decoration: none;
+  }
+
+  /* line 298, ../scss/parts/_plone.scss */
+  #content li.formTab a.selected,
+  #content li.formTab a:hover {
+    background: #fff;
+    color: #000;
+  }
+
+  /* line 302, ../scss/parts/_plone.scss */
+  #content li.formTab a.notify {
+    background-color: red;
+    color: #fff;
+  }
+
+  /* line 308, ../scss/parts/_plone.scss */
+  #content li.formTab a.required span:after,
+  #content-core li.formTab a.required span:after,
+  div.field span.required:after {
+    color: #f00;
+    content: " ■";
+  }
+
+  /* line 312, ../scss/parts/_plone.scss */
+  #content fieldset.formPanel {
+    border: none;
+  }
+
+  /* line 315, ../scss/parts/_plone.scss */
+  #content fieldset.formPanel.hidden {
+    display: none;
+  }
+
+  /* line 318, ../scss/parts/_plone.scss */
+  #content div.formControls input.hidden {
+    display: none;
+  }
+
+  /*----- Status messages -----*/
+  /* line 323, ../scss/parts/_plone.scss */
+  .portalMessage {
+    background-color: #ffffe3;
+    border: 1px solid #996;
+    clear: both;
+    margin: 1em 0;
+  }
+
+  /* line 329, ../scss/parts/_plone.scss */
+  .portalMessage dl {
+    margin: 0;
+  }
+
+  /* line 332, ../scss/parts/_plone.scss */
+  .portalMessage a {
+    border-bottom: 1px dotted;
+    color: #000;
+  }
+
+  /* line 336, ../scss/parts/_plone.scss */
+  .portalMessage dt {
+    background-color: #996;
+    color: #fff;
+    font-weight: bold;
+    float: left;
+    line-height: 1.25em;
+    margin: 0 0.5em 0 0;
+    max-width: 30%;
+    padding: 0.5em 0.75em;
+  }
+
+  /* line 346, ../scss/parts/_plone.scss */
+  .portalMessage dd {
+    line-height: 1.25em;
+    margin: 0;
+    padding: 0.5em 0.5em;
+  }
+
+  /* line 351, ../scss/parts/_plone.scss */
+  dl.warning {
+    border-color: #d80;
+  }
+
+  /* line 354, ../scss/parts/_plone.scss */
+  dl.warning dt {
+    background-color: #d80;
+  }
+
+  /* line 357, ../scss/parts/_plone.scss */
+  dl.warning dd {
+    background-color: #fd7;
+  }
+
+  /* line 360, ../scss/parts/_plone.scss */
+  dl.error {
+    border-color: #d00;
+  }
+
+  /* line 363, ../scss/parts/_plone.scss */
+  dl.error dt {
+    background-color: #d00;
+  }
+
+  /* line 366, ../scss/parts/_plone.scss */
+  dl.error dd {
+    background-color: #fdc;
+  }
+
+  /*----- Overlays -----*/
+  /* line 371, ../scss/parts/_plone.scss */
+  .overlay {
+    display: none;
+    height: auto;
+    margin: 1em;
+    width: auto;
+  }
+
+  /* line 378, ../scss/parts/_plone.scss */
+  .overlay-iframe,
+  .overlay-ajax {
+    min-height: 100px;
+    width: 600px;
+    z-index: 99;
+  }
+
+  /* line 383, ../scss/parts/_plone.scss */
+  .overlay-iframe {
+    height: 60%;
+  }
+
+  /* line 387, ../scss/parts/_plone.scss */
+  .overlaybg div.close,
+  .overlay div.close {
+    background: url(../images/pb_close.png) no-repeat 0 0;
+    cursor: pointer;
+    height: 30px;
+    left: -14px;
+    position: absolute;
+    top: -14px;
+    width: 30px;
+  }
+
+  /* line 396, ../scss/parts/_plone.scss */
+  .pb-ajax {
+    overflow-y: auto;
+  }
+
+  /* line 400, ../scss/parts/_plone.scss */
+  .pb-ajax,
+  .pb-image {
+    background-color: #fff;
+    border: 1px solid #999;
+    white-space: normal;
+    box-shadow: 0 0 3em 0.5em #666;
+    -moz-box-shadow: 0 0 3em 0.5em #666;
+    -webkit-box-shadow: 0 0 3em #666;
+  }
+
+  /* line 408, ../scss/parts/_plone.scss */
+  .pb-ajax > div {
+    padding: 1em;
+  }
+
+  /* line 411, ../scss/parts/_plone.scss */
+  .pb-ajax .documentActions {
+    display: none;
+  }
+
+  /* line 414, ../scss/parts/_plone.scss */
+  div.overlay div.close span {
+    display: block;
+    height: 1px;
+    margin: -1px 0 0 -1px;
+    overflow: hidden;
+    padding: 0;
+    width: 1px;
+  }
+
+  /* line 422, ../scss/parts/_plone.scss */
+  .overlay textarea {
+    width: 100%;
+  }
+
+  /* line 425, ../scss/parts/_plone.scss */
+  .overlay .link-parent {
+    display: none;
+  }
+
+  /* line 426, ../scss/parts/_plone.scss */
+  .overlay #createGroup legend {
+    display: none;
+  }
+
+  /* line 427, ../scss/parts/_plone.scss */
+  .overlay #createGroup fieldset {
+    border: none;
+  }
+
+  /* line 428, ../scss/parts/_plone.scss */
+  .overlay p {
+    margin-bottom: 1em;
+  }
+
+  /* line 431, ../scss/parts/_plone.scss */
+  .overlay label {
+    margin-bottom: 0.25em;
+  }
+
+  /* line 434, ../scss/parts/_plone.scss */
+  .overlay a:hover {
+    color: #75ad0a;
+  }
+
+  /* line 437, ../scss/parts/_plone.scss */
+  .overlay a.selected {
+    color: #000000;
+  }
+
+  /* line 440, ../scss/parts/_plone.scss */
+  .overlay .formTab {
+    margin-right: 1em;
+    font-weight: bold;
+  }
+
+  /* line 444, ../scss/parts/_plone.scss */
+  .overlay .formTab.lastFormTab {
+    margin-right: 0em;
+  }
+
+  /* line 447, ../scss/parts/_plone.scss */
+  .overlay .formControls a {
+    display: block;
+    margin: 0.75em;
+  }
+
+  /*----- Login form -----*/
+  /* line 454, ../scss/parts/_plone.scss */
+  #fieldset-openid-login input,
+  #login-form input {
+    font-size: 150%;
+  }
+
+  /* line 458, ../scss/parts/_plone.scss */
+  body.template-register #content input,
+  body.template-new-user #content input {
+    font-size: 150%;
+    width: inherit;
+  }
+
+  /* line 463, ../scss/parts/_plone.scss */
+  #fieldset-openid-login label,
+  #login-form label {
+    display: inline-block;
+    margin-right: 0.5em;
+    padding-top: 0.2em;
+    width: 10em;
+  }
+
+  /* line 470, ../scss/parts/_plone.scss */
+  #fieldset-openid-login .formControls,
+  #login-form .formControls {
+    padding-left: 10.7em;
+  }
+
+  /*----- Content History -----*/
+  /* line 475, ../scss/parts/_plone.scss */
+  div.historyRecord {
+    margin-bottom: 1em;
+  }
+
+  /* line 478, ../scss/parts/_plone.scss */
+  div.historyTools ul {
+    float: right;
+    margin: 0.5em 1em;
+  }
+
+  /* line 482, ../scss/parts/_plone.scss */
+  div.historyTools ul li {
+    display: inline;
+    padding: 0 0.015em;
+  }
+
+  /* line 486, ../scss/parts/_plone.scss */
+  div.historyTools form {
+    display: inline;
+  }
+
+  /* line 489, ../scss/parts/_plone.scss */
+  .historyByLine {
+    background: #ddd;
+    padding: 0.5em;
+  }
+
+  /* line 493, ../scss/parts/_plone.scss */
+  div.historyLinks {
+    clear: right;
+    float: right;
+    margin: 0.5em 1em 0 0;
+  }
+
+  /* line 498, ../scss/parts/_plone.scss */
+  div.historyComment {
+    border: 1px solid #ddd;
+    padding: 0.5em 1em;
+  }
+
+  /* line 502, ../scss/parts/_plone.scss */
+  div.historyComment p {
+    margin: 0;
+    padding-top: 1px;
+  }
+
+  /* line 506, ../scss/parts/_plone.scss */
+  a.historyComparePrevious {
+    border-top: 1px dotted #ccc;
+    display: block;
+    margin-top: 3em;
+    text-align: center;
+  }
+
+  /* line 512, ../scss/parts/_plone.scss */
+  a.historyComparePrevious span {
+    background-color: white;
+    position: relative;
+    top: -0.75em;
+    padding: 0 0.5em;
+  }
+
+  /*----- Data tables -----*/
+  /* line 521, ../scss/parts/_plone.scss */
+  table.listing,
+  table.plain {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 0 0 0.75em;
+    width: 100%;
+  }
+
+  /* line 532, ../scss/parts/_plone.scss */
+  table.invisible td,
+  table.invisible th,
+  table.plain td,
+  table.plain th,
+  table.listing td,
+  table.listing th {
+    padding: 0.5em 1em;
+    vertical-align: top;
+  }
+
+  /* line 537, ../scss/parts/_plone.scss */
+  table.plain th,
+  table.plain td {
+    border: 1px solid #ddd;
+  }
+
+  /* line 541, ../scss/parts/_plone.scss */
+  table.listing td.listingCheckbox,
+  table.listing th.listingCheckbox {
+    text-align: center;
+  }
+
+  /* line 544, ../scss/parts/_plone.scss */
+  table.listing {
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* line 548, ../scss/parts/_plone.scss */
+  table.listing .top {
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+
+  /* line 553, ../scss/parts/_plone.scss */
+  table.listing th {
+    background: #ddd;
+    border: 0.1em solid #e7e7e7;
+    border-style: solid solid none;
+    color: #666;
+    text-align: left;
+  }
+
+  /* line 560, ../scss/parts/_plone.scss */
+  table.listing tr.odd th {
+    border: 0.1em solid #fff;
+    border-style: solid solid none none;
+  }
+
+  /* line 564, ../scss/parts/_plone.scss */
+  table.listing tbody th {
+    font-weight: bold;
+  }
+
+  /* line 567, ../scss/parts/_plone.scss */
+  table.listing tbody tr {
+    text-align: left;
+  }
+
+  /* line 570, ../scss/parts/_plone.scss */
+  table.listing tbody tr.odd {
+    background: #eee;
+  }
+
+  /* line 573, ../scss/parts/_plone.scss */
+  table.listing tbody tr td {
+    background: transparent;
+  }
+
+  /* line 576, ../scss/parts/_plone.scss */
+  table.listing tbody tr.odd td {
+    background: #eee;
+  }
+
+  /* line 579, ../scss/parts/_plone.scss */
+  table.listing td {
+    border-right: 1px solid #ddd;
+  }
+
+  /* line 582, ../scss/parts/_plone.scss */
+  table.listing a {
+    border: none;
+    display: inline-block;
+  }
+
+  /* line 586, ../scss/parts/_plone.scss */
+  table.listing td.draggable {
+    background: #ddd !important;
+    border-bottom: 1px solid white;
+    padding: 0.4em 0.4em 0 0.5em;
+    text-shadow: #fff 1px 1px 1px;
+  }
+
+  /* Vertical table data listings */
+  /* line 594, ../scss/parts/_plone.scss */
+  table.vertical th {
+    text-align: right;
+  }
+
+  /* line 597, ../scss/parts/_plone.scss */
+  table.vertical td {
+    border-top: 0.1em solid #e7e7e7;
+    padding: 0.5em;
+  }
+
+  /* Grid table listings */
+  /* line 604, ../scss/parts/_plone.scss */
+  table.grid td,
+  table.grid th {
+    border: 1px solid #e7e7e7;
+    padding: 0.5em;
+  }
+
+  /* line 608, ../scss/parts/_plone.scss */
+  .dragindicator {
+    outline: 2px solid #ffd700;
+  }
+
+  /* line 611, ../scss/parts/_plone.scss */
+  #foldercontents-order-column {
+    padding: 0;
+  }
+
+  /* Listing Bar */
+  /* line 616, ../scss/parts/_plone.scss */
+  .listingBar {
+    margin: 1em 0;
+    text-align: center;
+  }
+
+  /* line 620, ../scss/parts/_plone.scss */
+  .listingBar .previous {
+    float: left;
+  }
+
+  /* line 623, ../scss/parts/_plone.scss */
+  .listingBar .next {
+    float: right;
+  }
+
+  /* line 626, ../scss/parts/_plone.scss */
+  .listingBar .previous {
+    display: inline-block;
+  }
+
+  /* line 630, ../scss/parts/_plone.scss */
+  .listingBar a,
+  .listingBar .current {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+  }
+
+  /*---------- DASHBOARD ----------*/
+  /* line 639, ../scss/parts/_plone.scss */
+  #dashboard-portlets1,
+  #dashboard-portlets2,
+  #dashboard-portlets3,
+  #dashboard-portlets4 {
+    float: left;
+    margin-right: 1.3%;
+    width: 24%;
+  }
+
+  /* line 644, ../scss/parts/_plone.scss */
+  #dashboard-portlets4 {
+    margin-right: 0;
+  }
+
+  /*---------- ALBUM ----------*/
+  /* line 649, ../scss/parts/_plone.scss */
+  .photoAlbumEntry {
+    background: url(../images/album.png) no-repeat;
+    float: left;
+    font-size: 0.92em;
+    height: 162px;
+    line-height: 1.36em;
+    margin: 0 6px 6px;
+    padding: 8px 7px 8px 6px;
+    width: 132px;
+  }
+
+  /* line 659, ../scss/parts/_plone.scss */
+  .photoAlbumFolder {
+    background-position: 0 -178px;
+  }
+
+  /* line 662, ../scss/parts/_plone.scss */
+  .photoAlbumEntry a {
+    display: block;
+    height: 162px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+  }
+
+  /* line 669, ../scss/parts/_plone.scss */
+  .photoAlbumEntry a:after {
+    background-color: rgba(241, 241, 241, 0.4);
+    bottom: 0;
+    content: "";
+    height: 8px;
+    position: absolute;
+    width: 100%;
+  }
+
+  /* line 677, ../scss/parts/_plone.scss */
+  .photoAlbumEntryWrapper {
+    display: block;
+    text-align: center;
+  }
+
+  /* line 681, ../scss/parts/_plone.scss */
+  .photoAlbumEntry img {
+    border: 2px solid #fff;
+  }
+
+  /* line 684, ../scss/parts/_plone.scss */
+  .photoAlbumEntryTitle {
+    color: #757373;
+    display: block;
+    padding: 4px 3px 0;
+    width: 126px;
+  }
+
+  /* line 690, ../scss/parts/_plone.scss */
+  .photoAlbumEntry a:hover {
+    overflow: visible;
+  }
+
+  /* line 693, ../scss/parts/_plone.scss */
+  .photoAlbumEntry a:hover .photoAlbumEntryTitle {
+    background-color: #f1f1f1;
+    background-color: rgba(241, 241, 241, 0.8);
+    bottom: 0;
+    min-height: 50%;
+    position: absolute;
+  }
+
+  /*----- Accessibility elements, applied by JS -----*/
+  /* line 702, ../scss/parts/_plone.scss */
+  body.largeText {
+    font-size: 81%;
+  }
+
+  /* line 705, ../scss/parts/_plone.scss */
+  body.smallText {
+    font-size: 56%;
+  }
+
+  /*---------- COMMENTING ----------*/
+  /* line 710, ../scss/parts/_plone.scss */
+  .discussion .hide {
+    display: none;
+  }
+
+  /* line 713, ../scss/parts/_plone.scss */
+  .discussion {
+    clear: both;
+    font-size: 1.09em;
+  }
+
+  /* line 717, ../scss/parts/_plone.scss */
+  .comment {
+    padding: 0 0 9px;
+  }
+
+  /* line 720, ../scss/parts/_plone.scss */
+  .commentImage {
+    float: left;
+    padding: 5px 7px;
+  }
+
+  /* line 724, ../scss/parts/_plone.scss */
+  .discussion .documentByLine {
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 5px;
+  }
+
+  /* line 729, ../scss/parts/_plone.scss */
+  .commentBody {
+    border-color: #d9d9d9 #f1f1f1 #f1f1f1;
+    border-style: solid;
+    border-width: 1px;
+    clear: both;
+    margin: 0 0 5px;
+    padding: 5px;
+    overflow: auto;
+  }
+
+  /* line 738, ../scss/parts/_plone.scss */
+  .commentActions {
+    text-align: right;
+  }
+
+  /* line 741, ../scss/parts/_plone.scss */
+  .reply-to-comment-button {
+    margin-left: 11px;
+  }
+
+  /* line 744, ../scss/parts/_plone.scss */
+  .reply {
+    background-color: #f1f1f1;
+    clear: both;
+    font-size: 1.09em;
+    margin: 35px 0 0;
+    padding: 5px 7px;
+    position: relative;
+  }
+
+  /* line 752, ../scss/parts/_plone.scss */
+  .reply fieldset {
+    margin: 0;
+  }
+
+  /* line 755, ../scss/parts/_plone.scss */
+  .reply legend {
+    font-weight: bold;
+    position: absolute;
+    top: -28px;
+  }
+
+  /* line 760, ../scss/parts/_plone.scss */
+  .reply p {
+    color: #76797c;
+    font-size: 0.92em;
+  }
+
+  /* line 764, ../scss/parts/_plone.scss */
+  .reply textarea {
+    min-height: 50px;
+    width: 100%;
+  }
+
+  /*----- Collapsible -----*/
+  /* line 770, ../scss/parts/_plone.scss */
+  dl.collapsible {
+    border: 0.1em solid #8cacbb;
+    margin: 1em 0;
+    padding: 0;
+  }
+
+  /* line 775, ../scss/parts/_plone.scss */
+  dl.collapsible dt.collapsibleHeader {
+    display: block;
+    float: left;
+    background: White;
+    line-height: 1.2em;
+    vertical-align: middle;
+    font-size: 90%;
+    position: relative;
+    top: -0.6em;
+    width: auto;
+    margin: 0 0 -0.6em 1em;
+    padding: 0 0.5em;
+  }
+
+  /* line 788, ../scss/parts/_plone.scss */
+  dl.collapsible dd.collapsibleContent {
+    margin: 0;
+    padding: 0 1em 0.4em;
+    clear: left;
+  }
+
+  /* for IE the following isn't needed, that's why the css2 selector is used */
+  /* line 795, ../scss/parts/_plone.scss */
+  dl.collapsible dd.collapsibleContent > dl {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 800, ../scss/parts/_plone.scss */
+  dl.expandedInlineCollapsible dt.collapsibleHeader,
+  dl.expandedBlockCollapsible dt.collapsibleHeader {
+    background: url(../images/treeExpanded.png) no-repeat 0.5em 50% white;
+    cursor: pointer;
+    padding: 0 0.5em 0 2em;
+  }
+
+  /* line 805, ../scss/parts/_plone.scss */
+  dl.collapsedBlockCollapsible {
+    border: none;
+    height: 1em;
+    width: auto;
+  }
+
+  /* line 811, ../scss/parts/_plone.scss */
+  dl.collapsedInlineCollapsible dt.collapsibleHeader,
+  dl.collapsedBlockCollapsible dt.collapsibleHeader {
+    float: none;
+    position: relative;
+    margin: 0 0 0 1em;
+    padding: 0 0.5em 0 2em;
+    line-height: 1.2em;
+    cursor: pointer;
+    background: white url(../images/treeCollapsed.png) no-repeat 0.5em 50%;
+  }
+
+  /* line 821, ../scss/parts/_plone.scss */
+  dl.collapsedInlineCollapsible dd.collapsibleContent,
+  dl.collapsedBlockCollapsible dd.collapsibleContent {
+    display: none;
+  }
+
+  /* line 824, ../scss/parts/_plone.scss */
+  dl.collapsedInlineCollapsible {
+    border: 0;
+    height: 1em;
+    width: auto;
+    display: inline;
+  }
+
+  /* line 830, ../scss/parts/_plone.scss */
+  dl.collapsedInlineCollapsible dt.collapsibleHeader {
+    position: static;
+    float: none;
+    margin: 0;
+    padding: 0 0 0 2em;
+    line-height: 1em;
+    cursor: pointer;
+    display: inline;
+  }
+
+  /* line 839, ../scss/parts/_plone.scss */
+  .collapsible .collapser.collapsed:after {
+    content: " ▶";
+  }
+
+  /* line 842, ../scss/parts/_plone.scss */
+  .collapsible .collapser.expanded:after {
+    content: " ▼";
+  }
+
+  /*---------- CONTENT TYPE ICONS ----------*/
+  /* line 847, ../scss/parts/_plone.scss */
+  .icons-on .contenttype-folder {
+    background: url(../images/icons-sprite.png) no-repeat 0 -1600px;
+    display: inline-block;
+    padding-left: 19px;
+  }
+
+  /* line 852, ../scss/parts/_plone.scss */
+  .icons-on .contenttype-document {
+    background: url(../images/icons-sprite.png) no-repeat 0 -1800px;
+    display: inline-block;
+    padding-left: 19px;
+  }
+
+  /* line 857, ../scss/parts/_plone.scss */
+  .icons-on .contenttype-news-item {
+    background: url(../images/icons-sprite.png) no-repeat 0 -2000px;
+    display: inline-block;
+    padding-left: 19px;
+  }
+
+  /* line 862, ../scss/parts/_plone.scss */
+  .icons-on .contenttype-event {
+    background: url(../images/icons-sprite.png) no-repeat 0 -2201px;
+    display: inline-block;
+    padding-left: 19px;
+  }
+
+  /* line 867, ../scss/parts/_plone.scss */
+  .icons-on .contenttype-topic {
+    background: url(../images/icons-sprite.png) no-repeat 0 -2402px;
+    display: inline-block;
+    padding-left: 19px;
+  }
+
+  /* line 872, ../scss/parts/_plone.scss */
+  .icons-on .contenttype-image {
+    background: url(../images/icons-sprite.png) no-repeat 0 -2601px;
+    display: inline-block;
+    padding-left: 19px;
+  }
+
+  /* line 877, ../scss/parts/_plone.scss */
+  .icons-on .contenttype-link {
+    background: url(../images/icons-sprite.png) no-repeat 0 -2997px;
+    display: inline-block;
+    padding-left: 19px;
+  }
+
+  /* line 882, ../scss/parts/_plone.scss */
+  .icons-on img[alt='File'] {
+    margin-right: 3px;
+  }
+
+  /* Add new */
+  /* line 886, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li a {
+    background: url(../images/icons-sprite.png) no-repeat 1px -1199px;
+    display: block;
+    padding-left: 17px;
+  }
+
+  /* line 891, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li a:hover {
+    background-color: #fff;
+    background-position: 1px -2799px;
+  }
+
+  /* line 895, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li .contenttype-folder {
+    background-position: 1px 2px;
+  }
+
+  /* line 898, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li .contenttype-folder:hover {
+    background-position: 2px -1598px;
+  }
+
+  /* line 901, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li .contenttype-document {
+    background-position: 1px -199px;
+  }
+
+  /* line 904, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li .contenttype-document:hover {
+    background-position: 2px -1799px;
+  }
+
+  /* line 907, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li .contenttype-news-item {
+    background-position: 1px -399px;
+  }
+
+  /* line 910, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li .contenttype-news-item:hover {
+    background-position: 2px -1999px;
+  }
+
+  /* line 913, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li .contenttype-event {
+    background-position: 1px -599px;
+  }
+
+  /* line 916, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li .contenttype-event:hover {
+    background-position: 2px -2199px;
+  }
+
+  /* line 919, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li .contenttype-topic {
+    background-position: 1px -800px;
+  }
+
+  /* line 922, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li .contenttype-topic:hover {
+    background-position: 2px -2400px;
+  }
+
+  /* line 925, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li .contenttype-image {
+    background-position: 1px -999px;
+  }
+
+  /* line 928, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li .contenttype-image:hover {
+    background-position: 2px -2599px;
+  }
+
+  /* line 931, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li .contenttype-file {
+    background-position: 1px -1199px;
+  }
+
+  /* line 934, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li .contenttype-file:hover {
+    background-position: 2px -2799px;
+  }
+
+  /* line 937, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li .contenttype-link {
+    background-position: 1px -1395px;
+  }
+
+  /* line 940, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories li .contenttype-link:hover {
+    background-position: 2px -2995px;
+  }
+
+  /* line 943, ../scss/parts/_plone.scss */
+  #plone-contentmenu-factories #settings {
+    background-image: none;
+    padding: 0;
+  }
+}
+/*----- Smaller than standard 960 (devices and browsers) -----*/
+/*----- Tablet Portrait size to standard 960 (devices and browsers) -----*/
+/*----- All Mobile Sizes (devices and browser) -----*/
+@media only screen and (max-width: 767px) {
+  /* ==========================================================================
+       Mobile styles
+       ========================================================================== */
+  /* line 4, ../scss/parts/_mobile.scss */
+  div.row {
+    float: none;
+    width: auto;
+  }
+
+  /* line 8, ../scss/parts/_mobile.scss */
+  div.cell {
+    float: none;
+    left: auto;
+    margin: 0 !important;
+    width: auto !important;
+  }
+}
+@media print {
+  /* Removes certain elements when printing, and apply basic font styles
+     for the remaining content. */
+  /* line 4, ../scss/parts/_print.scss */
+  body {
+    font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
+  }
+
+  /* line 7, ../scss/parts/_print.scss */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
+    font-weight: bold;
+    line-height: 125%;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+  }
+
+  /* line 14, ../scss/parts/_print.scss */
+  h1, h2 {
+    letter-spacing: -0.05em;
+  }
+
+  /* line 17, ../scss/parts/_print.scss */
+  a {
+    text-decoration: none;
+    border-bottom: 0.1em solid gray;
+    color: black;
+  }
+
+  /* line 22, ../scss/parts/_print.scss */
+  #portal-column-content {
+    width: 95%;
+  }
+
+  /* line 26, ../scss/parts/_print.scss */
+  .documentDescription {
+    font-weight: bold;
+  }
+
+  /* line 29, ../scss/parts/_print.scss */
+  pre {
+    border: 1pt dotted black;
+    white-space: pre;
+    font-size: 8pt;
+    overflow: auto;
+    padding: 1em;
+  }
+
+  /* line 37, ../scss/parts/_print.scss */
+  table.listing,
+  table.listing td {
+    border: 1pt solid black;
+    border-collapse: collapse;
+  }
+
+  /* line 42, ../scss/parts/_print.scss */
+  table.listing td,
+  table.listing th {
+    padding: 6px;
+  }
+
+  /* Page break class for use when printing */
+  /* line 47, ../scss/parts/_print.scss */
+  div.pageBreak {
+    page-break-before: always;
+  }
+
+  /* Basic styles for listing and document views */
+  /* line 52, ../scss/parts/_print.scss */
+  #content dt {
+    margin: 1em 0 0.625em;
+  }
+
+  /* line 55, ../scss/parts/_print.scss */
+  #content p, #content table {
+    margin-bottom: 0.625em;
+    margin-top: 0.625em;
+  }
+
+  /* line 59, ../scss/parts/_print.scss */
+  #content .documentDescription, #content #description {
+    margin: 0.5em 0 1.31em;
+  }
+
+  /* Uncomment these if you want link addresses inserted along with the link text
+     when you print.
+  #content a:link:after,
+  #content a:visited:after {
+     content: " [" attr(href) "] ";
+  }
+  */
+  /* Hide all the elements that are irrelevant for printing */
+  /* line 113, ../scss/parts/_print.scss */
+  div.top,
+  #portal-logo,
+  #portal-siteactions,
+  .hiddenStructure,
+  #portal-searchbox,
+  #portal-globalnav,
+  #portal-personaltools,
+  #portal-breadcrumbs,
+  #edit-bar,
+  #portal-column-one,
+  #portal-column-two,
+  #portal-languageselector,
+  .contentViews,
+  .contentActions,
+  .help,
+  .legend,
+  .portalMessage,
+  .documentActions,
+  .netscape4,
+  #viewlet-below-content .reply,
+  #viewlet-below-content .discussion,
+  #kss-spinner,
+  #review-history,
+  #content-history,
+  .listingBar,
+  #portal-footer,
+  #portal-colophon,
+  .skipnav,
+  #kss-spinner,
+  #review-history,
+  #content-history,
+  .listingBar,
+  .link-presentation,
+  input.standalone,
+  .overlay,
+  .managePortletsFallback,
+  .close,
+  .link-parent,
+  .draggingHook,
+  #foldercontents-order-column,
+  input.context,
+  .visualNoPrint {
+    display: none;
+  }
+
+  /* Image alignment classes */
+  /* line 118, ../scss/parts/_print.scss */
+  .image-left {
+    float: left;
+    clear: both;
+    margin: 0.5em 1em 0.5em 0;
+    border: 0.4pt solid Black;
+  }
+
+  /* line 124, ../scss/parts/_print.scss */
+  .image-inline {
+    float: none;
+  }
+
+  /* line 127, ../scss/parts/_print.scss */
+  .image-right {
+    float: right;
+    clear: both;
+    margin: 0.5em;
+    border: 0.4pt solid Black;
+  }
+
+  /* line 133, ../scss/parts/_print.scss */
+  dd.image-caption {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* line 137, ../scss/parts/_print.scss */
+  dl.captioned {
+    padding: 0.8em;
+  }
+
+  /* line 140, ../scss/parts/_print.scss */
+  .newsImageContainer {
+    float: right;
+    margin: 0 0 0.5em 1em;
+    width: 16em;
+  }
+}

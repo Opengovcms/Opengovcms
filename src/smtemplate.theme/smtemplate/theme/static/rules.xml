@@ -14,6 +14,18 @@
             <xsl:value-of select="." />
         </div>
     </xsl:template>
+    <xsl:template css:match=".photoAlbumFolder">
+        <div class="photoAlbumVisual">
+            <div class="photoAlbumShadow">
+                <div class="photoAlbumFolder">
+                    <xsl:copy-of select="@*" />
+                    <xsl:apply-templates />
+                </div>
+            </div>
+        </div>
+    </xsl:template>
+    <replace content="//*[contains(concat(' ', normalize-space(@class), ' '), ' navTreeItem ')]/a/@class" />
+    <replace content="//*[contains(concat(' ', normalize-space(@class), ' '), ' navTreeItem ')]/div/a/@class" />
 
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
@@ -24,14 +36,7 @@
         <!-- Header -->
         <drop css:theme="meta[http-equiv='Content-type']" />
         <drop css:content="meta[name='viewport']" />
-        <drop css:content="link[href$='public.css']" />
-        <drop css:content="link[href$='columns.css']" />
-        <drop css:content="link[href$='portlets.css']" />
-        <drop css:content="link[href$='discussion.css']" />
-        <drop css:content="link[href$='ploneKss.css']" />
-        <drop css:content="link[href$='print.css']" />
-        <drop css:content="link[href$='mobile.css']" />
-        <drop css:content="link[href*='base-cachekey']" />
+        <drop css:content="link[href$='.css']" />
         <drop css:content="link[href$='favicon.ico']" />
         <before content="/html/head/meta" css:theme="meta[name='viewport']" />
         <before content="/html/head/base" theme="/html/head/title" />
@@ -44,7 +49,7 @@
         <merge attributes="dir class" css:content="body" css:theme="body" />
 
         <!-- Top -->
-        <before css:content="#portal-header > p.hiddenStructure" css:theme-children="#portal-header" />
+        <before css:content="#portal-header > p.hiddenStructure:first-child" css:theme-children="#portal-header" />
         <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
         <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" method="raw" />
         <drop css:content="#portal-siteactions" />
@@ -62,6 +67,10 @@
         <!-- Portlets -->
         <replace css:content="#portal-column-one" css:theme="#portal-column-one" />
         <replace css:content="#portal-column-two" css:theme="#portal-column-two" />
+        <drop css:content=".portletTopLeft" />
+        <drop css:content=".portletTopRight" />
+        <drop css:content=".portletBottomLeft" />
+        <drop css:content=".portletBottomRight" />
 
         <!-- Content -->
         <strip css:content="#portal-column-content > div:not(#viewlet-above-content):not(#viewlet-below-content)" if-content="//div[@id='portal-column-content']/div/div[@id='content']" />
@@ -71,7 +80,7 @@
         <drop css:content="#plone-contentmenu-factories li a img" />
 
         <!-- Footer -->
-        <replace css:content="#portal-footer-wrapper" css:theme="#portal-footer" />
+        <replace css:content="#portal-footer-wrapper" css:theme="#portal-footer-wrapper" />
 
     </rules>
 </rules>

@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <title></title> 
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet/less" type="text/css" href="less/styles.less" />
-    <script src="js/less.js" type="text/javascript"></script>
+    <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <style type="text/css"> </style>
@@ -15,10 +14,11 @@
         <div id="portal-top" class="row">
             <div class="cell width-full position-0">
                 <div id="portal-header">
-                    <p class="hiddenStructure">
-                        <a accesskey="2" href="#content">Skip to content.</a> |
-                        <a accesskey="6" href="#portal-globalnav">Skip to navigation</a>
-                    </p>
+                    <ul id="portal-siteactions">
+                        <li id="siteaction-sitemap"><a accesskey="3" title="Site Map" href="http://devel.sm-template.quintagroup.com/sitemap">Site Map</a></li>
+                        <li id="siteaction-accessibility"><a accesskey="0" title="Accessibility" href="http://devel.sm-template.quintagroup.com/accessibility-info">Accessibility</a></li>
+                        <li id="siteaction-contact"><a accesskey="9" title="Contact" href="http://devel.sm-template.quintagroup.com/contact-info" rel="#pb_1" class="link-overlay" style="cursor: pointer;">Contact</a></li>
+                    </ul>
                     <div id="portal-personaltools-wrapper">
                         <h5 class="hiddenStructure">Personal tools</h5>
                         <ul class="actionMenu deactivated" id="portal-personaltools">
@@ -43,6 +43,7 @@
                             <a accesskey="5" href="@@search">Advanced Search&hellip;</a>
                         </div>
                     </div>
+                    <p class="hiddenStructure">Navigation</p>
                     <ul id="theme-globalnav"><li class="plain" id="portaltab-1"><a title="portaltab-1" href="portaltab-1">portaltab-1</a></li><li class="selected" id="portaltab-2"><a title="portaltab-2" href="portaltab-2">portaltab-2</a></li><li class="plain" id="portaltab-3"><a title="portaltab-3" href="portaltab-3">portaltab-3</a></li><li class="plain" id="portaltab-4"><a title="portaltab-4" href="portaltab-4">portaltab-4</a></li></ul>             
                     <a href="." title="Home" id="portal-logo">
                         <img width="348" height="99" alt="Python Reel Theme Logo" src="images/logo.png" /></a>
@@ -97,14 +98,7 @@
                 </div>
             </div>   
         </div>
-        <div id="portal-bottom">
-            <div id="portal-footer-wrapper" class="row">
-                <div class="cell width-full position-0">
-                    <div id="portal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id="portal-footer-wrapper" class="row"></div>
     </div>
 </body>
 </html>

@@ -1,34 +1,35 @@
-/*!
- * Bootstrap v2.3.2
- *
- * Copyright 2012 Twitter, Inc
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Designed and built with all the love in the world @twitter by @mdo and @fat.
- */
+@import "fonts.less";
+@import "settings.less";
 
-// Core variables and mixins
-@import "variables.less"; // Modify this for custom colors, font-sizes, etc
-@import "mixins.less";
-
-// CSS Reset
 @import "normalize.less";
+@import "columns.less";
+@import "general.less";
+@import "base.less";
+@import "forms.less";
+@import "theme.less";
+@import "portlets.less";
+@import "authoring.less";
+@import "controlpanel.less";
 
-// Grid system and page structure
-// @import "scaffolding.less";
-// @import "grid.less";
-// @import "layouts.less";
+ /*----- Smaller than standard 960 (devices and browsers) -----*/
+@media only screen and (max-width: 959px) {
 
-// Base CSS
-// @import "type.less";
-// @import "code.less";
-// @import "forms.less";
-// @import "tables.less";
+}
 
-// Components: common
-// @import "sprites.less";
-// @import "dropdowns.less";
-// @import "wells.less";
-// @import "component-animations.less";
-// @import "close.less";
+/*----- Tablet Portrait size to standard 960 (devices and browsers) -----*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+}
+
+/*----- All Mobile Sizes (devices and browser) -----*/
+@media only screen and (max-width: 767px) {
+
+@import "mobile.less";
+
+}
+
+@media print {
+
+@import "print.less";
+
+}

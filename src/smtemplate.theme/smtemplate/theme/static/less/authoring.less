@@ -1,0 +1,183 @@
+/* @group Editing */
+
+/* @group Tabs */
+
+.formTabs {
+  background-color: #e3e3e3;
+  margin: 0 0 1em;
+  padding: 3px 3px 0;
+}
+#edit-bar {
+  background-color: #75ad0a;
+  margin: 0 0 1em;
+  padding: 3px 0 0 3px;
+}
+#edit-bar:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+#content-views {
+  background-color: #75ad0a;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+#content-views li {
+  display: inline;
+  }
+#content-views a {
+  color: #fff;
+  display: inline-block;
+  padding: 3px 9px;
+  text-decoration: none;
+}
+#content-views li.selected a,
+#content-views li a:hover {
+  background: #fff;
+  color: #000;
+}
+#content-views li.selected a {
+  font-weight: bold;
+}
+#plone-contentmenu-workflow dt a {
+  padding: 0 3px;
+}
+#plone-contentmenu-workflow .state-private {
+  background-color: #f00;
+  display: inline-block;
+  padding: 3px 5px;
+}
+#plone-contentmenu-workflow .state-published {
+  background-color: @mainColor;
+  display: inline-block;
+  padding: 3px 5px;
+}
+.formTab {
+  display: inline;
+  margin-right: 0.25em;
+}
+.formTab a {
+  display: inline-block;
+  line-height: 2em;
+  padding: 0 0.75em;
+  text-decoration: none;
+}
+.formTab a:hover,
+.formTab a.selected {
+  background: #fff;
+  color: #000;
+}
+a.notify {
+  background-color: red;
+  color: White;
+}
+span.required:after {
+  content: "■";
+  color: Red;
+  padding-left: 0.2em;
+}
+.formPanel {
+  border: 0;
+  padding: 0;
+}
+.formPanel.hidden {
+  display: none;
+}
+.formControls input.hidden {
+  display: none;
+}
+
+/* @end */
+
+/* @group Pulldown menus */
+
+#contentActionMenus {
+  margin: 0;
+  padding: 0;
+}
+#contentActionMenus > li {
+  display: inline;
+}
+.actionMenu {
+  margin: 0;
+  position: relative;
+  white-space: nowrap;
+}
+#contentActionMenus .actionMenu {
+  float: right;
+}
+.actionMenu a {
+  display: block;
+  padding: 3px;
+  text-decoration: none;
+}
+.contentActions .actionMenu a {
+  color: #fff;
+}
+#contentActionMenus .actionMenu dd a:hover {
+  color: #666;
+}
+.actionMenu dd {
+  background-color: #75ad0a;
+  margin: 0;
+  min-width: 100%;
+  padding: 0 3px 3px;
+  position:absolute;
+  right: 0;
+  z-index: 5;
+}
+.actionMenu.deactivated dd {
+  display: none;
+}
+.actionMenu dd a:hover,
+.actionMenu dd .actionMenuSelected {
+  background-color:#fff;
+  color:#666;
+  }
+.actionMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+.subMenuTitle {
+  display:block;
+  padding:0 3px;
+  }
+
+/* @group Personal tools pulldown */
+#portal-personaltools {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#portal-personaltools {
+  list-style: none;
+  padding: 0;
+}
+#portal-personaltools .actionMenuHeader a:after {
+  content: " ▼";
+}
+#portal-personaltools dd {
+  background-color: #e3e3e3;
+  padding: 0.5em 0;
+}
+#portal-personaltools dd a {
+  line-height: 2em;
+  padding: 0 0.75em;
+}
+/* @end */
+
+/* @group Content pulldowns */
+
+#folderHeader, 
+#contextHeader {
+  border-bottom: 2px solid white;
+}
+#contextHeader { 
+  margin-top: 5px; 
+}
+
+/* @end */
+
+/* @end */

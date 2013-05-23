@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <object>
   <layout>
-    <content_css value="/++theme++smtemplate.theme/css/visual.css"/>
+    <content_css value="/++theme++smtemplate.theme/css/tinymce.css"/>
   </layout>
 </object> 

@@ -3,12 +3,12 @@
 /* @group Tabs */
 
 .formTabs {
-  background-color: #e3e3e3;
+  background-color: @grayLight;
   margin: 0 0 1em;
   padding: 3px 3px 0;
 }
 #edit-bar {
-  background-color: #75ad0a;
+  background-color: @gray;
   margin: 0 0 1em;
   padding: 3px 0 0 3px;
 }
@@ -18,7 +18,7 @@
   display: table;
 }
 #content-views {
-  background-color: #75ad0a;
+  background-color: @gray;
   float: left;
   margin: 0;
   padding: 0;
@@ -27,15 +27,15 @@
   display: inline;
   }
 #content-views a {
-  color: #fff;
+  color: @white;
   display: inline-block;
   padding: 3px 9px;
   text-decoration: none;
 }
 #content-views li.selected a,
 #content-views li a:hover {
-  background: #fff;
-  color: #000;
+  background: @white;
+  color: @black;
 }
 #content-views li.selected a {
   font-weight: bold;
@@ -44,12 +44,18 @@
   padding: 0 3px;
 }
 #plone-contentmenu-workflow .state-private {
-  background-color: #f00;
+  background-color: @notice;
   display: inline-block;
   padding: 3px 5px;
 }
 #plone-contentmenu-workflow .state-published {
-  background-color: @mainColor;
+  background-color: @secondary;
+  display: inline-block;
+  padding: 3px 5px;
+}
+#plone-contentmenu-workflow .state-pending {
+  background-color: @light;
+  color: @gray;
   display: inline-block;
   padding: 3px 5px;
 }
@@ -58,6 +64,7 @@
   margin-right: 0.25em;
 }
 .formTab a {
+  color: @black;
   display: inline-block;
   line-height: 2em;
   padding: 0 0.75em;
@@ -65,16 +72,16 @@
 }
 .formTab a:hover,
 .formTab a.selected {
-  background: #fff;
-  color: #000;
+  background: @white;
+  color: @black;
 }
 a.notify {
   background-color: red;
-  color: White;
+  color: @white;
 }
 span.required:after {
   content: "■";
-  color: Red;
+  color: @notice;
   padding-left: 0.2em;
 }
 .formPanel {
@@ -108,18 +115,13 @@ span.required:after {
   float: right;
 }
 .actionMenu a {
+  color: @white;
   display: block;
   padding: 3px;
   text-decoration: none;
 }
-.contentActions .actionMenu a {
-  color: #fff;
-}
-#contentActionMenus .actionMenu dd a:hover {
-  color: #666;
-}
 .actionMenu dd {
-  background-color: #75ad0a;
+  background-color: @gray;
   margin: 0;
   min-width: 100%;
   padding: 0 3px 3px;
@@ -132,8 +134,8 @@ span.required:after {
 }
 .actionMenu dd a:hover,
 .actionMenu dd .actionMenuSelected {
-  background-color:#fff;
-  color:#666;
+  background-color: @white;
+  color: @gray;
   }
 .actionMenu ul {
   list-style: none;
@@ -155,11 +157,13 @@ span.required:after {
   list-style: none;
   padding: 0;
 }
+#portal-personaltools .actionMenuHeader a {
+  color: @black;
+}
 #portal-personaltools .actionMenuHeader a:after {
   content: " ▼";
 }
 #portal-personaltools dd {
-  background-color: #e3e3e3;
   padding: 0.5em 0;
 }
 #portal-personaltools dd a {

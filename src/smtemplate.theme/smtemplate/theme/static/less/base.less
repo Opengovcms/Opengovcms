@@ -50,7 +50,7 @@ div.newsImageContainer {
 /* @group Data tables */
 table.listing,
 table.plain {
-  margin: 0 0 0.75em;
+  margin: 0 0 @baseLineHeight;
   width: 100%;
 }
 table.invisible td,
@@ -59,12 +59,12 @@ table.plain td,
 table.plain th,
 table.listing td,
 table.listing th {
-  padding: 0.5em 1em;
+  padding: (@baseLineHeight / 2) @baseLineHeight;
   vertical-align: top;
 }
 table.plain th,
 table.plain td {
-  border: 1px solid #ddd;
+  border: 1px solid @grayLight;
 }
 table.plain th {
     text-align: left;
@@ -73,51 +73,21 @@ table.listing td.listingCheckbox,
 table.listing th.listingCheckbox {
   text-align: center;
 }
-table.listing {
-  border-left: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-}
-table.listing .top {
-  border-left: 1px solid #ddd;
-  border-top: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-}
 table.listing th {
-  background-color: #ddd;
-  border: 1px solid #e7e7e7;
-  border-style: solid solid none;
-  color: #666;
+  background-color: @light;
+  border: 1px solid @grayLight;
   text-align: left;
-}
-table.listing tr.odd th {
-  border: 1px solid #fff;
-  border-style: solid solid none none;
-}
-table.listing tbody tr {
-  text-align: left;
-}
-table.listing tbody tr.odd {
-  background-color: #eee;
-}
-table.listing tbody tr td {
-  background: transparent;
-}
-table.listing tbody tr.odd td {
-  background-color: #eee;
 }
 table.listing td {
-  border-right: 1px solid #ddd;
+  border: 1px solid @grayLight;
 }
-table.listing a {
-  border: none;
-  display: inline-block;
-}
-table.listing td.draggable {
-  background-color: #ddd !important;
-  border-bottom: 1px solid white;
-  padding: 0.4em 0.4em 0 0.5em;
+table.listing td.draggable,
+table.listing td.notDraggable {
+  padding: 0 (@baseLineHeight * 0.4);
   text-shadow: #fff 1px 1px 1px;
-  }
+  text-align: center;
+  vertical-align: middle;
+}
 
 /* Vertical table data listings */
 table.vertical th {
@@ -599,7 +569,7 @@ dl.toc dd ol {
   }
 .photoAlbumShadow {
   background-color: #f3f3f3;
-  border-bottom: 1px solid #e3e3e3;
+  border-bottom: 1px solid @grayLight;
   border-radius: 10px;
   padding: 0 0 1px;
   }
@@ -772,7 +742,7 @@ div.overlay label {
     margin-bottom: 0.25em;
 }
 div.overlay a:hover {
-    color: #75ad0a;
+    color: @gray;
 }
 div.overlay a:hover label{
     cursor: pointer;

@@ -8,12 +8,6 @@
     <theme href="index.html" css:if-content="#visual-portal-wrapper" />
     <notheme if-path="@@manage-viewlets" />
     <notheme if="$ajax_load" />
-    <xsl:template css:match="#portal-colophon">
-        <div id="portal-colophon">
-            <p class="credits"><a href="http://skins.quintagroup.com">Plone Theme/Design</a> by <a href="http://quintagroup.com">Quintagroup</a> © 2005-2012</p>
-            <xsl:value-of select="." />
-        </div>
-    </xsl:template>
     <xsl:template css:match=".photoAlbumFolder">
         <div class="photoAlbumVisual">
             <div class="photoAlbumShadow">

@@ -149,15 +149,24 @@ span.required:after {
 
 /* @group Personal tools pulldown */
 #portal-personaltools {
+  font-family: @sansFontFamily;
+  font-size: @baseFontSize * 0.79;
+  line-height: @baseLineHeight * 0.84;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 40px;
+  right: 14px;
 }
 #portal-personaltools {
   list-style: none;
   padding: 0;
 }
-#portal-personaltools .actionMenuHeader a {
+#portal-personaltools .actionMenuHeader a,
+#personaltools-login {
+  color: @gray;
+  text-transform: uppercase;
+}
+#portal-personaltools .actionMenuHeader a:hover,
+#personaltools-login:hover {
   color: @black;
 }
 #portal-personaltools .actionMenuHeader a:after {

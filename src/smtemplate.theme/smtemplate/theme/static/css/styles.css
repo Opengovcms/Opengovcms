@@ -1794,7 +1794,6 @@ body.template-new-user #content input {
   border: 0;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25) inset;
   color: #6f7578;
-  font-size: 16px;
   height: 30px;
   margin-right: 10px;
   padding: 5px 10px;
@@ -1810,7 +1809,7 @@ body.template-new-user #content input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 0 none;
-  font-size: 16px;
+  font-size: 15.96px;
   height: 30px;
   padding: 3px 10px;
   vertical-align: top;
@@ -1861,12 +1860,26 @@ body.template-new-user #content input {
  */
 
 #theme-globalnav {
+  background: linear-gradient(#087b8c, #066270);
   list-style: none;
   margin: 0;
   padding: 0;
 }
+.no-cssgradients #theme-globalnav {
+  background-color: #087b8c;
+}
 #theme-globalnav li {
-  display: inline;
+  border-right: 1px solid #207c89;
+  display: inline-block;
+}
+#theme-globalnav a {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAMAAACDi47UAAAAMFBMVEX////////////z8/P7+/v////////////////w8PD39/f///////8AAADu7u7///+7HHyoAAAADnRSTlOZVTPXrYhmRCLswncRAO6B8fwAAABUSURBVHjaXY1BDoAwCATR2toCW/7/W1ejCXVOZLIZxPHC40Os+qNMs4zZgHNEll0jyhGhe5J+r7hem9LBrtdf04A21yZ7Q9nsSfJzod6ALImZI3MB3dIJbYVOa18AAAAASUVORK5CYII=) no-repeat 100% 50%;
+  border-right: 1px solid #06606e;
+  color: white;
+  display: inline-block;
+  font-size: 18.06px;
+  line-height: 23.94px;
+  padding: 11px 35px 11px 15px;
 }
 /*
  * Portal Logo 

@@ -979,9 +979,6 @@ form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
 #search-results-bar dt.actionMenuHeader a::after {
   content: " ▼";
 }
-#search-results {
-  padding: 1em;
-}
 .searchResults {
   margin-top: 0;
 }
@@ -1525,6 +1522,10 @@ input[type="radio"] {
 label {
   font-weight: bold;
 }
+label.horizontal {
+  display: block;
+  margin: 0 0 6px;
+}
 .field {
   margin: 0 0 1em;
 }
@@ -1559,6 +1560,7 @@ input#title {
   line-height: 42.12px;
   margin: 10.778443114px 0;
   margin-top: 0;
+  margin: 0;
   width: 100%;
 }
 /* Emulates styling from the description's view */
@@ -1568,6 +1570,7 @@ input#title {
   font-size: 18.06px;
   line-height: 24.12px;
   margin: 0 0 18px;
+  margin: 0;
 }
 input[type="text"],
 input[type="password"],
@@ -1605,18 +1608,6 @@ input[type="submit"].standalone {
 label .fieldErrorBox {
   font-weight: normal;
 }
-#content optgroup {
-  font-style: normal;
-  font-weight: bold;
-  color: #999999;
-  padding-left: 0.25em;
-}
-#content option {
-  color: black;
-}
-#content optgroup > option {
-  padding: 0 0.25em 0 1em;
-}
 dl.enableFormTabbing dd {
   margin-left: 0;
   padding-top: 2em;
@@ -1643,10 +1634,12 @@ dl.enableFormTabbing dd {
   margin-right: 0.75em;
 }
 .formHelp {
-  color: #555555;
-  margin: 0 0 0.2em 0;
+  color: #6f7578;
   display: block;
+  font-size: 11.998px;
   font-weight: normal;
+  line-height: 14.994px;
+  margin: 3px 0 6px;
 }
 .error .fieldRequired {
   color: #dd0000;
@@ -1719,13 +1712,32 @@ body.template-new-user #content input {
 
 /* @end */
 
+.criteria,
+.sortingField {
+  margin: 0 0 9px;
+}
+.criteria select {
+  margin: 0 3px 6px 0;
+}
+.sortingField select {
+  margin-right: 3px;
+}
+.widgetPulldownMenu label {
+  display: block;
+}
+.multipleSelectionWidgetTitle {
+  cursor: pointer;
+}
+.widgetPulldownMenu {
+  margin: 0;
+}
 /* ==========================================================================
      Layout
      ========================================================================== */
 
 #visual-portal-wrapper {
   background-color: white;
-  margin: auto;
+  margin: 0 auto 30px;
   padding: 0 15px;
   width: 960px;
 }
@@ -1920,6 +1932,24 @@ dl.portletError {
   display: inline;
 }
 /*
+ * Panels
+ */
+
+.add-panel a {
+  background-color: #e9eff3;
+  border: 1px solid #a7b0b5;
+  float: left;
+  margin: 0 1em 1em 0;
+  padding: 5px;
+  text-align: center;
+  width: 7em;
+}
+.add-panel .cell div {
+  background-color: #6f7578;
+  color: white;
+  padding: 5px 0;
+}
+/*
  * Navigation portlet
  */
 
@@ -2022,7 +2052,6 @@ a.notify {
 span.required:after {
   content: "■";
   color: #d5241c;
-  padding-left: 0.2em;
 }
 .formPanel {
   border: 0;
@@ -2242,7 +2271,6 @@ div.portletAssignments .managedPortletActions {
 }
 div.portletAssignments .managedPortletActions a,
 div.portletAssignments .managedPortletActions button {
-  background-color: transparent;
   border: 0;
   padding: 3px;
 }

@@ -76,6 +76,7 @@
 
         <!-- Footer -->
         <replace css:content="#portal-footer-wrapper" css:theme="#portal-footer-wrapper" />
+        <drop css:content="#portal-colophon" />
 
     </rules>
 </rules>

@@ -9,6 +9,10 @@ input[type="radio"] {
 label {
   font-weight: bold;
   }
+label.horizontal {
+  display: block;
+  margin: 0 0 @baseLineHeight / 3;
+}
 .field {
   margin: 0 0 1em;
   }
@@ -37,7 +41,8 @@ input#title {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
- .documentFirstHeading;
+  .documentFirstHeading;
+  margin: 0;
   width: 100%;
 }
 
@@ -45,6 +50,7 @@ input#title {
 #content .field textarea[name$=".description"],
 #archetypes-fieldname-description textarea#description {
   .documentDescription;
+  margin: 0;
 }
 input[type="text"],
 input[type="password"],
@@ -82,18 +88,6 @@ input[type="submit"].standalone {
 label .fieldErrorBox {
     font-weight: normal;
 }
-#content optgroup {
-    font-style: normal;
-    font-weight: bold;
-    color: #999;
-    padding-left: 0.25em;
-}
-#content option {
-    color: black;
-}
-#content optgroup > option {
-    padding: 0 0.25em 0 1em;
-}
 dl.enableFormTabbing dd {
     margin-left: 0;
     padding-top: 2em;
@@ -120,10 +114,12 @@ dl.enableFormTabbing dd {
     margin-right: 0.75em
 }
 .formHelp {
-    color: #555;
-    margin: 0 0 0.2em 0;
-    display: block;
-    font-weight: normal;
+  color: @gray;
+  display: block;
+  font-size: @baseFontSize * 0.857;
+  font-weight: normal;
+  line-height: @baseLineHeight * 0.833;
+  margin: @baseLineHeight / 6 0 @baseLineHeight / 3;
 }
 .error .fieldRequired {
     color: #d00;
@@ -203,3 +199,24 @@ margin-left: 0.25em;
 /* @end */
 
 /* @end */
+
+// QueryWidget
+.criteria,
+.sortingField {
+  margin: 0 0 @baseLineHeight / 2;
+}
+.criteria select {
+  margin: 0 3px 6px 0;
+}
+.sortingField select {
+  margin-right: 3px;
+}
+.widgetPulldownMenu label {
+  display: block;
+}
+.multipleSelectionWidgetTitle {
+  cursor: pointer;
+}
+.widgetPulldownMenu {
+  margin: 0;
+}

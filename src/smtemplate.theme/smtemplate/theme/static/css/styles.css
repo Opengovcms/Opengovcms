@@ -1746,6 +1746,9 @@ body.template-new-user #content input {
   content: "";
   display: table;
 }
+#portal-top {
+  margin: 0 0 12px;
+}
 #portal-header {
   padding: 20px 0 0;
   min-height: 127px;
@@ -1816,6 +1819,7 @@ body.template-new-user #content input {
   border: 1px solid;
 }
 .searchButton[type="submit"] {
+  background: -webkit-linear-gradient(#087b8c, #066270);
   background: linear-gradient(#087b8c, #066270);
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1828,6 +1832,7 @@ body.template-new-user #content input {
 }
 .searchButton[type="submit"]:hover,
 .searchButton[type="submit"]:focus {
+  background: -webkit-linear-gradient(#d5241c, #ab1d17);
   background: linear-gradient(#d5241c, #ab1d17);
 }
 .no-cssgradients .searchButton[type="submit"]:hover,
@@ -1867,11 +1872,8 @@ body.template-new-user #content input {
 .LSDescr {
   margin-left: 9px;
 }
-/*
- * Portal Globalnav
- */
-
 #theme-globalnav {
+  background: -webkit-linear-gradient(#087b8c, #066270);
   background: linear-gradient(#087b8c, #066270);
   list-style: none;
   margin: 0;
@@ -1901,10 +1903,31 @@ body.template-new-user #content input {
  * Bread Crumbs & Language Selecto 
  */
 
-/*
- * Footer and Colophon
- */
-
+#portal-breadcrumbs {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 10.9998px;
+  line-height: 14.1426px;
+  margin: 12px 0 0;
+  text-transform: uppercase;
+}
+#portal-breadcrumbs a {
+  color: #087b8c;
+}
+#portal-breadcrumbs a:hover {
+  border-bottom: 1px solid;
+}
+#portal-footer-wrapper {
+  background: -webkit-linear-gradient(#e9eff3, white);
+  background: linear-gradient(#e9eff3, white);
+}
+.no-cssgradients #portal-footer-wrapper {
+  background-color: white;
+}
+#portal-footer-inner {
+  margin: auto;
+  padding: 15px 15px 1px;
+  width: 960px;
+}
 /*
  * Portlets
  */
@@ -1948,6 +1971,9 @@ dl.portletError {
   background-color: #6f7578;
   color: white;
   padding: 5px 0;
+}
+.manage-panel input[type="submit"] {
+  margin-right: 4px;
 }
 /*
  * Navigation portlet
@@ -2260,11 +2286,6 @@ table.controlpanel-listing th.smallcolumn {
 
 /* @group Portlets management */
 
-div.portletAssignments div.portletHeader {
-  padding: 0.42em 1em;
-  background: #dddddd;
-  line-height: normal;
-}
 div.portletAssignments .managedPortletActions {
   float: right;
   margin-top: -0.21em;

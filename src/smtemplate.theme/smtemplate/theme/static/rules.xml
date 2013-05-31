@@ -20,6 +20,16 @@
     </xsl:template>
     <replace content="//*[contains(concat(' ', normalize-space(@class), ' '), ' navTreeItem ')]/a/@class" />
     <replace content="//*[contains(concat(' ', normalize-space(@class), ' '), ' navTreeItem ')]/div/a/@class" />
+    
+    <after css:theme="#theme-globalnav" if-not-content="$home_page">
+        <div id="portal-breadcrumbs">
+            <xsl:apply-templates css:select="#portal-breadcrumbs > span:not(#breadcrumbs-you-are-here)" mode="raw" />
+        </div>        
+    </after>
+
+    <xsl:template css:match=".breadcrumbSeparator" mode="raw">
+        <span class="breadcrumbSeparator"> » </span>
+    </xsl:template>
 
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
@@ -53,8 +63,7 @@
 	    <after css:theme="#theme-globalnav" css:content="#portal-globalnav-mobile" />
 	    <merge attributes="class" css:content="#portal-globalnav" css:theme="#theme-globalnav" />
         <replace css:content="#portal-personaltools" css:theme="#portal-personaltools" />
-        <drop css:content="#portal-breadcrumbs" /> 
-        <replace css:content="#portal-breadcrumbs" css:theme="#portal-breadcrumbs" method="raw"/>
+        <drop css:content="#portal-breadcrumbs" />
         <after css:content="#portal-languageselector" css:theme="#theme-globalnav" />
         <after css:theme="#portal-header" css:content="#portlets-in-header" />
         <after css:theme="#portal-header" css:content=".manageInHeaderPortletsLink" />
@@ -75,8 +84,10 @@
         <drop css:content="#plone-contentmenu-factories li a img" />
 
         <!-- Footer -->
-        <replace css:content="#portal-footer-wrapper" css:theme="#portal-footer-wrapper" />
+        <replace css:content-children="#portal-footer-wrapper > .cell" css:theme-children="#portal-footer-inner" />
         <drop css:content="#portal-colophon" />
+        <drop css:content="#portal-footer" />
+        <after css:content="#portal-footer" css:theme-children="#portal-footer-inner" method="raw" />
 
     </rules>
 </rules>

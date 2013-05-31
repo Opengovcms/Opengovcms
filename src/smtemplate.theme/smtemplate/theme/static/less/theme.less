@@ -12,6 +12,9 @@
     display: table;
   }
 }
+#portal-top {
+  margin: 0 0 @baseLineHeight / 1.5;
+}
 #portal-header {
   padding: 20px 0 0;
   min-height: 127px;
@@ -84,6 +87,7 @@
   border: 1px solid;
 }
 .searchButton[type="submit"] {
+  background: -webkit-linear-gradient(@secondary, @main);
   background: linear-gradient(@secondary, @main);
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -96,6 +100,7 @@
 }
 .searchButton[type="submit"]:hover,
 .searchButton[type="submit"]:focus {
+  background: -webkit-linear-gradient(@notice, @noticeDark);  
   background: linear-gradient(@notice, @noticeDark);  
 }
 .no-cssgradients .searchButton[type="submit"]:hover,
@@ -136,10 +141,9 @@
   margin-left: (@baseLineHeight / 2);
 }
 
-/*
- * Portal Globalnav
- */
+// Portal Globalnav
 #theme-globalnav {
+  background: -webkit-linear-gradient(@secondary, @main);
   background: linear-gradient(@secondary, @main);
   list-style: none;
   margin: 0;
@@ -177,18 +181,32 @@
  * Bread Crumbs & Language Selecto 
  */
 #portal-breadcrumbs {
-  
+  font-family: @sansFontFamily;
+  font-size: @baseFontSize * 0.7857;
+  line-height: @baseLineHeight * 0.7857;
+  margin: @baseLineHeight / 1.5 0 0;
+  text-transform: uppercase;
 }
-#breadcrumbs-you-are-here {
-  
+#portal-breadcrumbs a {
+  color: @linkColor;
+}
+#portal-breadcrumbs a:hover {
+  border-bottom: 1px solid;
 }
 
-/*
- * Footer and Colophon
- */
-#portal-footer {
-  
+// Footer
+#portal-footer-wrapper {
+  background: -webkit-linear-gradient(#e9eff3, @white);
+  background: linear-gradient(#e9eff3, @white);
 }
-#portal-colophon {
+.no-cssgradients #portal-footer-wrapper {
+  background-color: @white;
+}
+#portal-footer-inner {
+  margin: auto;
+  padding: 15px 15px 1px;
+  width: 960px;
+}
+#portal-footer {
   
 }

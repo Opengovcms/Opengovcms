@@ -3,35 +3,62 @@
  */
 
 .portlet {
-  margin: 0 0 1em;
+  border-bottom: 1px solid @grayLight;
+  margin: 0 0 @baseLineHeight;
+  padding: 0 0 @baseLineHeight * 1.5;
+}
+.portlet a:hover {
+  text-decoration: underline;
 }
 dl.portletError {
   background-color: #ffa500;
 }
 .portletHeader {
-
+  font-size: @baseFontSize / 0.778;
+  font-weight: bold;
+  line-height: @baseLineHeight;
+  margin: @baseLineHeight 0 @baseLineHeight / 1.2;
 }
 .portletItem,
 .portletFooter {
   margin: 0;
 }
-
-.blockedPortlet .portletHeader {
-    border: 1px dashed #ddd;
-    margin: -1px;
-    background: none !important;
-}
-
-.blockedPortlet .portletHeader a {
-    color: #666;
-}
-
-.blockedPortlet .portletBlockedMessage {
-    color: white;
-    display: inline;
-}
 .portletItemDetails {
 
+}
+.managedPortlet {
+  margin: @baseLineHeight/2 0;
+  padding: 0;
+}
+.managedPortlet .portletHeader {
+  margin: @baseLineHeight / 3 0;
+  padding: 5px;
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+.blockedPortlet .portletHeader {
+  background: @light;
+}
+.blockedPortlet .portletHeader a {
+  color: @grayLight;
+}
+.managedPortletActions form {
+  display: inline-block;
+}
+.portletAssignments select {
+  margin: 0 0 @baseLineHeight / 2;
+}
+.managedPortletActions {
+  float: right;
+  font-size: @baseFontSize/1.1667;
+}
+.managedPortletActions a, 
+.managedPortletActions button {
+  border: 0;
+  padding: 2px 4px;
 }
 
 /*

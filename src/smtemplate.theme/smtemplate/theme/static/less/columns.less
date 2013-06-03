@@ -1,7 +1,6 @@
-/* The 4-column Deco Grid System for fixed width of 960px:
- * Cells are 210.0px (21.875%), margin will be 30px (3.125%).
- * Portal left/right margin is 15.0dpx (1.5625%).
- */
+// The 4-column Deco Grid System for fixed width of 960px:
+// Cells are 210.0px (21.875%), margin will be 30px (3.125%).
+// Portal left/right margin is 15.0dpx (1.5625%).
 
 div.row {
   float: left;
@@ -15,7 +14,6 @@ div.cell {
   left: 100%;
 }
 
-/* Convenience classes. Not strictly necessary. */
 div.width-full { width: 96.8750% }
 
 div.width-1\3a 2 { width: 46.8750% }
@@ -31,3 +29,21 @@ div.width-3\3a 4 { width: 71.8750%; }
 div.position-0 { margin-left: -98.4375%; }
 div.position-1\3a 4 { margin-left: -73.4375%; }
 div.position-3\3a 4 { margin-left: -23.4375%; }
+
+
+// Nested columns
+
+.cell div.position-0 { margin-left: -100.0000%; }
+.cell div.position-1 { margin-left: -74.1935%; }
+.cell div.position-2 { margin-left: -48.3871%; }
+.cell div.position-3 { margin-left: -22.5806%; }
+
+.cell div.width-full { width: 100.0000% }
+
+.cell div.width-1\3a 2 { width: 48.3871% }
+.cell div.position-1\3a 2 { margin-left: -48.3871% }
+
+.cell div.width-1\3a 3 { width: 31.1828% }
+.cell div.width-2\3a 3 { width: 65.5914% }
+.cell div.position-1\3a 3 { margin-left: -65.5914% }
+.cell div.position-2\3a 3 { margin-left: -31.1828% }

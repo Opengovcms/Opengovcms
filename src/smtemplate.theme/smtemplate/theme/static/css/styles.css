@@ -387,11 +387,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* The 4-column Deco Grid System for fixed width of 960px:
- * Cells are 210.0px (21.875%), margin will be 30px (3.125%).
- * Portal left/right margin is 15.0dpx (1.5625%).
- */
-
 div.row {
   float: left;
   width: 100%;
@@ -403,8 +398,6 @@ div.cell {
   float: left;
   left: 100%;
 }
-/* Convenience classes. Not strictly necessary. */
-
 div.width-full {
   width: 96.875%;
 }
@@ -441,6 +434,39 @@ div.position-1\3a 4 {
 div.position-3\3a 4 {
   margin-left: -23.4375%;
 }
+.cell div.position-0 {
+  margin-left: -100%;
+}
+.cell div.position-1 {
+  margin-left: -74.1935%;
+}
+.cell div.position-2 {
+  margin-left: -48.3871%;
+}
+.cell div.position-3 {
+  margin-left: -22.5806%;
+}
+.cell div.width-full {
+  width: 100%;
+}
+.cell div.width-1\3a 2 {
+  width: 48.3871%;
+}
+.cell div.position-1\3a 2 {
+  margin-left: -48.3871%;
+}
+.cell div.width-1\3a 3 {
+  width: 31.1828%;
+}
+.cell div.width-2\3a 3 {
+  width: 65.5914%;
+}
+.cell div.position-1\3a 3 {
+  margin-left: -65.5914%;
+}
+.cell div.position-2\3a 3 {
+  margin-left: -31.1828%;
+}
 /* ==========================================================================
      General Styles
      ========================================================================== */
@@ -466,10 +492,7 @@ h1,
   font-size: 36.12px;
   font-weight: normal;
   line-height: 42.12px;
-  margin: 10.778443114px 0;
-}
-.documentFirstHeading {
-  margin-top: 0;
+  margin: 18px 0 15px;
 }
 h2 {
   font-family: inherit;
@@ -506,6 +529,7 @@ img {
 menu,
 ol,
 ul {
+  margin: 0 0 18px;
   padding: 0 0 0 27px;
 }
 li ul,
@@ -769,9 +793,9 @@ dl.collapsible dt.collapsibleHeader {
   width: auto;
 }
 dl.collapsible dd.collapsibleContent {
-  margin: 0;
-  padding: 0 1em 0.4em;
   clear: left;
+  margin: 0;
+  padding: 6px 12px 12px;
 }
 /* for IE the following isn't needed, that's why the css2 selector is used */
 
@@ -1545,6 +1569,10 @@ div.field.error {
 .destructive {
   margin-right: 4px;
 }
+fieldset {
+  margin: 0 0 9px;
+  padding: 6px 12px 12px;
+}
 /* @group Forms */
 
 /* Emulates the styling from the h1 tag */
@@ -1558,8 +1586,7 @@ input#title {
   font-size: 36.12px;
   font-weight: normal;
   line-height: 42.12px;
-  margin: 10.778443114px 0;
-  margin-top: 0;
+  margin: 18px 0 15px;
   margin: 0;
   width: 100%;
 }
@@ -1731,14 +1758,13 @@ body.template-new-user #content input {
 .widgetPulldownMenu {
   margin: 0;
 }
-/* ==========================================================================
-     Layout
-     ========================================================================== */
-
+.sequencewidget input[type="submit"] {
+  margin-right: 3px;
+}
 #visual-portal-wrapper {
   background-color: white;
   margin: 0 auto 30px;
-  padding: 0 15px;
+  padding: 0 15px 30px;
   width: 960px;
 }
 #visual-portal-wrapper:after {
@@ -1753,23 +1779,25 @@ body.template-new-user #content input {
   padding: 20px 0 0;
   min-height: 127px;
 }
-/* ==========================================================================
-     Content
-     ========================================================================== */
-
+#portal-column-two {
+  margin-top: 18px;
+}
 .documentDescription {
   font-size: 18.06px;
   line-height: 24.12px;
   margin: 0 0 18px;
 }
-/* ==========================================================================
-     Viewlets
-     ========================================================================== */
-
-/*
- * Site Actions
- */
-
+.linkButton a {
+  background: -webkit-linear-gradient(#087b8c, #066270);
+  background: linear-gradient(#087b8c, #066270);
+  color: white;
+  display: inline-block;
+  padding: 6px 10px;
+}
+.linkButton a:hover {
+  background: -webkit-linear-gradient(#d5241c, #ab1d17);
+  background: linear-gradient(#d5241c, #ab1d17);
+}
 #portal-siteactions {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 11.06px;
@@ -1825,10 +1853,13 @@ body.template-new-user #content input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 0 none;
-  font-size: 15.96px;
-  height: 30px;
+  height: 24px;
   padding: 3px 10px;
   vertical-align: top;
+}
+#portal-searchbox .searchButton[type="submit"] {
+  font-size: 15.96px;
+  height: 30px;
 }
 .searchButton[type="submit"]:hover,
 .searchButton[type="submit"]:focus {
@@ -1916,6 +1947,15 @@ body.template-new-user #content input {
 #portal-breadcrumbs a:hover {
   border-bottom: 1px solid;
 }
+.breadcrumbSeparator {
+  color: #6f7578;
+  display: inline-block;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 17.994858612px;
+  line-height: 1;
+  padding: 0 5px;
+  vertical-align: -1px;
+}
 #portal-footer-wrapper {
   background: -webkit-linear-gradient(#e9eff3, white);
   background: linear-gradient(#e9eff3, white);
@@ -1933,26 +1973,59 @@ body.template-new-user #content input {
  */
 
 .portlet {
-  margin: 0 0 1em;
+  border-bottom: 1px solid #a7b0b5;
+  margin: 0 0 18px;
+  padding: 0 0 27px;
+}
+.portlet a:hover {
+  text-decoration: underline;
 }
 dl.portletError {
   background-color: orange;
+}
+.portletHeader {
+  font-size: 17.994858612px;
+  font-weight: bold;
+  line-height: 18px;
+  margin: 18px 0 15px;
 }
 .portletItem,
 .portletFooter {
   margin: 0;
 }
+.managedPortlet {
+  margin: 9px 0;
+  padding: 0;
+}
+.managedPortlet .portletHeader {
+  margin: 6px 0;
+  padding: 5px;
+}
+.managedPortlet .portletHeader:after {
+  clear: both;
+  content: "";
+  display: table;
+}
 .blockedPortlet .portletHeader {
-  border: 1px dashed #dddddd;
-  margin: -1px;
-  background: none !important;
+  background: #e9eff3;
 }
 .blockedPortlet .portletHeader a {
-  color: #666666;
+  color: #a7b0b5;
 }
-.blockedPortlet .portletBlockedMessage {
-  color: white;
-  display: inline;
+.managedPortletActions form {
+  display: inline-block;
+}
+.portletAssignments select {
+  margin: 0 0 9px;
+}
+.managedPortletActions {
+  float: right;
+  font-size: 11.999657153px;
+}
+.managedPortletActions a,
+.managedPortletActions button {
+  border: 0;
+  padding: 2px 4px;
 }
 /*
  * Panels
@@ -2286,21 +2359,6 @@ table.controlpanel-listing th.smallcolumn {
 
 /* @group Portlets management */
 
-div.portletAssignments .managedPortletActions {
-  float: right;
-  margin-top: -0.21em;
-}
-div.portletAssignments .managedPortletActions a,
-div.portletAssignments .managedPortletActions button {
-  border: 0;
-  padding: 3px;
-}
-div.portletAssignments .managedPortletActions form {
-  display: inline;
-}
-.managedPortlet {
-  margin: 0.8em 0;
-}
 div.managePortletsLink,
 a.managePortletsFallback {
   padding: 0.25em 0.5em;

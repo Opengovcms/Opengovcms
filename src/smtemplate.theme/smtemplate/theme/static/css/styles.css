@@ -515,14 +515,9 @@ hr {
   margin: 18px 0;
 }
 img {
-  border: 0;
-  vertical-align: text-bottom;
-}
-#content img,
-.portletStaticText img {
   height: auto;
   max-width: 100%;
-  width: auto;
+  width: auto\9;
   /*fix to IE8*/
 
 }
@@ -610,7 +605,7 @@ table.plain td,
 table.plain th,
 table.listing td,
 table.listing th {
-  padding: 9px 18px;
+  padding: 6px 9px;
   vertical-align: top;
 }
 table.plain th,
@@ -645,7 +640,6 @@ table.vertical th {
   text-align: right;
 }
 table.vertical td {
-  border-top: 1px solid #e7e7e7;
   padding: 0.5em;
 }
 /* Grid table listings */
@@ -1388,61 +1382,61 @@ a.historyComparePrevious span {
 /* Add new */
 
 #plone-contentmenu-factories li a {
-  background: url(../images/icons-sprite.png) no-repeat 1px -1199px;
+  background: url(../images/icons-sprite.png) no-repeat 1px -1197px;
   display: block;
   padding-left: 17px;
 }
 #plone-contentmenu-factories li a:hover {
   background-color: white;
-  background-position: 1px -2799px;
+  background-position: 1px -2797px;
 }
 #plone-contentmenu-factories li .contenttype-folder {
-  background-position: 1px 2px;
+  background-position: 1px 4px;
 }
 #plone-contentmenu-factories li .contenttype-folder:hover {
-  background-position: 2px -1598px;
+  background-position: 2px -1596px;
 }
 #plone-contentmenu-factories li .contenttype-document {
-  background-position: 1px -199px;
+  background-position: 1px -197px;
 }
 #plone-contentmenu-factories li .contenttype-document:hover {
-  background-position: 2px -1799px;
+  background-position: 2px -1797px;
 }
 #plone-contentmenu-factories li .contenttype-news-item {
-  background-position: 1px -399px;
+  background-position: 1px -397px;
 }
 #plone-contentmenu-factories li .contenttype-news-item:hover {
-  background-position: 2px -1999px;
+  background-position: 2px -1997px;
 }
 #plone-contentmenu-factories li .contenttype-event {
-  background-position: 1px -599px;
+  background-position: 1px -597px;
 }
 #plone-contentmenu-factories li .contenttype-event:hover {
-  background-position: 2px -2199px;
+  background-position: 2px -2197px;
 }
 #plone-contentmenu-factories li .contenttype-topic {
-  background-position: 1px -800px;
+  background-position: 1px -798px;
 }
 #plone-contentmenu-factories li .contenttype-topic:hover {
-  background-position: 2px -2400px;
+  background-position: 2px -2398px;
 }
 #plone-contentmenu-factories li .contenttype-image {
-  background-position: 1px -999px;
+  background-position: 1px -997px;
 }
 #plone-contentmenu-factories li .contenttype-image:hover {
-  background-position: 2px -2599px;
+  background-position: 2px -2597px;
 }
 #plone-contentmenu-factories li .contenttype-file {
-  background-position: 1px -1199px;
+  background-position: 1px -1197px;
 }
 #plone-contentmenu-factories li .contenttype-file:hover {
-  background-position: 2px -2799px;
+  background-position: 2px -2797px;
 }
 #plone-contentmenu-factories li .contenttype-link {
-  background-position: 1px -1395px;
+  background-position: 1px -1393px;
 }
 #plone-contentmenu-factories li .contenttype-link:hover {
-  background-position: 2px -2995px;
+  background-position: 2px -2993px;
 }
 #plone-contentmenu-factories #settings {
   background-image: none;
@@ -1798,6 +1792,9 @@ body.template-new-user #content input {
   background: -webkit-linear-gradient(#d5241c, #ab1d17);
   background: linear-gradient(#d5241c, #ab1d17);
 }
+.suppressVisualEditor {
+  margin: 9px 0 0 !important;
+}
 #portal-siteactions {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 11.06px;
@@ -1968,14 +1965,13 @@ body.template-new-user #content input {
   padding: 15px 15px 1px;
   width: 960px;
 }
-/*
- * Portlets
- */
-
 .portlet {
   border-bottom: 1px solid #a7b0b5;
   margin: 0 0 18px;
   padding: 0 0 27px;
+}
+.section-home .portlet {
+  border: 0;
 }
 .portlet a:hover {
   text-decoration: underline;
@@ -1989,9 +1985,25 @@ dl.portletError {
   line-height: 18px;
   margin: 18px 0 15px;
 }
-.portletItem,
+.section-home .portletHeader {
+  font-size: 24.013722127px;
+  line-height: 30px;
+}
+.portletItem {
+  line-height: 20px;
+  margin: 0 0 18px;
+}
 .portletFooter {
-  margin: 0;
+  margin: 27px 0 0;
+}
+.portletFooter a {
+  background-color: #e9eff3;
+  color: black;
+  display: inline-block;
+  padding: 6px;
+}
+.portletFooter a:hover {
+  background-color: #a7b0b5;
 }
 .managedPortlet {
   margin: 9px 0;
@@ -2027,10 +2039,6 @@ dl.portletError {
   border: 0;
   padding: 2px 4px;
 }
-/*
- * Panels
- */
-
 .add-panel a {
   background-color: #e9eff3;
   border: 1px solid #a7b0b5;
@@ -2048,24 +2056,36 @@ dl.portletError {
 .manage-panel input[type="submit"] {
   margin-right: 4px;
 }
-/*
- * Navigation portlet
- */
-
-/*
- * Static Text Portlet
- */
-
-/*
- * Calendar Portlet 
- */
-
 .ploneCalendar {
   width: 100%;
 }
 .ploneCalendar th,
 .ploneCalendar td {
   text-align: center;
+}
+.portletItemTitle {
+  display: block;
+  font-size: 17.994858612px;
+  line-height: 24px;
+  margin: 0 0 6px;
+}
+.portletItemImageWrapper {
+  margin: 0 0 9px;
+  max-height: 175px;
+  overflow: hidden;
+}
+.width-1\3a 3 .portletItemImageWrapper {
+  max-height: 113px;
+}
+.portletItemByline {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 11.004px;
+  line-height: 15px;
+  margin: 0 0 6px;
+  text-transform: uppercase;
+}
+.portletRich {
+  padding: 0;
 }
 /* @group Editing */
 
@@ -2127,6 +2147,12 @@ dl.portletError {
   color: #6f7578;
   display: inline-block;
   padding: 3px 5px;
+}
+#listing-table .state-private {
+  color: #d5241c;
+}
+#listing-table .state-pending {
+  color: orange;
 }
 .formTab {
   display: inline;

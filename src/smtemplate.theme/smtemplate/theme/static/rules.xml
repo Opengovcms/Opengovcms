@@ -51,6 +51,7 @@
 
         <!-- Body-->
         <merge attributes="dir class" css:content="body" css:theme="body" />
+        <drop attributes="class" css:theme="#visual-portal-wrapper" if-not-content="$home_page" />
 
         <!-- Top -->
         <before css:content="#portal-header > p.hiddenStructure:first-child" css:theme-children="#portal-header" />

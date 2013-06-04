@@ -1,0 +1,25 @@
+<div tal:condition="view/data/omit_border"
+     tal:attributes="class string:portletRich ${view/css_class}"
+     tal:content="structure view/data/text" />
+<div tal:condition="not:view/data/omit_border"
+     tal:attributes="class string:portlet portletRich ${view/css_class}"
+     i18n:domain="plone.portlet.static">
+    <a class="portletItemTitle"
+       tal:omit-tag="not:view/has_title_link"
+       tal:attributes="href view/data/title_more_url">
+        <div class="portletItemTitle"
+             tal:omit-tag="view/has_title_link">
+            <div class="portletItemImageWrapper">
+                <img tal:replace="structure view/get_title_image_tag" />
+            </div>
+            <tal:content tal:content="view/data/title">Title</tal:content>
+        </div>
+    </a>
+    <div class="portletItem"
+        tal:content="structure view/data/text"
+        tal:condition="view/has_text">Portlet Item Description</div>
+    <div class="portletFooter" tal:condition="view/has_footer">
+            <a tal:omit-tag="not:view/has_footer_link"
+              tal:attributes="href view/data/footer_more_url"
+              tal:content="view/data/footer" /></div>
+</div>

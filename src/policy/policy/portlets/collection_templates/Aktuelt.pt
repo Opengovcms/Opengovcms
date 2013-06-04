@@ -4,54 +4,44 @@
                 plone_view context/@@plone;
                 toLocalizedTime nocall:plone_view/toLocalizedTime;
                 getIcon nocall:plone_view/getIcon;">
-
     <dt class="portletHeader">
-        <a tal:attributes="href collection_url" tal:omit-tag="not:view/data/show_more">
-            <span tal:content="view/data/header" />
-        </a>
+        <a tal:attributes="href collection_url" 
+           tal:omit-tag="not:view/data/show_more">
+            <span tal:content="view/data/header"
+                  tal:omit-tag="view/data/show_more">Portlet Header</span></a>
     </dt>
-
     <tal:events tal:repeat="item view/results">
     <dd class="portletItem"
         tal:define="oddrow repeat/item/odd;
                     number repeat/item/number;
-                    item_icon python:getIcon(item);"
-        tal:attributes="class python:oddrow and 'portletItem even ngaktueltItem%d'%number or 'portletItem odd ngaktueltItem%d'%number">
-      <a href="#"
-         class="ngaktuelt-block"
-         tal:condition="repeat/item/start"
-         tal:attributes="href item/getURL;
-                         title item/Description;">
-            <img tal:define="obj item/getObject;
-			     image nocall:obj/image|nothing;
-			     scale obj/@@images|nothing"
-		 tal:condition="python: image and image.getSize()"
-		 src="dummy.png" width="60" height="60" alt="" class="imgLeft"
-                 tal:replace="structure python:scale.scale('image', scale='mini').tag()" /></a>
-      <div class="ngaktuelt-details">
-        <span class="portletItemDetails"
+                    item_icon python:getIcon(item);">
+        <a href="#"
+           class="portletItemTitle"
+           tal:attributes="href item/getURL;
+                           title item/Description;">
+            <div class="portletItemImageWrapper"
+                 tal:condition="repeat/item/start">
+                <img tal:define="obj item/getObject;
+                			     image nocall:obj/image|nothing;
+                			     scale obj/@@images|nothing"
+            		 tal:condition="python: image and image.getSize()"
+            		 src="dummy.png" width="60" height="60" alt="" class="imgLeft"
+                     tal:replace="structure python:scale.scale('image', scale='large').tag()" />
+            </div>
+            <tal:content tal:content="item/title">Title</tal:content>
+        </a>
+<!--         <div class="portletByline"
               tal:condition="view/data/show_dates"
-              tal:content="python:toLocalizedTime(item.Date)">
-            Date
-        </span>
-      </div>
-      <a href="#"
-         class="ngaktuelt-title"
-         tal:content="item/title"
-         tal:attributes="href item/getURL;
-                         title item/Description">Title</a>
-      <div class="ngaktuelt-description"
+              tal:content="python:toLocalizedTime(item.Date)">Date</div> -->
+        <div class="portletItemByline">
+              Emneord | 15.04.2013</div>
+        <div class="portletItemDescription"
            tal:content="item/Description">Description</div>
     </dd>
     </tal:events>
     <dd class="portletFooter" tal:condition="view/data/show_more">
-        <span class="portletBottomLeft"></span>
-        <span>
         <a tal:attributes="href collection_url"
            tal:content="structure view/show_more_label">
-             More&hellip;
-             </a>
-        </span>
-        <span class="portletBottomRight"></span>
+             More&hellip;</a>
     </dd>
 </dl>

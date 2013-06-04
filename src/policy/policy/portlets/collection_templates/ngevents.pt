@@ -43,7 +43,7 @@
                    class="eventItemTitle"
                    tal:attributes="href obj/getURL;
                                    title obj/Description"
-                   tal:content="obj/pretty_title_or_id">Title</a>
+                   tal:content="obj/title">Title</a>
             </div>
     </dd>
     </tal:events>

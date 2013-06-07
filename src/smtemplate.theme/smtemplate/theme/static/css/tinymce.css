@@ -392,7 +392,7 @@ table {
      ========================================================================== */
 
 body {
-  background-color: white;
+  background-color: #60969f;
   color: black;
   font-family: 'Libre Baskerville', serif;
   font-size: 14px;
@@ -412,10 +412,7 @@ h1,
   font-size: 36.12px;
   font-weight: normal;
   line-height: 42.12px;
-  margin: 10.778443114px 0;
-}
-.documentFirstHeading {
-  margin-top: 0;
+  margin: 18px 0 15px;
 }
 h2 {
   font-family: inherit;
@@ -438,20 +435,16 @@ hr {
   margin: 18px 0;
 }
 img {
-  border: 0;
-  vertical-align: text-bottom;
-}
-#content img,
-.portletStaticText img {
   height: auto;
   max-width: 100%;
-  width: auto;
+  width: auto\9;
   /*fix to IE8*/
 
 }
 menu,
 ol,
 ul {
+  margin: 0 0 18px;
   padding: 0 0 0 27px;
 }
 li ul,
@@ -532,7 +525,7 @@ table.plain td,
 table.plain th,
 table.listing td,
 table.listing th {
-  padding: 9px 18px;
+  padding: 6px 9px;
   vertical-align: top;
 }
 table.plain th,
@@ -567,7 +560,6 @@ table.vertical th {
   text-align: right;
 }
 table.vertical td {
-  border-top: 1px solid #e7e7e7;
   padding: 0.5em;
 }
 /* Grid table listings */
@@ -715,9 +707,9 @@ dl.collapsible dt.collapsibleHeader {
   width: auto;
 }
 dl.collapsible dd.collapsibleContent {
-  margin: 0;
-  padding: 0 1em 0.4em;
   clear: left;
+  margin: 0;
+  padding: 6px 12px 12px;
 }
 /* for IE the following isn't needed, that's why the css2 selector is used */
 
@@ -924,9 +916,6 @@ form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
 }
 #search-results-bar dt.actionMenuHeader a::after {
   content: " ▼";
-}
-#search-results {
-  padding: 1em;
 }
 .searchResults {
   margin-top: 0;
@@ -1313,61 +1302,61 @@ a.historyComparePrevious span {
 /* Add new */
 
 #plone-contentmenu-factories li a {
-  background: url(../images/icons-sprite.png) no-repeat 1px -1199px;
+  background: url(../images/icons-sprite.png) no-repeat 1px -1197px;
   display: block;
   padding-left: 17px;
 }
 #plone-contentmenu-factories li a:hover {
   background-color: white;
-  background-position: 1px -2799px;
+  background-position: 1px -2797px;
 }
 #plone-contentmenu-factories li .contenttype-folder {
-  background-position: 1px 2px;
+  background-position: 1px 4px;
 }
 #plone-contentmenu-factories li .contenttype-folder:hover {
-  background-position: 2px -1598px;
+  background-position: 2px -1596px;
 }
 #plone-contentmenu-factories li .contenttype-document {
-  background-position: 1px -199px;
+  background-position: 1px -197px;
 }
 #plone-contentmenu-factories li .contenttype-document:hover {
-  background-position: 2px -1799px;
+  background-position: 2px -1797px;
 }
 #plone-contentmenu-factories li .contenttype-news-item {
-  background-position: 1px -399px;
+  background-position: 1px -397px;
 }
 #plone-contentmenu-factories li .contenttype-news-item:hover {
-  background-position: 2px -1999px;
+  background-position: 2px -1997px;
 }
 #plone-contentmenu-factories li .contenttype-event {
-  background-position: 1px -599px;
+  background-position: 1px -597px;
 }
 #plone-contentmenu-factories li .contenttype-event:hover {
-  background-position: 2px -2199px;
+  background-position: 2px -2197px;
 }
 #plone-contentmenu-factories li .contenttype-topic {
-  background-position: 1px -800px;
+  background-position: 1px -798px;
 }
 #plone-contentmenu-factories li .contenttype-topic:hover {
-  background-position: 2px -2400px;
+  background-position: 2px -2398px;
 }
 #plone-contentmenu-factories li .contenttype-image {
-  background-position: 1px -999px;
+  background-position: 1px -997px;
 }
 #plone-contentmenu-factories li .contenttype-image:hover {
-  background-position: 2px -2599px;
+  background-position: 2px -2597px;
 }
 #plone-contentmenu-factories li .contenttype-file {
-  background-position: 1px -1199px;
+  background-position: 1px -1197px;
 }
 #plone-contentmenu-factories li .contenttype-file:hover {
-  background-position: 2px -2799px;
+  background-position: 2px -2797px;
 }
 #plone-contentmenu-factories li .contenttype-link {
-  background-position: 1px -1395px;
+  background-position: 1px -1393px;
 }
 #plone-contentmenu-factories li .contenttype-link:hover {
-  background-position: 2px -2995px;
+  background-position: 2px -2993px;
 }
 #plone-contentmenu-factories #settings {
   background-image: none;
@@ -1459,3 +1448,36 @@ a.historyComparePrevious span {
 }
 /* @end */
 
+.section-home .documentFirstHeading {
+  display: none;
+}
+.documentDescription {
+  font-size: 18.06px;
+  line-height: 24.12px;
+  margin: 0 0 18px;
+}
+.linkButton a {
+  background: -webkit-linear-gradient(#087b8c, #066270);
+  background: linear-gradient(#087b8c, #066270);
+  color: white;
+  display: inline-block;
+  padding: 6px 10px;
+}
+.linkButton a:hover {
+  background: -webkit-linear-gradient(#d5241c, #ab1d17);
+  background: linear-gradient(#d5241c, #ab1d17);
+}
+.listTypeHyphen,
+.listTypeMark {
+  list-style: none;
+  padding-left: 0;
+}
+.listTypeHyphen li:before {
+  content: "- ";
+}
+.listTypeMark > li > a {
+  content: "» ";
+}
+.suppressVisualEditor {
+  margin: 9px 0 0 !important;
+}

@@ -18,7 +18,7 @@
                     item_icon python:getIcon(obj);
                     month_abr python: ['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec']"
         tal:attributes="class python:oddrow and 'portletItem even' or 'portletItem odd'">
-            <span class="eventItemDetails">
+            <span class="eventItemData">
               <span class="eventItemDay"
                     tal:condition="view/data/show_dates"
                     tal:content="python:DateTime(obj.start).dd()">
@@ -30,21 +30,13 @@
                   Mon
               </span>
             </span>
-            <div class="eventItemContent">
-                <div class="eventItemData">
-                  <div class="eventItemStart">Start
-                        <tal:start condition="view/data/show_dates"
-                        tal:content="python:toLocalizedTime(obj.start, time_only=True)">Start</tal:start></div>
-                  <div class="eventItemEnd">Slut
-                        <tal:end condition="view/data/show_dates"
-                        tal:content="python:toLocalizedTime(obj.end, time_only=True)">End</tal:end></div>
-                </div>
-                <a href="#"
-                   class="eventItemTitle"
-                   tal:attributes="href obj/getURL;
-                                   title obj/Description"
-                   tal:content="obj/title">Title</a>
-            </div>
+            <div class="portletItemByline">Emneord</div>
+            <a class="portletItemTitle"
+               href="#"
+               class="eventItemTitle"
+               tal:attributes="href obj/getURL;
+                               title obj/Description"
+               tal:content="obj/title">Title</a>
     </dd>
     </tal:events>
     <dd class="portletFooter" tal:condition="view/data/show_more">

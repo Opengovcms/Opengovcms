@@ -2030,6 +2030,9 @@ li:hover .globalSectionsLevel1 {
   line-height: 16px;
   padding: 0;
 }
+.globalSectionsLevel2 a:before {
+  content: "» ";
+}
 /*
  * Portal Logo 
  */

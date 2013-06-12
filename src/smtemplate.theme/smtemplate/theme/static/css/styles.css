@@ -2033,14 +2033,34 @@ li:hover .globalSectionsLevel1 {
 .globalSectionsLevel2 a:before {
   content: "» ";
 }
-/*
- * Portal Logo 
- */
-
-/*
- * Bread Crumbs & Language Selecto 
- */
-
+.documentActions {
+  float: right;
+  margin: 13px 0;
+  padding: 0;
+}
+.documentActions li {
+  display: inline-block;
+}
+.documentActions a {
+  display: block;
+  height: 18px;
+  margin-left: 12px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 18px;
+}
+#document-action-print a {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQJJREFUeNpi/P//PwM1AAu6AGdNbx6QyiGgb8r3luJJeA0CAiMgViVgkBFBFwFBBhDPJGDQeXQBRo7qHkcgbY8k9haI3xEwSAiIhYGYF4i5gXgdyEWbgJiHzDC+DsSbgXgOE5BgpyCylgNxOxD/Bxn0jQKDmoD4PcibTAzUAX+oZRADE46AXg3EajjwaizqeVigfhRBk3gETLm3sdkMTPmPsAi/BhnkBMRmSIIpQKyFxxcguROgKEcSO8kCtPkykHEZyUYTIGWKxyAxID4N1DcXPYzQgSAQf8Zj0GeoGoJ5DVSu6AFdFoXDID0g3kWMQYeB2BJPxn0LVYOaaalVsAEEGAAHyjjviog4oAAAAABJRU5ErkJggg==) no-repeat 50% 50%;
+}
+#document-action-print a:hover {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQJJREFUeNpi/P//PwM1AAu6wDVV2TwglUNA3xSt248n4TUICIyAWJWAQUYEXQQEGUA8k4BB59EFGK+qyDgCaXsksbdA/I6AQUJALAzEvEDMDcTrQC7aBMQ8ZIbxdSDeDMRzmIAEOwWRtRyI24H4P8igbxQY1ATE70HeZGKgDvhDLYMYmHAE9GogVsOBV2NRz8MC9aMImsQjYMq9jc1mYMp/hEX4NcggJyA2QxJMAWItPL4AyZ0ARTmS2EkWoM2XgYzLSDaaAClTPAaJAfFpoL656GGEDgSB+DMegz5D1RDMa6ByRQ/osigcBukB8S5iDDoMxJZ4Mu5bqBrUTEutgg0gwAAeQzj1VN4dMQAAAABJRU5ErkJggg==);
+}
+#document-action-plus a {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAGFBMVEUIe4wIe4wIe4wAAAAHdoYHeIgHdocIe4zV6KgnAAAABHRSTlN5d3YAjX8pKQAAADdJREFUeNqt0CsWACAMA8HAlvb+N8bxq0F05Kq8qFmcTGjEbaB4rQSUJLa/VD/ilZ9w1P0uHZFM+2sHR3ArI/YAAAAASUVORK5CYII=) no-repeat 50% 50%;
+}
+#document-action-plus a:hover {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAGFBMVEXVJBzVJBzVJBwAAADMIhrPIxvNIhvVJByw4Hs/AAAABHRSTlN5d3YAjX8pKQAAADdJREFUeNqt0CsWACAMA8HAlvb+N8bxq0F05Kq8qFmcTGjEbaB4rQSUJLa/VD/ilZ9w1P0uHZFM+2sHR3ArI/YAAAAASUVORK5CYII=);
+}
 #portal-breadcrumbs {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 10.9998px;

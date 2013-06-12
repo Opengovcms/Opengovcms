@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/browser"
+    i18n_domain="policy">
+
+    <viewlet
+        name="plone.footer"
+        for="*"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        class=".footer.FooterViewlet"
+        permission="zope.Public"
+        layer="policy.interfaces.IBrowserLayer"
+        />
+
+</configure>

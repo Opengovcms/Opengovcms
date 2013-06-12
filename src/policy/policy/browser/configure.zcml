@@ -27,4 +27,13 @@
       permission="zope2.View"
       />
 
+  <!-- Control panel view -->
+  <page
+      name="site-settings-controlpanel"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".controlpanel.ControlPanel"
+      permission="cmf.ManagePortal"
+      layer="policy.interfaces.IBrowserLayer"
+      />
+
 </configure>

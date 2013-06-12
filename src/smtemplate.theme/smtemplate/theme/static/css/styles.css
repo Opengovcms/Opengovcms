@@ -2136,6 +2136,84 @@ dl.portletError {
 .manage-panel input[type="submit"] {
   margin-right: 4px;
 }
+.portletNavigationTree {
+  padding: 0;
+}
+.portletNavigationTree .portletItem {
+  margin: 0;
+}
+.portletNavigationTree a {
+  color: #087b8c;
+}
+.navTree {
+  margin: 0;
+  padding: 0;
+}
+.navTreeItem {
+  border-top: 1px solid #a7b0b5;
+  display: block;
+}
+.navTreeLevel0 > .navTreeCurrentNode,
+.navTreeLevel0 > .navTreeItemInPath {
+  background-color: #087b8c;
+  padding-left: 6px;
+}
+.navTreeTopNode {
+  background-color: transparent !important;
+  border: 0;
+  font-size: 17.994858612px;
+  font-weight: bold;
+  line-height: 18px;
+  margin: 18px 0 15px;
+  padding: 0 !important;
+}
+.navTreeItem a {
+  display: block;
+  padding: 10px 0;
+}
+.navTreeLevel0 > .navTreeCurrentNode > a,
+.navTreeLevel0 > .navTreeItemInPath > a {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAICAYAAAD0g6+qAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEhJREFUeNpi+P///1IgdgNiBiRsAsST0MTwYhDhAcTvkQwDGfIWiKNJNQiEPaGGFZJjCLJBIOwFxJeAOJJUQ2AGjYYRfgwQYAAgwsCAqBE6wwAAAABJRU5ErkJggg==) no-repeat 100% 50%;
+  color: white;
+  padding-right: 20px;
+  padding-left: 9px;
+}
+.navTreeTopNode a {
+  color: #087b8c !important;
+}
+.navTreeLevel1 {
+  background-color: white;
+  font-size: 11.998px;
+  line-height: 16px;
+}
+.navTreeLevel1 > .navTreeCurrentNode,
+.navTreeLevel1 > .navTreeItemInPath {
+  background-color: #e9eff3;
+  border: 0;
+  padding-left: 6px;
+}
+.navTreeLevel1 a {
+  padding: 7px 0 7px 9px;
+}
+.navTreeLevel1 > .navTreeCurrentNode > a,
+.navTreeLevel1 > .navTreeItemInPath > a {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAHCAYAAADu4qZ8AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIlJREFUeNpi5KjumcjAwLAHiDczQIA9ELt9bymuZiASMAHxMSDuBmIbINYD4mlAfJ+BBMACxCuB+AsQzwViNiAGuWAZqYb4A/FGIP4HxNxAvAaIHYD4ACmGBABxOBBHQcWmQQ0jyZAKIJ4H1fwDiDWAOIkU74AC9iUQRwOxMBCrQV30gBRDAAIMAAyfGKDIqHAOAAAAAElFTkSuQmCC) no-repeat 100% 50%;
+  font-weight: bold;
+  padding-right: 20px;
+}
+.navTreeLevel2 {
+  background-color: white;
+  padding: 6px 0;
+}
+.navTreeLevel2 .navTreeItem {
+  border: 0;
+}
+.navTreeLevel2 .navTreeItem a {
+  padding: 3px 0 3px 9px;
+}
+.navTreeLevel2 .navTreeCurrentNode {
+  font-weight: bold;
+}
 .ploneCalendar {
   width: 100%;
 }

@@ -97,35 +97,83 @@ dl.portletError {
 }
 
 // Navigation portlet
-.navTree {
-  
+.portletNavigationTree {
+  padding: 0;
+}
+.portletNavigationTree .portletItem {
+  margin: 0;
 }
 .portletNavigationTree a {
-  
+  color: @linkColor;
 }
-.portletNavigationTree a:visited {
-  
+.navTree {
+  margin: 0;
+  padding: 0;
 }
-.portletNavigationTree a:hover {
-  
+.navTreeItem {
+  border-top: 1px solid @grayLight;
+  display: block;
 }
-.navTreeLevel0 {
-  
+.navTreeLevel0 > .navTreeCurrentNode,
+.navTreeLevel0 > .navTreeItemInPath {
+  background-color: @secondary;
+  padding-left: 6px;
 }
-.navTreeLevel0 > .navTreeItem {
-  
+.navTreeTopNode {
+  background-color: transparent !important;
+  border: 0;
+  font-size: @baseFontSize / 0.778;
+  font-weight: bold;
+  line-height: @baseLineHeight;
+  margin: @baseLineHeight 0 @baseLineHeight / 1.2;
+  padding: 0 !important;
+}
+.navTreeItem a {
+  display: block;
+  padding: 10px 0;
+}
+.navTreeLevel0 > .navTreeCurrentNode > a,
+.navTreeLevel0 > .navTreeItemInPath > a {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAICAYAAAD0g6+qAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEhJREFUeNpi+P///1IgdgNiBiRsAsST0MTwYhDhAcTvkQwDGfIWiKNJNQiEPaGGFZJjCLJBIOwFxJeAOJJUQ2AGjYYRfgwQYAAgwsCAqBE6wwAAAABJRU5ErkJggg==) no-repeat 100% 50%;
+  color: @white;
+  padding-right: 20px;
+  padding-left: 9px;
+}
+.navTreeTopNode a {
+  color: @linkColor !important;
 }
 .navTreeLevel1 {
-  
+  background-color: @white;
+  font-size: @baseFontSize * 0.857;  
+  line-height: @baseLineHeight / 1.125;
 }
-.navTreeLevel1 > .navTreeItem {
-  
+.navTreeLevel1 > .navTreeCurrentNode,
+.navTreeLevel1 > .navTreeItemInPath {
+  background-color: @light;
+  border: 0;
+  padding-left: 6px; 
+}
+.navTreeLevel1 a {
+  padding: 7px 0 7px 9px;
+}
+.navTreeLevel1 > .navTreeCurrentNode > a,
+.navTreeLevel1 > .navTreeItemInPath > a {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAHCAYAAADu4qZ8AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIlJREFUeNpi5KjumcjAwLAHiDczQIA9ELt9bymuZiASMAHxMSDuBmIbINYD4mlAfJ+BBMACxCuB+AsQzwViNiAGuWAZqYb4A/FGIP4HxNxAvAaIHYD4ACmGBABxOBBHQcWmQQ0jyZAKIJ4H1fwDiDWAOIkU74AC9iUQRwOxMBCrQV30gBRDAAIMAAyfGKDIqHAOAAAAAElFTkSuQmCC) no-repeat 100% 50%;
+  font-weight: bold;
+  padding-right: 20px;
 }
 .navTreeLevel2 {
-  
+  background-color: @white;
+  padding: 6px 0;
 }
-.navTreeLevel2 .navTree {
-  
+.navTreeLevel2 .navTreeItem {
+  border: 0;
+}
+.navTreeLevel2 .navTreeItem a {
+  padding: 3px 0 3px 9px;
+}
+.navTreeLevel2 .navTreeCurrentNode {
+  font-weight: bold;
 }
 
 // Static Text Portlet

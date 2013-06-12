@@ -12,14 +12,14 @@ tinyMCE.addI18n(
     {da : {divwrap : {
 	"title" : "Pak det valgte ind",
 	"none_title" : "Ingen indpakning",
-	"factbox_title" : "Faktaboks"
+	"factBox_title" : "Faktaboks"
     }}}
 );
 tinyMCE.addI18n(
     {en : {divwrap : {
 	"title" : "Wrap selected content",
 	"none_title" : "Do not wrap",
-	"factbox_title" : "Factbox"
+	"factBox_title" : "Factbox"
     }}}
 );
 

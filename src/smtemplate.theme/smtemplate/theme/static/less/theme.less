@@ -234,9 +234,7 @@ li:hover .globalSectionsLevel1 {
   content: "» ";
 }
 
-/*
- * Portal Logo 
- */
+// Portal Logo 
 #portal-logo {
   
 }
@@ -244,9 +242,37 @@ li:hover .globalSectionsLevel1 {
   
 }
 
-/*
- * Bread Crumbs & Language Selecto 
- */
+// Document Actions
+.documentActions {
+  float: right;
+  margin: 13px 0;
+  padding: 0;
+}
+.documentActions li {
+  display: inline-block;
+}
+.documentActions a {
+  display: block;
+  height: 18px;
+  margin-left: 12px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 18px;
+}
+#document-action-print a {
+  background: @print-icon no-repeat 50% 50%;
+}
+#document-action-print a:hover {
+  background-image: @print-icon-hover;
+}
+#document-action-plus a {
+  background: @addthis-icon no-repeat 50% 50%;
+}
+#document-action-plus a:hover {
+  background-image: @addthis-icon-hover;
+}
+
+// Bread Crumbs & Language Selecto
 #portal-breadcrumbs {
   font-family: @sansFontFamily;
   font-size: @baseFontSize * 0.7857;

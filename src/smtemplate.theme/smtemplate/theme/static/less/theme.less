@@ -306,9 +306,43 @@ li:hover .globalSectionsLevel1 {
 }
 #portal-footer-inner {
   margin: auto;
-  padding: 15px 15px 1px;
+  padding: 3px 15px 1px;
   width: 960px;
 }
+#portal-footer-wrapper .portlet {
+  border: 0;
+  margin: 0 0 @baseLineHeight*1.5;
+  padding: 0;
+}
+#portal-footer-wrapper .portletItem {
+  font-family: @sansFontFamily;
+  font-size: @baseFontSize * 0.857;  
+  line-height: @baseLineHeight / 1.125;
+}
+#portal-footer-wrapper .listTypeMark > li {
+  margin: 0;
+}
+#portal-footer-wrapper .listTypeMark > li:before {
+  display: none;
+}
+#portal-footer-wrapper .listTypeMark > li > a {
+  display: block;
+  padding: 3px 3px 3px 17px;
+}
+#portal-footer-wrapper .listTypeMark > li > a:hover {
+  background-color: @light;
+  text-decoration: none;
+}
+#portal-footer-wrapper .listTypeMark > li > a:before {
+  content: "» ";
+  font-size: @baseFontSize;
+  margin-left: -14px;
+}
 #portal-footer {
-  
+  border-top: 1px solid @grayLight;
+  clear: both;
+  padding: @baseLineHeight 0 0;
+}
+#portal-footer a:hover {
+  color: @black;
 }

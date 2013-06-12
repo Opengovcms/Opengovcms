@@ -1789,11 +1789,12 @@ body.template-new-user #content input {
 .listTypeHyphen li:before {
   content: "- ";
 }
-.listTypeMark > li > a {
+.listTypeMark > li {
   display: block;
-  padding-left: 14px;
+  margin: 0 0 3px 14px;
 }
-.listTypeMark > li > a:before {
+.listTypeMark > li:before {
+  color: #087b8c;
   content: "» ";
   font-size: 17.994858612px;
   font-weight: bold;
@@ -2092,8 +2093,45 @@ li:hover .globalSectionsLevel1 {
 }
 #portal-footer-inner {
   margin: auto;
-  padding: 15px 15px 1px;
+  padding: 3px 15px 1px;
   width: 960px;
+}
+#portal-footer-wrapper .portlet {
+  border: 0;
+  margin: 0 0 27px;
+  padding: 0;
+}
+#portal-footer-wrapper .portletItem {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 11.998px;
+  line-height: 16px;
+}
+#portal-footer-wrapper .listTypeMark > li {
+  margin: 0;
+}
+#portal-footer-wrapper .listTypeMark > li:before {
+  display: none;
+}
+#portal-footer-wrapper .listTypeMark > li > a {
+  display: block;
+  padding: 3px 3px 3px 17px;
+}
+#portal-footer-wrapper .listTypeMark > li > a:hover {
+  background-color: #e9eff3;
+  text-decoration: none;
+}
+#portal-footer-wrapper .listTypeMark > li > a:before {
+  content: "» ";
+  font-size: 14px;
+  margin-left: -14px;
+}
+#portal-footer {
+  border-top: 1px solid #a7b0b5;
+  clear: both;
+  padding: 18px 0 0;
+}
+#portal-footer a:hover {
+  color: black;
 }
 .portlet {
   border-bottom: 1px solid #a7b0b5;

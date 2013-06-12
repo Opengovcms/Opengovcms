@@ -28,11 +28,12 @@
 .listTypeHyphen li:before {
   content: "- ";
 }
-.listTypeMark > li > a {
+.listTypeMark > li {
   display: block;
-  padding-left: 14px;
+  margin: 0 0 3px 14px;
 }
-.listTypeMark > li > a:before {
+.listTypeMark > li:before {
+  color: @linkColor;
   content: "» ";
   font-size: @baseFontSize/0.778;
   font-weight: bold;

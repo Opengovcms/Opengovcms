@@ -1,7 +1,6 @@
 /* ==========================================================================
      Fonts
      ========================================================================== */
-
 @font-face {
   
 }
@@ -11,15 +10,12 @@
   display: table;
 }
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
-
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
-
 /**
  * Correct `block` display not defined in IE 8/9.
  */
-
 article,
 aside,
 details,
@@ -37,7 +33,6 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */
-
 audio,
 canvas,
 video {
@@ -47,7 +42,6 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -55,25 +49,24 @@ audio:not([controls]) {
 /**
  * Address styling not present in IE 8/9.
  */
-
 [hidden] {
   display: none;
 }
 /* ==========================================================================
    Base
    ========================================================================== */
-
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-
 html {
   font-family: sans-serif;
   /* 1 */
+
   -ms-text-size-adjust: 100%;
   /* 2 */
+
   -webkit-text-size-adjust: 100%;
   /* 2 */
 
@@ -81,25 +74,21 @@ html {
 /**
  * Remove default margin.
  */
-
 body {
   margin: 0;
 }
 /* ==========================================================================
    Links
    ========================================================================== */
-
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-
 a:focus {
   outline: thin dotted;
 }
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-
 a:active,
 a:hover {
   outline: 0;
@@ -107,12 +96,10 @@ a:hover {
 /* ==========================================================================
    Typography
    ========================================================================== */
-
 /**
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
-
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -120,14 +107,12 @@ h1 {
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
-
 abbr[title] {
   border-bottom: 1px dotted;
 }
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-
 b,
 strong {
   font-weight: bold;
@@ -135,14 +120,12 @@ strong {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-
 dfn {
   font-style: italic;
 }
 /**
  * Address differences between Firefox and other browsers.
  */
-
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -151,15 +134,13 @@ hr {
 /**
  * Address styling not present in IE 8/9.
  */
-
 mark {
-  background: yellow;
-  color: black;
+  background: #ff0;
+  color: #000;
 }
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
  */
-
 code,
 kbd,
 pre,
@@ -170,28 +151,24 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
-
 pre {
   white-space: pre-wrap;
 }
 /**
  * Set consistent quote types.
  */
-
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-
 small {
   font-size: 80%;
 }
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-
 sub,
 sup {
   font-size: 75%;
@@ -208,42 +185,35 @@ sub {
 /* ==========================================================================
    Embedded content
    ========================================================================== */
-
 /**
  * Remove border when inside `a` element in IE 8/9.
  */
-
 img {
   border: 0;
 }
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-
 svg:not(:root) {
   overflow: hidden;
 }
 /* ==========================================================================
    Figures
    ========================================================================== */
-
 /**
  * Address margin not present in IE 8/9 and Safari 5.
  */
-
 figure {
   margin: 0;
 }
 /* ==========================================================================
    Forms
    ========================================================================== */
-
 /**
  * Define consistent border, margin, and padding.
  */
-
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -251,10 +221,10 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-
 legend {
   border: 0;
   /* 1 */
+
   padding: 0;
   /* 2 */
 
@@ -264,15 +234,16 @@ legend {
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
-
 button,
 input,
 select,
 textarea {
   font-family: inherit;
   /* 1 */
+
   font-size: 100%;
   /* 2 */
+
   margin: 0;
   /* 3 */
 
@@ -281,7 +252,6 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-
 button,
 input {
   line-height: normal;
@@ -292,7 +262,6 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-
 button,
 select {
   text-transform: none;
@@ -304,13 +273,13 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-
 button,
 html input[type="button"],
-/* 1 */ input[type="reset"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
+
   cursor: pointer;
   /* 3 */
 
@@ -318,7 +287,6 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -327,11 +295,11 @@ html input[disabled] {
  * 1. Address box sizing set to `content-box` in IE 8/9.
  * 2. Remove excess padding in IE 8/9.
  */
-
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
+
   padding: 0;
   /* 2 */
 
@@ -341,20 +309,20 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   /* 2 */
+
   box-sizing: content-box;
 }
 /**
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -362,7 +330,6 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -372,10 +339,10 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-
 textarea {
   overflow: auto;
   /* 1 */
+
   vertical-align: top;
   /* 2 */
 
@@ -383,11 +350,9 @@ textarea {
 /* ==========================================================================
    Tables
    ========================================================================== */
-
 /**
  * Remove most spacing between table cells.
  */
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -475,10 +440,9 @@ div.position-3\3a 4 {
 /* ==========================================================================
      General Styles
      ========================================================================== */
-
 body {
   background-color: #60969f;
-  color: black;
+  color: #000000;
   font-family: 'Libre Baskerville', serif;
   font-size: 14px;
   line-height: 18px;
@@ -494,14 +458,14 @@ a:visited {
 h1,
 .documentFirstHeading {
   font-family: inherit;
-  font-size: 36.12px;
+  font-size: 36.120000000000005px;
   font-weight: normal;
   line-height: 42.12px;
   margin: 18px 0 15px;
 }
 h2 {
   font-family: inherit;
-  font-size: 18.06px;
+  font-size: 18.060000000000002px;
   font-weight: normal;
   line-height: 24.12px;
   margin: 27px 0 9px;
@@ -541,8 +505,8 @@ dd {
   margin: 0 0 0 27px;
 }
 pre {
-  background-color: #222222;
-  color: white;
+  background-color: #222;
+  color: #fff;
   font-size: 12px;
   font-family: monospace;
   margin-bottom: 1em;
@@ -550,19 +514,17 @@ pre {
   overflow-x: auto;
 }
 /* @group Content Area */
-
 /* Editor styles */
-
 .discreet {
-  font-size: 12.068965517px;
+  font-size: 12.06896551724138px;
   color: #6f7578;
 }
 .visualHighlight {
-  background-color: #ffffbb;
+  background-color: #ffb;
 }
 .pullquote {
   clear: right;
-  color: #444444;
+  color: #444;
   float: right;
   font-size: 1.6em;
   font-weight: bold;
@@ -572,14 +534,13 @@ pre {
 }
 .callout {
   clear: both;
-  background-color: #eeeeee;
-  border-left: 1em solid #cccccc;
+  background-color: #eee;
+  border-left: 1em solid #ccc;
   padding: 1em;
 }
 /* Content layout styles */
-
 div.documentByLine {
-  font-size: 12.068965517px;
+  font-size: 12.06896551724138px;
   color: #6f7578;
 }
 img.tileImage,
@@ -596,9 +557,7 @@ div.newsImageContainer {
   clear: both;
 }
 /* @end */
-
 /* @group Data tables */
-
 table.listing,
 table.plain {
   margin: 0 0 18px;
@@ -635,12 +594,11 @@ table.listing td {
 table.listing td.draggable,
 table.listing td.notDraggable {
   padding: 0 7.2px;
-  text-shadow: white 1px 1px 1px;
+  text-shadow: #fff 1px 1px 1px;
   text-align: center;
   vertical-align: middle;
 }
 /* Vertical table data listings */
-
 table.vertical th {
   text-align: right;
 }
@@ -648,20 +606,18 @@ table.vertical td {
   padding: 0.5em;
 }
 /* Grid table listings */
-
 table.grid td,
 table.grid th {
   border: 1px solid #e7e7e7;
   padding: 0.5em;
 }
 .dragindicator {
-  outline: 2px solid gold;
+  outline: 2px solid #ffd700;
 }
 #foldercontents-order-column {
   padding: 0;
 }
 /* Listing Bar */
-
 .listingBar {
   margin: 1em 0;
   text-align: center;
@@ -678,9 +634,7 @@ table.grid th {
   padding: 0.25em 0.5em;
 }
 /* @end */
-
 /* @group Status messages */
-
 dl.portalMessage,
 div.attention,
 div.caution,
@@ -692,7 +646,7 @@ div.note,
 div.tip,
 div.warning {
   margin: 1em 0;
-  border: 1px solid #999966;
+  border: 1px solid #996;
   background-color: #ffffe3;
   clear: both;
 }
@@ -716,12 +670,12 @@ div.warning a,
 #content div.note a,
 #content div.tip a,
 #content div.warning a {
-  color: black;
+  color: #000;
   text-decoration: underline;
 }
 dl.portalMessage dt,
 div > .admonition-title {
-  background-color: #999966;
+  background-color: #996;
   float: left;
   margin: 0 0.5em 0 0;
   padding: 0.5em 0.75em;
@@ -743,44 +697,42 @@ div.warning > .last {
   line-height: 1.25em;
 }
 .warning {
-  border-color: #dd8800;
+  border-color: #d80;
 }
 .warning > dt,
 .warning > .admonition-title {
-  background-color: #dd8800;
+  background-color: #d80;
 }
 .error {
-  border-color: #dd0000;
+  border-color: #d00;
 }
 .error > dt,
 .error > .admonition-title {
-  background-color: #dd0000;
+  background-color: #d00;
 }
 .warning {
-  border-color: #dd8800;
+  border-color: #d80;
 }
 .warning > dd,
 .warning > .last {
-  background-color: #ffdd77;
+  background-color: #fd7;
 }
 .error {
   border-color: red;
 }
 .error > dd,
 .error > .last {
-  background-color: #ffddcc;
+  background-color: #fdc;
 }
 /* @end */
-
 /* @group Collapsible */
-
 dl.collapsible {
   border: 1px solid #8cacbb;
   margin: 1em 0;
   padding: 0;
 }
 dl.collapsible dt.collapsibleHeader {
-  background-color: white;
+  background-color: #fff;
   float: left;
   display: block;
   line-height: 1.2em;
@@ -797,14 +749,13 @@ dl.collapsible dd.collapsibleContent {
   padding: 6px 12px 12px;
 }
 /* for IE the following isn't needed, that's why the css2 selector is used */
-
 dl.collapsible dd.collapsibleContent > dl {
   margin: 0;
   padding: 0;
 }
 dl.expandedInlineCollapsible dt.collapsibleHeader,
 dl.expandedBlockCollapsible dt.collapsibleHeader {
-  background: url(../images/treeExpanded.png) no-repeat 0.5em 50% white;
+  background: url(../images/treeExpanded.png) no-repeat 0.5em 50% #ffffff;
   cursor: pointer;
   padding: 0 0.5em 0 2em;
 }
@@ -815,7 +766,7 @@ dl.collapsedBlockCollapsible {
 }
 dl.collapsedInlineCollapsible dt.collapsibleHeader,
 dl.collapsedBlockCollapsible dt.collapsibleHeader {
-  background: url(../images/treeCollapsed.png) no-repeat 0.5em 50% white;
+  background: url(../images/treeCollapsed.png) no-repeat 0.5em 50% #ffffff;
   cursor: pointer;
   float: none;
   margin: 0 0 0 1em;
@@ -841,9 +792,7 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
   position: static;
 }
 /* @end */
-
 /* @group Comments */
-
 .comment {
   margin-top: 1.5em;
   font-size: 80%;
@@ -855,12 +804,12 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
   margin-left: 0;
 }
 .commentTime {
-  color: #666666;
+  color: #666;
 }
 .commentBody {
   padding: 1em;
   margin: 0.5em 0;
-  box-shadow: 0 0 1em 0 #888888;
+  box-shadow: 0 0 1em 0 #888;
 }
 .comment h1,
 .comment h2,
@@ -871,7 +820,6 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
   font-weight: normal;
 }
 /* @end */
-
 .reviewHistory,
 .contentHistory {
   display: inline;
@@ -895,30 +843,25 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
   font-size: 90%;
 }
 /* for highlighting of search terms */
-
 .highlightedSearchTerm {
-  background-color: #ffffaa;
+  background-color: #ffa;
 }
 dl.searchResults .highlightedSearchTerm {
   background-color: transparent;
   font-weight: bold;
 }
 /* for greying out inherited roles */
-
 .noInheritedRoles {
   color: #a0a0a0;
 }
 /* for highlighting current items, like the language or today in the calendar */
-
 .currentItem {
   border-collapse: collapse;
-  border: 0.2em solid orange;
+  border: 0.2em solid #ffa500;
   padding: 0.1em;
 }
 /* @end */
-
 /* @group Search results page */
-
 fieldset#search-field {
   border: none !important;
   text-align: center;
@@ -935,7 +878,7 @@ input.searchPage {
   padding: 0;
 }
 #search-filter {
-  background: #dddddd;
+  background: #ddd;
   margin: 0;
   padding: 0;
 }
@@ -952,7 +895,7 @@ input.searchPage {
   font-weight: bold;
 }
 #search-filter .field {
-  background: #eeeeee;
+  background: #eee;
   padding: 1em 1.5em;
   margin: 0;
 }
@@ -985,8 +928,8 @@ form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
   z-index: 1;
   float: left;
   width: 100%;
-  border-top: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
   padding: 1em 0;
 }
 #search-results-bar dl.actionMenu {
@@ -1009,9 +952,7 @@ form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
   display: none;
 }
 /* @end */
-
 /* @group Image alignment classes */
-
 .image-left {
   float: left;
   margin: 0.5em 1em 0.5em 0;
@@ -1024,11 +965,8 @@ form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
   float: none;
 }
 /* @end */
-
 /* @group Table of Contents */
-
 /*Table of Contents styling - essentially a portlet with smaller fonts and aligned right + limited in width*/
-
 dl.toc {
   float: right;
   width: 35%;
@@ -1048,9 +986,7 @@ dl.toc dd ol {
   margin-left: 1.5em;
 }
 /* @end */
-
 /* @group Sitemap */
-
 #portal-sitemap {
   list-style: none;
   margin-left: 0;
@@ -1066,7 +1002,7 @@ dl.toc dd ol {
   display: block;
 }
 #portal-sitemap > li {
-  border-bottom: 0.1em dotted #dddddd;
+  border-bottom: 0.1em dotted #ddd;
   line-height: 1.8em;
   padding: 0.25em 1em;
   margin-bottom: 0;
@@ -1079,9 +1015,7 @@ dl.toc dd ol {
   padding: 0.25em 0;
 }
 /* @end */
-
 /* @group Album view classes */
-
 .photoAlbumVisual {
   background-color: #f9f9f9;
   border-bottom: 1px solid #ededed;
@@ -1099,7 +1033,7 @@ dl.toc dd ol {
 }
 .photoAlbumEntry {
   background-color: #ededed;
-  border-color: lightgray #e8e8e8;
+  border-color: #d3d3d3 #e8e8e8;
   border-radius: 8px;
   border-style: solid;
   border-width: 0 1px 1px 0;
@@ -1139,7 +1073,7 @@ dl.toc dd ol {
   text-align: center;
 }
 .photoAlbumEntry img {
-  border: 2px solid white;
+  border: 2px solid #fff;
 }
 .photoAlbumEntryTitle {
   color: #757373;
@@ -1158,14 +1092,13 @@ dl.toc dd ol {
   position: absolute;
 }
 /* @end */
-
 /* @group Invisibles */
-
 .hiddenStructure {
   display: block;
   background: transparent;
   background-image: none;
   /* safari bug */
+
   border: none;
   height: 0.1em;
   overflow: hidden;
@@ -1181,9 +1114,7 @@ dl.toc dd ol {
   clear: both;
 }
 /* @end */
-
 /* @group Accessibility elements, applied by JS */
-
 body.largeText {
   font-size: 125%;
 }
@@ -1191,11 +1122,8 @@ body.smallText {
   font-size: 85%;
 }
 /* @end */
-
 /* @group Overlay windows */
-
 /* styling for overlays (popups) */
-
 .overlay {
   display: none;
   height: auto;
@@ -1212,7 +1140,6 @@ div.overlay-iframe {
   height: 60%;
 }
 /* default close button positioned on upper-left corner */
-
 div.overlaybg div.close,
 div.overlay div.close {
   background-image: url(../images/pb_close.png);
@@ -1229,10 +1156,10 @@ div.overlay div.close {
 .pb-ajax,
 .pb-image,
 .overlay iframe {
-  background-color: white;
-  border: 1px solid #999999;
+  background-color: #fff;
+  border: 1px solid #999;
   white-space: normal;
-  box-shadow: 0 0 3em 0.5em #666666;
+  box-shadow: 0 0 3em 0.5em #666;
 }
 .pb-ajax > div {
   width: 92%;
@@ -1253,7 +1180,6 @@ div.overlay textarea {
   width: 100%;
 }
 /* Hide form elements that don't make sense within an overlay. */
-
 div.overlay .link-parent {
   display: none;
 }
@@ -1264,7 +1190,6 @@ div.overlay #createGroup fieldset {
   border: none;
 }
 /* lets play nice with paragraphs, links, tabbed pages in overlay e.g. when plone.openid is installed */
-
 div.overlay p {
   margin-bottom: 1em;
 }
@@ -1278,7 +1203,7 @@ div.overlay a:hover label {
   cursor: pointer;
 }
 div.overlay a.selected {
-  color: black;
+  color: #000000;
 }
 div.overlay .formTab {
   margin-right: 1em;
@@ -1292,9 +1217,7 @@ div.overlay .formControls a {
   margin: 0.75em;
 }
 /* @end */
-
 /* @group Content History */
-
 div.historyRecord {
   margin-bottom: 1em;
 }
@@ -1313,7 +1236,7 @@ div.historyTools form {
   display: inline;
 }
 .historyByLine {
-  background: #dddddd;
+  background: #ddd;
   padding: 0.5em;
 }
 div.historyLinks {
@@ -1323,14 +1246,14 @@ div.historyLinks {
 }
 div.historyComment {
   padding: 0.5em 1em;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
 }
 div.historyComment p {
   margin: 0;
   padding-top: 1px;
 }
 a.historyComparePrevious {
-  border-top: 1px dotted #cccccc;
+  border-top: 1px dotted #ccc;
   display: block;
   margin-top: 1.5em;
   margin-bottom: -0.5em;
@@ -1343,9 +1266,7 @@ a.historyComparePrevious span {
   padding: 0 0.5em;
 }
 /* @end */
-
 /* @group Core content type sprites */
-
 .icons-on .contenttype-folder {
   background: url(../images/icons-sprite.png) no-repeat 0 -1600px;
   display: inline-block;
@@ -1385,14 +1306,13 @@ a.historyComparePrevious span {
   margin-right: 3px;
 }
 /* Add new */
-
 #plone-contentmenu-factories li a {
   background: url(../images/icons-sprite.png) no-repeat 1px -1197px;
   display: block;
   padding-left: 17px;
 }
 #plone-contentmenu-factories li a:hover {
-  background-color: white;
+  background-color: #fff;
   background-position: 1px -2797px;
 }
 #plone-contentmenu-factories li .contenttype-folder {
@@ -1448,13 +1368,11 @@ a.historyComparePrevious span {
   padding: 0;
 }
 /* @end */
-
 /* @group jQuery Tag multiple selector */
-
 .optionsBox {
   overflow-y: auto;
   border: solid 1px #999999;
-  background: white;
+  background: #FFFFFF;
   height: 14em;
   width: 100%;
 }
@@ -1469,11 +1387,11 @@ a.historyComparePrevious span {
   margin: 1px 4px 4px 6px;
 }
 .optionsBox LABEL.checked {
-  background-color: #eeeeee;
+  background-color: #EEEEEE;
 }
 .optionsBox LABEL.hover {
   background-color: #777777;
-  color: white;
+  color: #FFFFFF;
 }
 #archetypes-fieldname-subject .formHelp {
   font-weight: normal;
@@ -1532,11 +1450,9 @@ a.historyComparePrevious span {
   margin-left: -10px;
 }
 /* @end */
-
 /* ==========================================================================
      Forms
      ========================================================================== */
-
 input[type="checkbox"],
 input[type="radio"] {
   margin-right: 3px;
@@ -1553,7 +1469,7 @@ label.horizontal {
   margin: 0 0 1em;
 }
 div.field.error {
-  background-color: #ffddcc;
+  background-color: #fdc;
   border: 1px solid red;
   padding: 0.5em;
 }
@@ -1573,16 +1489,14 @@ fieldset {
   padding: 6px 12px 12px;
 }
 /* @group Forms */
-
 /* Emulates the styling from the h1 tag */
-
 .field input[type="text"][name$=".title"],
 input#title {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: inherit;
-  font-size: 36.12px;
+  font-size: 36.120000000000005px;
   font-weight: normal;
   line-height: 42.12px;
   margin: 18px 0 15px;
@@ -1590,10 +1504,9 @@ input#title {
   width: 100%;
 }
 /* Emulates styling from the description's view */
-
 #content .field textarea[name$=".description"],
 #archetypes-fieldname-description textarea#description {
-  font-size: 18.06px;
+  font-size: 18.060000000000002px;
   line-height: 24.12px;
   margin: 0 0 18px;
   margin: 0;
@@ -1601,7 +1514,7 @@ input#title {
 input[type="text"],
 input[type="password"],
 textarea {
-  border: 1px solid black;
+  border: 1px solid #000;
   padding: 2px;
 }
 input[type="text"]:hover,
@@ -1618,8 +1531,8 @@ textarea:focus {
 button,
 input[type="submit"] {
   background-color: #087b8c;
-  border: 1px solid black;
-  color: white;
+  border: 1px solid #000;
+  color: #ffffff;
   padding: 3px 6px;
 }
 input[type="submit"].standalone {
@@ -1668,7 +1581,7 @@ dl.enableFormTabbing dd {
   margin: 3px 0 6px;
 }
 .error .fieldRequired {
-  color: #dd0000;
+  color: #d00;
 }
 div.error.warning {
   background-color: transparent;
@@ -1690,15 +1603,15 @@ table.listing tbody tr.odd.selected td,
 table.listing tbody tr.odd.dragging td,
 tr.dragging,
 tr.selected {
-  background-color: #ffffaa;
+  background-color: #ffa;
 }
 table.listing tbody tr.odd.error td,
 tr.error {
-  background-color: #ffddcc;
+  background-color: #fdc;
 }
 .multi-widget-field {
   padding-left: 0.5em;
-  border-left: 1.5em solid #dddddd;
+  border-left: 1.5em solid #DDD;
 }
 .multi-widget-checkbox {
   margin-left: -2em;
@@ -1707,7 +1620,6 @@ tr.error {
   display: inline-block;
 }
 /* @group Login form */
-
 body.template-logged_out #content,
 body.template-login_form #content,
 .pb-ajax #login-form {
@@ -1735,9 +1647,7 @@ body.template-new-user #content input {
   margin-left: 0.25em;
 }
 /* @end */
-
 /* @end */
-
 .criteria,
 .sortingField {
   margin: 0 0 9px;
@@ -1764,7 +1674,7 @@ body.template-new-user #content input {
   display: none;
 }
 .documentDescription {
-  font-size: 18.06px;
+  font-size: 18.060000000000002px;
   line-height: 24.12px;
   margin: 0 0 18px;
 }
@@ -1772,7 +1682,7 @@ body.template-new-user #content input {
   background-color: #087b8c;
   background: -webkit-linear-gradient(#087b8c, #066270);
   background: linear-gradient(#087b8c, #066270);
-  color: white;
+  color: #ffffff;
   display: inline-block;
   padding: 6px 10px;
 }
@@ -1796,7 +1706,7 @@ body.template-new-user #content input {
 .listTypeMark > li:before {
   color: #087b8c;
   content: "» ";
-  font-size: 17.994858612px;
+  font-size: 17.994858611825194px;
   font-weight: bold;
   margin-left: -14px;
 }
@@ -1809,8 +1719,11 @@ body.template-new-user #content input {
   box-sizing: border-box;
   width: 100%;
 }
+.factBox {
+  background: #087b8c;
+}
 #visual-portal-wrapper {
-  background-color: white;
+  background-color: #fff;
   margin: 0 auto 30px;
   padding: 0 15px 30px;
   width: 960px;
@@ -1851,12 +1764,11 @@ body.template-new-user #content input {
 }
 #portal-siteactions a:hover {
   border-bottom: 1px solid;
-  color: black;
+  color: #000000;
 }
 /*
  * Portal Search Box 
  */
-
 #portal-searchbox {
   position: absolute;
   right: 0;
@@ -1893,7 +1805,7 @@ body.template-new-user #content input {
   background-color: #076f7e;
 }
 #portal-searchbox .searchButton[type="submit"] {
-  font-size: 15.96px;
+  font-size: 15.959999999999999px;
   height: 30px;
 }
 .searchButton[type="submit"]:hover,
@@ -1910,7 +1822,7 @@ body.template-new-user #content input {
   z-index: 3;
 }
 .livesearchContainer {
-  background-color: white;
+  background-color: #ffffff;
   border: 1px solid #6f7578;
   left: 0;
   margin: 2em 0 0;
@@ -1920,7 +1832,7 @@ body.template-new-user #content input {
   width: 100%;
 }
 #livesearchLegend {
-  background-color: white;
+  background-color: #ffffff;
   border-color: #6f7578;
   border-style: solid;
   border-width: 1px 1px 0;
@@ -1974,9 +1886,9 @@ body.template-new-user #content input {
 #theme-globalnav > li > a span {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAMAAACDi47UAAAAMFBMVEX////////////z8/P7+/v////////////////w8PD39/f///////8AAADu7u7///+7HHyoAAAADnRSTlOZVTPXrYhmRCLswncRAO6B8fwAAABUSURBVHjaXY1BDoAwCATR2toCW/7/W1ejCXVOZLIZxPHC40Os+qNMs4zZgHNEll0jyhGhe5J+r7hem9LBrtdf04A21yZ7Q9nsSfJzod6ALImZI3MB3dIJbYVOa18AAAAASUVORK5CYII=) no-repeat 100% 50%;
   border-right: 1px solid #06606e;
-  color: white;
+  color: #ffffff;
   display: inline-block;
-  font-size: 18.06px;
+  font-size: 18.060000000000002px;
   line-height: 23.94px;
   padding: 11px 35px 11px 15px;
 }
@@ -2011,13 +1923,13 @@ li:hover .globalSectionsLevel1 {
   width: 25%;
 }
 .globalSectionsLevel1 a {
-  color: white;
+  color: #ffffff;
   display: block;
   margin: 0 24px 0 0;
   padding: 4px 0 4px 15px;
 }
 .globalSectionsLevel1 > li > a {
-  font-size: 18.06px;
+  font-size: 18.060000000000002px;
   font-weight: bold;
   line-height: 23.94px;
   padding: 7px 15px;
@@ -2064,7 +1976,7 @@ li:hover .globalSectionsLevel1 {
 }
 #portal-breadcrumbs {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 10.9998px;
+  font-size: 10.999799999999999px;
   line-height: 14.1426px;
   margin: 12px 0 0;
   text-transform: uppercase;
@@ -2079,17 +1991,17 @@ li:hover .globalSectionsLevel1 {
   color: #6f7578;
   display: inline-block;
   font-family: 'Libre Baskerville', serif;
-  font-size: 17.994858612px;
+  font-size: 17.994858611825194px;
   line-height: 1;
   padding: 0 5px;
   vertical-align: -1px;
 }
 #portal-footer-wrapper {
-  background: -webkit-linear-gradient(#e9eff3, white);
-  background: linear-gradient(#e9eff3, white);
+  background: -webkit-linear-gradient(#e9eff3, #ffffff);
+  background: linear-gradient(#e9eff3, #ffffff);
 }
 .no-cssgradients #portal-footer-wrapper {
-  background-color: white;
+  background-color: #ffffff;
 }
 #portal-footer-inner {
   margin: auto;
@@ -2145,16 +2057,16 @@ li:hover .globalSectionsLevel1 {
   text-decoration: underline;
 }
 dl.portletError {
-  background-color: orange;
+  background-color: #ffa500;
 }
 .portletHeader {
-  font-size: 17.994858612px;
+  font-size: 17.994858611825194px;
   font-weight: bold;
   line-height: 18px;
   margin: 18px 0 15px;
 }
 .section-home .portletHeader {
-  font-size: 24.013722127px;
+  font-size: 24.013722126929675px;
   line-height: 30px;
 }
 .portletItem {
@@ -2166,7 +2078,7 @@ dl.portletError {
 }
 .portletFooter a {
   background-color: #e9eff3;
-  color: black;
+  color: #000000;
   display: inline-block;
   padding: 6px;
 }
@@ -2200,7 +2112,7 @@ dl.portletError {
 }
 .managedPortletActions {
   float: right;
-  font-size: 11.999657153px;
+  font-size: 11.99965715265278px;
 }
 .managedPortletActions a,
 .managedPortletActions button {
@@ -2218,7 +2130,7 @@ dl.portletError {
 }
 .add-panel .cell div {
   background-color: #6f7578;
-  color: white;
+  color: #ffffff;
   padding: 5px 0;
 }
 .manage-panel input[type="submit"] {
@@ -2311,7 +2223,7 @@ dl.portletError {
 }
 .portletItemTitle {
   display: block;
-  font-size: 17.994858612px;
+  font-size: 17.994858611825194px;
   line-height: 24px;
   margin: 0 0 6px;
 }
@@ -2325,7 +2237,7 @@ dl.portletError {
 }
 .portletItemByline {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 11.004px;
+  font-size: 11.004000000000001px;
   line-height: 15px;
   margin: 0 0 6px;
   text-transform: uppercase;
@@ -2339,9 +2251,9 @@ dl.portletError {
   background-color: #087b8c;
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
   background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #ffffff;
   box-shadow: 0 1px #a7b0b5;
-  color: white;
+  color: #ffffff;
   height: 70px;
   float: left;
   margin: 0 20px 0 0;
@@ -2379,9 +2291,9 @@ dl.portletError {
   vertical-align: top;
 }
 .carouselPortletItemWrapper {
-  background-color: white;
+  background-color: #ffffff;
   bottom: 15px;
-  color: black;
+  color: #000000;
   left: 15px;
   padding: 15px;
   position: absolute;
@@ -2391,23 +2303,23 @@ dl.portletError {
 .carouselPortletItemTitle {
   display: block;
   font-size: 42px;
-  line-height: 46.153846154px;
+  line-height: 46.15384615384615px;
   margin: 0 0 18px;
 }
 .carouselPortletItemDescription {
   display: block;
   font-size: 16px;
-  line-height: 22.222222222px;
+  line-height: 22.22222222222222px;
   margin: 0 0 12px;
 }
 .carouselPortletItemCaption {
   background-color: #087b8c;
   background: -webkit-linear-gradient(#087b8c, #066270);
   background: linear-gradient(#087b8c, #066270);
-  color: white;
+  color: #ffffff;
   display: inline-block;
   font-size: 16px;
-  line-height: 22.222222222px;
+  line-height: 22.22222222222222px;
   padding: 6px 10px;
 }
 .carouselPortletItemCaption:hover {
@@ -2430,9 +2342,9 @@ dl.portletError {
 .portletCarousel li a {
   background-color: rgba(8, 123, 140, 0.8);
   border-top: 1px solid #087b8c;
-  color: white;
+  color: #ffffff;
   display: block;
-  font-size: 17.994858612px;
+  font-size: 17.994858611825194px;
   height: 86px;
   line-height: 24px;
   padding: 15px 10px 15px 15px;
@@ -2486,9 +2398,7 @@ dl.portletError {
   width: 1px;
 }
 /* @group Editing */
-
 /* @group Tabs */
-
 .formTabs {
   background-color: #a7b0b5;
   margin: 0 0 1em;
@@ -2514,15 +2424,15 @@ dl.portletError {
   display: inline;
 }
 #content-views a {
-  color: white;
+  color: #ffffff;
   display: inline-block;
   padding: 3px 9px;
   text-decoration: none;
 }
 #content-views li.selected a,
 #content-views li a:hover {
-  background: white;
-  color: black;
+  background: #ffffff;
+  color: #000000;
 }
 #content-views li.selected a {
   font-weight: bold;
@@ -2550,14 +2460,14 @@ dl.portletError {
   color: #d5241c;
 }
 #listing-table .state-pending {
-  color: orange;
+  color: #ffa500;
 }
 .formTab {
   display: inline;
   margin-right: 0.25em;
 }
 .formTab a {
-  color: black;
+  color: #000000;
   display: inline-block;
   line-height: 2em;
   padding: 0 0.75em;
@@ -2565,12 +2475,12 @@ dl.portletError {
 }
 .formTab a:hover,
 .formTab a.selected {
-  background: white;
-  color: black;
+  background: #ffffff;
+  color: #000000;
 }
 a.notify {
   background-color: red;
-  color: white;
+  color: #ffffff;
 }
 span.required:after {
   content: "■";
@@ -2587,9 +2497,7 @@ span.required:after {
   display: none;
 }
 /* @end */
-
 /* @group Pulldown menus */
-
 #contentActionMenus {
   margin: 0;
   padding: 0;
@@ -2606,7 +2514,7 @@ span.required:after {
   float: right;
 }
 .actionMenu a {
-  color: white;
+  color: #ffffff;
   display: block;
   padding: 3px;
   text-decoration: none;
@@ -2625,7 +2533,7 @@ span.required:after {
 }
 .actionMenu dd a:hover,
 .actionMenu dd .actionMenuSelected {
-  background-color: white;
+  background-color: #ffffff;
   color: #6f7578;
 }
 .actionMenu ul {
@@ -2638,7 +2546,6 @@ span.required:after {
   padding: 0 3px;
 }
 /* @group Personal tools pulldown */
-
 #portal-personaltools {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 11.06px;
@@ -2658,7 +2565,7 @@ span.required:after {
 }
 #portal-personaltools .actionMenuHeader a:hover,
 #personaltools-login:hover {
-  color: black;
+  color: #000000;
 }
 #portal-personaltools .actionMenuHeader a:after {
   content: " ▼";
@@ -2671,9 +2578,7 @@ span.required:after {
   padding: 0 0.75em;
 }
 /* @end */
-
 /* @group Content pulldowns */
-
 #folderHeader,
 #contextHeader {
   border-bottom: 2px solid white;
@@ -2682,11 +2587,8 @@ span.required:after {
   margin-top: 5px;
 }
 /* @end */
-
 /* @end */
-
 /* @group Control panel */
-
 #setup-link {
   font-size: 90%;
 }
@@ -2766,7 +2668,7 @@ table.controlpanel-listing th.smallcolumn {
   margin-bottom: 0;
 }
 .rule-element {
-  background-color: #eef3f5;
+  background-color: #EEF3F5;
   margin: 0.5em 0pt 0.5em;
   padding: 0.3em 1em 0.3em 1em;
   width: auto;
@@ -2780,9 +2682,7 @@ table.controlpanel-listing th.smallcolumn {
   padding-top: 0.8em;
 }
 /* @end */
-
 /* @group Portlets management */
-
 div.managePortletsLink,
 a.managePortletsFallback {
   padding: 0.25em 0.5em;
@@ -2799,19 +2699,15 @@ a.managePortletsFallback {
   border-bottom: none !important;
 }
 /* @end */
-
 /*----- Smaller than standard 960 (devices and browsers) -----*/
-
 @media only screen and (max-width: 959px) {
   
 }
 /*----- Tablet Portrait size to standard 960 (devices and browsers) -----*/
-
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   
 }
 /*----- All Mobile Sizes (devices and browser) -----*/
-
 @media only screen and (max-width: 767px) {
   /* ==========================================================================
        Mobile styles

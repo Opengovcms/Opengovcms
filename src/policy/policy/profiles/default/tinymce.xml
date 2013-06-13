@@ -44,6 +44,8 @@
    <element value="Heading|h2| "/>
    <element value="Subheading|h3| "/>
    <element value="Quote|blockquote|quoteAsParagrapgh"/>
+   <element value="List (hyphen)|ul|listTypeHyphen"/>
+   <element value="List (mark)|ul|listTypeMark"/>
   </styles>
   <tablestyles>
    <element value="Fancy grid listing|grid listing"/>

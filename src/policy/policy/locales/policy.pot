@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-05-14 13:33+0000\n"
+"POT-Creation-Date: 2013-06-13 15:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,16 +17,24 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: policy\n"
 
-#: policy/policy/content/publication.py:19
+#: policy/policy/content/publication.py:21
 msgid ""
 msgstr ""
 
-#: policy/policy/content/person.py:86
+#: policy/policy/content/person.py:89
 msgid "A portrait of this person. This should be in standard portrait orientation."
 msgstr ""
 
-#: policy/policy/content/publication.py:108
-msgid "Add a link to Issuu version of the publication, e.g http://www.issuu.com/myaccount/docs/mypublication."
+#: policy/policy/content/publication.py:123
+msgid "Add a link to Issuu version of the publication,e.g http://www.issuu.com/myaccount/docs/mypublication."
+msgstr ""
+
+#: policy/policy/interfaces.py:15
+msgid "Address"
+msgstr ""
+
+#: policy/policy/browser/controlpanel.py:16
+msgid "Configure site"
 msgstr ""
 
 #: policy/policy/portlets/contact.py:63
@@ -34,7 +42,7 @@ msgstr ""
 msgid "Contact"
 msgstr ""
 
-#: policy/policy/content/publication.py:24
+#: policy/policy/content/publication.py:26
 msgid "Cover image"
 msgstr ""
 
@@ -42,11 +50,11 @@ msgstr ""
 msgid "Cover image text is missing"
 msgstr ""
 
-#: policy/policy/content/person.py:69
+#: policy/policy/content/person.py:72
 msgid "Danish Function title"
 msgstr ""
 
-#: policy/policy/content/person.py:57
+#: policy/policy/content/person.py:60
 msgid "Danish Job title"
 msgstr ""
 
@@ -58,19 +66,19 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: policy/policy/content/person.py:45
+#: policy/policy/content/person.py:48
 msgid "Email"
 msgstr ""
 
-#: policy/policy/content/person.py:75
+#: policy/policy/content/person.py:78
 msgid "English Function title"
 msgstr ""
 
-#: policy/policy/content/person.py:63
+#: policy/policy/content/person.py:66
 msgid "English Job title"
 msgstr ""
 
-#: policy/policy/content/publication.py:56
+#: policy/policy/content/publication.py:60
 msgid "Enter version"
 msgstr ""
 
@@ -78,35 +86,39 @@ msgstr ""
 msgid "Find the person to display"
 msgstr ""
 
-#: policy/policy/content/person.py:22
+#: policy/policy/content/person.py:24
 msgid "First name"
 msgstr ""
 
-#: policy/policy/content/person.py:39
+#: policy/policy/content/person.py:42
 msgid "Initials"
 msgstr ""
 
-#: policy/policy/content/publication.py:50
+#: policy/policy/content/publication.py:54
 msgid "Institution behind the publication."
 msgstr ""
 
-#: policy/policy/content/publication.py:107
+#: policy/policy/content/publication.py:122
 msgid "Issuu URL"
 msgstr ""
 
-#: policy/policy/content/person.py:28
+#: policy/policy/content/person.py:30
 msgid "Last name"
 msgstr ""
 
-#: policy/policy/content/publication.py:44
+#: policy/policy/content/publication.py:48
 msgid "Name of the publication author, e.g. John Doe."
 msgstr ""
 
-#: policy/policy/content/publication.py:62
+#: policy/policy/profiles/default/portlets.xml
+msgid "News"
+msgstr ""
+
+#: policy/policy/content/publication.py:66
 msgid "Number of pages of the publication."
 msgstr ""
 
-#: policy/policy/content/publication.py:61
+#: policy/policy/content/publication.py:65
 msgid "Page count"
 msgstr ""
 
@@ -114,7 +126,7 @@ msgstr ""
 msgid "Person"
 msgstr ""
 
-#: policy/policy/content/person.py:51
+#: policy/policy/content/person.py:54
 msgid "Phone"
 msgstr ""
 
@@ -123,10 +135,14 @@ msgid "Portlet header"
 msgstr ""
 
 #: policy/policy/profiles/default/portlets.xml
+msgid "Portlet to display a list of news elements obtained from a collection"
+msgstr ""
+
+#: policy/policy/profiles/default/portlets.xml
 msgid "Portlet to display contact information for a Person"
 msgstr ""
 
-#: policy/policy/content/person.py:85
+#: policy/policy/content/person.py:88
 msgid "Portrait"
 msgstr ""
 
@@ -134,19 +150,19 @@ msgstr ""
 msgid "Publication"
 msgstr ""
 
-#: policy/policy/content/publication.py:43
+#: policy/policy/content/publication.py:47
 msgid "Publication author"
 msgstr ""
 
-#: policy/policy/content/publication.py:37
+#: policy/policy/content/publication.py:41
 msgid "Publication file"
 msgstr ""
 
-#: policy/policy/content/publication.py:49
+#: policy/policy/content/publication.py:53
 msgid "Publication publisher"
 msgstr ""
 
-#: policy/policy/content/person.py:80
+#: policy/policy/content/person.py:83
 msgid "QR code URL"
 msgstr ""
 
@@ -154,27 +170,47 @@ msgstr ""
 msgid "Scan QR code with your phone"
 msgstr ""
 
+#: policy/policy/portlets/news.py:45
+msgid "Show more text"
+msgstr ""
+
+#: policy/policy/profiles/default/controlpanel.xml
+msgid "Site settings"
+msgstr ""
+
+#: policy/policy/portlets/news.py:46
+msgid "Specify the text used in the show more-link"
+msgstr ""
+
 #: policy/policy/portlets/contact.py:34
 msgid "Target person"
 msgstr ""
 
-#: policy/policy/content/person.py:97
+#: policy/policy/content/person.py:101
 msgid "Text"
+msgstr ""
+
+#: policy/policy/browser/controlpanel.py:17
+msgid "This form lets you configure the site specific settings."
+msgstr ""
+
+#: policy/policy/interfaces.py:16
+msgid "This text will be used in the footer for address information."
 msgstr ""
 
 #: policy/policy/portlets/contact.py:30
 msgid "Title of the rendered portlet"
 msgstr ""
 
-#: policy/policy/content/publication.py:25
+#: policy/policy/content/publication.py:27
 msgid "Upload the cover of the publication."
 msgstr ""
 
-#: policy/policy/content/publication.py:38
+#: policy/policy/content/publication.py:42
 msgid "Upload the publication file, e.g. a PDF file."
 msgstr ""
 
-#: policy/policy/content/publication.py:55
+#: policy/policy/content/publication.py:59
 msgid "Version"
 msgstr ""
 
@@ -182,33 +218,33 @@ msgstr ""
 msgid "View"
 msgstr ""
 
-#. Default: "The Internet ISBN record identifier for this publication."
-#: policy/policy/content/publication.py:76
+#. Default: "The Internet ISBN record identifierfor this publication."
+#: policy/policy/content/publication.py:82
 msgid "help_internet_isbn"
 msgstr ""
 
-#. Default: "The Internet ISSN record identifier for this publication."
-#: policy/policy/content/publication.py:92
+#. Default: "The Internet ISSN record identifierfor this publication."
+#: policy/policy/content/publication.py:103
 msgid "help_internet_issn"
 msgstr ""
 
 #. Default: "The ISBN record identifier for this publication."
-#: policy/policy/content/publication.py:68
+#: policy/policy/content/publication.py:72
 msgid "help_isbn"
 msgstr ""
 
 #. Default: "The ISSN record identifier for this publication."
-#: policy/policy/content/publication.py:84
+#: policy/policy/content/publication.py:93
 msgid "help_issn"
 msgstr ""
 
 #. Default: "Caption for the cover image."
-#: policy/policy/content/publication.py:31
+#: policy/policy/content/publication.py:33
 msgid "help_publication_cover_caption"
 msgstr ""
 
 #. Default: "The year this publication was first published."
-#: policy/policy/content/publication.py:101
+#: policy/policy/content/publication.py:114
 msgid "help_publication_year"
 msgstr ""
 
@@ -238,22 +274,22 @@ msgid "label_internet_ISSN"
 msgstr ""
 
 #. Default: "Internet ISBN"
-#: policy/policy/content/publication.py:75
+#: policy/policy/content/publication.py:81
 msgid "label_internet_isbn"
 msgstr ""
 
 #. Default: "Internet ISSN"
-#: policy/policy/content/publication.py:91
+#: policy/policy/content/publication.py:102
 msgid "label_internet_issn"
 msgstr ""
 
 #. Default: "ISBN"
-#: policy/policy/content/publication.py:67
+#: policy/policy/content/publication.py:71
 msgid "label_isbn"
 msgstr ""
 
 #. Default: "ISSN"
-#: policy/policy/content/publication.py:83
+#: policy/policy/content/publication.py:92
 msgid "label_issn"
 msgstr ""
 
@@ -268,12 +304,12 @@ msgid "label_price"
 msgstr ""
 
 #. Default: "Cover caption"
-#: policy/policy/content/publication.py:30
+#: policy/policy/content/publication.py:32
 msgid "label_publication_cover_caption"
 msgstr ""
 
 #. Default: "Year of publication"
-#: policy/policy/content/publication.py:100
+#: policy/policy/content/publication.py:113
 msgid "label_publication_year"
 msgstr ""
 

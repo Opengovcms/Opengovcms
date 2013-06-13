@@ -12,19 +12,22 @@ tinyMCE.addI18n(
     {da : {divwrap : {
 	"title" : "Pak det valgte ind",
 	"none_title" : "Ingen indpakning",
-	"factBox_title" : "Faktaboks"
+	"factBox_title" : "Faktaboks",
+    "linkButton_title" : "Link knap"
     }}}
 );
 tinyMCE.addI18n(
     {en : {divwrap : {
 	"title" : "Wrap selected content",
 	"none_title" : "Do not wrap",
-	"factBox_title" : "Factbox"
+	"factBox_title" : "Factbox",
+    "linkButton_title" : "Linkbutton"
     }}}
 );
 
 var wrapper_classes = ['none',
-		       'factBox'
+		       'factBox',
+               'linkButton'
 		      ];
 
 (function() {

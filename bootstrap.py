@@ -227,7 +227,7 @@ if version is None and not options.accept_buildout_test_releases:
         bestv = None
         for dist in index[req.project_name]:
             distv = dist.parsed_version
-            if distv >= pkg_resources.parse_version('2dev'):
+            if distv >= pkg_resources.parse_version('2.1dev'):
                 continue
             if _final_version(distv):
                 if bestv is None or distv > bestv:
@@ -242,7 +242,7 @@ if version is None and not options.accept_buildout_test_releases:
 if version:
     requirement += '=='+version
 else:
-    requirement += '<2dev'
+    requirement += '<2.1dev'
 
 cmd.append(requirement)
 

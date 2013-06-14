@@ -28,6 +28,6 @@ dist
 *.tmp*
 .DS_Store
 mr-developer-src
-intbar.sublime-project
-intbar.sublime-workspace
+*.sublime-project
+*.sublime-workspace
 .ipython

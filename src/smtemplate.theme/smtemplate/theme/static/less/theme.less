@@ -21,27 +21,6 @@
   margin-top: @baseLineHeight;
 }
 
-// Content
-.documentDescription {
-  font-size: @baseFontSize * 1.29; // ~18
-  line-height: @baseLineHeight * 1.34; // ~24
-  margin: 0 0 @baseLineHeight;
-}
-.linkButton a {
-  background: -webkit-linear-gradient(@secondary, @main);
-  background: linear-gradient(@secondary, @main);
-  color: @white;
-  display: inline-block;
-  padding: 6px 10px;
-}
-.linkButton a:hover {
-  background: -webkit-linear-gradient(@notice, @noticeDark);  
-  background: linear-gradient(@notice, @noticeDark); 
-}
-.suppressVisualEditor {
-  margin: @baseLineHeight / 2 0 0 !important;
-}
-
 // Viewlets
 
 // Site Actions
@@ -107,6 +86,9 @@
   padding: 3px 10px;
   vertical-align: top;
 }
+.no-cssgradients .searchButton[type="submit"] {
+  background-color: mix(@main, @secondary);
+}
 #portal-searchbox .searchButton[type="submit"] {
   font-size: @baseFontSize * 1.14;
   height: 30px;
@@ -118,7 +100,7 @@
 }
 .no-cssgradients .searchButton[type="submit"]:hover,
 .no-cssgradients .searchButton[type="submit"]:focus {
-  background-color: @notice;
+  background-color: mix(@notice, @noticeDark);
 }
 .LSResult {
   position:relative;
@@ -161,15 +143,34 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative;
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
 }
 .no-cssgradients #theme-globalnav {
-  background-color: @secondary;
+  background-color: mix(@main, @secondary);
 }
-#theme-globalnav li {
+#theme-globalnav > li {
   border-right: 1px solid (@main + #1a1a19); // 066270 -> 207c89
-  display: inline-block;
+  float: left;
 }
-#theme-globalnav a {
+#theme-globalnav > li:hover {
+  border-color: darken(@notice, 10%);
+}
+#theme-globalnav > li > a {
+  display: block;
+}
+#theme-globalnav > li:hover > a {
+  background: -webkit-linear-gradient(@notice, @noticeDark);
+  background: linear-gradient(@notice, @noticeDark);
+}
+.no-cssgradients #theme-globalnav > li:hover > a {
+  background-color: mix(@notice, @noticeDark);
+}
+#theme-globalnav > li > a span {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAMAAACDi47UAAAAMFBMVEX////////////z8/P7+/v////////////////w8PD39/f///////8AAADu7u7///+7HHyoAAAADnRSTlOZVTPXrYhmRCLswncRAO6B8fwAAABUSURBVHjaXY1BDoAwCATR2toCW/7/W1ejCXVOZLIZxPHC40Os+qNMs4zZgHNEll0jyhGhe5J+r7hem9LBrtdf04A21yZ7Q9nsSfJzod6ALImZI3MB3dIJbYVOa18AAAAASUVORK5CYII=) no-repeat 100% 50%;
   border-right: 1px solid (@main - #000202); // 066270 -> 06606e
   color: @white;
@@ -178,11 +179,62 @@
   line-height: @baseLineHeight * 1.33;
   padding: 11px 35px 11px 15px;
 }
+#theme-globalnav > li:hover > a span {
+  border-left: 1px solid desaturate(@notice, 10%);
+  border-right: 0 none;
+  margin-right: 1px;
+  padding-left: 14px;
+}
+.globalSectionsLevel1 {
+  background: -webkit-linear-gradient(@noticeDark,@notice);
+  background: linear-gradient(@noticeDark,@notice);
+  display: none;
+  left: 0;
+  padding: @baseLineHeight/2 0 @baseLineHeight;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 3;
+}
+.no-cssgradients .globalSectionsLevel1{
+  background-color: mix(@noticeDark, @notice);
+}
+li:hover .globalSectionsLevel1 {
+  display: block;
+}
+.globalSectionsLevel1 li {
+  display: block;
+}
+.globalSectionsLevel1 > li {
+  float: left;
+  width: 25%;
+}
+.globalSectionsLevel1 a {
+  color: @white;
+  display: block;
+  margin: 0 24px 0 0;
+  padding: 4px 0 4px 15px;
+}
+.globalSectionsLevel1 > li > a {  
+  font-size: @baseFontSize * 1.29;
+  font-weight: bold;
+  line-height: @baseLineHeight * 1.33;
+  padding: 7px 15px;
+}
+.globalSectionsLevel1 a:hover {
+  background-color: desaturate(@notice, 10%);
+}
+.globalSectionsLevel2 {
+  font-family: @sansFontFamily;
+  font-style: @baseFontSize*0.857;
+  line-height: @baseLineHeight/1.125;
+  padding: 0;
+}
+.globalSectionsLevel2 a:before {
+  content: "» ";
+}
 
-
-/*
- * Portal Logo 
- */
+// Portal Logo 
 #portal-logo {
   
 }
@@ -190,9 +242,37 @@
   
 }
 
-/*
- * Bread Crumbs & Language Selecto 
- */
+// Document Actions
+.documentActions {
+  float: right;
+  margin: 13px 0;
+  padding: 0;
+}
+.documentActions li {
+  display: inline-block;
+}
+.documentActions a {
+  display: block;
+  height: 18px;
+  margin-left: 12px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 18px;
+}
+#document-action-print a {
+  background: @print-icon no-repeat 50% 50%;
+}
+#document-action-print a:hover {
+  background-image: @print-icon-hover;
+}
+#document-action-plus a {
+  background: @addthis-icon no-repeat 50% 50%;
+}
+#document-action-plus a:hover {
+  background-image: @addthis-icon-hover;
+}
+
+// Bread Crumbs & Language Selecto
 #portal-breadcrumbs {
   font-family: @sansFontFamily;
   font-size: @baseFontSize * 0.7857;
@@ -226,9 +306,43 @@
 }
 #portal-footer-inner {
   margin: auto;
-  padding: 15px 15px 1px;
+  padding: 3px 15px 1px;
   width: 960px;
 }
+#portal-footer-wrapper .portlet {
+  border: 0;
+  margin: 0 0 @baseLineHeight*1.5;
+  padding: 0;
+}
+#portal-footer-wrapper .portletItem {
+  font-family: @sansFontFamily;
+  font-size: @baseFontSize * 0.857;  
+  line-height: @baseLineHeight / 1.125;
+}
+#portal-footer-wrapper .listTypeMark > li {
+  margin: 0;
+}
+#portal-footer-wrapper .listTypeMark > li:before {
+  display: none;
+}
+#portal-footer-wrapper .listTypeMark > li > a {
+  display: block;
+  padding: 3px 3px 3px 17px;
+}
+#portal-footer-wrapper .listTypeMark > li > a:hover {
+  background-color: @light;
+  text-decoration: none;
+}
+#portal-footer-wrapper .listTypeMark > li > a:before {
+  content: "» ";
+  font-size: @baseFontSize;
+  margin-left: -14px;
+}
 #portal-footer {
-  
+  border-top: 1px solid @grayLight;
+  clear: both;
+  padding: @baseLineHeight 0 0;
+}
+#portal-footer a:hover {
+  color: @black;
 }

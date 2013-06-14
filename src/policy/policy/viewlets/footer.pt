@@ -1,0 +1,4 @@
+<div id="portal-footer"
+     i18n:domain="plone"
+     tal:content="structure view/contents">
+</div>

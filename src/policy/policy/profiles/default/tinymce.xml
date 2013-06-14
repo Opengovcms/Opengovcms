@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<object>
+ <resourcetypes>
+  <linkable>
+   <element value="Document"/>
+   <element value="Event"/>
+   <element value="File"/>
+   <element value="Folder"/>
+   <element value="FormFolder"/>
+   <element value="Image"/>
+   <element value="Large Plone Folder"/>
+   <element value="News Item"/>
+   <element value="Topic"/>
+  </linkable>
+  <customplugins>
+   <element value="plonebrowser"/>
+   <element
+      value="divwrap|/++resource++policy.tinymce-plugins/divwrap/editor_plugin.js"/>
+  </customplugins>
+  <containsanchors>
+   <element value="ATRelativePathCriterion"/>
+   <element value="Document"/>
+   <element value="Event"/>
+   <element value="News Item"/>
+  </containsanchors>
+  <allow_captioned_images value="True"/>
+  <containsobjects>
+   <element value="Folder"/>
+   <element value="Large Plone Folder"/>
+   <element value="Plone Site"/>
+  </containsobjects>
+  <entity_encoding value="raw"/>
+  <imageobjects>
+   <element value="Image"/>
+  </imageobjects>
+  <link_using_uids value="True"/>
+  <rooted value="False"/>
+ </resourcetypes>
+ <contentbrowser>
+  <anchor_selector value="h2,h3"/>
+ </contentbrowser>
+ <layout>
+  <styles>
+   <element value="Heading|h2| "/>
+   <element value="Subheading|h3| "/>
+   <element value="Quote|blockquote|quoteAsParagrapgh"/>
+   <element value="List (hyphen)|ul|listTypeHyphen"/>
+   <element value="List (mark)|ul|listTypeMark"/>
+  </styles>
+  <tablestyles>
+   <element value="Fancy grid listing|grid listing"/>
+   <element value="Invisible grid|invisible"/>
+  </tablestyles>
+  <content_css value="/site/++theme++smtemplate.theme/css/tinymce.css"/>
+  <editor_height value="400"/>
+  <editor_width value="100%"/>
+  <contextmenu value="True"/>
+  <resizing value="True"/>
+  <autoresize value="False"/>
+ </layout>
+ <toolbar>
+  <toolbar_anchor value="True"/>
+  <toolbar_hr value="True"/>
+  <toolbar_insertdate value="False"/>
+  <toolbar_cut value="False"/>
+  <toolbar_definitionlist value="False"/>
+  <customtoolbarbuttons>
+   <element value="divwrap"/>
+  </customtoolbarbuttons>
+  <toolbar_paste value="False"/>
+  <toolbar_justifycenter value="False"/>
+  <toolbar_inserttime value="False"/>
+  <toolbar_tablecontrols value="True"/>
+  <toolbar_justifyleft value="False"/>
+  <toolbar_redo value="False"/>
+  <toolbar_unlink value="True"/>
+  <toolbar_visualchars value="False"/>
+  <toolbar_media value="False"/>
+  <toolbar_nonbreaking value="False"/>
+  <toolbar_image value="True"/>
+  <toolbar_advhr value="False"/>
+  <toolbar_removeformat value="False"/>
+  <toolbar_undo value="False"/>
+  <toolbar_save value="False"/>
+  <toolbar_sub value="False"/>
+  <toolbar_numlist value="True"/>
+  <toolbar_underline value="False"/>
+  <toolbar_sup value="False"/>
+  <toolbar_preview value="False"/>
+  <toolbar_forecolor value="False"/>
+  <toolbar_code value="True"/>
+  <toolbar_style value="True"/>
+  <toolbar_link value="True"/>
+  <toolbar_emotions value="False"/>
+  <toolbar_justifyright value="False"/>
+  <toolbar_replace value="False"/>
+  <toolbar_outdent value="False"/>
+  <toolbar_strikethrough value="False"/>
+  <toolbar_pasteword value="True"/>
+  <toolbar_width value="440"/>
+  <toolbar_print value="False"/>
+  <toolbar_spellchecker value="False"/>
+  <toolbar_justifyfull value="False"/>
+  <toolbar_charmap value="False"/>
+  <toolbar_bullist value="True"/>
+  <toolbar_copy value="False"/>
+  <toolbar_pastetext value="True"/>
+  <toolbar_visualaid value="False"/>
+  <toolbar_indent value="False"/>
+  <toolbar_search value="False"/>
+  <toolbar_fullscreen value="True"/>
+  <toolbar_italic value="True"/>
+  <toolbar_attribs value="False"/>
+  <toolbar_pagebreak value="False"/>
+  <toolbar_bold value="True"/>
+  <toolbar_backcolor value="False"/>
+  <toolbar_external value="False"/>
+  <toolbar_cleanup value="False"/>
+ </toolbar>
+</object>

@@ -20,12 +20,17 @@
       editview=".contact.EditForm"
       />
 
-  <include package="collective.portlet.rich" />
-  <plone:portletRenderer
-      portlet="collective.portlet.rich.richportlet.IRichPortlet"
-      layer="policy.interfaces.IBrowserLayer"
-      template="templates/richportlet.pt"
+  <plone:portlet
+      name="policy.portlets.News"
+      interface=".news.INews"
+      assignment=".news.Assignment"
+      view_permission="zope2.View"
+      edit_permission="cmf.ManagePortal"
+      renderer=".news.Renderer"
+      addview=".news.AddForm"
+      editview=".news.EditForm"
       />
+
 
   <include package="collective.portlet.ngcollection" file="meta.zcml" />
 

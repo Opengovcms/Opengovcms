@@ -11,7 +11,6 @@
     
     <dependency>profile-plone.app.relationfield:default</dependency>
     <dependency>profile-collective.z3cform.datetimewidget:default</dependency>
-    <dependency>profile-plone.formwidget.contenttree:default</dependency>
 
     <dependency>profile-collective.panels:default</dependency>
     <dependency>profile-Products.PloneFormGen:default</dependency>
@@ -20,6 +19,8 @@
     <dependency>profile-quintagroup.portlet.generichtml:default</dependency>
     <dependency>profile-collective.portlet.ngcollection:default</dependency>
     <dependency>profile-collective.portlet.carousel:default</dependency>
+    
+    <dependency>profile-plone.formwidget.contenttree:default</dependency>
 
   </dependencies>
 </metadata>

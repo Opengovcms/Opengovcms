@@ -2399,6 +2399,12 @@ dl.portletError {
   vertical-align: middle;
   width: 1px;
 }
+.portletSSTKontakt img {
+  padding: 10px 0 10px 0;
+}
+.portletSSTKontakt .kontaktName {
+  font-weight: bold;
+}
 /* @group Editing */
 /* @group Tabs */
 .formTabs {

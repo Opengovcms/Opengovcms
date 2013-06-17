@@ -61,23 +61,24 @@ class IPerson(IMinimalPerson, IImageCropping):
         required=False,
     )
 
-    dexteritytextindexer.searchable('english_jobtitle')
-    english_jobtitle = schema.TextLine(
-        title=_(u"English Job title"),
-        required=False,
-    )
+    # Seems to be fivu stuff?
+    # dexteritytextindexer.searchable('english_jobtitle')
+    # english_jobtitle = schema.TextLine(
+    #     title=_(u"English Job title"),
+    #     required=False,
+    # )
 
-    dexteritytextindexer.searchable('functiontitle')
-    functiontitle = schema.TextLine(
-        title=_(u"Danish Function title"),
-        required=False,
-    )
+    # dexteritytextindexer.searchable('functiontitle')
+    # functiontitle = schema.TextLine(
+    #     title=_(u"Danish Function title"),
+    #     required=False,
+    # )
 
-    dexteritytextindexer.searchable('english_functiontitle')
-    english_functiontitle = schema.TextLine(
-        title=_(u"English Function title"),
-        required=False,
-    )
+    # dexteritytextindexer.searchable('english_functiontitle')
+    # english_functiontitle = schema.TextLine(
+    #     title=_(u"English Function title"),
+    #     required=False,
+    # )
 
     qrcodeurl = schema.URI(
         title=_(u"QR code URL"),

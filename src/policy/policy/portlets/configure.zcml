@@ -31,6 +31,28 @@
       editview=".news.EditForm"
       />
 
+  <plone:portlet
+      name="policy.portlets.Events"
+      interface=".events.IEvents"
+      assignment=".events.Assignment"
+      view_permission="zope2.View"
+      edit_permission="cmf.ManagePortal"
+      renderer=".events.Renderer"
+      addview=".events.AddForm"
+      editview=".events.EditForm"
+      />
+
+    <plone:portlet
+      name="policy.portlets.Publications"
+      interface=".publications.IPublications"
+      assignment=".publications.Assignment"
+      view_permission="zope2.View"
+      edit_permission="cmf.ManagePortal"
+      renderer=".publications.Renderer"
+      addview=".publications.AddForm"
+      editview=".publications.EditForm"
+      />
+
 
   <include package="collective.portlet.ngcollection" file="meta.zcml" />
 

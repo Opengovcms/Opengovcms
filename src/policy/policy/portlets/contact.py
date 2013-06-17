@@ -1,21 +1,21 @@
-from zope.interface import Interface
-from zope.interface import implements
-
-from plone.app.portlets.portlets import base
-from plone.portlets.interfaces import IPortletDataProvider
-
-from zope import schema
-from zope.formlib import form
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from plone.app.vocabularies.catalog import SearchableTextSourceBinder
-from plone.app.form.widgets.uberselectionwidget import UberSelectionWidget
 from AccessControl import getSecurityManager
-from zope.component import getMultiAdapter
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone.app.portlets.portlets import base
+from plone.app.portlets.browser import z3cformhelper
+from plone.formwidget.contenttree import ObjPathSourceBinder
 from plone.memoize.instance import memoize
+from plone.portlets.interfaces import IPortletDataProvider
 from policy.i18n import MessageFactory as _
+from policy.content.person import IPerson
+from z3c.relationfield.schema import RelationChoice
+from zope import schema
+from zope.component import getMultiAdapter
+from z3c.form import field
+from zope.interface import implements
 
 from zope.i18nmessageid import MessageFactory
 __ = MessageFactory("plone")
+
 
 class IContact(IPortletDataProvider):
     """A portlet
@@ -30,13 +30,14 @@ class IContact(IPortletDataProvider):
         description=_(u"Title of the rendered portlet"),
         required=True)
 
-    target = schema.Choice(
+    target = RelationChoice(
         title=_(u"Target person"),
         description=_(u"Find the person to display"),
         required=True,
-        source=SearchableTextSourceBinder(
-            {'portal_type': 'Person'},
-            default_query='path:'))
+        source=ObjPathSourceBinder(
+            object_provides=IPerson.__identifier__
+        ),
+    )
 
 
 class Assignment(base.Assignment):
@@ -88,24 +89,7 @@ class Renderer(base.Renderer):
 
     @memoize
     def person(self):
-        path = self.data.target
-        if not path:
-            return None
-
-        if path.startswith('/'):
-            path = path[1:]
-
-        if not path:
-            return None
-
-        portal_state = getMultiAdapter((self.context, self.request),
-                                       name=u'plone_portal_state')
-        portal = portal_state.portal()
-        if isinstance(path, unicode):
-            # restrictedTraverse accepts only strings
-            path = str(path)
-
-        result = portal.unrestrictedTraverse(path, default=None)
+        result = self.data.target.to_object
         if result is not None:
             sm = getSecurityManager()
             if not sm.checkPermission('View', result):
@@ -113,28 +97,25 @@ class Renderer(base.Renderer):
         return result
 
 
-
-
-class AddForm(base.AddForm):
+class AddForm(z3cformhelper.AddForm):
     """Portlet add form.
 
     This is registered in configure.zcml. The form_fields variable tells
     zope.formlib which fields to display. The create() method actually
     constructs the assignment that is being added.
     """
-    form_fields = form.Fields(IContact)
-    form_fields['target'].custom_widget = UberSelectionWidget
+
+    fields = field.Fields(IContact)
 
     def create(self, data):
         return Assignment(**data)
 
 
-class EditForm(base.EditForm):
+class EditForm(z3cformhelper.EditForm):
     """Portlet edit form.
 
     This is registered with configure.zcml. The form_fields variable tells
     zope.formlib which fields to display.
     """
-    form_fields = form.Fields(IContact)
-    form_fields['target'].custom_widget = UberSelectionWidget
 
+    fields = field.Fields(IContact)

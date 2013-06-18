@@ -3,10 +3,20 @@
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:monkey="http://namespaces.plone.org/monkey"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="smtemplate.theme">
 
   <five:registerPackage package="." initialize=".initialize" />
+
+  <include package="collective.monkeypatcher" />
+  <monkey:patch
+      description="notify on saving less file"
+      class="plone.resource.directory.PersistentResourceDirectory"
+      original="writeFile"
+      replacement=".compiler.writeFile"
+      preserveOriginal="True"
+      />
 
   <genericsetup:registerProfile
       name="default"

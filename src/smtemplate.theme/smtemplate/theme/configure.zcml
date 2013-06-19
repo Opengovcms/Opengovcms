@@ -4,10 +4,15 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:monkey="http://namespaces.plone.org/monkey"
+    xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="smtemplate.theme">
 
   <five:registerPackage package="." initialize=".initialize" />
+
+  <include package="z3c.jbot" file="meta.zcml" />
+
+  <browser:jbot directory="overrides" />
 
   <include package="collective.monkeypatcher" />
   <monkey:patch

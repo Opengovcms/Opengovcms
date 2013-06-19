@@ -25,6 +25,9 @@ setup(name='smtemplate.theme',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'collective.monkeypatcher',
+          'plone.app.theming',
+          'z3c.jbot',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
@@ -33,6 +36,4 @@ setup(name='smtemplate.theme',
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript"],
-      paster_plugins=["ZopeSkel"],
       )

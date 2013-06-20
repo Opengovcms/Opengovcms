@@ -1823,7 +1823,8 @@ def create_bootstrap_script(extra_text, python_version=''):
 
 
 def adjust_options(options, args):
-    args = ['.']
+    args.append('.')
+    #args = ['.']
     options.no_site_packages = True
     options.use_distribute = True
 

@@ -59,6 +59,10 @@ def getLessCompiler():
     return lessc
 
 
+class CompileErrors(Exception):
+    pass
+
+
 def renderLESS(lessc_command_line, resource_path, resource_file_less, resource_file_css):
     logger.info("The '%s' has been compiled to '%s'." % (resource_file_less, resource_file_css))
     # Call the LESSC executable
@@ -73,6 +77,7 @@ def renderLESS(lessc_command_line, resource_path, resource_file_less, resource_f
         logger.info("Info on compile: %s" % output)
     if errors:
         logger.error("Error on compile: %s" % errors)
+        raise CompileErrors(errors)
     return output
 
 def subscriber(theme, event):

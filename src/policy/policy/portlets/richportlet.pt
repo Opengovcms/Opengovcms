@@ -1,0 +1,61 @@
+
+<div tal:attributes="class string:portlet portletRich ${view/css_class}"
+     tal:attributes="style view/get_div_style"
+     i18n:domain="plone.portlet.static">
+
+  <div class="portletItemTitle" 
+       tal:condition="not:view/data/omit_border">
+      <a tal:omit-tag="not:view/has_title_link"
+         tal:attributes="href view/data/title_more_url">
+        <div class="portletItemImageWrapper">      
+          <img tal:replace="structure view/get_title_image_tag|nothing" />
+        </div>
+        <tal:content tal:content="view/data/title">Title</tal:content>
+       </a>
+  </div>
+
+  <div class="portletItem odd">
+    <div tal:replace="structure view/data/text/output"
+         tal:condition="view/has_text"/>
+    <tal:links
+        tal:define="results view/get_links;
+                    css view/data/links_css|nothing;
+                    links_list_row python:css == 'links_list_row';
+                    links_list_description python:css == 'links_list_description';"
+        tal:condition="results">
+      <ul class="visualNoMarker"
+          tal:attributes="class string:visualNoMarker ${css}RichPortlet">
+        <li tal:repeat="item results">
+          <tal:def_item tal:define="end repeat/item/end">
+            <span class="visualIcon">
+              <a href=""
+                 class="visualIconPadding"
+                 tal:attributes="href item/url;
+                                 title item/description;">
+                <span tal:replace="item/title">
+                  Title
+                </span>
+                <span class="links_list_descriptionDescription"
+                      tal:content="item/description"
+                      tal:condition="links_list_description">
+                  Description
+                </span>
+              </a>
+            </span>
+            <span class="links_list_rowSeparator" tal:condition="python:links_list_row and not end">
+              |
+            </span>
+          </tal:def_item>
+        </li>
+      </ul>
+      <span class="visualClear"
+            tal:condition="links_list_row"><!-- --></span>
+    </tal:links>
+  </div>
+  <div class="portletFooter" tal:condition="view/has_footer">
+    <a tal:omit-tag="not:view/has_footer_link"
+       tal:attributes="href view/data/footer_more_url"
+       tal:content="view/data/footer"
+       />
+  </div>
+</div>

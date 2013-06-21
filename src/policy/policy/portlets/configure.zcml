@@ -61,4 +61,12 @@
       directory="collection_templates"
       />
 
+  <include package="collective.portlet.rich" />
+
+  <plone:portletRenderer
+      portlet="collective.portlet.rich.richportlet.IRichPortlet"
+      layer="policy.interfaces.IBrowserLayer"
+      template="richportlet.pt"
+      />
+
 </configure>

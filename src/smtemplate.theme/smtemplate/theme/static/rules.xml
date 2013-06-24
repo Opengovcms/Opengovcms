@@ -48,8 +48,35 @@
 
         <!-- Header -->
         <drop css:theme="meta[http-equiv='Content-type']" />
+        <!-- Drop regular plone css -->
         <drop css:content="meta[name='viewport']" />
-        <drop css:content="link[href$='.css']" />
+
+        <!-- Drop cachekey css --> 
+        <drop css:content="link[href$='authoring.css']" />
+        <drop css:content="link[href$='base.css']" />
+        <drop css:content="link[href$='columns.css']" />
+        <drop css:content="link[href$='content.css']" />
+        <drop css:content="link[href$='controlpanel.css']" />
+        <drop css:content="link[href$='forms.css']" />
+        <drop css:content="link[href$='member.css']" />
+        <drop css:content="link[href$='mobile.css']" />
+        <drop css:content="link[href$='portlets.css']" />
+        <drop css:content="link[href$='print.css']" />
+        <drop css:content="link[href$='public.css']" />
+        <drop css:content="link[href$='reset.css']" />
+
+        <drop css:content="link[href*='base-cachekey']" />        
+        <drop css:content="link[href*='public-cachekey']" />
+        <drop css:content="link[href*='authoring-cachekey']" />
+        <drop css:content="link[href*='reset-cachekey']" />
+        <drop css:content="link[href*='columns-cachekey']" />
+        <drop css:content="link[href*='portlets-cachekey']" />
+        <drop css:content="link[href*='discussion-cachekey']" />
+        <drop css:content="link[href*='member-cachekey']" />
+        <drop css:content="link[href*='print-cachekey']" />
+        <drop css:content="link[href*='mobile-cachekey']" />
+        <drop css:content="link[href*='forms-cachekey']" />
+
         <drop css:content="link[href$='favicon.ico']" />
         <before content="/html/head/meta" css:theme="meta[name='viewport']" />
         <before content="/html/head/base" theme="/html/head/title" />

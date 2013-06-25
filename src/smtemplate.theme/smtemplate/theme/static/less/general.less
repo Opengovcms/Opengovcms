@@ -23,8 +23,12 @@ h1,
   font-size: @baseFontSize * 2.58; // ~36
   font-weight: @headingsFontWeight;
   line-height: @baseLineHeight * 2.34; // ~42
-  margin: @baseLineHeight 0 @baseLineHeight / 1.2;
+  margin: @baseLineHeight/2 0 @baseLineHeight / 1.2;
   }
+.template-summary_view .documentFirstHeading {
+  border-bottom: 1px solid @grayLight;
+  padding: 0 0 @baseLineHeight/2;
+}
 h2 {
   font-family: @headingsFontFamily;
   font-size: @baseFontSize * 1.29; // ~18;

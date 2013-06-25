@@ -110,23 +110,6 @@ table.grid th {
   padding: 0;
 }
 
-/* Listing Bar */
-.listingBar {
-  margin: 1em 0;
-  text-align: center;
-}
-.listingBar .next {
-  float: right;
-}
-.listingBar .previous {
-  display: inline-block;
-  }
-.listingBar a,
-.listingBar .current {
-  display: inline-block;
-  padding: 0.25em 0.5em;
-}
-
 /* @end */
   
 /* @group Status messages */
@@ -636,15 +619,15 @@ dl.toc dd ol {
 /* @group Invisibles */
 
 .hiddenStructure {
-    display: block;
-    background: transparent;
-    background-image: none; /* safari bug */
-    border: none;
-    height: 0.1em;
-    overflow: hidden;
-    padding: 0;
-    margin: -0.1em 0 0 -0.1em;
-    width: 1px;
+    display: block !important;
+    background: transparent !important;
+    background-image: none !important; /* safari bug */
+    border: none !important;
+    height: 0.1em !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: -0.1em 0 0 -0.1em !important;
+    width: 1px !important;
 }
 
 #content .visualNoMarker {

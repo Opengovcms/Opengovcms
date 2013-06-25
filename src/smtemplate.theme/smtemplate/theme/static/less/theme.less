@@ -17,8 +17,9 @@
   padding: 20px 0 0;
   min-height: 127px;
 }
+#portal-column-one,
 #portal-column-two {
-  margin-top: @baseLineHeight;
+  margin-top: @baseLineHeight/2;
 }
 
 // Viewlets
@@ -345,4 +346,73 @@ li:hover .globalSectionsLevel1 {
 }
 #portal-footer a:hover {
   color: @black;
+}
+
+// Listings
+.tileHeadline a:hover {
+  text-decoration: underline;
+}
+
+// Listing Bar
+.listingBar {
+  border-top: 1px solid @grayLight;
+  color: @main;
+  margin: @baseLineHeight 0;
+  padding: 5px 0;
+  text-align: center;
+}
+.itemBatch,
+.currentBatch {
+  display: inline-block;
+  padding: 6px 3px;
+}
+.itemBatch:hover,
+.itemBatch:visited {
+  color: @main;
+}
+.currentBatch {
+  color: @black;
+}
+.itemBatch:hover {
+  text-decoration: underline;
+}
+.batch {
+  background-color: @light;
+  color: @black;
+  font-size: 36px;
+  height: 30px;
+  line-height: 24px;
+  text-align: center;
+  width: 30px;
+}
+.batch:hover {
+  background-color: @grayLight;
+  color: @black;
+}
+.batch:visited {
+  color: @black;
+}
+.previousBatch {
+  float: left;
+}
+.nextBatch {
+  float: right;
+}
+
+// Subsection View
+.subSectionTile {
+  margin-bottom: @baseLineHeight;
+}
+.subSectionTile.position-0 {
+  clear: both;
+}
+.subSectionTile a:hover {
+  text-decoration: underline;
+}
+.sstImageWrapper {
+  height: 113px;
+  overflow: hidden;
+}
+.sstHeadline {
+  margin: @baseLineHeight/2 0;
 }

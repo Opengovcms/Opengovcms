@@ -392,84 +392,84 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-div.row {
+.row {
   float: left;
   width: 100%;
   display: block;
   position: relative;
 }
-div.cell {
+.cell {
   position: relative;
   float: left;
   left: 100%;
 }
-div.width-full {
+.width-full {
   width: 96.875%;
 }
-div.width-1\3a 2 {
+.width-1\3a 2 {
   width: 46.875%;
 }
-div.position-1\3a 2 {
+.position-1\3a 2 {
   margin-left: -48.4375%;
 }
-div.width-1\3a 3 {
+.width-1\3a 3 {
   width: 30.2083%;
 }
-div.width-2\3a 3 {
+.width-2\3a 3 {
   width: 63.5417%;
 }
-div.position-1\3a 3 {
+.position-1\3a 3 {
   margin-left: -65.1042%;
 }
-div.position-2\3a 3 {
+.position-2\3a 3 {
   margin-left: -31.7708%;
 }
-div.width-1\3a 4 {
+.width-1\3a 4 {
   width: 21.8750%;
 }
-div.width-3\3a 4 {
+.width-3\3a 4 {
   width: 71.8750%;
 }
-div.position-0 {
+.position-0 {
   margin-left: -98.4375%;
 }
-div.position-1\3a 4 {
+.position-1\3a 4 {
   margin-left: -73.4375%;
 }
-div.position-3\3a 4 {
+.position-3\3a 4 {
   margin-left: -23.4375%;
 }
-.cell div.position-0 {
+.cell .position-0 {
   margin-left: -100%;
 }
-.cell div.position-1 {
+.cell .position-1 {
   margin-left: -74.1935%;
 }
-.cell div.position-2 {
+.cell .position-2 {
   margin-left: -48.3871%;
 }
-.cell div.position-3 {
+.cell .position-3 {
   margin-left: -22.5806%;
 }
-.cell div.width-full {
+.cell .width-full {
   width: 100%;
 }
-.cell div.width-1\3a 2 {
+.cell .width-1\3a 2 {
   width: 48.3871%;
 }
-.cell div.position-1\3a 2 {
+.cell .position-1\3a 2 {
   margin-left: -48.3871%;
 }
-.cell div.width-1\3a 3 {
+.cell .width-1\3a 3 {
   width: 31.1828%;
 }
-.cell div.width-2\3a 3 {
+.cell .width-2\3a 3 {
   width: 65.5914%;
 }
-.cell div.position-1\3a 3 {
+.cell .position-1\3a 3 {
   margin-left: -65.5914%;
 }
-.cell div.position-2\3a 3 {
+.cell .position-2\3a 3 {
   margin-left: -31.1828%;
 }
 /* ==========================================================================
@@ -497,7 +497,11 @@ h1,
   font-size: 36.12px;
   font-weight: normal;
   line-height: 42.12px;
-  margin: 18px 0 15px;
+  margin: 9px 0 15px;
+}
+.template-summary_view .documentFirstHeading {
+  border-bottom: 1px solid #a7b0b5;
+  padding: 0 0 9px;
 }
 h2 {
   font-family: inherit;
@@ -659,23 +663,6 @@ table.grid th {
 }
 #foldercontents-order-column {
   padding: 0;
-}
-/* Listing Bar */
-
-.listingBar {
-  margin: 1em 0;
-  text-align: center;
-}
-.listingBar .next {
-  float: right;
-}
-.listingBar .previous {
-  display: inline-block;
-}
-.listingBar a,
-.listingBar .current {
-  display: inline-block;
-  padding: 0.25em 0.5em;
 }
 /* @end */
 
@@ -1162,16 +1149,16 @@ dl.toc dd ol {
 /* @group Invisibles */
 
 .hiddenStructure {
-  display: block;
-  background: transparent;
-  background-image: none;
+  display: block !important;
+  background: transparent !important;
+  background-image: none !important;
   /* safari bug */
-  border: none;
-  height: 0.1em;
-  overflow: hidden;
-  padding: 0;
-  margin: -0.1em 0 0 -0.1em;
-  width: 1px;
+  border: none !important;
+  height: 0.1em !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: -0.1em 0 0 -0.1em !important;
+  width: 1px !important;
 }
 #content .visualNoMarker {
   list-style: none;
@@ -1585,7 +1572,7 @@ input#title {
   font-size: 36.12px;
   font-weight: normal;
   line-height: 42.12px;
-  margin: 18px 0 15px;
+  margin: 9px 0 15px;
   margin: 0;
   width: 100%;
 }
@@ -1830,8 +1817,9 @@ body.template-new-user #content input {
   padding: 20px 0 0;
   min-height: 127px;
 }
+#portal-column-one,
 #portal-column-two {
-  margin-top: 18px;
+  margin-top: 9px;
 }
 #portal-siteactions {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -2136,6 +2124,69 @@ li:hover .globalSectionsLevel1 {
 #portal-footer a:hover {
   color: black;
 }
+.tileHeadline a:hover {
+  text-decoration: underline;
+}
+.listingBar {
+  border-top: 1px solid #a7b0b5;
+  color: #066270;
+  margin: 18px 0;
+  padding: 5px 0;
+  text-align: center;
+}
+.itemBatch,
+.currentBatch {
+  display: inline-block;
+  padding: 6px 3px;
+}
+.itemBatch:hover,
+.itemBatch:visited {
+  color: #066270;
+}
+.currentBatch {
+  color: black;
+}
+.itemBatch:hover {
+  text-decoration: underline;
+}
+.batch {
+  background-color: #e9eff3;
+  color: black;
+  font-size: 36px;
+  height: 30px;
+  line-height: 24px;
+  text-align: center;
+  width: 30px;
+}
+.batch:hover {
+  background-color: #a7b0b5;
+  color: black;
+}
+.batch:visited {
+  color: black;
+}
+.previousBatch {
+  float: left;
+}
+.nextBatch {
+  float: right;
+}
+.subSectionTile {
+  margin-bottom: 18px;
+}
+.subSectionTile.position-0 {
+  clear: both;
+}
+.subSectionTile a:hover {
+  text-decoration: underline;
+}
+.sstImageWrapper {
+  height: 113px;
+  overflow: hidden;
+}
+.sstHeadline {
+  margin: 9px 0;
+}
 .portlet {
   border-bottom: 1px solid #a7b0b5;
   margin: 0 0 18px;
@@ -2271,6 +2322,7 @@ dl.portletError {
 }
 .navTreeTopNode a {
   color: #087b8c !important;
+  padding: 0;
 }
 .navTreeLevel1 {
   background-color: white;

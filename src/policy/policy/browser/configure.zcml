@@ -2,6 +2,17 @@
     xmlns="http://namespaces.zope.org/browser"
     i18n_domain="policy">
 
+  <include package="plone.app.contentmenu" />
+  <page
+      name="section_view"
+      for="plone.app.contenttypes.interfaces.IFolder"
+      layer="policy.interfaces.IBrowserLayer"
+      template="templates/section_view.pt"
+      permission="zope2.View"
+      menu="plone_displayviews"
+      title="Section view"
+      />
+
   <page
       name="view"
       for="..content.publication.IPublication"

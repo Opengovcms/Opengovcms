@@ -32,7 +32,7 @@ class ThemeChangedEvent(ObjectEvent):
 
 def dump(dir, prefix):
     for name in dir.listDirectory():
-        relativeName = "%s/%s" % (prefix, name,)
+        relativeName = os.path.join(prefix, name)
         if dir.isDirectory(name):
             os.mkdir(relativeName)
             dump(dir[name], relativeName)
@@ -101,6 +101,13 @@ def subscriber(theme, event):
             continue
         theme.writeFile(css_file, readCSS(prefix, css_file))
     rmtree(prefix)
+    exportdir = os.environ.get('EXPORT_THEME_DIR')
+    if exportdir and os.path.exists(exportdir):
+        themedir = os.path.join(exportdir, theme.__name__)
+        if os.path.exists(themedir):
+            rmtree(themedir)
+        os.mkdir(themedir)
+        dump(theme, themedir)
 
 
 getGlobalSiteManager().registerHandler(subscriber, (Interface, IThemeChangedEvent))

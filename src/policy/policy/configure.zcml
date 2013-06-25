@@ -24,6 +24,13 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:importStep
+      name="policy.migrateAT2DX"
+      title="migrate content from AT to DX"
+      description=""
+      handler=".setuphandlers.migrateAT2DX"
+      />
+
   <!-- -*- extra stuff goes here -*- -->
 
   <includeDependencies package="." />

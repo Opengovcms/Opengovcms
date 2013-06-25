@@ -63,13 +63,13 @@ class CompileErrors(Exception):
     pass
 
 
-def renderLESS(lessc_command_line, resource_path, resource_file_less, resource_file_css):
-    logger.info("The '%s' has been compiled to '%s'." % (resource_file_less, resource_file_css))
+def renderLESS(lessc_command_line, file_less, file_css):
+    logger.info("The '%s' has been compiled to '%s'." % (file_less, file_css))
     # Call the LESSC executable
     process = Popen([
             lessc_command_line,
-            os.path.join(resource_path, resource_file_less),
-            os.path.join(resource_path, resource_file_css)
+            file_less,
+            file_css
         ], stdout=PIPE, stderr=PIPE)
     output, errors = process.communicate()
     # Return the command output
@@ -80,15 +80,25 @@ def renderLESS(lessc_command_line, resource_path, resource_file_less, resource_f
         raise CompileErrors(errors)
     return output
 
+
 def subscriber(theme, event):
-    prefix = mkdtemp()
-    dump(theme, prefix)
+    for less_resource in RESOURCES:
+        if not theme.isFile(less_resource):
+            return
     lessc = getLessCompiler()
     if not lessc:
         return
+    prefix = mkdtemp()
+    dump(theme, prefix)
     for less_resource in RESOURCES:
+        file_less = os.path.join(prefix, less_resource)
+        if not os.path.exists(file_less):
+            continue
         css_file = RESOURCES[less_resource]
-        renderLESS(lessc, prefix, less_resource, css_file)
+        file_css = os.path.join(prefix, css_file)
+        renderLESS(lessc, file_less, file_css)
+        if not os.path.exists(file_css):
+            continue
         theme.writeFile(css_file, readCSS(prefix, css_file))
     rmtree(prefix)
 

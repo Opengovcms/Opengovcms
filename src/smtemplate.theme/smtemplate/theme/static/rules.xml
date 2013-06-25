@@ -50,6 +50,7 @@
         <drop css:theme="meta[http-equiv='Content-type']" />
         <drop css:content="meta[name='viewport']" />
         <drop css:content="link[href$='.css']" />
+        <drop css:content="style" />
         <drop css:content="link[href$='favicon.ico']" />
         <before content="/html/head/meta" css:theme="meta[name='viewport']" />
         <before content="/html/head/base" theme="/html/head/title" />

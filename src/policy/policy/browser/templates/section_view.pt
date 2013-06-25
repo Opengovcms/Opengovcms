@@ -14,7 +14,7 @@
     <metal:content-core fill-slot="content-core">
         <metal:block define-macro="listing" extend-macro="context/folder_listing/macros/content-core">
             <!-- we don't want the dl -->
-            <metal:entries fill-slot="entries">
+            <metal:entries fill-slot="entries" tal:define="batch python:[i for i in batch if not i.exclude_from_nav]">
                 <metal:block use-macro="context/folder_listing/macros/entries">
                     <metal:entry fill-slot="entry">
                     <div class="subSectionTile"
@@ -32,7 +32,7 @@
                                              scale python: images.scale('image', scale='preview')">
                                 <img src="" alt="" tal:condition="scale"
                                      tal:replace="structure python: scale.tag(css_class='sstImage')" />
-                            </div>                                     
+                            </div>
                             <h2 class="sstHeadline"
                                 metal:define-macro="listitem"
                                 tal:content="item_title_or_id">Title</h2>

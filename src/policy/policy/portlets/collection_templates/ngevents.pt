@@ -30,7 +30,7 @@
                   Mon
               </span>
             </span>
-            <div class="portletItemByline"><tal:sub tal:condition="sub" tal:define="sub obj/Subject; ss python:', '.join(sub)" tal:replace="ss" /></div>
+            <div class="portletItemByline"><tal:sub tal:condition="sub" tal:define="sub obj/Subject; ss python:', '.join(sub)" tal:replace="string:$ss | " /><tal:location tal:replace="obj/location" /></div>
             <a class="portletItemTitle"
                href="#"
                class="eventItemTitle"

@@ -66,6 +66,8 @@
         <drop css:content="link[href$='print.css']" />
         <drop css:content="link[href$='public.css']" />
         <drop css:content="link[href$='reset.css']" />
+        <drop css:content="link[href$='collection.css']" />
+        <drop css:content="link[href$='panels.css']" />
 
         <drop css:content="link[href*='base-cachekey']" />        
         <drop css:content="link[href*='public-cachekey']" />

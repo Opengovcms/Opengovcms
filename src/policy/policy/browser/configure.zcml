@@ -14,6 +14,16 @@
       />
 
   <page
+      name="events_view"
+      for="plone.app.contenttypes.interfaces.ICollection"
+      layer="policy.interfaces.IBrowserLayer"
+      template="templates/events_view.pt"
+      permission="zope2.View"
+      menu="plone_displayviews"
+      title="Events listing"
+      />
+
+  <page
       name="view"
       for="..content.publication.IPublication"
       template="templates/publication_view.pt"

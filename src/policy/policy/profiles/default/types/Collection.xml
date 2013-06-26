@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<object name="Collection" meta_type="Dexterity FTI">
+ <property name="view_methods" purge="False">
+  <element value="events_view"/>
+ </property>
+</object>

@@ -83,7 +83,9 @@
             <div id="search-results-wrapper"
                  tal:define="b_start python:0;
                              b_start request/b_start | b_start;
-                             batch python: view.results(b_start=b_start);
+                             b_size python:10;
+                             b_size request/b_size | b_size;
+                             batch python: view.results(b_start=b_start, b_size=b_size);
                              normalizeString nocall:context/@@plone/normalizeString;">
 
                 <div id="search-results-bar">

@@ -4,6 +4,26 @@
                    metal:define-macro="navigation"
                    >
 <div class="listingBar"
+     tal:define="mq python:modules['ZTUtils'].make_query;
+                 linkparams request/form/copy;
+                 re_size request/b_size|nothing;
+                 url request/ACTUAL_URL;
+                 sequence_length batch/sequence_length;
+                 sizes python:[10, 20, 30]"
+     tal:condition="batch/multiple_pages">
+     <span class="previousBatch">Viser <tal:x replace="batch/start" /><tal:x condition="python:batch.items_on_page!=1" replace="string:-${batch/end}" /> af <tal:x replace="sequence_length" />.</span>
+     <span class="nextBatch">
+        Per side
+        <tal:sizes repeat="size sizes">
+            <a href=""
+               tal:attributes="href python: '%s?%s' % (url, mq(linkparams, {'b_size': size}))"
+               tal:content="size"
+               tal:omit-tag="python:re_size==size">size</a>
+        </tal:sizes>
+        <a href="" tal:attributes="href python: '%s?%s' % (url, mq(linkparams, {'b_size': sequence_length+1, batch.b_start_str: 0}))">Vis alle</a>
+     </span>
+</div>
+<div class="listingBar"
      i18n:domain="plone"
      tal:condition="batch/multiple_pages">
     <a class="previousBatch batch"

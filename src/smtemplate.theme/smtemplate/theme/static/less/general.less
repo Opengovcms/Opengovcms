@@ -25,7 +25,8 @@ h1,
   line-height: @baseLineHeight * 2.34; // ~42
   margin: @baseLineHeight/2 0 @baseLineHeight / 1.2;
   }
-.template-summary_view .documentFirstHeading {
+.template-summary_view .documentFirstHeading,
+.template-events_view .documentFirstHeading {
   border-bottom: 1px solid @grayLight;
   padding: 0 0 @baseLineHeight/2;
 }
@@ -77,3 +78,6 @@ pre {
   padding: 1em;
   overflow-x: auto;
   }
+abbr[title] {
+  border: 0;
+}

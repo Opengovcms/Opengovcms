@@ -57,10 +57,8 @@
   right: 0;
   top: 87px;
 }
-.LSBox {
-  
-}
-#portal-searchbox .searchField {
+#portal-searchbox .searchField,
+.searchPage[type="text"] {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -68,12 +66,18 @@
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25) inset;
   color: @gray;
   height: 30px;
+  line-height: 20px;
   margin-right: 10px;
   padding: 5px 10px;
   vertical-align: top;
   width: 230px;
 }
-.no-boxshadow #portal-searchbox .searchField {
+.searchPage[type="text"]:hover,
+.searchPage[type="text"]:focus {
+  border: 0;
+}
+.no-boxshadow #portal-searchbox .searchField,
+.no-boxshadow .searchPage[type="text"] {
   border: 1px solid;
 }
 .searchButton[type="submit"] {
@@ -90,7 +94,8 @@
 .no-cssgradients .searchButton[type="submit"] {
   background-color: mix(@main, @secondary);
 }
-#portal-searchbox .searchButton[type="submit"] {
+#portal-searchbox .searchButton[type="submit"],
+.searchPage[type="submit"] {
   font-size: @baseFontSize * 1.14;
   height: 30px;
 }
@@ -425,4 +430,57 @@ li:hover .globalSectionsLevel1 {
 }
 .sstHeadline {
   margin: @baseLineHeight/2 0;
+}
+
+// Search results page
+#searchform {
+
+}
+#search-field {
+  padding: 0;
+}
+#rss-subscription {
+  float: left;
+  line-height: 3em;
+}
+#advanced-search {
+  background-color: @secondary;
+  color: @white;
+  float: left;
+  margin-left: -240px;
+  margin-top: -110px;
+  width: 210px;
+}
+#advanced-search h2 {
+  margin: 0;
+}
+#search-filter-toggle {
+  color: @white;
+  display: block;
+  padding: 12px;
+}
+#search-filter label {
+  font-weight: normal;
+}
+#search-results-wrapper {
+  margin-top: 1em;
+}
+form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
+  background: transparent !important;
+}
+.searchResultsItemTitle {
+  margin: @baseLineHeight 0 @baseLineHeight/6;
+}
+.documentLocation {
+  font-family: @sansFontFamily;
+  font-size: @baseFontSize * 0.7857;
+  line-height: @baseLineHeight * 0.7857;
+  margin: 0 0 @baseLineHeight/6;
+  text-transform: uppercase;
+}
+.documentLocation a {
+  color: @gray;
+}
+#ajax-search-res {
+  display: none;
 }

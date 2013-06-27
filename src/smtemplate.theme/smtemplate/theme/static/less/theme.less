@@ -369,12 +369,29 @@ li:hover .globalSectionsLevel1 {
 }
 
 // Listing Bar
+.listingAmount {
+  border-top: 1px solid @grayLight;
+  padding: 11px 0;  
+  margin: @baseLineHeight 0 0;
+}
+.batchNumbers {
+  float: right;
+}
+.batchNumbers a {
+  margin-right: 3px;
+}
+.allBatch {
+  margin-left: 6px;
+}
 .listingBar {
   border-top: 1px solid @grayLight;
   color: @main;
   margin: @baseLineHeight 0;
   padding: 5px 0;
   text-align: center;
+}
+.listingAmount + .listingBar {
+  margin-top: 0;
 }
 .itemBatch,
 .currentBatch {

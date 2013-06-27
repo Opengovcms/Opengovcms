@@ -68,6 +68,7 @@
         <drop css:content="link[href$='reset.css']" />
         <drop css:content="link[href$='collection.css']" />
         <drop css:content="link[href$='panels.css']" />
+        <drop css:content="link[href$='querywidget.css']" />
 
         <drop css:content="link[href*='base-cachekey']" />        
         <drop css:content="link[href*='public-cachekey']" />

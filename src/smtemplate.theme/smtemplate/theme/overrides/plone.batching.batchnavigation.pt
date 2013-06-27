@@ -3,7 +3,7 @@
                    condition="batch"
                    metal:define-macro="navigation"
                    >
-<div class="listingBar"
+<div class="listingAmount"
      tal:define="mq python:modules['ZTUtils'].make_query;
                  linkparams request/form/copy;
                  re_size request/b_size|nothing;
@@ -11,8 +11,8 @@
                  sequence_length batch/sequence_length;
                  sizes python:[10, 20, 30]"
      tal:condition="batch/multiple_pages">
-     <span class="previousBatch">Viser <tal:x replace="batch/start" /><tal:x condition="python:batch.items_on_page!=1" replace="string:-${batch/end}" /> af <tal:x replace="sequence_length" />.</span>
-     <span class="nextBatch">
+     <span class="batchAmount">Viser <tal:x replace="batch/start" /><tal:x condition="python:batch.items_on_page!=1" replace="string:-${batch/end}" /> af <tal:x replace="sequence_length" />.</span>
+     <span class="batchNumbers">
         Per side
         <tal:sizes repeat="size sizes">
             <a href=""
@@ -20,7 +20,7 @@
                tal:content="size"
                tal:omit-tag="python:re_size==size">size</a>
         </tal:sizes>
-        <a href="" tal:attributes="href python: '%s?%s' % (url, mq(linkparams, {'b_size': sequence_length+1, batch.b_start_str: 0}))">Vis alle</a>
+        <a class="allBatch" href="" tal:attributes="href python: '%s?%s' % (url, mq(linkparams, {'b_size': sequence_length+1, batch.b_start_str: 0}))">Vis alle</a>
      </span>
 </div>
 <div class="listingBar"

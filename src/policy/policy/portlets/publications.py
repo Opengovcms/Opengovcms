@@ -1,5 +1,4 @@
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from plone.app.collection.interfaces import ICollection
 from plone.portlet.collection import PloneMessageFactory as _c
 from plone.formwidget.contenttree import ObjPathSourceBinder
 from plone.portlet.collection import collection
@@ -9,6 +8,20 @@ from z3c.relationfield.schema import RelationChoice
 from zope import schema
 from zope.interface import implements
 from policy.i18n import MessageFactory as _
+
+COLLECTIONS = []
+
+try:
+    from plone.app.collection.interfaces import ICollection
+    COLLECTIONS.append(ICollection.__identifier__)
+except ImportError:
+    pass
+
+try:
+    from plone.app.contenttypes.interfaces import ICollection
+    COLLECTIONS.append(ICollection.__identifier__)
+except ImportError:
+    pass
 
 
 class IPublications(IPortletDataProvider):
@@ -23,7 +36,7 @@ class IPublications(IPortletDataProvider):
         description=_c(u"Find the collection which provides the items to list"),
         required=True,
         source=ObjPathSourceBinder(
-            object_provides=ICollection.__identifier__
+            object_provides=COLLECTIONS
         ),
     )
 

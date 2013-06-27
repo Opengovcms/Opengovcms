@@ -31,7 +31,8 @@
             <tal:content tal:content="item/title">Title</tal:content>
         </a>
         <div class="portletItemByline">
-              <tal:sub tal:condition="sub" tal:define="sub item/Subject; ss python:', '.join(sub)" tal:replace="string:$ss |" />
+              <tal:sub tal:condition="sub" tal:define="sub item/Subject; ss python:', '.join(sub)" tal:replace="string:$ss" />
+              <span class="separator">|</span>
               <tal:date tal:define="dd item/Date" tal:replace="python:toLocalizedTime(dd)" />
         </div>
         <div class="portletItemDescription"

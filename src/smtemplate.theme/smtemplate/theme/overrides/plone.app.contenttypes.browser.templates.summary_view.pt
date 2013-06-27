@@ -37,7 +37,10 @@
                 </a>
             </h2>
 
-            <div metal:use-macro="context/standard_view/macros/document_byline"></div>
+            <div class="documentByLine">
+                <tal:sub tal:condition="sub" tal:define="sub item/Subject; ss python:', '.join(sub)" tal:replace="string:$ss |" />
+                <tal:date tal:define="dd item/Date" tal:replace="python:toLocalizedTime(dd)" />
+            </div>
 
             <p class="tileBody" tal:condition="item_description">
                 <span class="description" tal:content="item_description">

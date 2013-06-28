@@ -31,3 +31,7 @@ mr-developer-src
 *.sublime-project
 *.sublime-workspace
 .ipython
+include
+lib
+local
+

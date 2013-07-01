@@ -14,6 +14,9 @@ fake-eggs
 var
 parts
 dist
+include
+lib
+local
 .installed.cfg
 .project
 .pydevproject

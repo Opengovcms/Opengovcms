@@ -12,7 +12,7 @@
             <a href="#"
                class="ddl-item"
                tal:attributes="href obj/getRemoteUrl|obj/getURL;"
-               tal:content="obj/pretty_title_or_id">Title</a>
+               tal:content="obj/Title">Title</a>
           </li>
         </tal:i>
       </ul>

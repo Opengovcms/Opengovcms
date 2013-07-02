@@ -17,4 +17,16 @@
             <permission>Manage portal</permission>
     </configlet>
 
+    <configlet
+        title="Flyt-out menu"
+        action_id="flyout_menu_settings"
+        appId="site-settings"
+        category="Products"
+        condition_expr=""
+        url_expr="string:${portal_url}/@@flyout-menu-controlpanel"
+        visible="True"
+        i18n:attributes="title">
+            <permission>Manage portal</permission>
+    </configlet>
+
 </object>

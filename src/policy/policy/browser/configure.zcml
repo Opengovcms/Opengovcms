@@ -57,6 +57,14 @@
       layer="policy.interfaces.IBrowserLayer"
       />
 
+  <page
+      name="flyout-menu-controlpanel"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".controlpanel.FlyoutControlPanel"
+      permission="cmf.ManagePortal"
+      layer="policy.interfaces.IBrowserLayer"
+      />
+
   <viewlet
       name="plone.global_sections"
       manager="plone.app.layout.viewlets.interfaces.IPortalHeader"

@@ -103,6 +103,7 @@
         <replace css:content-children="#portal-globalnav" css:theme-children="#theme-globalnav" />
 	    <after css:theme="#theme-globalnav" css:content="#portal-globalnav-mobile" />
 	    <merge attributes="class" css:content="#portal-globalnav" css:theme="#theme-globalnav" />
+        <after css:theme="#theme-globalnav" css:content="#portal-top .panels" if-path="@@manage-panels"/>
         <replace css:content="#portal-personaltools" css:theme="#portal-personaltools" />
         <drop css:content="#portal-breadcrumbs" />
         <after css:content="#portal-languageselector" css:theme="#theme-globalnav" />

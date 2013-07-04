@@ -1,7 +1,17 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="policy">
 
   <adapter name="lastname" factory=".indexers.lastname" />
+
+  <!-- Exclude from navigation -->
+  <plone:behavior
+        title="Exclude From mobile navigation"
+        description="Allow items to be excluded from mobile navigation"
+        provides=".exclfrommobilenav.IExcludeFromMobileNavigation"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
 
 </configure>

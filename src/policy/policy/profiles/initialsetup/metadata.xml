@@ -19,5 +19,7 @@
     <dependency>profile-quintagroup.portlet.generichtml:default</dependency>
     <dependency>profile-collective.portlet.ngcollection:default</dependency>
     <dependency>profile-collective.portlet.carousel:default</dependency>
+    <dependency>profile-collective.portletmetadata:default</dependency>
+    <dependency>profile-smtemplate.theme:default</dependency>
   </dependencies>
 </metadata>

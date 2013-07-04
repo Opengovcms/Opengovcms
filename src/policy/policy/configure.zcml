@@ -31,6 +31,8 @@
       handler=".setuphandlers.migrateAT2DX"
       />
 
+  <utility factory=".setuphandlers.HiddenProducts" name="policy" />
+
   <!-- -*- extra stuff goes here -*- -->
 
   <includeDependencies package="." />

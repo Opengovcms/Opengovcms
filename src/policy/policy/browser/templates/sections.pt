@@ -14,8 +14,8 @@
                                title tab/description|nothing;"><span tal:content="tab/name">
             Tab Name
             </span></a>
-            <ul class="globalSectionsLevel1" tal:define="item python:view.getItem(tab)">
-                <li tal:repeat="panel python:view.getPanels(item)">
+            <ul class="globalSectionsLevel1" tal:condition="panels" tal:define="panels python:view.getPanels(view.getItem(tab))">
+                <li tal:repeat="panel panels">
                     <div tal:attributes="class string:panel panel-${repeat/panel/index} panel-${panel/layout}"
                         tal:define="html panel/@@display"
                         tal:condition="html"

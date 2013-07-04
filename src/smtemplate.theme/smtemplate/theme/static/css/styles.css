@@ -1054,6 +1054,7 @@ dl.toc dd ol {
   overflow: hidden !important;
   padding: 0 !important;
   margin: -0.1em 0 0 -0.1em !important;
+  position: absolute;
   width: 1px !important;
 }
 #content .visualNoMarker {
@@ -1697,6 +1698,8 @@ body.template-new-user #content input {
 }
 .factBox {
   background: #087b8c;
+  color: white;
+  padding: 10px;
 }
 #visual-portal-wrapper {
   background-color: white;
@@ -1836,9 +1839,17 @@ body.template-new-user #content input {
 .LSDescr {
   margin-left: 9px;
 }
-#theme-globalnav {
+#globalnav-wrapper {
   background: -webkit-linear-gradient(#087b8c, #066270);
   background: linear-gradient(#087b8c, #066270);
+}
+.no-cssgradients #globalnav-wrapper {
+  background-color: #076f7e;
+}
+.menu-trigger {
+  display: none;
+}
+#theme-globalnav {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1848,9 +1859,6 @@ body.template-new-user #content input {
   clear: both;
   content: "";
   display: table;
-}
-.no-cssgradients #theme-globalnav {
-  background-color: #076f7e;
 }
 #theme-globalnav > li {
   border-right: 1px solid #207c89;
@@ -1887,6 +1895,7 @@ body.template-new-user #content input {
 .globalSectionsLevel1 {
   background: -webkit-linear-gradient(#ab1d17, #d5241c);
   background: linear-gradient(#ab1d17, #d5241c);
+  color: white;
   display: none;
   left: 0;
   padding: 9px 0 18px;
@@ -1901,36 +1910,36 @@ body.template-new-user #content input {
 li:hover .globalSectionsLevel1 {
   display: block;
 }
-.globalSectionsLevel1 li {
-  display: block;
+.globalSectionsLevel1 .portlet {
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 .globalSectionsLevel1 > li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
   float: left;
+  padding: 7px 15px;
   width: 25%;
 }
 .globalSectionsLevel1 a {
   color: white;
-  display: block;
-  margin: 0 24px 0 0;
-  padding: 4px 0 4px 15px;
 }
-.globalSectionsLevel1 > li > a {
-  font-size: 18.06px;
+.globalSectionsLevel1 li > a {
+  display: block;
   font-weight: bold;
-  line-height: 23.94px;
   padding: 7px 15px;
 }
 .globalSectionsLevel1 a:hover {
   background-color: #c92f28;
 }
-.globalSectionsLevel2 {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-style: 11.998px;
-  line-height: 16px;
+.globalSectionsLevel1 ul {
   padding: 0;
 }
-.globalSectionsLevel2 a:before {
-  content: "» ";
+.globalSectionsLevel1 li li {
+  display: block;
 }
 .documentActions {
   float: right;
@@ -2120,6 +2129,10 @@ li:hover .globalSectionsLevel1 {
 }
 .sstHeadline {
   margin: 9px 0;
+}
+.template-search #portal-breadcrumbs,
+.template-search #portal-column-one {
+  display: none;
 }
 #search-field {
   padding: 0;
@@ -2910,11 +2923,96 @@ a.managePortletsFallback {
     width: auto;
   }
   #portal-siteactions,
+  #portal-personaltools-wrapper,
+  #theme-globalnav,
+  #portal-breadcrumbs,
+  .portletCarousel,
+  #portal-footer-wrapper .panels {
+    display: none;
+  }
   #portal-searchbox {
+    float: right;
+    margin: 5px 5px 0 0;
     position: static;
   }
-  .portletCarousel {
+  #portal-searchbox .searchField {
+    margin-right: 0;
+    width: 140px;
+  }
+  #portal-searchbox .searchButton[type="submit"] {
+    padding: 3px 5px;
+  }
+  .menu-trigger {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAjCAYAAADv0ujUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAArdJREFUeNrUWE+LUnEU9f2fcv7VNDVEkBEMtRx4EMxGJFq7azeLNoL4ARQ/QBu/goE7wY20G1qULQIX4mqoKGaVQ5KRMppPff86v8f92cs+gHcuHN44q8N999xz7lMSf0sBVHpyqRAIYn9H5AQ0wKrX64epVOqB67rquplqmhZaluXbtv0WP2eAJ8nrwE6/338VMizHcT6C3y3AlG//GnA/ZFzNZvMEHLcFYfHqDWArwbgGg4HgZwmNqXJ+OROezWYmjW7U4UiJ4/H4J1fC3W73Ii44ob5puVx+mc/nX+i6vo2xWftqUxQlnM/nk1ardVqr1b7iX65orkLquwHcAw5ouPU172Px1n1gAvwAesAvwJE72CThbQIbDAxEGsYC+A2M5S5WVsxDpycHt5OkPep2IN3uSpWy8uSWJeKd/idLCPOwOp3OUyhT832fBWmRJRAZzrPZ7BfaEmI0IrI3J5NJm6Mte553WSgUDmkZRMYhNsRuMpl8wnFmkdq20un0cZywTuuMbQ2Hw6RMayoJzeRMGLoy5LpVSYFur9f7zJSsg8PiEwkusmbR7oMjVLFYfG4Yxh6XLGGa5rxarb5GfSB7vpQrbQe4DeyTRa87SySoo1NApMg+MBINl4enQZeHHG4OBhLQ7nUoT4hc4SsrF7PGyO2kwwVyfhNXseIdlt3l1OFwJamFkqiB1fEYjnLiuq7GZUvA5QJkife2bb8RgpNZQohsH4feBdcskcvlHtFSWJ75u0hGd7lmiUwmc0yX/ZJwkrPQRqPR9ThhOcdsC7rS5TJQaZAX7Xb7lOlXn2+NRuOMbrtoG4hhvgM8LJVKz6bT6WYQBGvvuKqqAXTlVCqVd/h5DnwX17MSy8N74vKgeeYwIgHZ8ojyhDj1F/Km02moN0iEKhPCHu3f5fdh7lfzf1/g/wgwAFmFTqLFY6FUAAAAAElFTkSuQmCC") no-repeat 0 50%;
+    -webkit-background-size: 22px 18px;
+    background-size: 22px 18px;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 8px;
+    padding: 11px 15px 11px 27px;
+    text-transform: uppercase;
+  }
+  .menu-trigger:hover,
+  .menu-trigger:visited {
+    color: white;
+  }
+  #jPanelMenu-menu .navTreeTopNode a,
+  #jPanelMenu-menu .navTreeLevel0 > li:not(.navTreeCurrentNode) > a {
+    color: white !important;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  #jPanelMenu-menu {
+    padding-left: 0;
+  }
+  #jPanelMenu-menu li:not(.navTreeItem) {
+    border-top: 1px solid #a7b0b5;
+    display: block;
+  }
+  #jPanelMenu-menu li .plain {
+    padding: 5px 10px;
+  }
+  #jPanelMenu-menu li .plain {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAICAYAAAD0g6+qAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEhJREFUeNpi+P///1IgdgNiBiRsAsST0MTwYhDhAcTvkQwDGfIWiKNJNQiEPaGGFZJjCLJBIOwFxJeAOJJUQ2AGjYYRfgwQYAAgwsCAqBE6wwAAAABJRU5ErkJggg==) no-repeat 100% 50%;
+    color: white;
+    padding-right: 20px;
+  }
+  #jPanelMenu-menu #portal-siteactions {
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    position: static;
+  }
+  #portal-siteactions li {
+    border-top: 1px solid #a7b0b5;
+    display: block;
+  }
+  #portal-siteactions a {
+    color: white;
+    display: block;
+    margin: 0;
+    padding: 5px 10px;
+    text-transform: none;
+  }
+  #portal-column-one .portletNavigationTree li:not(.navTreeCurrentNode),
+  #portal-column-one .portletNavigationTree .navTreeCurrentNode > a {
     display: none;
+  }
+  #portal-column-one .portletNavigationTree .navTreeCurrentNode {
+    border: 0;
+    padding: 0;
+  }
+  #portal-column-one .portletNavigationTree .navTreeCurrentNode li {
+    display: block;
+  }
+  #portal-footer {
+    border: 0;
+  }
+  #advanced-search {
+    float: none;
+    margin: 0;
+    width: auto;
   }
 }
 @media print {

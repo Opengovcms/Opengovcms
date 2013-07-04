@@ -974,6 +974,7 @@ dl.toc dd ol {
   overflow: hidden !important;
   padding: 0 !important;
   margin: -0.1em 0 0 -0.1em !important;
+  position: absolute;
   width: 1px !important;
 }
 #content .visualNoMarker {
@@ -1387,4 +1388,6 @@ a.historyComparePrevious span {
 }
 .factBox {
   background: #087b8c;
+  color: white;
+  padding: 10px;
 }

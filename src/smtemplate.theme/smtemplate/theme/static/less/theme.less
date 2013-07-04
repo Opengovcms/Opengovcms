@@ -143,9 +143,17 @@
 }
 
 // Portal Globalnav
-#theme-globalnav {
+#globalnav-wrapper {  
   background: -webkit-linear-gradient(@secondary, @main);
   background: linear-gradient(@secondary, @main);
+}
+.no-cssgradients #globalnav-wrapper {
+  background-color: mix(@main, @secondary);
+}
+.menu-trigger {
+  display: none;
+}
+#theme-globalnav {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -155,9 +163,6 @@
     content: "";
     display: table;
   }
-}
-.no-cssgradients #theme-globalnav {
-  background-color: mix(@main, @secondary);
 }
 #theme-globalnav > li {
   border-right: 1px solid (@main + #1a1a19); // 066270 -> 207c89
@@ -194,6 +199,7 @@
 .globalSectionsLevel1 {
   background: -webkit-linear-gradient(@noticeDark,@notice);
   background: linear-gradient(@noticeDark,@notice);
+  color: @white;
   display: none;
   left: 0;
   padding: @baseLineHeight/2 0 @baseLineHeight;
@@ -208,36 +214,36 @@
 li:hover .globalSectionsLevel1 {
   display: block;
 }
-.globalSectionsLevel1 li {
-  display: block;
+.globalSectionsLevel1 .portlet {
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 .globalSectionsLevel1 > li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
   float: left;
+  padding: 7px 15px;
   width: 25%;
 }
 .globalSectionsLevel1 a {
   color: @white;
-  display: block;
-  margin: 0 24px 0 0;
-  padding: 4px 0 4px 15px;
 }
-.globalSectionsLevel1 > li > a {  
-  font-size: @baseFontSize * 1.29;
+.globalSectionsLevel1 li > a {    
+  display: block;
   font-weight: bold;
-  line-height: @baseLineHeight * 1.33;
   padding: 7px 15px;
 }
 .globalSectionsLevel1 a:hover {
   background-color: desaturate(@notice, 10%);
 }
-.globalSectionsLevel2 {
-  font-family: @sansFontFamily;
-  font-style: @baseFontSize*0.857;
-  line-height: @baseLineHeight/1.125;
+.globalSectionsLevel1 ul {
   padding: 0;
 }
-.globalSectionsLevel2 a:before {
-  content: "» ";
+.globalSectionsLevel1 li li {
+  display: block;
 }
 
 // Portal Logo 
@@ -450,8 +456,9 @@ li:hover .globalSectionsLevel1 {
 }
 
 // Search results page
-#searchform {
-
+.template-search #portal-breadcrumbs,
+.template-search #portal-column-one {
+  display: none;
 }
 #search-field {
   padding: 0;

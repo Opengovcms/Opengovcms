@@ -21,7 +21,7 @@
     <replace content="//*[contains(concat(' ', normalize-space(@class), ' '), ' navTreeItem ')]/a/@class" />
     <replace content="//*[contains(concat(' ', normalize-space(@class), ' '), ' navTreeItem ')]/div/a/@class" />
     
-    <after css:theme="#theme-globalnav" if-not-content="$home_page">
+    <after css:theme="#globalnav-wrapper" if-not-content="$home_page">
         <ul class="documentActions">
             <li id="document-action-plus">
                 <!-- AddThis Button BEGIN -->
@@ -103,12 +103,13 @@
         <replace css:content-children="#portal-globalnav" css:theme-children="#theme-globalnav" />
 	    <after css:theme="#theme-globalnav" css:content="#portal-globalnav-mobile" />
 	    <merge attributes="class" css:content="#portal-globalnav" css:theme="#theme-globalnav" />
-        <after css:theme="#theme-globalnav" css:content="#portal-top .panels" if-path="@@manage-panels"/>
+        <after css:theme="#globalnav-wrapper" css:content="#portal-top .panels" if-path="@@manage-panels"/>
         <replace css:content="#portal-personaltools" css:theme="#portal-personaltools" />
         <drop css:content="#portal-breadcrumbs" />
         <after css:content="#portal-languageselector" css:theme="#theme-globalnav" />
         <after css:theme="#portal-header" css:content="#portlets-in-header" />
         <after css:theme="#portal-header" css:content=".manageInHeaderPortletsLink" />
+        <strip css:content=".globalSectionsLevel1 .panel, .globalSectionsLevel1 .row, .globalSectionsLevel1 .cell, .globalSectionsLevel1 .content, .globalSectionsLevel1 .portletWrapper, .globalSectionsLevel1 .portletWrapper > div" />
 
         <!-- Portlets -->
         <replace css:content="#portal-column-one" css:theme="#portal-column-one" />

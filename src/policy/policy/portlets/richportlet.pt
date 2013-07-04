@@ -1,7 +1,5 @@
-
 <div tal:attributes="class string:portlet portletRich ${view/css_class}"
-     tal:attributes="style view/get_div_style"
-     i18n:domain="plone.portlet.static">
+     tal:attributes="style view/get_div_style">
 
   <div class="portletItemTitle" 
        tal:condition="not:view/data/omit_border">

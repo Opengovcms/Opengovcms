@@ -21,5 +21,6 @@
     <dependency>profile-collective.portlet.carousel:default</dependency>
     <dependency>profile-collective.portletmetadata:default</dependency>
     <dependency>profile-smtemplate.theme:default</dependency>
+    <dependency>profile-quintagroup.plonetabs:default</dependency>
   </dependencies>
 </metadata>

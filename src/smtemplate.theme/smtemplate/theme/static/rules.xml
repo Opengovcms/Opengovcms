@@ -109,7 +109,7 @@
         <after css:content="#portal-languageselector" css:theme="#theme-globalnav" />
         <after css:theme="#portal-header" css:content="#portlets-in-header" />
         <after css:theme="#portal-header" css:content=".manageInHeaderPortletsLink" />
-        <strip css:content=".globalSectionsLevel1 .panel, .globalSectionsLevel1 .row, .globalSectionsLevel1 .cell, .globalSectionsLevel1 .content, .globalSectionsLevel1 .portletWrapper, .globalSectionsLevel1 .portletWrapper > div" />
+        <strip css:content=".globalSectionsLevel1 .panel, .globalSectionsLevel1 .content, .globalSectionsLevel1 .portletWrapper, .globalSectionsLevel1 .portletWrapper > div" />
 
         <!-- Portlets -->
         <replace css:content="#portal-column-one" css:theme="#portal-column-one" />

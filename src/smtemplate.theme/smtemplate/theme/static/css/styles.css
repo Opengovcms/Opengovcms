@@ -1918,13 +1918,8 @@ li:hover .globalSectionsLevel1 {
   padding: 0;
 }
 .globalSectionsLevel1 > li {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   display: block;
-  float: left;
   padding: 7px 15px;
-  width: 25%;
 }
 .globalSectionsLevel1 a {
   color: white;

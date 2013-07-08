@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width" />
     <!-- <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <script src="http://jpanelmenu.com/jquery.jpanelmenu.min.js"></script>
-    <script>$(function(){$.jPanelMenu({menu:$(".portletNavigationTree").length?".portletNavigationTree":"#theme-globalnav"}).on()})</script>
-    <script type="text/javascript">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><script src="jquery.jpanelmenu.min.js"></script>
+    <script>$(function(){$.jPanelMenu({menu:$($(".portletNavigationTree").length?".portletNavigationTree":"#theme-globalnav").clone().add($("#portal-siteactions").clone()).wrapAll('<div />').parent()}).on()})</script><script type="text/javascript">
     var MTIProjectId='131a2bac-8aba-4848-b271-468bbb947398';
      (function() {
             var mtiTracking = document.createElement('script');

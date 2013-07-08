@@ -14,6 +14,7 @@
                                title tab/description|nothing;"><span tal:content="tab/name">
             Tab Name
             </span></a>
+            <tal:diazo tal:condition="view/isThemeEnabled">
             <ul class="globalSectionsLevel1" tal:condition="panels" tal:define="panels python:view.getPanels(view.getItem(tab))">
                 <li tal:repeat="panel panels">
                     <div tal:attributes="class string:panel panel-${repeat/panel/index} panel-${panel/layout}"
@@ -22,5 +23,5 @@
                         tal:content="structure html"
                         />
                 </li>
-            </ul></li></tal:tabs></ul>
+            </ul></tal:diazo></li></tal:tabs></ul>
 </tal:sections>

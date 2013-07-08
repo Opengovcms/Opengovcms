@@ -50,6 +50,7 @@ div.cell {
   color: @white;
 }
 #jPanelMenu-menu .portletNavigationTree {
+  border-width: 3px;
   margin: 0;
 }
 #jPanelMenu-menu .navTreeTopNode {
@@ -67,7 +68,7 @@ div.cell {
   padding-left: 0;
 }
 #jPanelMenu-menu #theme-globalnav {
-  border-bottom: 1px solid @grayLight;
+  border-bottom: 3px solid @grayLight;
   display: block;
 }
 #theme-globalnav li {
@@ -113,6 +114,14 @@ div.cell {
 #portal-siteactions a:hover {
   border: 0;
   color: @white;
+}
+#portal-column-one .navTreeItem {
+  border: 0;
+}
+#portal-column-one .navTreeItem a {
+  background-color: @body;
+  color: @white;
+  margin: 0 0 5px;
 }
 #portal-column-one .portletNavigationTree li:not(.navTreeCurrentNode),
 #portal-column-one .portletNavigationTree .navTreeCurrentNode > a {

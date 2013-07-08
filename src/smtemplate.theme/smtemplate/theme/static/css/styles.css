@@ -2968,6 +2968,7 @@ a.managePortletsFallback {
     color: white;
   }
   #jPanelMenu-menu .portletNavigationTree {
+    border-width: 3px;
     margin: 0;
   }
   #jPanelMenu-menu .navTreeTopNode {
@@ -2985,7 +2986,7 @@ a.managePortletsFallback {
     padding-left: 0;
   }
   #jPanelMenu-menu #theme-globalnav {
-    border-bottom: 1px solid #a7b0b5;
+    border-bottom: 3px solid #a7b0b5;
     display: block;
   }
   #theme-globalnav li {
@@ -3031,6 +3032,14 @@ a.managePortletsFallback {
   #portal-siteactions a:hover {
     border: 0;
     color: white;
+  }
+  #portal-column-one .navTreeItem {
+    border: 0;
+  }
+  #portal-column-one .navTreeItem a {
+    background-color: #60969f;
+    color: white;
+    margin: 0 0 5px;
   }
   #portal-column-one .portletNavigationTree li:not(.navTreeCurrentNode),
   #portal-column-one .portletNavigationTree .navTreeCurrentNode > a {

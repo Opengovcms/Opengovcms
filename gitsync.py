@@ -4,7 +4,8 @@ import sys
 import os
 
 def run_cmd(command):
-    print command
+    print "Running, ", command
+    os.system(command)
 
 def run_git_action(action, path):
     command = "git {0} {1}".format(action, path)

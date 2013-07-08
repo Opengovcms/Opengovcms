@@ -2964,16 +2964,22 @@ a.managePortletsFallback {
   #jPanelMenu-menu .portletNavigationTree {
     margin: 0;
   }
+  #jPanelMenu-menu .navTreeTopNode {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+    margin: 0;
+  }
   #jPanelMenu-menu .navTreeTopNode a,
   #jPanelMenu-menu .navTreeLevel0 > li:not(.navTreeCurrentNode) > a {
     color: white !important;
-    padding-right: 5px;
-    padding-left: 5px;
+    padding: 10px 5px;
   }
   #jPanelMenu-menu {
     padding-left: 0;
   }
   #jPanelMenu-menu #theme-globalnav {
+    border-bottom: 1px solid #a7b0b5;
     display: block;
   }
   #theme-globalnav li {
@@ -3000,7 +3006,7 @@ a.managePortletsFallback {
   }
   #jPanelMenu-menu #portal-siteactions {
     display: block;
-    font-family: 'Libre Baskerville', serif;
+    font-family: "Swift Neue LT W01 Light", serif;
     font-size: 14px;
     line-height: 18px;
     position: static;

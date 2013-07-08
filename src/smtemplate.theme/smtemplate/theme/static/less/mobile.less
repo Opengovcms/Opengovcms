@@ -52,16 +52,22 @@ div.cell {
 #jPanelMenu-menu .portletNavigationTree {
   margin: 0;
 }
+#jPanelMenu-menu .navTreeTopNode {
+  font-size: @baseFontSize;
+  font-weight: normal;
+  line-height: @baseLineHeight;
+  margin: 0;
+}
 #jPanelMenu-menu .navTreeTopNode a,
 #jPanelMenu-menu .navTreeLevel0 > li:not(.navTreeCurrentNode) > a {
   color: @white !important;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding: 10px 5px;
 }
 #jPanelMenu-menu {
   padding-left: 0;
 }
 #jPanelMenu-menu #theme-globalnav {
+  border-bottom: 1px solid @grayLight;
   display: block;
 }
 #theme-globalnav li {
@@ -88,7 +94,7 @@ div.cell {
 }
 #jPanelMenu-menu #portal-siteactions {
   display: block;
-  font-family: 'Libre Baskerville', serif;
+  font-family: @serifFontFamily;
   font-size: @baseFontSize;
   line-height: @baseLineHeight;
   position: static;

@@ -1,0 +1,874 @@
+/* @group Content Area */
+
+/* Editor styles */
+.discreet {
+  font-size: @baseFontSize / 1.16;
+  color: @gray;
+  }
+.visualHighlight {
+  background-color: #ffb;
+  }
+.pullquote {
+  clear: right;
+  color: #444;
+  float: right;
+  font-size: 1.6em;
+  font-weight: bold;
+  line-height: 1.25em;
+  margin: 0 1em 0.5em 0.5em;
+  width: 35%;
+  }
+.callout {
+  clear: both;
+  background-color: #eee;
+  border-left: 1em solid #ccc;
+  padding: 1em;
+  }
+
+/* Content layout styles */
+img.tileImage,
+div.newsImageContainer {
+  float: right;
+  margin: 0 1em 0.5em 1em;
+}
+.eventDetails {
+  float: right;
+  clear: right;
+  margin: 0 0 0.5em 1em;
+}
+.eventDetails .eventDetail {
+  clear: both;
+}
+
+/* @end */
+
+
+/* @group Data tables */
+table.listing,
+table.plain {
+  margin: 0 0 @baseLineHeight;
+  width: 100%;
+}
+table.invisible td,
+table.invisible th,
+table.plain td,
+table.plain th,
+table.listing td,
+table.listing th {
+  padding: @baseLineHeight/3 @baseLineHeight/2;
+  vertical-align: top;
+}
+table.plain th,
+table.plain td {
+  border: 1px solid @grayLight;
+}
+table.plain th {
+    text-align: left;
+}
+table.listing td.listingCheckbox,
+table.listing th.listingCheckbox {
+  text-align: center;
+}
+table.listing th {
+  background-color: @light;
+  border: 1px solid @grayLight;
+  text-align: left;
+}
+table.listing td {
+  border: 1px solid @grayLight;
+}
+table.listing td.draggable,
+table.listing td.notDraggable {
+  padding: 0 (@baseLineHeight * 0.4);
+  text-shadow: #fff 1px 1px 1px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Vertical table data listings */
+table.vertical th {
+  text-align: right;
+}
+table.vertical td {
+  padding: 0.5em;
+}
+
+/* Grid table listings */
+table.grid td,
+table.grid th {
+  border: 1px solid #e7e7e7;
+  padding: 0.5em;
+}
+.dragindicator {
+  outline: 2px solid #ffd700;
+}
+#foldercontents-order-column {
+  padding: 0;
+}
+
+/* @end */
+  
+/* @group Status messages */
+
+dl.portalMessage,
+div.attention,
+div.caution,
+div.danger,
+div.error,
+div.hint,
+div.important,
+div.note,
+div.tip,
+div.warning {
+    margin: 1em 0;
+    border: 1px solid #996;
+    background-color: #ffffe3;
+    clear:both;
+}
+dl.portalMessage a,
+#content dl.portalMessage a,
+div.attention a,
+div.caution a,
+div.danger a,
+div.error a,
+div.hint a,
+div.important a,
+div.note a,
+div.tip a,
+div.warning a,
+#content div.attention a,
+#content div.caution a,
+#content div.danger a,
+#content div.error a,
+#content div.hint a,
+#content div.important a,
+#content div.note a,
+#content div.tip a,
+#content div.warning a {
+  color: #000;
+  text-decoration: underline;
+}
+dl.portalMessage dt,
+div > .admonition-title {
+    background-color: #996;
+    float: left;
+    margin: 0 0.5em 0 0;
+    padding: 0.5em 0.75em;
+    color: White;
+    line-height: 1.25em;
+}
+dl.portalMessage dd,
+div.attention > .last,
+div.caution > .last,
+div.danger > .last,
+div.error > .last,
+div.hint > .last,
+div.important > .last,
+div.note > .last,
+div.tip > .last,
+div.warning > .last {
+    padding: 0.5em 0.5em;
+    margin: 0;
+    line-height: 1.25em;
+}
+.warning {
+    border-color: #d80;
+}
+.warning > dt,
+.warning > .admonition-title {
+    background-color: #d80;
+}
+.error {
+    border-color: #d00;
+}
+.error > dt,
+.error > .admonition-title {
+    background-color: #d00;
+}
+.warning {
+    border-color: #d80;
+}
+.warning > dd,
+.warning > .last {
+    background-color: #fd7;
+}
+.error {
+    border-color: red;
+}
+.error > dd,
+.error > .last {
+    background-color: #fdc;
+}
+
+/* @end */
+
+
+/* @group Collapsible */
+
+dl.collapsible {
+  border: 1px solid #8cacbb;
+  margin: 1em 0;
+  padding: 0;
+}
+dl.collapsible dt.collapsibleHeader {
+  background-color: #fff;
+  float: left;
+  display: block;
+  line-height: 1.2em;
+  margin: 0 0 -0.6em 1em;
+  padding: 0 0.5em;
+  position: relative;
+  top: -0.6em;
+  vertical-align: middle;
+  width: auto;
+}
+dl.collapsible dd.collapsibleContent {
+  clear: left;
+  margin: 0;
+  padding: @baseLineHeight / 3 @baseLineHeight / 1.5 @baseLineHeight / 1.5;
+}
+/* for IE the following isn't needed, that's why the css2 selector is used */
+dl.collapsible dd.collapsibleContent > dl {
+  margin: 0;
+  padding: 0;
+}
+dl.expandedInlineCollapsible dt.collapsibleHeader,
+dl.expandedBlockCollapsible dt.collapsibleHeader {
+  background: url(../images/treeExpanded.png) no-repeat 0.5em 50% #fff;
+  cursor: pointer;
+  padding: 0 0.5em 0 2em;
+}
+dl.collapsedBlockCollapsible {
+  border: 0;
+  height: 1em;
+  width: auto;
+}
+dl.collapsedInlineCollapsible dt.collapsibleHeader,
+dl.collapsedBlockCollapsible dt.collapsibleHeader {
+  background: url(../images/treeCollapsed.png) no-repeat 0.5em 50% #fff;
+  cursor: pointer;
+  float: none;
+  margin: 0 0 0 1em;
+  padding: 0 0.5em 0 2em;
+  position: relative;
+}
+dl.collapsedInlineCollapsible dd.collapsibleContent,
+dl.collapsedBlockCollapsible dd.collapsibleContent {
+  display: none;
+}
+dl.collapsedInlineCollapsible {
+  border: 0;
+  display: inline;
+  height: 1em;
+  width: auto;
+}
+dl.collapsedInlineCollapsible dt.collapsibleHeader {
+  cursor: pointer;
+  display: inline;
+  float: none;
+  margin: 0;
+  padding: 0 0 0 2em;
+  position: static;
+}
+
+/* @end */
+
+
+/* @group Comments */
+
+.comment {
+    margin-top: 1.5em;
+    font-size: 80%;
+}
+
+.comment .documentByLine {
+    margin-left: 1em;
+}
+
+.comment .formControls {
+    margin-left: 0;
+}
+
+.commentTime {
+    color: #666;
+}
+
+.commentBody {
+    padding: 1em;
+    margin: 0.5em 0;
+    box-shadow: 0 0 1em 0 #888;
+}
+
+.comment h1,
+.comment h2,
+.comment h3,
+.comment h4,
+.comment h5,
+.comment h6 {
+    font-weight: normal;
+}
+
+/* @end */
+
+
+.reviewHistory,
+.contentHistory {
+    display: inline;
+    color: Black;
+}
+.spacer {
+    margin: 1em;
+}
+
+.label {
+    font-weight: bold;
+    display: inline;
+}
+.label .fieldErrorBox {
+    font-weight: normal;
+}
+
+/* for highlighting of search terms */
+.highlightedSearchTerm {
+  font-weight: bold;
+}
+/* for greying out inherited roles */
+.noInheritedRoles {
+  color: #a0a0a0;
+}
+/* for highlighting current items, like the language or today in the calendar */
+.currentItem {
+    border-collapse: collapse;
+    border: 0.2em solid #ffa500;
+    padding: 0.1em;
+}
+
+/* @end */
+
+
+/* @group Image alignment classes */
+
+.image-left {
+   float: left;
+   margin: 0.5em 1em 0.5em 0;
+}
+.image-right {
+   float: right;
+   margin: 0.5em;
+}
+.image-inline {
+   float: none;
+}
+
+/* @end */
+
+
+/* @group Table of Contents */
+
+ /*Table of Contents styling - essentially a portlet with smaller fonts and aligned right + limited in width*/
+
+dl.toc {
+    float: right;
+    width: 35%;
+    font-size: 100%;
+    margin: 1em 0 0.5em 1.5em;
+}
+dl.toc dt {
+    margin-left: 1em;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+dl.toc dd {
+    margin-bottom: 0;
+    padding-left: 2em;
+}
+dl.toc dd ol {
+    margin-left: 1.5em;
+}
+
+/* @end */
+
+
+/* @group Sitemap */
+
+#portal-sitemap {
+    list-style: none;
+    margin-left: 0;
+    font-size: 130%;
+    font-weight: bold;
+}
+
+#portal-sitemap li {
+    list-style: none;
+    margin-left: 0;
+}
+
+#portal-sitemap a {
+    border-bottom: none;
+    display: block;
+}
+
+#portal-sitemap > li {
+    border-bottom:0.1em dotted #ddd;
+    line-height:1.8em;
+    padding:0.25em 1em;
+    margin-bottom: 0;
+}
+
+#portal-sitemap .navTreeLevel2,
+#portal-sitemap .navTreeLevel2 ul {
+    font-size: 85%;
+    font-weight: normal;
+    margin-bottom: 0;
+    padding: 0.25em 0;
+}
+
+/* @end */
+
+
+/* @group Album view classes */
+.photoAlbumVisual {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ededed;
+  border-radius: 12px;
+  display: inline-block;
+  margin: 0 3px 6px 6px;
+  padding: 0 0 1px;
+  vertical-align: top;
+  }
+.photoAlbumShadow {
+  background-color: #f3f3f3;
+  border-bottom: 1px solid @grayLight;
+  border-radius: 10px;
+  padding: 0 0 1px;
+  }
+.photoAlbumEntry {
+  background-color: #ededed;
+  border-color: #d3d3d3 #e8e8e8;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  font-size: 0.92em;
+  line-height: 1.36em;
+  margin: 0 3px 6px 6px;
+  vertical-align: top;
+  width: 144px;
+  }
+.photoAlbumFolder {
+  margin: 0;
+  vertical-align: top;
+  }
+.photoAlbumEntry a {
+  border-radius: 8px;
+  border-color: #f8f8f8;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  display: block;
+  height: 156px;
+  overflow: hidden;
+  padding: 8px 7px 8px 6px;
+  position: relative;
+  text-decoration: none;
+  }
+.photoAlbumEntry a:after {
+  background-color:rgba(241, 241, 241, 0.4);
+  bottom:0;
+  content:"";
+  height:8px;
+  position:absolute;
+  width:131px;
+  }
+.photoAlbumEntryWrapper {
+  display:block;
+  text-align:center;
+  }
+.photoAlbumEntry img {
+  border:2px solid #fff;
+  }
+.photoAlbumEntryTitle {
+  color:#757373;
+  display:block;
+  padding:4px 3px 0;
+  width:126px;
+  }
+.photoAlbumEntry a:hover {
+  overflow:visible;
+  }
+.photoAlbumEntry a:hover .photoAlbumEntryTitle  {
+  background-color:rgb(241,241,241);
+  background-color:rgba(241,241,241,0.8);
+  bottom:0;
+  min-height:50%;
+  position:absolute;
+  }
+
+/* @end */
+
+
+/* @group Invisibles */
+
+.hiddenStructure {
+  display: block !important;
+  background: transparent !important;
+  background-image: none !important; /* safari bug */
+  border: none !important;
+  height: 0.1em !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: -0.1em 0 0 -0.1em !important;
+  position: absolute;
+  width: 1px !important;
+}
+
+#content .visualNoMarker {
+    list-style:none;
+    margin-left: 0;
+}
+
+.visualClear {
+    clear: both;
+}
+
+/* @end */
+
+
+/* @group Accessibility elements, applied by JS */
+
+body.largeText { font-size: 125%; }
+body.smallText { font-size: 85%; }
+
+/* @end */
+
+
+/* @group Overlay windows */
+
+/* styling for overlays (popups) */
+
+.overlay {
+  display: none;
+  height: auto;
+  margin: 1em;
+  width: auto;
+}
+.overlay-iframe,
+.overlay-ajax {
+  min-height: 100px;
+  width: 600px;
+  z-index: 99;
+  }
+div.overlay-iframe {
+  height: 60%;
+}
+/* default close button positioned on upper-left corner */
+div.overlaybg div.close,
+div.overlay div.close {
+    background-image: url(../images/pb_close.png);
+    position: absolute;
+    left: -14px;
+    top: -14px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+.pb-ajax {
+    overflow-y: auto;
+}
+.pb-ajax, .pb-image, .overlay iframe {
+    background-color: #fff;
+    border: 1px solid #999;
+    white-space: normal;
+    box-shadow: 0 0 3em 0.5em #666;
+}
+.pb-ajax > div {
+    width: 92%;
+    padding: 1em;
+}
+.pb-ajax .documentActions {
+  display:none
+}
+div.overlay div.close span {
+    display: block;
+    height: 1px;
+    margin: -1px 0 0 -1px;
+    overflow: hidden;
+    padding: 0;
+    width: 1px;
+}
+div.overlay textarea { 
+  width: 100%; 
+}
+
+/* Hide form elements that don't make sense within an overlay. */
+div.overlay .link-parent { display: none; }
+div.overlay #createGroup legend { display: none; }
+div.overlay #createGroup fieldset { border: none; }
+
+/* lets play nice with paragraphs, links, tabbed pages in overlay e.g. when plone.openid is installed */
+div.overlay p {
+    margin-bottom: 1em;
+}
+div.overlay label {
+    margin-bottom: 0.25em;
+}
+div.overlay a:hover {
+    color: @gray;
+}
+div.overlay a:hover label{
+    cursor: pointer;
+}
+div.overlay a.selected {
+    color: #000000;
+}
+div.overlay .formTab {
+    margin-right:1em;
+    font-weight: bold;
+}
+div.overlay .formTab.lastFormTab {
+    margin-right:0em;
+}
+div.overlay .formControls a {
+    display: block;
+    margin: 0.75em;
+}
+
+/* @end */
+
+
+/* @group Content History */
+
+div.historyRecord {
+    margin-bottom: 1em;
+}
+div.historyTools ul {
+    float: right;
+    margin: 2px 1em;
+}
+div.historyTools ul li {
+    display: inline;
+    padding: 0 0.015em;
+}
+div.historyTools ul li a{
+    border-bottom: none;
+}
+div.historyTools form {
+    display: inline;
+}
+.historyByLine {
+    background: #ddd;
+    padding: 0.5em;
+}
+div.historyLinks {
+    float: right;
+    clear: right;
+    margin: 0.5em 1em 0 0;
+}
+div.historyComment {
+    padding: 0.5em 1em;
+    border: 1px solid #ddd;
+}
+div.historyComment p {
+    margin: 0;
+    padding-top: 1px;
+}
+a.historyComparePrevious {
+    border-top: 1px dotted #ccc;
+    display: block;
+    margin-top: 1.5em;
+    margin-bottom: -0.5em;
+    text-align: center;
+}
+a.historyComparePrevious span {
+    background-color: white;
+    position: relative;
+    top: -0.75em;
+    padding: 0 0.5em;
+}
+
+/* @end */
+
+
+/* @group Core content type sprites */
+
+.icons-on .contenttype-folder {
+  background:url(../images/icons-sprite.png) no-repeat 0 -1600px;
+  display:inline-block;
+  padding-left:19px;
+  }
+.icons-on .contenttype-document {
+  background:url(../images/icons-sprite.png) no-repeat 0 -1800px;
+  display:inline-block;
+  padding-left:19px;
+  }
+.icons-on .contenttype-news-item {
+  background:url(../images/icons-sprite.png) no-repeat 0 -2000px;
+  display:inline-block;
+  padding-left:19px;
+  }
+.icons-on .contenttype-event {
+  background:url(../images/icons-sprite.png) no-repeat 0 -2201px;
+  display:inline-block;
+  padding-left:19px;
+  }
+.icons-on .contenttype-topic {
+  background:url(../images/icons-sprite.png) no-repeat 0 -2402px;
+  display:inline-block;
+  padding-left:19px;
+  }
+.icons-on .contenttype-image {
+  background:url(../images/icons-sprite.png) no-repeat 0 -2601px;
+  display:inline-block;
+  padding-left:19px;
+  }
+.icons-on .contenttype-link {
+  background:url(../images/icons-sprite.png) no-repeat 0 -2997px;
+  display:inline-block;
+  padding-left:19px;
+  }
+.icons-on img[alt='File'] {
+  margin-right:3px;
+  }
+/* Add new */
+#plone-contentmenu-factories li a {
+  background:url(../images/icons-sprite.png) no-repeat 1px -1197px;
+  display:block;
+  padding-left:17px;
+  }
+#plone-contentmenu-factories li a:hover {
+  background-color:#fff;
+  background-position:1px -2797px;
+  }
+#plone-contentmenu-factories li .contenttype-folder {
+  background-position:1px 4px;
+  }
+#plone-contentmenu-factories li .contenttype-folder:hover {
+  background-position:2px -1596px;
+  }
+#plone-contentmenu-factories li .contenttype-document {
+  background-position:1px -197px;
+  }
+#plone-contentmenu-factories li .contenttype-document:hover {
+  background-position:2px -1797px;
+  }
+#plone-contentmenu-factories li .contenttype-news-item {
+  background-position:1px -397px;
+  }
+#plone-contentmenu-factories li .contenttype-news-item:hover {
+  background-position:2px -1997px;
+  }
+#plone-contentmenu-factories li .contenttype-event {
+  background-position:1px -597px;
+  }
+#plone-contentmenu-factories li .contenttype-event:hover {
+  background-position:2px -2197px;
+  }
+#plone-contentmenu-factories li .contenttype-topic {
+  background-position:1px -798px;
+  }
+#plone-contentmenu-factories li .contenttype-topic:hover {
+  background-position:2px -2398px;
+  }
+#plone-contentmenu-factories li .contenttype-image {
+  background-position:1px -997px;
+  }
+#plone-contentmenu-factories li .contenttype-image:hover {
+  background-position:2px -2597px;
+  }
+#plone-contentmenu-factories li .contenttype-file {
+  background-position:1px -1197px;
+  }
+#plone-contentmenu-factories li .contenttype-file:hover {
+  background-position:2px -2797px;
+  }
+#plone-contentmenu-factories li .contenttype-link {
+  background-position:1px -1393px;
+  }
+#plone-contentmenu-factories li .contenttype-link:hover {
+  background-position:2px -2993px;
+  }
+#plone-contentmenu-factories #settings {
+  background-image:none;
+  padding:0;
+  }
+  
+/* @end */
+
+
+/* @group jQuery Tag multiple selector */
+.optionsBox {
+    overflow-y: auto;
+    border: solid 1px #999999;
+    background: #FFFFFF;
+    height: 14em;
+    width: 100%;
+}
+.optionsBox LABEL {
+    padding: 2px 0 0 0;
+    display: block;
+    line-height: 1em;
+    font-weight: normal;
+}
+.optionsBox input{
+    vertical-align: middle;
+    margin: 1px 4px 4px 6px;
+}
+.optionsBox LABEL.checked {
+    background-color: #EEEEEE;
+}
+.optionsBox LABEL.hover {
+    background-color: #777777;
+    color: #FFFFFF;
+}
+#archetypes-fieldname-subject .formHelp {
+    font-weight: normal;
+}
+#existingTagsSection {
+    position: relative;
+    margin-left: 3em;
+}
+#existingTags {
+    float: left;
+    width: 50%;
+}
+#content #existingTags dd {
+    margin-bottom: 1px;
+    margin-left: 0;
+}
+#content #selectedTags, #content #newTags {
+    margin-bottom: 0;
+    margin-left: 0;
+}
+#content #selectedTagsSection {
+    margin-left: 3em;
+    float: left;
+    width: 43%;
+    margin-bottom: 0;
+}
+#newTagsSection {
+    width: 48%;
+    margin-left: 3em;
+}
+#content p.selectedTag {
+    margin-bottom: .4em;
+}
+#existingTagsTitle, #newTagsTitle {
+    float: left;
+}
+#existingTagsHelp, #newTagsHelp {
+    float: right;
+}
+#noTagsSelected, #oneOrMoreTagsSelected {
+    display: none;
+}
+#ajax-spinner {
+    display:none;
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    background-position: center center;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+/* @end */

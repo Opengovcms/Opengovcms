@@ -1844,11 +1844,9 @@ body.template-new-user #content input {
   margin-left: 9px;
 }
 #globalnav-wrapper {
+  background-color: #076f7e;
   background: -webkit-linear-gradient(#087b8c, #066270);
   background: linear-gradient(#087b8c, #066270);
-}
-.no-cssgradients #globalnav-wrapper {
-  background-color: #076f7e;
 }
 .menu-trigger {
   display: none;

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!-- The default theme, used for standard Plone web pages -->
+    <theme href="index.html" css:if-content="#visual-portal-wrapper" />
+    <notheme if-path="@@manage-viewlets" />
+    <notheme if="$ajax_load" />
+    <xsl:template css:match=".photoAlbumFolder">
+        <div class="photoAlbumVisual">
+            <div class="photoAlbumShadow">
+                <div class="photoAlbumFolder">
+                    <xsl:copy-of select="@*" />
+                    <xsl:apply-templates />
+                </div>
+            </div>
+        </div>
+    </xsl:template>
+    <replace content="//*[contains(concat(' ', normalize-space(@class), ' '), ' navTreeItem ')]/a/@class" />
+    <replace content="//*[contains(concat(' ', normalize-space(@class), ' '), ' navTreeItem ')]/div/a/@class" />
+    
+    <after css:theme="#globalnav-wrapper" if-not-content="$home_page">
+        <ul class="documentActions">
+            <li id="document-action-plus">
+                <!-- AddThis Button BEGIN -->
+                    <a class="addthis_button_compact"><span>Bookmark or Share</span></a>
+                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-516d25276505d88f"></script>
+                <!-- AddThis Button END -->
+            </li>
+            <xsl:apply-templates css:select=".documentActions li" mode="raw" />   
+        </ul>
+        <div id="portal-breadcrumbs">
+            <xsl:apply-templates css:select="#portal-breadcrumbs > span:not(#breadcrumbs-you-are-here)" mode="raw" />
+        </div>        
+    </after>
+
+    <xsl:template css:match=".breadcrumbSeparator" mode="raw">
+        <span class="breadcrumbSeparator"> » </span>
+    </xsl:template>
+
+    <!-- Rules applying to a standard Plone web page -->
+    <rules css:if-content="#visual-portal-wrapper">
+    
+        <!-- HTML -->
+        <copy attributes="*" content='/html' theme='/html' />
+
+        <!-- Header -->
+        <drop css:theme="meta[http-equiv='Content-type']" />
+        <!-- Drop regular plone css -->
+        <drop css:content="meta[name='viewport']" />
+        <!-- <drop css:content="link[href$='.css']" /> -->
+        <!-- <drop css:content="style" /> -->
+
+        <!-- Drop cachekey css --> 
+        <drop css:content="link[href$='authoring.css']" />
+        <drop css:content="link[href$='base.css']" />
+        <drop css:content="link[href$='columns.css']" />
+        <drop css:content="link[href$='content.css']" />
+        <drop css:content="link[href$='controlpanel.css']" />
+        <drop css:content="link[href$='forms.css']" />
+        <drop css:content="link[href$='member.css']" />
+        <drop css:content="link[href$='mobile.css']" />
+        <drop css:content="link[href$='portlets.css']" />
+        <drop css:content="link[href$='print.css']" />
+        <drop css:content="link[href$='public.css']" />
+        <drop css:content="link[href$='reset.css']" />
+        <drop css:content="link[href$='collection.css']" />
+        <drop css:content="link[href$='panels.css']" />
+        <drop css:content="link[href$='querywidget.css']" />
+
+        <drop css:content="link[href*='base-cachekey']" />        
+        <drop css:content="link[href*='public-cachekey']" />
+        <drop css:content="link[href*='authoring-cachekey']" />
+        <drop css:content="link[href*='reset-cachekey']" />
+        <drop css:content="link[href*='columns-cachekey']" />
+        <drop css:content="link[href*='portlets-cachekey']" />
+        <drop css:content="link[href*='discussion-cachekey']" />
+        <drop css:content="link[href*='member-cachekey']" />
+        <drop css:content="link[href*='print-cachekey']" />
+        <drop css:content="link[href*='mobile-cachekey']" />
+        <drop css:content="link[href*='forms-cachekey']" />
+        <drop css:content="link[href$='favicon.ico']" />
+        <before content="/html/head/meta" css:theme="meta[name='viewport']" />
+        <before content="/html/head/base" theme="/html/head/title" />
+        <replace theme='/html/head/title' content='/html/head/title' />
+        <after css:content="head link:not([href*='ploneCustom'])" theme="/html/head/title" />
+        <after content="/html/head/style | /html/head/script" theme="/html/head/title" />
+        <after css:content="head link[href*='ploneCustom']" theme-children="/html/head" />
+
+        <!-- Body-->
+        <merge attributes="dir class" css:content="body" css:theme="body" />
+        <drop attributes="class" css:theme="#visual-portal-wrapper" if-not-content="$home_page" />
+
+        <!-- Top -->
+        <before css:content="#portal-header > p.hiddenStructure:first-child" css:theme-children="#portal-header" />
+        <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
+        <drop css:content=".searchSection" />
+        <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" method="raw" />
+        <drop css:content="#portal-siteactions" />
+        <replace css:content="#portal-logo" css:theme="#portal-logo" />
+        <replace css:content-children="#portal-globalnav" css:theme-children="#theme-globalnav" />
+	    <after css:theme="#theme-globalnav" css:content="#portal-globalnav-mobile" />
+	    <merge attributes="class" css:content="#portal-globalnav" css:theme="#theme-globalnav" />
+        <after css:theme="#globalnav-wrapper" css:content="#portal-top .panels" if-path="@@manage-panels"/>
+        <replace css:content="#portal-personaltools" css:theme="#portal-personaltools" />
+        <drop css:content="#portal-breadcrumbs" />
+        <after css:content="#portal-languageselector" css:theme="#theme-globalnav" />
+        <after css:theme="#portal-header" css:content="#portlets-in-header" />
+        <after css:theme="#portal-header" css:content=".manageInHeaderPortletsLink" />
+        <strip css:content=".globalSectionsLevel1 .panel, .globalSectionsLevel1 .content, .globalSectionsLevel1 .portletWrapper, .globalSectionsLevel1 .portletWrapper > div" />
+
+        <!-- Portlets -->
+        <replace css:content="#portal-column-one" css:theme="#portal-column-one" />
+        <replace css:content="#portal-column-two" css:theme="#portal-column-two" />
+        <drop css:content=".portletTopLeft" />
+        <drop css:content=".portletTopRight" />
+        <drop css:content=".portletBottomLeft" />
+        <drop css:content=".portletBottomRight" />
+
+        <!-- Content -->
+        <strip css:content="#portal-column-content > div:not(#viewlet-above-content):not(#viewlet-below-content)" if-content="//div[@id='portal-column-content']/div/div[@id='content']" />
+        <replace css:content="#portal-column-content" css:theme="#portal-column-content" />
+        <drop css:content="img[alt='Image'][src$='image.png']" />
+        <drop css:content="img[alt='File'][src$='image.png']" />
+        <drop css:content="#plone-contentmenu-factories li a img" />
+        <drop css:content="#viewlet-below-content-body .documentActions" />
+
+        <!-- Footer -->
+        <replace css:content-children="#portal-footer-wrapper > .cell" css:theme-children="#portal-footer-inner" />
+        <drop css:content="#portal-colophon" />
+        <drop css:content="#portal-footer" />
+        <after css:content="#portal-footer" css:theme-children="#portal-footer-inner" method="raw" />
+
+    </rules>
+</rules>

@@ -1,0 +1,115 @@
+/* @group Control panel */
+
+#setup-link {
+    font-size: 90%;
+}
+
+.configlets {
+  padding: 0;
+}
+.configlets li {
+  display: block;
+  margin: 1em 0;
+}
+.configlets li a {
+    text-decoration: none;
+    border: none;
+}
+.configlets li a:visited {
+    color: #436976;
+    background-color: transparent;
+}
+.configlets li a:active {
+    color: #436976;
+    background-color: transparent;
+}
+.configlets li label {
+    font-weight: bold;
+}
+.configletDetails {
+    margin: 0em 1em 1em 4em;
+    list-style-image: none;
+    list-style: none;
+}
+.configletDetails li {
+    margin-bottom: 1em;
+    display: inline;
+}
+.configletDetails li a {
+    text-decoration: none;
+}
+.configletDetails li label {
+    font-weight: bold;
+}
+.configletDetails li.configletDescription {
+    display: block;
+    color: #76797c;
+    margin: 0;
+}
+.inlineDisplay {
+    display:inline
+}
+table.controlpanel-listing {
+    width:100%;
+}
+table.controlpanel-listing td, table.controlpanel-listing th {
+    font-size:120%;
+}
+table.controlpanel-listing dl {
+    margin-top:0;
+}
+table.controlpanel-listing dd {
+    margin-left: 1em;
+}
+table.controlpanel-listing dl dt a .trigger{
+    font-weight:normal;
+}
+table .controlpanel-listing td {
+    vertical-align:top;
+}
+table.controlpanel-listing td.checker{
+    text-align:center;
+}
+table.controlpanel-listing th.smallcolumn {
+    width:1.5em;
+}
+.chooser-right {
+    float:right;
+    margin-right:0;
+    margin-bottom:0;
+}
+.rule-element {
+    background-color:#EEF3F5;
+    margin:0.5em 0pt 0.5em;
+    padding:0.3em 1em 0.3em 1em;
+    width:auto;
+}
+.rule-element dl {
+}
+.rule-element dl dd {
+    margin-left:1em;
+}
+.rule-updown, .rule-operations {
+    float:right;
+    padding-top:0.8em;
+}
+/* @end */
+
+
+/* @group Portlets management */
+
+div.managePortletsLink,
+a.managePortletsFallback {
+  padding: 0.25em 0.5em;
+  margin: 0 auto 1em;
+  text-align: center;
+}
+a.managePortletsFallback {
+    display:inline-block; /* in order for our vertical margins to work on inline element */
+}
+#content a.managePortletsFallback {
+    display: block;
+    border-bottom: none !important;
+}
+
+/* @end */

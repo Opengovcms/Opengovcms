@@ -1,0 +1,83 @@
+/* ==========================================================================
+     General Styles
+     ========================================================================== */
+
+body {
+  background-color: @body;
+  color: @black;
+  font-family: @baseFontFamily;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+}
+a {
+  color: @linkColor;
+  text-decoration: none;
+}
+a:hover,
+a:visited {
+  color: @linkColorHover;
+}
+h1,
+.documentFirstHeading {
+  font-family: @headingsFontFamily;
+  font-size: @baseFontSize * 2.58; // ~36
+  font-weight: @headingsFontWeight;
+  line-height: @baseLineHeight * 2.34; // ~42
+  margin: @baseLineHeight/2 0 @baseLineHeight / 1.2;
+  }
+.template-summary_view .documentFirstHeading,
+.template-events_view .documentFirstHeading {
+  border-bottom: 1px solid @grayLight;
+  padding: 0 0 @baseLineHeight/2;
+}
+h2 {
+  font-family: @headingsFontFamily;
+  font-size: @baseFontSize * 1.29; // ~18;
+  font-weight: @headingsFontWeight;
+  line-height: @baseLineHeight * 1.34; // ~24
+  margin: (@baseLineHeight * 1.5) 0 (@baseLineHeight * 0.5);
+  }
+h3 {
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight * 1.11; // ~20
+  margin: 0;
+  }
+p {
+  margin: 0 0 @baseLineHeight;
+}
+hr {
+  border: 0;
+  border-bottom: 1px solid @grayLight;
+  margin: @baseLineHeight 0;
+}
+img {
+  height: auto;
+  max-width: 100%;
+  width: auto\9; /*fix to IE8*/
+  }
+menu,
+ol,
+ul {
+  margin: 0 0 @baseLineHeight;
+  padding: 0 0 0 27px;
+  }
+li ul,
+li ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  }
+dd {
+  margin: 0 0 0 27px;
+  }
+pre {
+  background-color: #222;
+  color: #fff;
+  font-size: 12px;
+  font-family: monospace;
+  margin-bottom: 1em;
+  padding: 1em;
+  overflow-x: auto;
+  }
+abbr[title] {
+  border: 0;
+}

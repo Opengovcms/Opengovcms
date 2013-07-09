@@ -1,17 +1,18 @@
 # -*- extra stuff goes here -*-
 
 import os
+from OFS.Image import File
+from Products.CMFCore.utils import getToolByName 
+from Products.Five.browser import BrowserView
 from logging import getLogger
+from shutil import rmtree
 from subprocess import Popen, PIPE
 from tempfile import mkdtemp
-from shutil import rmtree
-from Products.Five.browser import BrowserView
-from OFS.Image import File
+from zope.component import getGlobalSiteManager
+from zope.component.interfaces import ObjectEvent
 from zope.event import notify
 from zope.interface import Interface
-from zope.component.interfaces import ObjectEvent
 from zope.interface import implements
-from zope.component import getGlobalSiteManager
 
 logger = getLogger('smtemplate.theme')
 
@@ -108,6 +109,10 @@ def subscriber(theme, event):
             rmtree(themedir)
         os.mkdir(themedir)
         dump(theme, themedir)
+        f = open(os.path.join(themedir, "AUTHOR"), "w")
+        portal_membership = getToolByName(theme, 'portal_membership')
+        f.write(portal_membership.getAuthenticatedMember().getUserName())
+        f.close()
 
 
 getGlobalSiteManager().registerHandler(subscriber, (Interface, IThemeChangedEvent))

@@ -1,0 +1,56 @@
+// Content
+.section-home .documentFirstHeading {
+  display: none;
+}
+.documentDescription {
+  font-size: @baseFontSize * 1.29; // ~18
+  line-height: @baseLineHeight * 1.34; // ~24
+  margin: 0 0 @baseLineHeight;
+}
+.linkButton a {
+  background-color: @secondary;
+  background: -webkit-linear-gradient(@secondary, @main);
+  background: linear-gradient(@secondary, @main);
+  color: @white;
+  display: inline-block;
+  padding: 6px 10px;
+}
+.linkButton a:hover {
+  background-color: @notice;
+  background: -webkit-linear-gradient(@notice, @noticeDark);  
+  background: linear-gradient(@notice, @noticeDark); 
+}
+.listTypeHyphen,
+.listTypeMark {
+  list-style: none;
+  padding-left: 0;
+}
+.listTypeHyphen li:before {
+  content: "- ";
+}
+.listTypeMark > li {
+  display: block;
+  margin: 0 0 3px 14px;
+}
+.listTypeMark > li:before {
+  color: @linkColor;
+  content: "» ";
+  font-family: @sansFontFamily;
+  font-weight: bold;
+  margin-left: -14px;
+  vertical-align: 1px;
+}
+.suppressVisualEditor {
+  margin: @baseLineHeight / 2 0 0 !important;
+}
+#form-widgets-ICarouselItemBehavior-carousel_heading {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+.factBox {
+  background: @secondary;
+  color: @white;
+  padding: 10px;
+}

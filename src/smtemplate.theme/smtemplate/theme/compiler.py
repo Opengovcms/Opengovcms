@@ -83,6 +83,7 @@ def renderLESS(lessc_command_line, file_less, file_css):
 
 
 def subscriber(theme, event):
+    export = True
     for less_resource in RESOURCES:
         if not theme.isFile(less_resource):
             return
@@ -94,16 +95,18 @@ def subscriber(theme, event):
     for less_resource in RESOURCES:
         file_less = os.path.join(prefix, less_resource)
         if not os.path.exists(file_less):
+            export = False
             continue
         css_file = RESOURCES[less_resource]
         file_css = os.path.join(prefix, css_file)
         renderLESS(lessc, file_less, file_css)
         if not os.path.exists(file_css):
+            export = False
             continue
         theme.writeFile(css_file, readCSS(prefix, css_file))
     rmtree(prefix)
     exportdir = os.environ.get('EXPORT_THEME_DIR')
-    if exportdir and os.path.exists(exportdir):
+    if export and exportdir and os.path.exists(exportdir):
         themedir = os.path.join(exportdir, theme.__name__)
         if os.path.exists(themedir):
             rmtree(themedir)

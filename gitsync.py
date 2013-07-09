@@ -6,6 +6,7 @@ import subprocess
 
 from threading import Thread, Lock
 
+
 def run_cmd(command):
     print "Running, ", command
     subprocess.call(command, shell=True)
@@ -34,6 +35,7 @@ class GitUpdated(object):
             result.append(elem)
         self.REPO_QUEUE = {}
         return result
+
 
 class GitCommitWorker(Thread):
 
@@ -76,6 +78,7 @@ class GitCommitWorker(Thread):
             time.sleep(60)
             print "Commit thread ran"
 
+
 class GitActionWorker(Thread):
 
     def __init__(self, git_updated):
@@ -87,18 +90,20 @@ class GitActionWorker(Thread):
 
     def run(self):
         try:
-            fh = os.popen('inotifywait -e modify -e create -e delete -m -r {0}'.format(self.directory))
+            inotify_fmt = 'inotifywait -e modify -e create -e delete -m -r {0}'
+            inotify_cmd = inotify_fmt.format(self.directory)
+            fh = os.popen(inotify_cmd)
         except IOError:
             print 'Could no open inotifywait, exiting'
             sys.exit(1)
-    
+
         while True:
             buf = fh.readline()
             if buf == "":
                 break
             buf = buf.replace('\n', '').replace('\r', '')
             (folder, action, filename) = buf.split(' ')
-    
+
             if action == 'MODIFY' or action == 'CREATE':
                 self.git_updated.take_lock()
                 self.git_updated.add(os.path.join(folder, filename), 'add')
@@ -117,4 +122,3 @@ action_worker.start()
 
 commit_worker = GitCommitWorker(git_updated)
 commit_worker.start()
-

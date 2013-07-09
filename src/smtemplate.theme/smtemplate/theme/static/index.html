@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <title></title> 
     <meta name="viewport" content="width=device-width" />
-    <!-- <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><script src="jquery.jpanelmenu.min.js"></script>
     <script>$(function(){$.jPanelMenu({menu:$($(".portletNavigationTree").length?".portletNavigationTree":"#theme-globalnav").clone().add($("#portal-siteactions").clone()).wrapAll('<div />').parent()}).on()})</script><script type="text/javascript">
@@ -35,9 +34,9 @@
                                 <a href="#" id="personaltools-login">Log in</a>
                             </li>
                         </ul>
-                    </div>   
-                    <a href="." title="Home" id="portal-logo">
-                        <img width="348" height="99" alt="Python Reel Theme Logo" src="images/logo.png" /></a>
+                    </div>                     
+                    <a href="." accesskey="1" title="Home" id="desktop-logo">Logo</a>                    
+                    <a href="." accesskey="1" title="Home" id="mobile-logo">Logo</a>
                 </div>
                 <div id="globalnav-wrapper">             
                     <div id="portal-searchbox">
@@ -65,42 +64,10 @@
         <div id="portal-columns" class="row">
             <div id="portal-column-content" class="cell width-full position-0">
             </div>
-            <div id="portal-column-one" class="cell width-1:4 position-0">
-                <div class="portletWrapper">
-                    <dl class="portlet portletNavigationTree">
-                        <dt class="portletHeader hiddenStructure">
-                            <a href="#" class="tile">Navigation</a>
-                        </dt>
-                        <dd class="portletItem lastItem">
-                            <ul class="navTree navTreeLevel0">
-                                <li class="navTreeItem visualNoMarker navTreeCurrentNode section-donec-scelerisque-varius-suscipi">
-                                    <a href="#" class="state-published navTreeCurrentItem navTreeCurrentNode contenttype-news-item" title="Mauris eu dui non orci blandit imperdiet.">
-                                        <span>Donec scelerisque varius suscipi</span>
-                                    </a>
-                                    <ul class="navTree navTreeLevel1">
-                                    </ul>
-                                </li>
-                            </ul>
-                        </dd>
-                    </dl>
-                </div>
+            <div id="sidebar">
+                <div id="portal-column-two" class="cell width-1:4 position-3:4"></div>  
+                <div id="portal-column-one" class="cell width-1:4 position-0"></div>
             </div>
-            <div id="portal-column-two" class="cell width-1:4 position-3:4">             
-                <div class="portletWrapper">
-                    <dl class="portlet portletNews">
-                        <dt class="portletHeader">
-                            <a href="#" class="tile">News</a>
-                        </dt>
-                        <dd class="portletItem odd">
-                            <a href="#" class="tile" title="Mauris eu dui non orci blandit imperdiet.">Donec scelerisque varius </a>
-                            <span class="portletItemDetails">Oct 30, 2012</span>
-                        </dd>
-                        <dd class="portletFooter">
-                            <a href="h#">More news&hellip;</a>
-                        </dd>
-                    </dl>
-                </div>
-            </div>   
         </div>        
     </div>
     <div id="portal-footer-wrapper">

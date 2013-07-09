@@ -59,10 +59,12 @@
 }
 #portal-searchbox .searchField,
 .searchPage[type="text"] {
+  -webkit-appearance: none;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 0;
+  border-radius: 0;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25) inset;
   color: @gray;
   height: 30px;
@@ -240,11 +242,16 @@ li:hover .globalSectionsLevel1 {
 }
 
 // Portal Logo 
-#portal-logo {
-  
+#desktop-logo {
+  background-image: @desktopLogo;
+  display: inline-block;
+  height: @desktopLogoHeight;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: @desktopLogoWidth;
 }
-#portal-logo img {
-  
+#mobile-logo {
+  display: none;
 }
 
 // Document Actions

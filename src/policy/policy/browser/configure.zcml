@@ -15,7 +15,7 @@
 
   <page
       name="events_view"
-      for="plone.app.collection.interfaces.ICollection"
+      for="plone.app.contenttypes.interfaces.ICollection"
       layer="policy.interfaces.IBrowserLayer"
       template="templates/events_view.pt"
       permission="zope2.View"

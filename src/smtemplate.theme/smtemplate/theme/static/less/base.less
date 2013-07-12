@@ -9,15 +9,30 @@
   background-color: #ffb;
   }
 .pullquote {
-  clear: right;
-  color: #444;
-  float: right;
-  font-size: 1.6em;
-  font-weight: bold;
-  line-height: 1.25em;
-  margin: 0 1em 0.5em 0.5em;
-  width: 35%;
+  font-size: @baseFontSize*1.2857;
+  font-style: italic;
+  line-height: @baseLineHeight/0.75;
+  margin: 0 0 18px 50px;
+  position: relative;
+  &:before {
+    color: #a7b0b5;
+    content: "”";
+    display: block;
+    font-size: @baseFontSize/0.14;
+    font-style: normal;
+    font-weight: bold;
+    left: -50px;
+    line-height: 1;
+    position: absolute;
+    top: -@baseFontSize/2;
   }
+  strong {
+    font-size: @baseFontSize;
+    font-style: normal;
+    font-weight: normal;
+    line-height: @baseLineHeight;
+  }
+}
 .callout {
   clear: both;
   background-color: #eee;

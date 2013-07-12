@@ -492,14 +492,29 @@ abbr[title] {
   background-color: #ffffbb;
 }
 .pullquote {
-  clear: right;
-  color: #444444;
-  float: right;
-  font-size: 1.6em;
+  font-size: 17.9998px;
+  font-style: italic;
+  line-height: 24px;
+  margin: 0 0 18px 50px;
+  position: relative;
+}
+.pullquote:before {
+  color: #a7b0b5;
+  content: "”";
+  display: block;
+  font-size: 100px;
+  font-style: normal;
   font-weight: bold;
-  line-height: 1.25em;
-  margin: 0 1em 0.5em 0.5em;
-  width: 35%;
+  left: -50px;
+  line-height: 1;
+  position: absolute;
+  top: -7px;
+}
+.pullquote strong {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 18px;
 }
 .callout {
   clear: both;

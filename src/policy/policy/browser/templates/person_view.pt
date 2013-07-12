@@ -9,9 +9,9 @@
 
     <metal:content-core fill-slot="content-core">
       <metal:content-core define-macro="content-core">
-	
+
 	<div>
-	  
+
 	  <div class="imageContainer"
 	       tal:define="image nocall:context/image"
 	       tal:condition="python:image and image.getSize()">
@@ -19,71 +19,45 @@
 		   tal:replace="structure python: scale.scale('image', scale='mini').tag()" />
 	  </div>
 
-	  <table class="employeeInformation" 
+	  <table class="employeeInformation"
 		 summary="Employee information"
 		 i18n:attributes="summary summary_employee_information">
-            <tbody>
+        <tbody>
 
-	      <tr class="personJobtitleFunctiontitle" tal:condition="context/jobtitle|context/functiontitle|nothing">
-		<td colspan="2">
-		  <span tal:condition="context/jobtitle|nothing" tal:replace="context/jobtitle" />
-		  <span tal:replace="string:/"
-			tal:condition="python:context.jobtitle and context.functiontitle" />
-		  <span tal:condition="context/functiontitle|nothing" tal:replace="context/functiontitle" />
-		</td>
+	      <tr class="personJobtitleFunctiontitle" tal:condition="context/jobtitle|nothing">
+    		<td colspan="2">
+	       	  <span tal:condition="context/jobtitle|nothing" tal:replace="context/jobtitle" />
+		    </td>
 	      </tr>
-	      <tr tal:condition="context/extension|nothing">
-		<th>Lokalnummer:</th>
-		<td tal:content="context/extension">123</td>
-	      </tr>
-	      
+
 	      <tr tal:condition="context/phone|nothing">
-		<th>Telefon:</th>
-		<td tal:content="context/phone">12345678</td>
+		      <th>Telefon:</th>
+		      <td tal:content="context/phone">12345678</td>
 	      </tr>
 
-	      
-	      <tr tal:condition="context/fax|nothing">
-		<th>Fax:</th>
-		<td tal:content="context/fax">87654321</td>
-	      </tr>
-
-	      
-	      <tr tal:condition="context/cell|nothing">
-		<th>Mobil:</th>
-		<td tal:content="context/cell">20123456</td>
-	      </tr>
-	      
 	      <tr tal:condition="context/email|nothing">
-		<th>E-mail:</th>
-		<td><a href=""
+		      <th>E-mail:</th>
+		      <td><a href=""
 		       tal:attributes="href string:mailto:${context/email}"
 		       tal:content="context/email">test@test.dk</a></td>
 	      </tr>
-	      
+
             </tbody>
 	  </table>
-	  
-	  <span class="employeeQR">
-	    <img src="" alt="Scan QR code with your phone"
-		 title="Scan QR code with your phone"
-		 tal:condition="context/qrcodeurl|nothing"
-		 tal:attributes="src context/qrcodeurl"
-		 i18n:attributes="alt; title" />
-	  </span>
+
 
 	  <div class="employeeDataBlock">
-	    
+
 	    <div class="employeeData" tal:condition="context/text">
 	      <span tal:replace="structure context/text/output" />
 	    </div>
-	  
+
 	  </div>
 
 	</div>
 
-      </metal:content-core>
     </metal:content-core>
-    
+    </metal:content-core>
+
   </body>
 </html>

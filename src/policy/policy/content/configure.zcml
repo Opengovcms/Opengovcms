@@ -3,15 +3,35 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="policy">
 
-  <adapter name="lastname" factory=".indexers.lastname" />
+  <adapter factory=".indexers.lastname"
+           name="lastname" />
+  <adapter factory=".indexers.subject_values_indexer"
+           name="smtemplate_subject_values_idx" />
+  <adapter factory=".indexers.section_indexer"
+           name="smtemplate_section_idx" />
+  <adapter factory=".indexers.suppl_category_indexer"
+           name="smtemplate_suppl_category_idx" />
 
-  <!-- Exclude from navigation -->
   <plone:behavior
         title="Exclude From mobile navigation"
         description="Allow items to be excluded from mobile navigation"
         provides=".exclfrommobilenav.IExcludeFromMobileNavigation"
         for="plone.dexterity.interfaces.IDexterityContent"
         />
+
+  <plone:behavior
+        title="SM Categorization"
+        description="Allow items to be categorized in three std ways"
+        provides=".categorization.ISMCategorization"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+
+  <utility component=".vocabularies.subject_values"
+           name="smtemplate.SubjectVocabulary" />
+  <utility component=".vocabularies.section"
+           name="smtemplate.SectionVocabulary" />
+  <utility component=".vocabularies.supplcategory"
+           name="smtemplate.SupplCategoryVocabulary" />
 
 
 </configure>

@@ -1,6 +1,16 @@
 <?xml version="1.0"?>
-<object name="Collection" meta_type="Dexterity FTI">
+<object name="Collection" meta_type="Dexterity FTI" i18n:domain="plone"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <property name="view_methods" purge="False">
   <element value="events_view"/>
  </property>
+  <property name="behaviors">
+    <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
+    <element value="plone.app.content.interfaces.INameFromTitle"/>
+    <!--<element value="plone.app.dexterity.behaviors.discussion.IAllowDiscussion"/>-->
+    <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>
+    <element value="plone.app.relationfield.behavior.IRelatedItems"/>
+    <element value="policy.content.exclfrommobilenav.IExcludeFromMobileNavigation"/>
+    <element value="policy.content.categorization.ISMCategorization"/>
+  </property>
 </object>

@@ -1,0 +1,74 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
+
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="2">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.runDefaultProfile"
+      title="Run policy profile"
+      description="Update settings for collections criterias in registry. Add catalog indexes."
+      />
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.installVocabManager"
+      title="Install ATVocabularyManager"
+      description=""
+      />
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.runDemoContentProfile"
+      title="Install three needed vocabularies."
+      description=""
+      />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="3">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.installChimpfeed"
+      title="Install chimpfeed"
+      description=""
+      />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="6">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.importDefaultTypes"
+      title="Import policy types"
+      description="Update types behavior settings."
+      />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="7">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.installVersioningBeh"
+      title="Install chimpfeed"
+      description=""
+      />
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.importDefaultTypes"
+      title="Import policy types"
+      description="Update types behavior settings."
+      />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="8">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.runDefaultProfile"
+      title="Run policy profile"
+      description="Update diff tool settings; hide allow discussion"
+      />
+  </genericsetup:upgradeSteps>
+
+</configure>

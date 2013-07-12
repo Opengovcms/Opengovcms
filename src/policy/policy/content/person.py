@@ -37,12 +37,6 @@ class IPerson(IMinimalPerson, IImageCropping):
         Displayed in a contacts portlet.
         """
 
-    dexteritytextindexer.searchable('initials')
-    initials = schema.TextLine(
-        title=_(u"Initials"),
-        required=False,
-    )
-
     dexteritytextindexer.searchable('email')
     email = schema.TextLine(
         title=_(u"Email"),
@@ -61,40 +55,9 @@ class IPerson(IMinimalPerson, IImageCropping):
         required=False,
     )
 
-    # Seems to be fivu stuff?
-    # dexteritytextindexer.searchable('english_jobtitle')
-    # english_jobtitle = schema.TextLine(
-    #     title=_(u"English Job title"),
-    #     required=False,
-    # )
-
-    # dexteritytextindexer.searchable('functiontitle')
-    # functiontitle = schema.TextLine(
-    #     title=_(u"Danish Function title"),
-    #     required=False,
-    # )
-
-    # dexteritytextindexer.searchable('english_functiontitle')
-    # english_functiontitle = schema.TextLine(
-    #     title=_(u"English Function title"),
-    #     required=False,
-    # )
-
-    qrcodeurl = schema.URI(
-        title=_(u"QR code URL"),
-        required=False,
-    )
-
     image = NamedBlobImage(
         title=_(u"Portrait"),
-        description=_(u"A portrait of this person. "
-                      u"This should be in standard portrait orientation."),
         required=False
-    )
-
-    hideimage = schema.Bool(
-        title=u'Hide image',
-        required=False,
     )
 
     dexteritytextindexer.searchable('text')

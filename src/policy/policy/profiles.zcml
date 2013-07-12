@@ -1,0 +1,51 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="policy">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="policy"
+      directory="profiles/default"
+      description="Installs the policy.policy package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:importStep
+      name="policy.various"
+      title="policy: miscellaneous import steps"
+      description="Various import steps that are not handled by GS import/export handlers."
+      handler="policy.setuphandlers.setupVarious">
+  </genericsetup:importStep>
+
+  <genericsetup:registerProfile
+      name="initialsetup"
+      title="policy initialsetup (run-once)"
+      directory="profiles/initialsetup"
+      description="Installs the policy.policy package with dependencies and run-once steps"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:importStep
+      name="policy.migrateAT2DX"
+      title="migrate content from AT to DX"
+      description=""
+      handler=".setuphandlers.migrateAT2DX"
+      />
+
+  <genericsetup:registerProfile
+      name="demo_content"
+      title="policy demo-content"
+      directory="profiles/demo_content"
+      description="Installs the policy demo content"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:importStep
+      name="policy.various-democontent"
+      title="policy: miscellaneous import steps of the democontent"
+      description="Various import steps that are not handled by GS import/export handlers."
+      handler="policy.setuphandlers.setupVariousDemoContent">
+  </genericsetup:importStep>
+
+</configure>

@@ -20,6 +20,10 @@
     <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>
     <element value="plone.app.relationfield.behavior.IRelatedItems"/>
     <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer" />
+    <element value="plone.app.versioningbehavior.behaviors.IVersionable" />
+    <element value="policy.content.exclfrommobilenav.IExcludeFromMobileNavigation"/>
+    <element value="policy.content.categorization.ISMCategorization"/>
+    <element value="collective.portlet.carousel.interfaces.ICarouselItemBehavior"/>
   </property>
 
   <!-- View information -->

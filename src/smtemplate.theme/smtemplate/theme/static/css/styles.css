@@ -2292,6 +2292,18 @@ dl.portletError {
   border: 0;
   padding: 2px 4px;
 }
+.cyanBackground .portlet {
+  background-color: #087b8c;
+  color: white;
+  padding: 15px;
+}
+.cyanBackground .portletHeader {
+  margin-top: 0;
+}
+.cyanBackground .portletHeader a,
+.cyanBackground .portletItem a {
+  color: white;
+}
 .add-panel a {
   background-color: #e9eff3;
   border: 1px solid #a7b0b5;

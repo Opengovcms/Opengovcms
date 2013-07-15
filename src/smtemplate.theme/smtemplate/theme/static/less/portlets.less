@@ -39,9 +39,6 @@ dl.portletError {
 .portletFooter a:hover {
   background-color: @grayLight;
 }
-.portletItemDetails {
-
-}
 .managedPortlet {
   margin: @baseLineHeight/2 0;
   padding: 0;
@@ -75,6 +72,19 @@ dl.portletError {
 .managedPortletActions button {
   border: 0;
   padding: 2px 4px;
+}
+// cyanBackground Portlet
+.cyanBackground .portlet {
+  background-color: @secondary;
+  color: @white;
+  padding: 15px;
+}
+.cyanBackground .portletHeader {
+  margin-top: 0;
+}
+.cyanBackground .portletHeader a,
+.cyanBackground .portletItem a {
+  color: @white;
 }
 
 // Panels

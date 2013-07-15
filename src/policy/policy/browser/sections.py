@@ -28,5 +28,12 @@ class GlobalSectionsViewlet(ViewletBase):
         return item
 
     def getPanels(self, context):
-        manager = PanelManager(context, self.request, context, "plone.portaltop").__of__(context)
-        return tuple(manager)
+        try:
+            manager = PanelManager(context,
+                                   self.request,
+                                   context,
+                                   "plone.portaltop"
+                                   ).__of__(context)
+            return tuple(manager)
+        except TypeError:
+            return tuple()

@@ -1,17 +1,23 @@
 <?xml version="1.0"?>
 <metadata>
   <dependencies>
-    <dependency>profile-policy:default</dependency>
-
     <dependency>profile-Products.PloneFormGen:default</dependency>
+    <dependency>profile-plone.app.dexterity:default</dependency>
     <dependency>profile-plone.app.contenttypes:default</dependency>
 
     <dependency>profile-plone.app.theming:default</dependency>
     <dependency>profile-plone.app.caching:default</dependency>
     <dependency>profile-plone.app.imagecropping:default</dependency>
+    <dependency>profile-plone.app.jquery:default</dependency>
+    <dependency>profile-plone.app.jquerytools:default</dependency>
+    <dependency>profile-collective.js.jqueryui:default</dependency>
 
     <dependency>profile-plone.app.relationfield:default</dependency>
+    <dependency>profile-plone.app.versioningbehavior:default</dependency>
     <dependency>profile-collective.z3cform.datetimewidget:default</dependency>
+    <dependency>profile-plone.formwidget.autocomplete:default</dependency>
+    <dependency>profile-plone.formwidget.contenttree:default</dependency>
+    <dependency>profile-plone.formwidget.querystring:default</dependency>
 
     <dependency>profile-collective.panels:default</dependency>
     <dependency>profile-Products.windowZ:default</dependency>
@@ -22,5 +28,10 @@
     <dependency>profile-collective.portletmetadata:default</dependency>
     <dependency>profile-smtemplate.theme:default</dependency>
     <dependency>profile-quintagroup.plonetabs:default</dependency>
+    <dependency>profile-collective.chimpfeed:default</dependency>
+    <dependency>profile-collective.flowplayer:default</dependency>
+
+    <dependency>profile-policy:default</dependency>
+
   </dependencies>
 </metadata>

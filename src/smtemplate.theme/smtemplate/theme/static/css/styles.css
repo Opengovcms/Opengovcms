@@ -3070,6 +3070,9 @@ a.managePortletsFallback {
     border: 0;
     color: white;
   }
+  .navMobileExclude {
+    display: none;
+  }
 }
 @media only screen and (max-width: 480px) {
   div.row {

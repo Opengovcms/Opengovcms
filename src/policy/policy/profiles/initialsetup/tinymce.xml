@@ -45,7 +45,7 @@
   <styles purge="True">
    <element value="Heading|h2| "/>
    <element value="Subheading|h3| "/>
-   <element value="Quote|blockquote|quoteAsParagrapgh"/>
+   <element value="Pull-quote|blockquote|pullquote"/>
    <element value="List (hyphen)|ul|listTypeHyphen"/>
    <element value="List (mark)|ul|listTypeMark"/>
    <element value="Link Button|span|linkButton"/>

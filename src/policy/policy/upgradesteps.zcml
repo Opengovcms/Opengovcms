@@ -97,6 +97,7 @@
       title="Import portal_transforms settings from initialsetup"
       description=""
       />
+  </genericsetup:upgradeSteps>
 
   <genericsetup:upgradeSteps
      profile="policy:default"
@@ -113,9 +114,5 @@
       description=""
       />
   </genericsetup:upgradeSteps>
-
-
-  </genericsetup:upgradeSteps>
-
 
 </configure>

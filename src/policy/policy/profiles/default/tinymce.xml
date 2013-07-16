@@ -2,6 +2,7 @@
 <object>
  <resourcetypes>
   <linkable>
+   <element value="Collection"/>
    <element value="Document"/>
    <element value="Event"/>
    <element value="File"/>
@@ -9,8 +10,10 @@
    <element value="FormFolder"/>
    <element value="Image"/>
    <element value="Large Plone Folder"/>
+   <element value="Link"/>
    <element value="News Item"/>
-   <element value="Topic"/>
+   <element value="Person"/>
+   <element value="Publication"/>
   </linkable>
   <customplugins>
    <element value="plonebrowser"/>
@@ -18,7 +21,6 @@
       value="divwrap|/++resource++policy.tinymce-plugins/divwrap/editor_plugin.js"/>
   </customplugins>
   <containsanchors>
-   <element value="ATRelativePathCriterion"/>
    <element value="Document"/>
    <element value="Event"/>
    <element value="News Item"/>
@@ -40,7 +42,7 @@
   <anchor_selector value="h2,h3"/>
  </contentbrowser>
  <layout>
-  <styles>
+  <styles purge="True">
    <element value="Heading|h2| "/>
    <element value="Subheading|h3| "/>
    <element value="Quote|blockquote|quoteAsParagrapgh"/>
@@ -49,7 +51,7 @@
    <element value="Link Button|span|linkButton"/>
    <element value="Angle Quotation Mark|ul|listTypeMark"/>
   </styles>
-  <tablestyles>
+  <tablestyles purge="True">
    <element value="Fancy grid listing|grid listing"/>
    <element value="Invisible grid|invisible"/>
   </tablestyles>
@@ -77,7 +79,7 @@
   <toolbar_redo value="False"/>
   <toolbar_unlink value="True"/>
   <toolbar_visualchars value="False"/>
-  <toolbar_media value="False"/>
+  <toolbar_media value="True"/>
   <toolbar_nonbreaking value="False"/>
   <toolbar_image value="True"/>
   <toolbar_advhr value="False"/>

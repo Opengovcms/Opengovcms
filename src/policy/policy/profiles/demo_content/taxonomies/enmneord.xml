@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vdex language="da" orderSignificant="false" profileType="hierarchicalTokenTerms" xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsvdex_v1p0 imsvdex_v1p0.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
+  <vocabName>
+    <langstring language="da">Emneord</langstring>
+  </vocabName>
+  <vocabIdentifier>enmneord</vocabIdentifier>
+  <term>
+    <termIdentifier>962e5220-f6c7-4190-a73b-4f89c228b1d3</termIdentifier>
+    <caption>
+      <langstring language="da">Emneord 1</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>36856d5a-8f73-4661-8402-106c685df24b</termIdentifier>
+    <caption>
+      <langstring language="da">Emneord 3</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>81b2ba60-dae8-444f-a5cd-ac4b290fbc34</termIdentifier>
+    <caption>
+      <langstring language="da">Emneord 2</langstring>
+    </caption>
+  </term>
+</vdex>

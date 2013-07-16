@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vdex language="da" orderSignificant="false" profileType="hierarchicalTokenTerms" xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsvdex_v1p0 imsvdex_v1p0.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
+  <vocabName>
+    <langstring language="da">Sektion</langstring>
+  </vocabName>
+  <vocabIdentifier>sektion</vocabIdentifier>
+  <term>
+    <termIdentifier>d355a598-34d8-48d3-989f-b1c35e67d370</termIdentifier>
+    <caption>
+      <langstring language="da">Sektion 1</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>7a4ea815-7394-4701-ae19-29ac48cee3a3</termIdentifier>
+    <caption>
+      <langstring language="da">Sektion 2</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>3d8d807d-0567-425f-9ab1-ad929caaad40</termIdentifier>
+    <caption>
+      <langstring language="da">Sektion 3</langstring>
+    </caption>
+  </term>
+</vdex>

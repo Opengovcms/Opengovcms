@@ -64,3 +64,11 @@ def importTinySettings(tool):
     setup_tool.runImportStepFromProfile(
         'profile-policy:initialsetup', 'tinymce_settings',
         run_dependencies=False)
+
+def importPortalTransforms(tool):
+    """ """
+    site = tool.aq_parent
+    setup_tool = getattr(site, 'portal_setup')
+    setup_tool.runImportStepFromProfile(
+        'profile-policy:initialsetup', 'policy.portal_transforms',
+        run_dependencies=False)

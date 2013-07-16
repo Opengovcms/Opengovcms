@@ -33,6 +33,13 @@
       handler=".setuphandlers.migrateAT2DX"
       />
 
+  <genericsetup:importStep
+      name="policy.portal_transforms"
+      title="policy.portal_transforms: setup html filtering"
+      description=""
+      handler=".setuphandlers.setup_portal_transforms"
+      />
+
   <genericsetup:registerProfile
       name="demo_content"
       title="policy demo-content"

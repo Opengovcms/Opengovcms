@@ -93,5 +93,16 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="13">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.importPortalTransforms"
+      title="Import portal_transforms settings from initialsetup"
+      description=""
+      />
+  </genericsetup:upgradeSteps>
+
 
 </configure>

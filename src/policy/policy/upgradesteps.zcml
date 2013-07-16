@@ -82,4 +82,16 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="12">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.runDemoContentProfile"
+      title="Install three needed vocabularies."
+      description=""
+      />
+  </genericsetup:upgradeSteps>
+
+
 </configure>

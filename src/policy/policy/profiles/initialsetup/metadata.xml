@@ -30,6 +30,7 @@
     <dependency>profile-quintagroup.plonetabs:default</dependency>
     <dependency>profile-collective.chimpfeed:default</dependency>
     <dependency>profile-collective.flowplayer:default</dependency>
+    <dependency>profile-collective.taxonomy:default</dependency>
 
     <dependency>profile-policy:default</dependency>
 

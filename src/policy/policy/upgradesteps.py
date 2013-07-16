@@ -41,6 +41,11 @@ def installChimpfeed(tool):
     site = tool.aq_parent
     runProfiles(site, ('collective.chimpfeed:default',))
 
+def installCTaxonomy(tool):
+    """ Install chimpfeed """
+    site = tool.aq_parent
+    runProfiles(site, ('collective.taxonomy:default',))
+
 def importDefaultProfileRegistry(tool):
     """ """
     site = tool.aq_parent

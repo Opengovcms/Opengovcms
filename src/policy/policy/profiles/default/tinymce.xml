@@ -46,6 +46,8 @@
    <element value="Quote|blockquote|quoteAsParagrapgh"/>
    <element value="List (hyphen)|ul|listTypeHyphen"/>
    <element value="List (mark)|ul|listTypeMark"/>
+   <element value="Link Button|span|linkButton"/>
+   <element value="Angle Quotation Mark|ul|listTypeMark"/>
   </styles>
   <tablestyles>
    <element value="Fancy grid listing|grid listing"/>

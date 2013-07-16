@@ -63,7 +63,7 @@
   <genericsetup:upgradeSteps
      profile="policy:default"
      source="*"
-     destination="8">
+     destination="9">
     <genericsetup:upgradeStep
       handler=".upgradesteps.runDefaultProfile"
       title="Run policy profile"

@@ -71,4 +71,15 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="11">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.importTinySettings"
+      title="Import tinymce settings from initialsetup"
+      description=""
+      />
+  </genericsetup:upgradeSteps>
+
 </configure>

@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <registry>
   <record name="collective.portletmetadata.interfaces.IMetadataSettings.css_classes" interface="collective.portletmetadata.interfaces.IMetadataSettings" field="css_classes">
-    <value>horizontalCarousel</value>
+    <value>horizontalCarousel&#13;
+cyanBackground</value>
   </record>
 </registry>

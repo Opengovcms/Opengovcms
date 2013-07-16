@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vdex language="da" orderSignificant="false" profileType="hierarchicalTokenTerms" xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsvdex_v1p0 imsvdex_v1p0.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
+  <vocabName>
+    <langstring language="da">Sekundært emneord</langstring>
+  </vocabName>
+  <vocabIdentifier>sekundaertemneord</vocabIdentifier>
+  <term>
+    <termIdentifier>e0f44251-34ab-4f76-83ec-53a0a836d4b5</termIdentifier>
+    <caption>
+      <langstring language="da">Sekundært emneord2</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>ee155543-6342-4862-842e-35e3bd92a9c7</termIdentifier>
+    <caption>
+      <langstring language="da">Sekundært emneord1</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>322c31c8-97bd-4fea-be16-d656f9769bb9</termIdentifier>
+    <caption>
+      <langstring language="da">Sekundært emneord3</langstring>
+    </caption>
+  </term>
+</vdex>

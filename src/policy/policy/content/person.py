@@ -68,7 +68,7 @@ class IPerson(IMinimalPerson, IImageCropping):
 
 
 class Person(Item):
-    """Customised Expert content class"""
+    """Customised person content class"""
 
     @property
     def title(self):

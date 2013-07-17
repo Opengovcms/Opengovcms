@@ -28,7 +28,9 @@
    <element value="plone.app.versioningbehavior.behaviors.IVersionable" />
    <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer" />
    <element value="policy.content.exclfrommobilenav.IExcludeFromMobileNavigation"/>
-   <element value="policy.content.categorization.ISMCategorization"/>
+   <element value="collective.taxonomy.generated.enmneord"/>
+   <element value="collective.taxonomy.generated.sektion"/>
+   <element value="collective.taxonomy.generated.sekundaertemneord"/>
  </property>
  <property name="schema">policy.content.person.IPerson</property>
  <property name="model_source"></property>

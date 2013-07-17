@@ -41,6 +41,11 @@ def installChimpfeed(tool):
     site = tool.aq_parent
     runProfiles(site, ('collective.chimpfeed:default',))
 
+def installCTaxonomy(tool):
+    """ Install chimpfeed """
+    site = tool.aq_parent
+    runProfiles(site, ('collective.taxonomy:default',))
+
 def importDefaultProfileRegistry(tool):
     """ """
     site = tool.aq_parent
@@ -63,4 +68,20 @@ def importTinySettings(tool):
     setup_tool = getattr(site, 'portal_setup')
     setup_tool.runImportStepFromProfile(
         'profile-policy:initialsetup', 'tinymce_settings',
+        run_dependencies=False)
+
+def importPortalTransforms(tool):
+    """ """
+    site = tool.aq_parent
+    setup_tool = getattr(site, 'portal_setup')
+    setup_tool.runImportStepFromProfile(
+        'profile-policy:initialsetup', 'policy.portal_transforms',
+        run_dependencies=False)
+
+def migrateRegistry(tool):
+    """ """
+    site = tool.aq_parent
+    setup_tool = getattr(site, 'portal_setup')
+    setup_tool.runImportStepFromProfile(
+        'profile-policy:migrate', 'plone.app.registry',
         run_dependencies=False)

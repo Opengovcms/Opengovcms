@@ -25,8 +25,4 @@
       directory="tinymce-plugins"
       />
 
-  <class class="Products.ATVocabularyManager.types.simple.term.SimpleVocabularyTerm">
-     <implements interface="Products.GenericSetup.interfaces.IDAVAware" />
-  </class>
-
 </configure>

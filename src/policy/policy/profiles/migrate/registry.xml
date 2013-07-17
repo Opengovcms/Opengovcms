@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<registry>
+  <records interface="plone.app.querystring.interfaces.IQueryField"
+           prefix="plone.app.querystring.field.smtemplate_subject_values_idx"
+           remove="true">
+  </records>
+
+  <records interface="plone.app.querystring.interfaces.IQueryField"
+           prefix="plone.app.querystring.field.smtemplate_section_idx"
+           remove="true">
+  </records>
+
+  <records interface="plone.app.querystring.interfaces.IQueryField"
+           prefix="plone.app.querystring.field.smtemplate_suppl_category_idx"
+           remove="true">
+  </records>
+
+</registry>

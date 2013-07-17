@@ -10,7 +10,9 @@
   <element value="plone.app.contenttypes.behaviors.leadimage.ILeadImage"/>
   <element value="plone.app.versioningbehavior.behaviors.IVersionable" />
   <element value="policy.content.exclfrommobilenav.IExcludeFromMobileNavigation"/>
-  <element value="policy.content.categorization.ISMCategorization"/>
+  <element value="collective.taxonomy.generated.enmneord"/>
+  <element value="collective.taxonomy.generated.sektion"/>
+  <element value="collective.taxonomy.generated.sekundaertemneord"/>
   <element value="collective.portlet.carousel.interfaces.ICarouselItemBehavior"/>
   <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer" />
  </property>

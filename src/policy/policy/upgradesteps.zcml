@@ -11,11 +11,6 @@
       description="Update settings for collections criterias in registry. Add catalog indexes."
       />
     <genericsetup:upgradeStep
-      handler=".upgradesteps.installVocabManager"
-      title="Install ATVocabularyManager"
-      description=""
-      />
-    <genericsetup:upgradeStep
       handler=".upgradesteps.runDemoContentProfile"
       title="Install three needed vocabularies."
       description=""
@@ -93,5 +88,47 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="13">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.importPortalTransforms"
+      title="Import portal_transforms settings from initialsetup"
+      description=""
+      />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="14">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.installCTaxonomy"
+      title="Install collective.taxonomy"
+      description=""
+      />
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.runDemoContentProfile"
+      title="Install three needed vocabularies."
+      description=""
+      />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="16">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.migrateRegistry"
+      title="Migrate some registry settings"
+      description=""
+      />
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.importDefaultTypes"
+      title="Import policy types"
+      description="Update types behavior settings to new collective.taxonomy"
+      />
+  </genericsetup:upgradeSteps>
 
 </configure>

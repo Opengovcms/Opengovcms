@@ -10,7 +10,9 @@
   <element value="plone.app.relationfield.behavior.IRelatedItems"/>
   <element value="plone.app.versioningbehavior.behaviors.IVersionable" />
   <element value="policy.content.exclfrommobilenav.IExcludeFromMobileNavigation"/>
-  <element value="policy.content.categorization.ISMCategorization"/>
+  <element value="collective.taxonomy.generated.enmneord"/>
+  <element value="collective.taxonomy.generated.sektion"/>
+  <element value="collective.taxonomy.generated.sekundaertemneord"/>
   <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer" />
 </property>
 </object>

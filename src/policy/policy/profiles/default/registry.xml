@@ -1,44 +1,4 @@
 <?xml version="1.0"?>
 <registry>
   <records interface="policy.interfaces.ISiteSettings" />
-
-  <records interface="plone.app.querystring.interfaces.IQueryField"
-           prefix="plone.app.querystring.field.smtemplate_subject_values_idx">
-      <value key="title">Emneord</value>
-      <value key="description"></value>
-      <value key="enabled">True</value>
-      <value key="sortable">True</value>
-      <value key="operations">
-          <element>plone.app.querystring.operation.selection.is</element>
-      </value>
-     <value key="vocabulary">smtemplate.SubjectVocabulary</value>
-     <value key="group">SM-Template</value>
-  </records>
-
-  <records interface="plone.app.querystring.interfaces.IQueryField"
-           prefix="plone.app.querystring.field.smtemplate_section_idx">
-      <value key="title">Sektion</value>
-      <value key="description"></value>
-      <value key="enabled">True</value>
-      <value key="sortable">True</value>
-      <value key="operations">
-          <element>plone.app.querystring.operation.selection.is</element>
-      </value>
-     <value key="vocabulary">smtemplate.SectionVocabulary</value>
-     <value key="group">SM-Template</value>
-  </records>
-
-  <records interface="plone.app.querystring.interfaces.IQueryField"
-           prefix="plone.app.querystring.field.smtemplate_suppl_category_idx">
-      <value key="title">Supplerende kategorisering</value>
-      <value key="description"></value>
-      <value key="enabled">True</value>
-      <value key="sortable">True</value>
-      <value key="operations">
-          <element>plone.app.querystring.operation.selection.is</element>
-      </value>
-     <value key="vocabulary">smtemplate.SupplCategoryVocabulary</value>
-     <value key="group">SM-Template</value>
-  </records>
-
 </registry>

@@ -55,4 +55,19 @@
       handler="policy.setuphandlers.setupVariousDemoContent">
   </genericsetup:importStep>
 
+  <genericsetup:registerProfile
+      name="migrate"
+      title="policy migrate"
+      directory="profiles/migrate"
+      description="Performs various migrations of the policy module"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:importStep
+      name="policy.various-migrate"
+      title="policy: miscellaneous import steps of the migrate profile"
+      description="Various import steps that are not handled by GS import/export handlers."
+      handler="policy.setuphandlers.variousMigrateSteps">
+  </genericsetup:importStep>
+
 </configure>

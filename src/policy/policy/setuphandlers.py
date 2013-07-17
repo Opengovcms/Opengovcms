@@ -13,6 +13,7 @@ class HiddenProducts(object):
     implements(INonInstallable)
 
     def getNonInstallableProducts(self):
+        return []
         return [
             'PloneFormGen',
             'Products.PloneFormGen',
@@ -50,6 +51,7 @@ class HiddenProducts(object):
             ]
 
     def getNonInstallableProfiles(self):
+        return []
         return [
             'Products.PloneFormGen:default',
             'Products.ATVocabularyManager:default',
@@ -226,6 +228,23 @@ def setupVarious(context):
                   columns=catalog_columns)
 
 def setupVariousDemoContent(context):
+
+    # Ordinarily, GenericSetup handlers check for the existence of XML files.
+    # Here, we are not parsing an XML file, but we use this text file as a
+    # flag to check that we actually meant for this import step to be run.
+    # The file is found in profiles/default.
+
+    if context.readDataFile('policy_demo_content.txt') is None:
+        return
+
+    # Add additional setup code here
+    portal = context.getSite()
+
+    # EMPTY SO FAR.
+
+def variousMigrateSteps(context):
+    """ For migrating to newer versions of modules / other implementations etc.
+    """
 
     # Ordinarily, GenericSetup handlers check for the existence of XML files.
     # Here, we are not parsing an XML file, but we use this text file as a

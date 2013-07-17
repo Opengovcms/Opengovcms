@@ -115,4 +115,20 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="16">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.migrateRegistry"
+      title="Migrate some registry settings"
+      description=""
+      />
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.importDefaultTypes"
+      title="Import policy types"
+      description="Update types behavior settings to new collective.taxonomy"
+      />
+  </genericsetup:upgradeSteps>
+
 </configure>

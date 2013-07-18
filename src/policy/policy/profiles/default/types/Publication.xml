@@ -10,7 +10,7 @@
   <property name="schema"></property>
   <property name="model_source"></property>
   <property name="model_file">policy.content.schema:publication.xml</property>
-  <property name="klass">plone.dexterity.content.Item</property>
+  <property name="klass">policy.content.publication.Publication</property>
   <property name="add_permission">cmf.AddPortalContent</property>
   <property name="behaviors">
     <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>

@@ -151,6 +151,11 @@
       title="Import actions from initialsetup"
       description=""
       />
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.importDefaultTypes"
+      title="Import policy types"
+      description="Update types behavior settings."
+      />
   </genericsetup:upgradeSteps>
 
 </configure>

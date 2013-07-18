@@ -123,6 +123,7 @@
   </property>
   <property name="icon_visibility" type="string">disabled</property>
   <property name="enable_livesearch" type="boolean">False</property>
+  <property name="disable_nonfolderish_sections" type="boolean">True</property>
  </object>
 
  <object name="imaging_properties" meta_type="Plone Property Sheet">

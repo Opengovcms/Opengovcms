@@ -142,4 +142,15 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="19">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.importActions"
+      title="Import actions from initialsetup"
+      description=""
+      />
+  </genericsetup:upgradeSteps>
+
 </configure>

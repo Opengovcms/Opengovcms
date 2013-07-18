@@ -7,7 +7,7 @@
   <property name="filter_content_types">False</property>
   <property name="allowed_content_types" />
   <property name="allow_discussion">False</property>
-  <property name="schema">policy.content.publication.IPublication</property>
+  <property name="schema"></property>
   <property name="model_source"></property>
   <property name="model_file">policy.content.schema:publication.xml</property>
   <property name="klass">plone.dexterity.content.Item</property>

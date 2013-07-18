@@ -27,7 +27,6 @@
       name="view"
       for="..content.publication.IPublication"
       template="templates/publication_view.pt"
-      class=".publication.PublicationView"
       permission="zope2.View"
       layer="policy.interfaces.IBrowserLayer"
       />
@@ -39,13 +38,6 @@
       class=".person.PersonView"
       permission="zope2.View"
       layer="policy.interfaces.IBrowserLayer"
-      />
-
-  <page
-      name="publication-csv-export"
-      for="*"
-      class=".publication.CSVExportView"
-      permission="zope2.View"
       />
 
   <!-- Control panel view -->

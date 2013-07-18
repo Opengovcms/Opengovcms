@@ -131,4 +131,15 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="18">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.importPortalproperties"
+      title="Import portal properties from initialsetup"
+      description=""
+      />
+  </genericsetup:upgradeSteps>
+
 </configure>

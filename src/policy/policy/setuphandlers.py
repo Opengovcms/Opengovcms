@@ -13,7 +13,7 @@ class HiddenProducts(object):
     implements(INonInstallable)
 
     def getNonInstallableProducts(self):
-        return []
+#        return []
         return [
             'PloneFormGen',
             'Products.PloneFormGen',
@@ -21,6 +21,8 @@ class HiddenProducts(object):
             'Products.ATVocabularyManager',
             'Products.windowZ',
             'collective.chimpfeed',
+            'collective.taxonomy',
+            'collective.flowplayer',
             'collective.js.jqueryui',
             'collective.panels',
             'collective.portlet.carousel',
@@ -51,12 +53,14 @@ class HiddenProducts(object):
             ]
 
     def getNonInstallableProfiles(self):
-        return []
+#        return []
         return [
             'Products.PloneFormGen:default',
             'Products.ATVocabularyManager:default',
             'Products.windowZ:default',
             'collective.chimpfeed:default',
+            'collective.taxonomy:default',
+            'collective.flowplayer:default',
             'collective.js.jqueryui:default',
             'collective.panels:default',
             'collective.portlet.carousel:default',

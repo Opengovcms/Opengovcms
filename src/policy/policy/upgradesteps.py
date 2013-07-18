@@ -85,3 +85,11 @@ def migrateRegistry(tool):
     setup_tool.runImportStepFromProfile(
         'profile-policy:migrate', 'plone.app.registry',
         run_dependencies=False)
+
+def importPortalproperties(tool):
+    """ """
+    site = tool.aq_parent
+    setup_tool = getattr(site, 'portal_setup')
+    setup_tool.runImportStepFromProfile(
+        'profile-policy:initialsetup', 'propertiestool',
+        run_dependencies=False)

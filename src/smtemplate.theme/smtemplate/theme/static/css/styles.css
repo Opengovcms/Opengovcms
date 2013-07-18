@@ -1768,10 +1768,6 @@ body.template-new-user #content input {
   border-bottom: 1px solid;
   color: black;
 }
-/*
- * Portal Search Box 
- */
-
 #portal-searchbox {
   position: absolute;
   right: 0;
@@ -2085,6 +2081,9 @@ li:hover .globalSectionsLevel1 {
   line-height: 15px;
   margin: 0 0 6px;
   text-transform: uppercase;
+}
+.template-events_view .documentByLine {
+  margin-left: 80px;
 }
 .separator {
   padding: 0 4px;

@@ -18,8 +18,8 @@
             </div>
         </div>
     </xsl:template>
-    <replace content="//*[contains(concat(' ', normalize-space(@class), ' '), ' navTreeItem ')]/a/@class" />
-    <replace content="//*[contains(concat(' ', normalize-space(@class), ' '), ' navTreeItem ')]/div/a/@class" />
+    <!-- <replace content="//*[contains(concat(' ', normalize-space(@class), ' '), ' navTreeItem ')]/a/@class" /> -->
+    <!-- <replace content="//*[contains(concat(' ', normalize-space(@class), ' '), ' navTreeItem ')]/div/a/@class" /> -->
     
     <after css:theme="#globalnav-wrapper" if-not-content="$home_page">
         <ul class="documentActions">

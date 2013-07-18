@@ -2698,10 +2698,12 @@ dl.portletError {
   display: inline-block;
   padding: 3px 5px;
 }
-#listing-table .state-private {
+#listing-table .state-private,
+.navTreeItem .state-private {
   color: #d5241c;
 }
-#listing-table .state-pending {
+#listing-table .state-pending,
+.navTreeItem .state-pending {
   color: orange;
 }
 .formTab {

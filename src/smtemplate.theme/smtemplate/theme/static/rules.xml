@@ -40,6 +40,16 @@
         <span class="breadcrumbSeparator"> » </span>
     </xsl:template>
 
+    <xsl:template match="//*[contains(concat(' ', normalize-space(@class), ' '), ' template-edit ')]//form[@id='form']/@class">        
+            <xsl:attribute name="class"><xsl:value-of select="." /> enableAutoFocus</xsl:attribute>
+    </xsl:template>
+    <xsl:template css:match=".textline-field">
+        <xsl:copy>
+            <xsl:apply-templates select="@*" />
+            <xsl:attribute name="placeholder"><xsl:value-of select="../preceding-sibling::label/span" /></xsl:attribute>
+        </xsl:copy>
+    </xsl:template>
+
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
     

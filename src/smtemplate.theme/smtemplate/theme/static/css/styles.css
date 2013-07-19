@@ -1439,10 +1439,6 @@ a.historyComparePrevious span {
 }
 /* @end */
 
-/* ==========================================================================
-     Forms
-     ========================================================================== */
-
 input[type="checkbox"],
 input[type="radio"] {
   margin-right: 3px;
@@ -1558,9 +1554,10 @@ dl.enableFormTabbing dd {
   color: Black;
 }
 .fieldRequired {
-  background: url(required.png) center left no-repeat;
-  padding: 0 0 0 1em;
-  color: White;
+  background: url(data:image/gif;base64,R0lGODlhBQAFAIAAANUkHAAAACH5BAAAAAAALAAAAAAFAAUAAAIEhI+pWAA7) 0 50% no-repeat;
+  color: #d5241c;
+  font-size: 11.998px;
+  padding-left: 10px;
 }
 .fieldUploadFile {
   text-align: right;
@@ -1794,9 +1791,13 @@ body.template-new-user #content input {
   vertical-align: top;
   width: 230px;
 }
-.searchPage[type="text"]:hover,
+.searchPage[type="text"]:hover {
+  border: 0;
+}
+#portal-searchbox .searchField:focus,
 .searchPage[type="text"]:focus {
   border: 0;
+  box-shadow: 1px 1px 5px rgba(8, 123, 140, 0.5) inset;
 }
 .no-boxshadow #portal-searchbox .searchField,
 .no-boxshadow .searchPage[type="text"] {
@@ -1809,17 +1810,13 @@ body.template-new-user #content input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 0 none;
-  height: 24px;
+  font-size: 15.96px;
+  height: 30px;
   padding: 3px 10px;
   vertical-align: top;
 }
 .no-cssgradients .searchButton[type="submit"] {
   background-color: #076f7e;
-}
-#portal-searchbox .searchButton[type="submit"],
-.searchPage[type="submit"] {
-  font-size: 15.96px;
-  height: 30px;
 }
 .searchButton[type="submit"]:hover,
 .searchButton[type="submit"]:focus {
@@ -2640,6 +2637,65 @@ dl.portletError {
 }
 .horizontalCarousel .portletCarousel li a span {
   width: auto;
+}
+.portletSubscription input[type="text"] {
+  width: 100%;
+}
+.portletSubscription .action {
+  text-align: right;
+}
+.portletSubscription input[type="text"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25) inset;
+  color: #6f7578;
+  height: 30px;
+  line-height: 20px;
+  padding: 5px 10px;
+}
+.no-boxshadow .portletSubscription input[type="text"] {
+  border: 1px solid;
+}
+.portletSubscription input[type="text"]:focus {
+  box-shadow: 1px 1px 5px rgba(8, 123, 140, 0.5) inset;
+}
+.portletSubscription input[type="submit"] {
+  background: -webkit-linear-gradient(#087b8c, #066270);
+  background: linear-gradient(#087b8c, #066270);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0 none;
+  font-size: 15.96px;
+  height: 30px;
+  padding: 3px 10px;
+  vertical-align: top;
+}
+.portletSubscription input[type="submit"]:hover,
+.portletSubscription input[type="submit"]:focus {
+  background: -webkit-linear-gradient(#d5241c, #ab1d17);
+  background: linear-gradient(#d5241c, #ab1d17);
+}
+.no-cssgradients .portletSubscription input[type="submit"]:hover,
+.no-cssgradients .portletSubscription input[type="submit"]:focus {
+  background-color: #c0211a;
+}
+.portletSubscription fieldset {
+  border: 0;
+  padding: 0;
+}
+.portletSubscription input[type="checkbox"] {
+  vertical-align: middle;
+}
+.portletSubscription .option .label {
+  color: #087b8c;
+  font-weight: normal;
+}
+.portletSubscription .row:first-child label,
+.portletSubscription .row:first-child + .row label {
+  display: none;
 }
 /* @group Editing */
 

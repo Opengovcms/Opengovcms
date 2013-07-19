@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><script src="jquery.jpanelmenu.min.js"></script>
-    <script>$(function(){if(!$('#jPanelMenu-menu').length){$.jPanelMenu({keyboardShortcuts:[{code:27,open:false,close:true},{code:37,open:false,close:true},{code:39,open:false,close:true},{code:77,open:false,close:true}],menu:$($(".portletNavigationTree").length?".portletNavigationTree":"#theme-globalnav").clone().add($("#portal-siteactions").clone()).wrapAll('<div />').parent()}).on()}})</script><script type="text/javascript">
+    <script>$(function(){$.jPanelMenu({menu:$($(".portletNavigationTree").length?".portletNavigationTree":"#theme-globalnav").clone().add($("#portal-siteactions").clone()).wrapAll('<div />').parent()}).on()})</script><script type="text/javascript">
     var MTIProjectId='131a2bac-8aba-4848-b271-468bbb947398';
      (function() {
             var mtiTracking = document.createElement('script');
@@ -16,6 +16,7 @@
             (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
        })();
     </script>
+    <script src="js/jquery.placeholder.min.js"></script>
 </head>
 <body>
     <div id="visual-portal-wrapper" class="section-home">
@@ -72,6 +73,11 @@
     </div>
     <div id="portal-footer-wrapper">
         <div id="portal-footer-inner"></div>
-    </div>
+    </div>    
+    <script>
+        $(function() {
+            $('input').placeholder();
+        });
+    </script>
 </body>
 </html>

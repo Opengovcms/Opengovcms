@@ -450,3 +450,64 @@ div.portletStaticText {
 .horizontalCarousel .portletCarousel li a span {
   width: auto;
 }
+
+// portletSubscription 
+.portletSubscription input[type="text"] {
+  width: 100%;
+}
+.portletSubscription .action {
+  text-align: right;
+}
+.portletSubscription input[type="text"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25) inset;
+  color: @gray;
+  height: 30px;
+  line-height: 20px;
+  padding: 5px 10px;
+}
+.no-boxshadow .portletSubscription input[type="text"] {
+  border: 1px solid;
+}
+.portletSubscription input[type="text"]:focus {
+  box-shadow: 1px 1px 5px fade(@secondary, 50%) inset;
+}
+.portletSubscription input[type="submit"] {
+  background: -webkit-linear-gradient(@secondary, @main);
+  background: linear-gradient(@secondary, @main);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0 none;
+  font-size: @baseFontSize * 1.14;
+  height: 30px;
+  padding: 3px 10px;
+  vertical-align: top;
+}
+.portletSubscription input[type="submit"]:hover,
+.portletSubscription input[type="submit"]:focus {
+  background: -webkit-linear-gradient(@notice, @noticeDark);  
+  background: linear-gradient(@notice, @noticeDark);  
+}
+.no-cssgradients .portletSubscription input[type="submit"]:hover,
+.no-cssgradients .portletSubscription input[type="submit"]:focus {
+  background-color: mix(@notice, @noticeDark);
+}
+.portletSubscription fieldset {
+  border: 0;
+  padding: 0;
+}
+.portletSubscription input[type="checkbox"] {
+  vertical-align: middle;
+}
+.portletSubscription .option .label {
+  color: @secondary;
+  font-weight: normal;
+}
+.portletSubscription .row:first-child label,
+.portletSubscription .row:first-child + .row label {
+  display: none;
+}

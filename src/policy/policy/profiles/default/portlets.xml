@@ -3,6 +3,7 @@
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     i18n:domain="policy">
 
+   <portlet addview="portlets.Calendar" remove="true" />
    <portlet addview="portlets.Classic" remove="true" />
    <portlet addview="portlets.Login" remove="true" />
    <portlet addview="portlets.Events" remove="true" />

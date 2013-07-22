@@ -31,15 +31,6 @@
       layer="policy.interfaces.IBrowserLayer"
       />
 
-  <page
-      name="view"
-      for="..content.person.IPerson"
-      template="templates/person_view.pt"
-      class=".person.PersonView"
-      permission="zope2.View"
-      layer="policy.interfaces.IBrowserLayer"
-      />
-
   <!-- Control panel view -->
   <page
       name="site-settings-controlpanel"

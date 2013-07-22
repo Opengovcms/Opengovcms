@@ -3,22 +3,7 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="sst.stc">
 
-  <!-- Ensure Plone's portlets ZCML has already been processed;
-       without this, we may get a permission lookup error -->
   <include package="plone.app.portlets" />
-
-  <!-- -*- extra stuff goes here -*- -->
-
-  <plone:portlet
-      name="policy.portlets.Contact"
-      interface=".contact.IContact"
-      assignment=".contact.Assignment"
-      view_permission="zope2.View"
-      edit_permission="cmf.ManagePortal"
-      renderer=".contact.Renderer"
-      addview=".contact.AddForm"
-      editview=".contact.EditForm"
-      />
 
   <include package="collective.portlet.ngcollection" file="meta.zcml" />
 

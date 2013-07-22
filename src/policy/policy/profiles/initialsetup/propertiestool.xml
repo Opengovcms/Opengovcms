@@ -17,9 +17,7 @@
    <element value="ATSimpleStringCriterion"/>
    <element value="ATSortCriterion"/>
    <element value="AliasVocabulary"/>
-   <element value="Collection"/>
    <element value="Discussion Item"/>
-   <element value="Document"/>
    <element value="Event"/>
    <element value="FieldsetEnd"/>
    <element value="FieldsetFolder"/>
@@ -47,7 +45,6 @@
    <element value="FormTextField"/>
    <element value="FormThanksPage"/>
    <element value="Image"/>
-   <element value="Link"/>
    <element value="News Item"/>
    <element value="Person"/>
    <element value="Plone Site"/>

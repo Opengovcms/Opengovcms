@@ -2083,7 +2083,8 @@ li:hover .globalSectionsLevel1 {
   margin: 0 0 6px;
   text-transform: uppercase;
 }
-.template-events_view .documentByLine {
+.template-events_view .documentByLine,
+.template-events_view .tileBody {
   margin-left: 80px;
 }
 .separator {

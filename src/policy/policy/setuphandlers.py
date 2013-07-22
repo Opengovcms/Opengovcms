@@ -1,4 +1,5 @@
 import logging
+import Globals
 from Products.CMFQuickInstallerTool.interfaces import INonInstallable
 from plone.app.contenttypes.migration import migration
 from zope.component import getMultiAdapter
@@ -13,7 +14,9 @@ class HiddenProducts(object):
     implements(INonInstallable)
 
     def getNonInstallableProducts(self):
-#        return []
+        if Globals.DevelopmentMode:
+            return []
+
         return [
             'PloneFormGen',
             'Products.PloneFormGen',
@@ -53,7 +56,9 @@ class HiddenProducts(object):
             ]
 
     def getNonInstallableProfiles(self):
-#        return []
+        if Globals.DevelopmentMode:
+            return []
+
         return [
             'Products.PloneFormGen:default',
             'Products.ATVocabularyManager:default',

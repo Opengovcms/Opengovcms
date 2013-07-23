@@ -3,9 +3,6 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="policy">
 
-  <adapter factory=".indexers.lastname"
-           name="lastname" />
-
   <plone:behavior
         title="Exclude From mobile navigation"
         description="Allow items to be excluded from mobile navigation"

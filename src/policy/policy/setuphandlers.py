@@ -118,7 +118,7 @@ def migrateAT2DX(context):
 
 catalog_indexes = (
     {'name': 'lastname',
-     'type': 'FieldIndex', },
+     'type': 'FieldIndex', },  # from collective.person
     {'name': 'smtemplate_subject_values_idx',
      'type': 'KeywordIndex', },
     {'name': 'smtemplate_section_idx',

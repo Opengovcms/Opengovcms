@@ -3135,6 +3135,18 @@ a.managePortletsFallback {
     border: 0;
     color: white;
   }
+  .navTreeLevel0 > .navTreeCurrentNode > a,
+  .navTreeLevel0 > .navTreeItemInPath > a,
+  .navTreeLevel1 > .navTreeCurrentNode > a,
+  .navTreeLevel1 > .navTreeItemInPath > a {
+    background-image: none;
+  }
+  .navTreeLevel0 > .navTreeCurrentNode,
+  .navTreeLevel0 > .navTreeItemInPath,
+  .navTreeLevel1 > .navTreeCurrentNode,
+  .navTreeLevel1 > .navTreeItemInPath {
+    padding-left: 0;
+  }
   .navMobileExclude {
     display: none;
   }

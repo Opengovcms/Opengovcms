@@ -844,6 +844,10 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 .image-inline {
   float: none;
 }
+.image-caption {
+  margin: 0;
+  font-style: italic;
+}
 /* @end */
 
 /* @group Table of Contents */
@@ -1409,4 +1413,7 @@ a.historyComparePrevious span {
   background: #087b8c;
   color: white;
   padding: 10px;
+}
+.factBox .listTypeMark > li:before {
+  color: white;
 }

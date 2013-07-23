@@ -236,24 +236,6 @@ function smtoggleSelect(selectbutton, id, initialState, formName) {
                           </div>
                     </div>
 
-                    <div id="searchResultsSort">
-                      <span i18n:translate="sort_by">Sort by</span>
-                          <span id="sorting-options">
-                              <metal:sorting define-macro="sorting">
-                                  <tal:block repeat="item view/sort_options">
-                                      <tal:item define="selected item/selected">
-                                      <a data-sort=""
-                                         tal:condition="not:selected"
-                                         tal:content="item/title"
-                                         tal:attributes="href item/url;
-                                                         data-sort python:item.sortkey and item.sortkey or None"></a>
-                                      <strong tal:condition="selected" tal:content="item/title"></strong>
-                                      <span tal:condition="not:repeat/item/end">&middot;</span>
-                                      </tal:item>
-                                  </tal:block>
-                              </metal:sorting>
-                          </span>
-                    </div>
                 </div>
 
                 <metal:searchresults define-macro="search_results">

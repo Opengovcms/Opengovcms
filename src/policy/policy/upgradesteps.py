@@ -41,8 +41,13 @@ def installChimpfeed(tool):
     site = tool.aq_parent
     runProfiles(site, ('collective.chimpfeed:default',))
 
+def installPerson(tool):
+    """ """
+    site = tool.aq_parent
+    runProfiles(site, ('collective.person:default',))
+
 def installCTaxonomy(tool):
-    """ Install chimpfeed """
+    """ """
     site = tool.aq_parent
     runProfiles(site, ('collective.taxonomy:default',))
 

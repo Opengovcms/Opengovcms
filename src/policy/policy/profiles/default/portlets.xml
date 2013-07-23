@@ -13,11 +13,4 @@
    <portlet addview="portlets.Language" remove="true" />
    <portlet addview="portlets.Review" remove="true" />
 
-   <portlet
-     addview="policy.portlets.Contact"
-     title="Contact"
-     description="Portlet to display contact information for a Person"
-     i18n:attributes="title; description"
-   />
-
 </portlets>

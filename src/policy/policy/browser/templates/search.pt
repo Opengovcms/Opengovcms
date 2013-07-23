@@ -158,65 +158,6 @@
                                   </div>
                               </fieldset>
 
-                              <fieldset class="noborder">
-
-                                  <legend i18n:translate="label_new_items_since">New items since</legend>
-
-                                  <div class="field">
-
-                                      <div class="formHelp"></div>
-
-                                      <tal:datetime define="today python:DateTime().earliestTime();
-                                                            yesterday python:(today-1).Date();
-                                                            lastweek python:(today-7).Date();
-                                                            lastmonth python:(today-31).Date();
-                                                            ever string:1970-01-02;
-                                                            checked python:request.get('created', []);
-                                                            checked python:(len(checked) == 1) and checked[0] or ever">
-                                          <input type="radio"
-                                                 id="query-date-yesterday"
-                                                 name="created.query:record:list:date"
-                                                 tal:attributes="value yesterday;
-                                                                 checked python:checked==yesterday and 'checked' or '';"
-                                                 />
-                                          <label for="query-date-yesterday" i18n:translate="time_yesterday">Yesterday</label>
-                                          <br />
-                                          <input type="radio"
-                                                 id="query-date-lastweek"
-                                                 name="created.query:record:list:date"
-                                                 tal:attributes="value lastweek;
-                                                                 checked python:checked==lastweek and 'checked' or '';"
-                                                 />
-                                          <label for="query-date-lastweek" i18n:translate="time_last_week">Last week</label>
-                                          <br />
-                                          <input type="radio"
-                                                 id="query-date-lastmonth"
-                                                 name="created.query:record:list:date"
-                                                 tal:attributes="value lastmonth;
-                                                                 checked python:checked==lastmonth and 'checked' or '';"
-                                                 />
-                                          <label for="query-date-lastmonth" i18n:translate="time_last_month">Last month</label>
-                                          <br />
-                                          <input type="radio"
-                                                 id="query-date-ever"
-                                                 name="created.query:record:list:date"
-                                                 tal:attributes="value ever;
-                                                                 checked python:checked==ever and 'checked' or '';"
-                                                 />
-                                          <label for="query-date-ever" i18n:translate="time_ever">Ever</label>
-                                      </tal:datetime>
-
-                                      <input type="hidden" name="created.range:record" value="min" />
-                                  </div>
-
-                                  <div class="formControls">
-                                      <input class="searchPage searchButton allowMultiSubmit"
-                                             type="submit"
-                                             value="Search"
-                                             i18n:attributes="value label_search;"/>
-                                  </div>
-                              </fieldset>
-
                           </div>
                     </div>
 

@@ -201,4 +201,20 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="24">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.removePersonPortlet"
+      title="Remove Person Portlet"
+      description=""
+      />
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.runDefaultProfile"
+      title="Run policy profile"
+      description="Update types and portlets"
+      />
+  </genericsetup:upgradeSteps>
+
 </configure>

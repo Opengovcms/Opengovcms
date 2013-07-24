@@ -243,6 +243,23 @@ li:hover .globalSectionsLevel1 {
 .globalSectionsLevel1 li li {
   display: block;
 }
+.globalSectionsLevel1 .listTypeMark > li {
+  margin-left: 0;
+}
+.globalSectionsLevel1 .listTypeMark > li:before {
+  display: none;
+}
+.globalSectionsLevel1 .listTypeMark > li > a {
+  padding-left: 20px;
+}
+.globalSectionsLevel1 .listTypeMark > li > a:before {
+  color: @white;
+  content: "» ";
+  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-weight: bold;
+  margin-left: -14px;
+  vertical-align: 1px;
+}
 
 // Portal Logo 
 #desktop-logo {

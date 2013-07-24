@@ -1724,6 +1724,9 @@ body.template-new-user #content input {
   color: white;
   padding: 10px;
 }
+.factBox .listTypeMark > li:before {
+  color: white;
+}
 #visual-portal-wrapper {
   background-color: white;
   margin: 0 auto 30px;
@@ -1954,6 +1957,23 @@ li:hover .globalSectionsLevel1 {
 }
 .globalSectionsLevel1 li li {
   display: block;
+}
+.globalSectionsLevel1 .listTypeMark > li {
+  margin-left: 0;
+}
+.globalSectionsLevel1 .listTypeMark > li:before {
+  display: none;
+}
+.globalSectionsLevel1 .listTypeMark > li > a {
+  padding-left: 20px;
+}
+.globalSectionsLevel1 .listTypeMark > li > a:before {
+  color: white;
+  content: "» ";
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  margin-left: -14px;
+  vertical-align: 1px;
 }
 #desktop-logo {
   background-image: url(../images/logo.png);
@@ -3131,6 +3151,18 @@ a.managePortletsFallback {
   #portal-siteactions a:hover {
     border: 0;
     color: white;
+  }
+  .navTreeLevel0 > .navTreeCurrentNode > a,
+  .navTreeLevel0 > .navTreeItemInPath > a,
+  .navTreeLevel1 > .navTreeCurrentNode > a,
+  .navTreeLevel1 > .navTreeItemInPath > a {
+    background-image: none;
+  }
+  .navTreeLevel0 > .navTreeCurrentNode,
+  .navTreeLevel0 > .navTreeItemInPath,
+  .navTreeLevel1 > .navTreeCurrentNode,
+  .navTreeLevel1 > .navTreeItemInPath {
+    padding-left: 0;
   }
   .navMobileExclude {
     display: none;

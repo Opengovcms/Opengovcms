@@ -56,4 +56,22 @@
       layer="policy.interfaces.IBrowserLayer"
       />
 
+  <page
+      name="search"
+      class=".search.Search"
+      permission="zope2.View"
+      for="*"
+      template="templates/search.pt"
+      layer="policy.interfaces.IBrowserLayer"
+      />
+
+  <page
+      name="updated_search"
+      class=".search.Search"
+      permission="zope2.View"
+      for="Products.CMFCore.interfaces.IFolderish"
+      template="templates/updated_search.pt"
+      layer="policy.interfaces.IBrowserLayer"
+      />
+
 </configure>

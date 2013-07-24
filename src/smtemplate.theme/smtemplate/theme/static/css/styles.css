@@ -1727,6 +1727,15 @@ body.template-new-user #content input {
 .factBox .listTypeMark > li:before {
   color: white;
 }
+.imageContainer {
+  float: left;
+  margin: 0 10px 5px 0;
+  max-height: 120px;
+  overflow: hidden;
+}
+.personText {
+  clear: left;
+}
 #visual-portal-wrapper {
   background-color: white;
   margin: 0 auto 30px;
@@ -2717,6 +2726,9 @@ dl.portletError {
 .portletSubscription .row:first-child label,
 .portletSubscription .row:first-child + .row label {
   display: none;
+}
+.portletPerson .portletItem {
+  margin: 0;
 }
 /* @group Editing */
 

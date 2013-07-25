@@ -106,6 +106,7 @@
         <!-- Top -->
         <before css:content="#portal-header > p.hiddenStructure:first-child" css:theme-children="#portal-header" />
         <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
+        <drop attributes="placeholder" css:content="#portal-searchbox .searchField" />
         <drop css:content=".searchSection" />
         <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" method="raw" />
         <drop css:content="#portal-siteactions" />

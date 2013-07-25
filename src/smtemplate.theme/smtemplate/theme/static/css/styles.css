@@ -2187,7 +2187,11 @@ li:hover .globalSectionsLevel1 {
   clear: both;
 }
 .subSectionTile a:hover {
+  color: #087b8c;
   text-decoration: underline;
+}
+.subSectionTile a:visited:hover {
+  color: #6f7578;
 }
 .sstImageWrapper {
   height: 113px;

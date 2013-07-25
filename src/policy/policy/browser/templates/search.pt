@@ -267,46 +267,6 @@ function smtoggleSelect(selectbutton, id, initialState, formName) {
                                     <div class="searchResultsItem">
                                       <span class="discreet" i18n:domain="plone"
                                         tal:condition="show_about">
-                                        <span class="documentAuthor"
-                                            i18n:translate="label_by_author">
-                                        by
-                                            <tal:block tal:condition="item/Creator"
-                                                tal:define="author python:context.portal_membership.getMemberInfo(item.Creator())">
-                                              <a href="#"
-                                                 tal:attributes="href string:$navigation_root_url/author/${item/Creator}"
-                                                 tal:content="python:author and author['fullname'] or item.Creator()"
-                                                 tal:omit-tag="not:item/Creator"
-                                                 i18n:name="author">
-                                                Bob Dobalina
-                                              </a>
-                                            </tal:block>
-                                        </span>
-
-                                        <span tal:define="publication_date item/EffectiveDate;
-                                                          modification_date item/ModificationDate">
-
-                                            <span class="documentPublished" tal:condition="python: publication_date != 'None'">
-                                              &mdash;
-                                              <span i18n:translate="box_published">
-                                                published
-                                              </span>
-                                              <span tal:replace="python:toLocalizedTime(publication_date, long_format=0)">
-                                                August 16, 2001 at 23:35:59
-                                              </span>
-                                            </span>
-
-                                            <span class="documentModified" tal:condition="python: modification_date != publication_date">
-                                              &mdash;
-                                              <span i18n:translate="box_last_modified">
-                                                last modified
-                                              </span>
-                                              <span tal:replace="python:toLocalizedTime(modification_date, long_format=1)">
-                                                August 16, 2001 at 23:35:59
-                                              </span>
-                                            </span>
-
-                                        </span>
-
                                         <span tal:define="categories item/Subject|nothing"
                                               tal:condition="categories">
                                           &mdash;

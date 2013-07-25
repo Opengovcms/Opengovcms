@@ -17,10 +17,6 @@
     <strong id="updated-search-results-number"
             tal:content="batch/sequence_length|string:0">234</strong>
 
-    <span id="updated-sorting-options">
-        <metal:results use-macro="context/@@search/sorting" />
-    </span>
-
     <metal:results use-macro="context/@@search/search_results" />
 
 </body>

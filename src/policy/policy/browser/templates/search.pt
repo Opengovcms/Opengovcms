@@ -129,8 +129,7 @@ function smtoggleSelect(name, fid, formName) {
 
                                   <div class="field"
                                        tal:define="sections view/sections_list;
-                                                   all_checked python:(len(sections) == len(request.get('path', []))) or first_call;
-                                                   toggle_select_state python:all_checked and 'true' or 'false';">
+                                                   all_checked python: not request.get('path', []);">
 
                                       <div class="formHelp"></div>
 
@@ -181,8 +180,7 @@ function smtoggleSelect(name, fid, formName) {
                                   <div class="field"
                                        tal:define="portal_types portal/portal_types;
                                                    types_list view/types_list;
-                                                   all_checked python:(len(types_list) == len(request.get('portal_type', []))) or first_call;
-                                                   toggle_select_state python:all_checked and 'true' or 'false';">
+                                                   all_checked python: not request.get('portal_type', []);">
 
                                       <div class="formHelp"></div>
 

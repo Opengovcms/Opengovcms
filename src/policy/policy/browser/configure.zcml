@@ -74,4 +74,10 @@
       layer="policy.interfaces.IBrowserLayer"
       />
 
+  <resource
+      name="search.js"
+      file="search.js"
+      layer="policy.interfaces.IBrowserLayer"
+      />
+
 </configure>

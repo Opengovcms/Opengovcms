@@ -20,7 +20,7 @@
   <metal:block fill-slot="top_slot"
                tal:define="dummy python:request.set('disable_border',1);
                            disable_column_one python:request.set('disable_plone.leftcolumn',0);
-                           disable_column_two python:request.set('disable_plone.rightcolumn',1);" />
+                           disable_column_two python:request.set('disable_plone.rightcolumn',0);" />
 
   <metal:block metal:fill-slot="javascript_head_slot">
 <script>
@@ -43,6 +43,7 @@ function smtoggleSelect(name, fid, formName) {
 
 <body>
 
+  <metal:pslot fill-slot="portlets_one_slot"></metal:pslot>
   <div id="content-core" metal:fill-slot="main">
 
     <form name="searchform"

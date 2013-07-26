@@ -46,6 +46,8 @@ jQuery(function ($) {
                     $('#rss-subscription').find('a.link-feed').attr('href', function () {
                         return navigation_root_url + '/search_rss?' + query;
                     });
+
+                    $('#region-content,#content').highlightSearchTerms({includeOwnDomain: $('dl.searchResults').length === 0});
                 });
         });
     };

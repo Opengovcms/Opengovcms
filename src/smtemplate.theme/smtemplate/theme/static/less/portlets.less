@@ -38,6 +38,7 @@ dl.portletError {
 }
 .portletFooter a:hover {
   background-color: @grayLight;
+  text-decoration: none;
 }
 .managedPortlet {
   margin: @baseLineHeight/2 0;
@@ -515,4 +516,69 @@ div.portletStaticText {
 // portletPerson
 .portletPerson .portletItem {
   margin: 0;
+}
+
+// portletDropDownLinks
+.portletDropDownLinks {
+  background-color: @secondary;
+  color: @white;
+  margin: 0 0 11px;
+  padding: 14px 15px;
+  }
+.pddl-header {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 2px 0 12px;
+  }
+.pddl-text {
+  margin: 0 0 9px;
+  }
+.dropDownLinks {
+  background-color: @white;
+  color:#000;
+  margin:0;
+  position:relative;
+  z-index:1;
+  }
+.dropDownLinks:hover {
+  z-index:2;
+  }
+.ddl-title {
+  cursor:pointer;
+  font-weight:normal;
+  padding:6px 37px 6px 7px;
+  }
+.ddl-icon {
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAGCAMAAADExV+OAAAAJ1BMVEVvdXhvdXhvdXhvdXhvdXhobnFvdXhrcXRvdXhvdXgAAABobXBvdXhRMpn2AAAAC3RSTlNVIjNEmexmwncRALq1JccAAAA7SURBVHjaPYpbDgAgCMOm8hK4/3kVTOzP0qUg+GcqLHU82ZQKX5q2r1mweKXCIYujTnRmkXSltBnz7QF8oALTDrf9CAAAAABJRU5ErkJggg==) no-repeat 50% 50%;
+  border-left:1px solid #e9eff3;
+  height:30px;
+  position:absolute;
+  right:0;
+  top:0;
+  width:30px;
+  }
+.ddl-body {
+  background-color:#fff;
+  display:none;
+  margin:0;
+  position:absolute;
+  width:100%;
+  }
+.dropDownLinks:hover .ddl-body {
+  display:block;
+  }
+.ddl-list {
+  list-style-type:none;
+  padding: 0;
+  }
+.ddl-item {
+  color:#000;
+  display:block;
+  padding:3px 7px;
+  }
+.ddl-item:hover {
+  text-decoration: underline;
+  }
+.ddl-expert {
+  margin-left:10px;
 }

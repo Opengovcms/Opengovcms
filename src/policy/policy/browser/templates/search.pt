@@ -105,28 +105,32 @@ function smtoggleSelect(name, fid, formName) {
                              b_size python:10;
                              b_size request/b_size | b_size;
                              batch python: view.results(b_start=b_start, b_size=b_size);
+                             sequence_length batch/sequence_length|python:0;
                              normalizeString nocall:context/@@plone/normalizeString;">
 
                 <div id="search-results-bar">
-                    <div i18n:translate="batch_x_items_matching_your_criteria" i18n:domain="plone">
-                        <strong i18n:name="number" id="search-results-number"
-                                tal:content="batch/sequence_length|string:0">234</strong>
-                        items matching your search terms.
+                    <div id="search-results-number-block" tal:condition="sequence_length">
+                        Din søgning gav
+                        <strong id="search-results-number"
+                                tal:content="sequence_length">234</strong>
+                        resultater
+                    </div>
+                    <div id="search-results-number-block"
+                         tal:condition="not:sequence_length">
+                         <strong i18n:translate="description_no_results_found">No results were found.</strong>
                     </div>
 
                     <div id="advanced-search">
                         <h2>
                           <a href="#"
                              tal:attributes="href view/advanced_search_trigger"
-                             id="search-filter-toggle"
-                             i18n:translate="narrow_search_options">
-                              Filter the results.</a>
+                             id="search-filter-toggle">Afgræns søgning</a>
                         </h2>
                          <div id="search-filter" i18n:domain="plone">
 
                               <fieldset class="noborder">
 
-                                  <legend i18n:translate="">Section</legend>
+                                  <legend i18n:translate="">Sektion</legend>
 
                                   <div class="field"
                                        tal:define="sections view/sections_list;
@@ -180,7 +184,7 @@ function smtoggleSelect(name, fid, formName) {
 
                                   <div class="field"
                                        tal:define="portal_types portal/portal_types;
-                                                   types_list view/types_list;
+                                                   types_list python:('News Item', 'Document', 'Event');
                                                    all_checked python: not request.get('portal_type', []);">
 
                                       <div class="formHelp"></div>
@@ -215,9 +219,10 @@ function smtoggleSelect(name, fid, formName) {
                                                                      onchange string:javascript:smtoggleSelect('pt', 'portal_type:list');
                                                                      checked python:((type in request.get('portal_type', []))) and 'checked' or ''"/>
                                               <label for=""
+                                                     i18n:domain="policy"
                                                      i18n:translate=""
                                                      tal:attributes="for string:portal_type_${repeat/type/number}"
-                                                     tal:content="python: portal_types.getTypeInfo(type).Title()"
+                                                     tal:content="type"
                                                      />
                                               <br />
                                           </tal:items>
@@ -233,10 +238,6 @@ function smtoggleSelect(name, fid, formName) {
                 <metal:searchresults define-macro="search_results">
                     <div id="search-results"
                          tal:define="navigation_root_url context/@@plone_portal_state/navigation_root_url;">
-
-                        <metal:noresults tal:condition="not: batch">
-                          <p i18n:domain="plone"><strong i18n:translate="description_no_results_found">No results were found.</strong></p>
-                        </metal:noresults>
 
                         <metal:results tal:condition="batch"
                                        tal:define="isAnon context/@@plone_portal_state/anonymous;

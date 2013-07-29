@@ -327,3 +327,11 @@ msgstr "Udgiver:"
 msgid "summary_employee_information"
 msgstr "Medarbejderinformation"
 
+msgid "Document"
+msgstr "Artikel"
+
+msgid "Event"
+msgstr "Aktivitet"
+
+msgid "News Item"
+msgstr "Nyhed"

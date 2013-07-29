@@ -3,17 +3,7 @@ from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.browser.navtree import getNavigationRoot
 
 
-TYPES = ['Document', 'Event', 'News Item']
-
-
 class Search(SearchBase):
-
-    def types_list(self):
-        # only show those types that have any content
-        catalog = getToolByName(self.context, 'portal_catalog')
-        used_types = catalog._catalog.getIndex('portal_type').uniqueValues()
-        used_types = [i for i in used_types if i in TYPES]
-        return self.filter_types(list(used_types))
 
     def filter_sections(self, sections):
         return [i for i in sections if not i.exclude_from_nav]

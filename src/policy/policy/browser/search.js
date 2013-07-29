@@ -26,7 +26,7 @@ jQuery(function ($) {
 
                     var $data_res = $ajax_search_res.find('#search-results').children(),
                         data_search_term = $ajax_search_res.find('#updated-search-term').text(),
-                        data_res_number = $ajax_search_res.find('#updated-search-results-number').text(),
+                        data_res_number = $ajax_search_res.find('#updated-search-results-number-block').html(),
                         data_sorting_opt = $ajax_search_res.find('#updated-sorting-options').html();
 
                     $container.html($data_res);
@@ -40,7 +40,7 @@ jQuery(function ($) {
                     }
 
                     $search_term.text(data_search_term);
-                    $('#search-results-number').text(data_res_number);
+                    $('#search-results-number-block').html(data_res_number);
                     $('#search-results-bar').find('#sorting-options').html(data_sorting_opt);
 
                     $('#rss-subscription').find('a.link-feed').attr('href', function () {

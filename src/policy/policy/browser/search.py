@@ -5,6 +5,9 @@ from Products.CMFPlone.browser.navtree import getNavigationRoot
 
 class Search(SearchBase):
 
+    def mtype(self, item):
+        return item.getObject().file.contentType.replace('/','-')
+
     def filter_sections(self, sections):
         return [i for i in sections if not i.exclude_from_nav]
 

@@ -114,3 +114,11 @@ def removePersonPortlet(tool):
     setup_tool.runImportStepFromProfile(
         'profile-policy:migrate', 'portlets',
         run_dependencies=False)
+
+def addSearchPortletsManager(tool):
+    """ """
+    site = tool.aq_parent
+    setup_tool = getattr(site, 'portal_setup')
+    setup_tool.runImportStepFromProfile(
+        'profile-policy:migrate', 'portlets',
+        run_dependencies=False)

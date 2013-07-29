@@ -44,6 +44,17 @@ function smtoggleSelect(name, fid, formName) {
 <body>
 
   <metal:pslot fill-slot="portlets_one_slot"></metal:pslot>
+  <metal:pslot fill-slot="portlets_two_slot">
+    <div tal:content="structure provider:policy.SearchManager" />
+    <div tal:condition="python:checkPermission('Portlets: Manage portlets', context)">
+        <p class="manageSearchPortletsLink">
+            <a href=""
+                i18n:domain="plone"
+                i18n:translate="manage_portlets_link"
+                tal:attributes="href string:${portal_url}/@@manage-search">Manage portlets</a>
+        </p>
+    </div>
+  </metal:pslot>
   <div id="content-core" metal:fill-slot="main">
 
     <form name="searchform"

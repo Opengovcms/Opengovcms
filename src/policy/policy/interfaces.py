@@ -1,6 +1,7 @@
 from zope.interface import Interface
 from zope import schema
-
+from plone.portlets.interfaces import IPortletManager
+from plone.app.portlets.interfaces import IColumn
 from i18n import MessageFactory as _
 
 
@@ -18,3 +19,14 @@ class ISiteSettings(Interface):
         required=False,
         default=u'',
     )
+
+
+class ISearchPortletManager(IPortletManager, IColumn):
+    """
+    """
+
+
+class ISearchPortlets(ISearchPortletManager):
+    """
+    For the portlet manager in the search.
+    """

@@ -24,5 +24,9 @@
       name="policy.tinymce-plugins"
       directory="tinymce-plugins"
       />
+  <adapter
+      factory="policy.browser.manager.SearchPortletRenderer"
+      provides="plone.portlets.interfaces.IPortletManagerRenderer"
+      />
 
 </configure>

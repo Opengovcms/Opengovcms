@@ -3,6 +3,10 @@
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     i18n:domain="policy">
 
+    <portletmanager 
+        name="policy.SearchManager"
+        type="policy.interfaces.ISearchPortlets"
+        />
    <portlet addview="portlets.Calendar" remove="true" />
    <portlet addview="portlets.Classic" remove="true" />
    <portlet addview="portlets.Login" remove="true" />

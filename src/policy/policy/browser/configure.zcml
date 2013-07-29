@@ -80,4 +80,12 @@
       layer="policy.interfaces.IBrowserLayer"
       />
 
+  <page
+      name="manage-search"
+      for="plone.portlets.interfaces.ILocalPortletAssignable"
+      class="plone.app.portlets.browser.manage.ManageContextualPortlets"
+      template="templates/manage_search.pt"
+      layer="policy.interfaces.IBrowserLayer"
+      permission="plone.app.portlets.ManagePortlets"
+      />
 </configure>

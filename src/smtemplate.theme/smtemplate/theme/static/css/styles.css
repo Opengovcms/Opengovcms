@@ -2492,6 +2492,23 @@ dl.portletError {
   line-height: 1;
   text-transform: uppercase;
 }
+.twoColumnsNews .portletItem {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: right;
+  padding-left: 15px;
+  width: 50%;
+}
+.twoColumnsNews .portletHeader + .portletItem {
+  float: left;
+  padding: 0 15px 0 0;
+}
+.twoColumnsNews .portletFooter {
+  clear: left;
+  float: left;
+  margin: 0;
+}
 .portletRich {
   padding: 0;
 }

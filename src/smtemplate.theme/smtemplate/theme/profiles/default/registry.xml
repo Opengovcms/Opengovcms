@@ -4,6 +4,7 @@
     <value>
       <element>horizontalCarousel</element>
       <element>cyanBackground</element>
+      <element>twoColumnsNews</element>
     </value>
   </record>
 </registry>

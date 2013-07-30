@@ -1984,6 +1984,9 @@ li:hover .globalSectionsLevel1 {
   margin-left: -14px;
   vertical-align: 1px;
 }
+.globalSectionsLevel1 p {
+  margin: 0 0 3px;
+}
 #desktop-logo {
   background-image: url(../images/logo.png);
   display: inline-block;
@@ -2123,6 +2126,9 @@ li:hover .globalSectionsLevel1 {
   border-top: 1px solid #a7b0b5;
   padding: 11px 0;
   margin: 18px 0 0;
+}
+.listingAmount a:hover {
+  text-decoration: underline;
 }
 .batchNumbers {
   float: right;
@@ -2491,6 +2497,23 @@ dl.portletError {
   font-size: 11.998px;
   line-height: 1;
   text-transform: uppercase;
+}
+.twoColumnsNews .portletItem {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: right;
+  padding-left: 15px;
+  width: 50%;
+}
+.twoColumnsNews .portletHeader + .portletItem {
+  float: left;
+  padding: 0 15px 0 0;
+}
+.twoColumnsNews .portletFooter {
+  clear: left;
+  float: left;
+  margin: 0;
 }
 .portletRich {
   padding: 0;

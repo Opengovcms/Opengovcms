@@ -35,13 +35,12 @@
        tal:condition="batch/has_next"
        tal:attributes="href python:view.make_link(batch.nextpage)">&raquo;</a>
     <!-- Link to first -->
-    <span tal:condition="batch/show_link_to_first">
-        <a href=""
-           tal:attributes="href python:view.make_link(1)">1</a>
+    <span tal:condition="batch/show_link_to_first"
+          tal:omit-tag="">
+        <a href="" class="itemBatch"
+           tal:attributes="href python:view.make_link(1)">1</a> /
         <span tal:condition="batch/second_page_not_in_navlist"
-              tal:omit-tag="">
-           / ... /
-        </span>
+              tal:omit-tag="">... /</span>
     </span>
 
     <!-- Pagelist with links to previous pages for quick navigation -->
@@ -56,7 +55,9 @@
     <span tal:condition="batch/navlist"
           tal:omit-tag="">
         <span tal:content="batch/pagenumber"
-              class="currentBatch">Current page number</span> /
+              class="currentBatch">Current page number</span>
+        <span tal:condition="batch/next_pages"
+              tal:omit-tag="">/</span>
     </span>
 
     <!-- Pagelist with links to next pages for quick navigation -->
@@ -64,16 +65,16 @@
           tal:omit-tag="" >
       <a href="" class="itemBatch"
          tal:content="pagenumber" 
-         tal:attributes="href python:view.make_link(pagenumber)"/> /
+         tal:attributes="href python:view.make_link(pagenumber)"/>
+      <span tal:omit-tag="" tal:condition="not:repeat/pagenumber/end">/</span>
     </span>
 
     <!-- Link to last -->
     <span tal:condition="batch/show_link_to_last">
         <span tal:condition="batch/before_last_page_not_in_navlist"
-              tal:omit-tag="">
-           ... /
-        </span>
-        <a href=""
+              tal:omit-tag="">/ ...</span>
+        /
+        <a href="" class="itemBatch"
            tal:attributes="href python:view.make_link(batch.lastpage)"
            tal:content="batch/lastpage">3457</a>
     </span>

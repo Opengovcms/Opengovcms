@@ -1984,6 +1984,9 @@ li:hover .globalSectionsLevel1 {
   margin-left: -14px;
   vertical-align: 1px;
 }
+.globalSectionsLevel1 p {
+  margin: 0 0 3px;
+}
 #desktop-logo {
   background-image: url(../images/logo.png);
   display: inline-block;

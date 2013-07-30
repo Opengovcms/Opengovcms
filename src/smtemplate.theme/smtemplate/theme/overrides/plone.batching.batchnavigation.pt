@@ -37,7 +37,7 @@
     <!-- Link to first -->
     <span tal:condition="batch/show_link_to_first"
           tal:omit-tag="">
-        <a href=""
+        <a href="" class="itemBatch"
            tal:attributes="href python:view.make_link(1)">1</a> /
         <span tal:condition="batch/second_page_not_in_navlist"
               tal:omit-tag="">... /</span>
@@ -74,7 +74,7 @@
         <span tal:condition="batch/before_last_page_not_in_navlist"
               tal:omit-tag="">/ ...</span>
         /
-        <a href=""
+        <a href="" class="itemBatch"
            tal:attributes="href python:view.make_link(batch.lastpage)"
            tal:content="batch/lastpage">3457</a>
     </span>

@@ -259,18 +259,19 @@ function smtoggleSelect(name, fid, formName) {
                                                    show_about python:not isAnon or allowAnonymousViewAbout;">
                           <div class="searchResults">
                               <tal:results repeat="item batch">
-                                    <h2 class="searchResultsItemTitle">
-                                      <tal:x condition="python:item.portal_type=='File'"><span tal:attributes="class python:view.mtype(item)" /></tal:x>
+                                    <h2 class="searchResultsItemTitle">                                      
                                       <a href="#"
                                          tal:define="item_url item/getURL;
                                                      item_type item/PortalType"
                                          tal:attributes="href python:item_type in use_view_action and (item_url + '/view') or item_url;
-                                                         class string:state-${item/review_state}"
-                                         tal:content="python:item.getDataOrigin().pretty_title_or_id()" />
+                                                         class string:state-${item/review_state}">
+                                         <tal:x condition="python:item.portal_type=='File'"><span tal:attributes="class python:view.mtype(item)" /></tal:x>
+                                         <span class="sritContent"
+                                               tal:content="python:item.getDataOrigin().pretty_title_or_id()">Content</span></a>
                                     </h2>
                                     <div class="searchResultsItem">
                                       <span class="discreet" i18n:domain="plone"
-                                        tal:condition="show_about">
+                                            tal:condition="show_about">
                                         <span tal:define="categories item/Subject|nothing"
                                               tal:condition="categories">
                                           &mdash;

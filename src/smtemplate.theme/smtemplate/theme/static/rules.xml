@@ -139,6 +139,7 @@
         <drop css:content="img[alt='File'][src$='image.png']" />
         <drop css:content="#plone-contentmenu-factories li a img" />
         <drop css:content="#viewlet-below-content-body .documentActions" />
+        <drop css:content=".fieldTextFormat" />
 
         <!-- Footer -->
         <replace css:content-children="#portal-footer-wrapper > .cell" css:theme-children="#portal-footer-inner" />

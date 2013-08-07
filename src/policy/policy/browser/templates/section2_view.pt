@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+<metal:override fill-slot="top_slot"
+    tal:define="disable_column_one python:request.set('disable_plone.leftcolumn',1);
+                disable_column_two python:request.set('disable_plone.rightcolumn',1);"/>
+
+<body>
+    <metal:content-core fill-slot="content-core">
+        <metal:block define-macro="listing" extend-macro="context/folder_listing/macros/content-core">
+            <!-- we don't want the dl -->
+            <metal:entries fill-slot="entries" tal:define="batch python:[i for i in batch if not i.exclude_from_nav]">
+                <metal:block use-macro="context/folder_listing/macros/entries">
+                    <metal:entry fill-slot="entry">
+                    <div class="subSectionTile"
+                         tal:define="item_object item/getObject; 
+                                     index repeat/item/index; 
+                                     index python:index%3; 
+                                     pos python:'%s:3'%index if index else index"
+                           tal:attributes="class string:subSectionTile cell width-1:3 position-$pos;">
+                        <a href="#"
+                           tal:attributes="title item_description;
+                                           href python: item_type in use_view_action and item_url+'/view' or item_url;">
+                            <h2 class="sstHeadline"
+                                metal:define-macro="listitem"
+                                tal:content="item_title_or_id">Title</h2>
+                        </a>
+                        <div class="sstDecription" 
+                             tal:condition="item_description"
+                             tal:content="item_description">Dummy Section Item Description</div>
+                      </div>
+                    </metal:entry>
+                </metal:block>
+            </metal:entries>
+        </metal:block>
+    </metal:content-core>
+
+</body>
+</html>

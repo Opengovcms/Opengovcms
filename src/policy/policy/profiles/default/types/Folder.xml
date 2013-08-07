@@ -3,6 +3,7 @@
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <property name="view_methods" purge="False">
   <element value="section_view"/>
+  <element value="section_wo_images_view"/>
  </property>
  <property name="behaviors">
   <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>

@@ -12,6 +12,15 @@
       menu="plone_displayviews"
       title="Section view"
       />
+  <page
+      name="section_wo_images_view"
+      for="plone.app.contenttypes.interfaces.IFolder"
+      layer="policy.interfaces.IBrowserLayer"
+      template="templates/section2_view.pt"
+      permission="zope2.View"
+      menu="plone_displayviews"
+      title="Section view w/o images"
+      />
 
   <page
       name="events_view"

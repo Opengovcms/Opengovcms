@@ -83,18 +83,18 @@ function smtoggleSelect(name, fid, formName) {
         <input type="hidden" name="sort_on" value="" />
 
         <fieldset id="search-field" i18n:domain="plone" class="noborder">
-            <input class="searchPage"
-                   name="SearchableText"
-                   type="text"
-                   size="25"
-                   title="Search Site"
-                   i18n:attributes="title title_search_title;"
-                   tal:attributes="value st;"
-                   />
             <input class="searchPage searchButton allowMultiSubmit"
                    type="submit"
                    value="Search"
                    i18n:attributes="value label_search;"/>
+            <div class="searchTextWrapper">
+              <input class="searchPage"
+                     name="SearchableText"
+                     type="text"
+                     size="25"
+                     title="Search Site"
+                     i18n:attributes="title title_search_title;"
+                     tal:attributes="value st;" /></div>
         </fieldset>             
                 <p id="rss-subscription" i18n:domain="plone"
                    tal:define="syndication context/@@tools/syndication|nothing"

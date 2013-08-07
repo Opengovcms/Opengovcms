@@ -2319,7 +2319,8 @@ dl.portletError {
   line-height: 18px;
   margin: 18px 0 15px;
 }
-.section-home .portletHeader {
+.section-home .portletHeader,
+.largeHeader .portletHeader {
   font-size: 24.013722127px;
   line-height: 30px;
 }

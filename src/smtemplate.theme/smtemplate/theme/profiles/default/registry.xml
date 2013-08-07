@@ -5,6 +5,7 @@
       <element>horizontalCarousel</element>
       <element>cyanBackground</element>
       <element>twoColumnsNews</element>
+      <element>largeHeader</element>
     </value>
   </record>
 </registry>

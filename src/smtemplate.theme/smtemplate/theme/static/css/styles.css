@@ -3299,12 +3299,16 @@ a.managePortletsFallback {
   .navTreeLevel1 > .navTreeCurrentNode > a,
   .navTreeLevel1 > .navTreeItemInPath > a {
     background-image: none;
+    padding-left: 10px;
   }
   .navTreeLevel0 > .navTreeCurrentNode,
   .navTreeLevel0 > .navTreeItemInPath,
   .navTreeLevel1 > .navTreeCurrentNode,
   .navTreeLevel1 > .navTreeItemInPath {
     padding-left: 0;
+  }
+  .navTreeLevel2 {
+    padding-left: 10px;
   }
   .navMobileExclude {
     display: none;

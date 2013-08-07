@@ -2464,6 +2464,7 @@ dl.portletError {
 .navTreeLevel1 > .navTreeItemInPath > a {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAHCAYAAADu4qZ8AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIlJREFUeNpi5KjumcjAwLAHiDczQIA9ELt9bymuZiASMAHxMSDuBmIbINYD4mlAfJ+BBMACxCuB+AsQzwViNiAGuWAZqYb4A/FGIP4HxNxAvAaIHYD4ACmGBABxOBBHQcWmQQ0jyZAKIJ4H1fwDiDWAOIkU74AC9iUQRwOxMBCrQV30gBRDAAIMAAyfGKDIqHAOAAAAAElFTkSuQmCC) no-repeat 100% 50%;
   font-weight: bold;
+  padding-left: 4px;
   padding-right: 20px;
 }
 .navTreeLevel2 {

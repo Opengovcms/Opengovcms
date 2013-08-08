@@ -25,7 +25,6 @@ div.cell,
 }
 #desktop-logo,
 #portal-breadcrumbs,
-.portletCarousel,
 #portal-footer-wrapper .panels {
   display: none;
 }
@@ -85,6 +84,78 @@ div.cell,
 }
 .tableCell .sstDecription {
   margin-bottom: @baseLineHeight/2;
+}
+
+// Carousel 
+.portletCarousel {
+  margin: 0 0 18px;
+  padding: 0 !important;
+}
+.carouselPortletItemImg,
+.carouselPortletItemDescription,
+.carouselPortletItemCaption {
+  display: none;
+}
+.carouselPortletItem {
+  height: auto;
+}
+.carouselPortletItemWrapper {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAB1CAMAAABTT8BvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIRQTFRFB3CACHaGB2l3B29+BmNwB3KCB29/B3KBBmRxB3GAB2d2B3B/B2p4B2t5B2h3B3GBB2l4CHWGBmJwCHeIBmRyCHODCHSFB2Z1B25+B2V0B3OCB219B2h2CHaHCHeHB2p5B2x7B2t6B2d1B3ODCHWFB259CHSEB218B2Z0B2RyBmNxB2VzbP54vAAAAHxJREFUeNpcwoUKgFAMAMDZ7bO7O/7//2QwHHocxDF0HW1bKkk0DGFZeJbBtvE0hXnmVQWaRg0DC4EtC78cB+s6VhRaFLCuvK5h3/kw8HHknof7nrouDgIsy9T3cdNQ28bTxPMcjuOzLOG+/8/zM0nANPF1/asqjaJHgAEAkasW7XXOy1UAAAAASUVORK5CYII=);
+  height: 117px;
+  padding: 0 15px 0 10px;
+  position: static;
+  width: auto !important;
+  white-space: nowrap;
+}
+.carouselPortletItemWrapper:before {
+  content: "";
+  display: inline-block;
+  height: 117px;
+  vertical-align: middle;
+  width: 1%;
+}
+.carouselPortletItemTitle {
+  color: @white;
+  display: inline-block;
+  font-size: @baseFontSize/0.778;
+  line-height: @baseLineHeight/0.75;
+  margin: 0;
+  padding: 15px 0;
+  vertical-align: middle;
+  width: 97%;
+  white-space: normal;
+}
+.portletCarousel ul {
+  margin: 10px 0;
+  position: static;
+  text-align: center;
+  width: auto;
+}
+.portletCarousel li {
+  display: inline-block;
+  float: none !important;
+  vertical-align: top;
+  width: auto !important;
+}
+.portletCarousel li a {
+  background: none !important;
+  border: 2px solid #929498 !important;
+  border-radius: 50%;
+  height: 20px;
+  margin: 0 5px;
+  overflow: hidden;
+  padding: 0;
+  width: 20px;
+}
+.portletCarousel li.current a,
+.portletCarousel li a:hover {
+  background-color: #edeaea !important;
+}
+.portletCarousel li a span {
+  display: none;
+}
+.portletCarousel li a:before {
+  display: none !important;
 }
 
 }

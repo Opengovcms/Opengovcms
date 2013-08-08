@@ -15,15 +15,16 @@
         <metal:block define-macro="listing" extend-macro="context/folder_listing/macros/content-core">
             <!-- we don't want the dl -->
             <metal:entries fill-slot="entries" tal:define="items python:[i for i in batch if not i.exclude_from_nav]">
-                <div tal:repeat="batch python:[items[x:x+3] for x in range(0,len(items),3)]">
+              <div class="tableWrapper">
+                <div class="table"
+                     tal:repeat="batch python:[items[x:x+3] for x in range(0,len(items),3)]">
                 <metal:block use-macro="context/folder_listing/macros/entries">
                     <metal:entry fill-slot="entry">
-                    <div class="subSectionTile"
+                    <div class="tableCell"
                          tal:define="item_object item/getObject; 
                                      index repeat/item/index; 
                                      index python:index%3; 
-                                     pos python:'%s:3'%index if index else index"
-                           tal:attributes="class string:subSectionTile cell width-1:3 position-$pos;">
+                                     pos python:'%s:3'%index if index else index">
                         <a href="#"
                            tal:attributes="title item_description;
                                            href python: item_type in use_view_action and item_url+'/view' or item_url;">
@@ -38,6 +39,7 @@
                     </metal:entry>
                 </metal:block>
                 </div>
+              </div>
             </metal:entries>
         </metal:block>
     </metal:content-core>

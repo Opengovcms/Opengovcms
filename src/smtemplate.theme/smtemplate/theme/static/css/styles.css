@@ -2044,6 +2044,9 @@ li:hover .globalSectionsLevel1 {
   padding: 0 5px;
   vertical-align: -1px;
 }
+.template-search #portal-breadcrumbs {
+  display: none;
+}
 #portal-footer-wrapper {
   background: -webkit-linear-gradient(#e9eff3, white);
   background: linear-gradient(#e9eff3, white);
@@ -2200,7 +2203,27 @@ li:hover .globalSectionsLevel1 {
   overflow: hidden;
 }
 .sstHeadline {
-  margin: 9px 0;
+  margin: 9px 0 0;
+}
+.sstDecription {
+  margin: 9px 0 0;
+}
+.tableWrapper {
+  margin: 0 -30px;
+}
+.table {
+  border-spacing: 30px 8px;
+  display: table;
+  width: 100%;
+}
+.tableCell {
+  border-bottom: 1px solid #a7b0b5;
+  display: table-cell;
+  padding: 0 0 9px;
+  width: 33%;
+}
+.tableCell .sstDecription {
+  margin-bottom: 18px;
 }
 .template-search #portal-columns {
   min-height: 400px;
@@ -3392,6 +3415,18 @@ a.managePortletsFallback {
   }
   .portlet a:hover {
     text-decoration: none;
+  }
+  .tableWrapper {
+    margin: 0 ;
+  }
+  .table,
+  .tableCell {
+    border-spacing: 0;
+    display: block;
+    width: auto;
+  }
+  .tableCell .sstDecription {
+    margin-bottom: 9px;
   }
 }
 @media print {

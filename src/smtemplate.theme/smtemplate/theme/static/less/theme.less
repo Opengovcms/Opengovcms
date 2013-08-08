@@ -330,6 +330,9 @@ li:hover .globalSectionsLevel1 {
   padding: 0 5px;
   vertical-align: -1px;
 }
+.template-search #portal-breadcrumbs {
+  display: none;
+}
 
 // Footer
 #portal-footer-wrapper {
@@ -494,7 +497,29 @@ li:hover .globalSectionsLevel1 {
   overflow: hidden;
 }
 .sstHeadline {
-  margin: @baseLineHeight/2 0;
+  margin: @baseLineHeight/2 0 0;
+}
+.sstDecription {
+  margin: @baseLineHeight/2 0 0;
+}
+
+// Subsection View w/o Images
+.tableWrapper {
+  margin: 0 -30px;
+}
+.table {
+  border-spacing: 30px 8px;
+  display: table;
+  width: 100%;
+}
+.tableCell {
+  border-bottom: 1px solid @grayLight;
+  display: table-cell;
+  padding: 0 0 @baseLineHeight/2;
+  width: 33%;
+}
+.tableCell .sstDecription {
+  margin-bottom: @baseLineHeight;
 }
 
 // Search results page

@@ -14,7 +14,8 @@
     <metal:content-core fill-slot="content-core">
         <metal:block define-macro="listing" extend-macro="context/folder_listing/macros/content-core">
             <!-- we don't want the dl -->
-            <metal:entries fill-slot="entries" tal:define="batch python:[i for i in batch if not i.exclude_from_nav]">
+            <metal:entries fill-slot="entries" tal:define="items python:[i for i in batch if not i.exclude_from_nav]">
+                <div tal:repeat="batch python:[items[x:x+3] for x in range(0,len(items),3)]">
                 <metal:block use-macro="context/folder_listing/macros/entries">
                     <metal:entry fill-slot="entry">
                     <div class="subSectionTile"
@@ -33,9 +34,10 @@
                         <div class="sstDecription" 
                              tal:condition="item_description"
                              tal:content="item_description">Dummy Section Item Description</div>
-                      </div>
+                    </div>
                     </metal:entry>
                 </metal:block>
+                </div>
             </metal:entries>
         </metal:block>
     </metal:content-core>

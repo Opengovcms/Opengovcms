@@ -122,3 +122,11 @@ def addSearchPortletsManager(tool):
     setup_tool.runImportStepFromProfile(
         'profile-policy:migrate', 'portlets',
         run_dependencies=False)
+
+def updateSMRegistry(tool):
+    """ """
+    site = tool.aq_parent
+    setup_tool = getattr(site, 'portal_setup')
+    setup_tool.runImportStepFromProfile(
+        'profile-smtemplate.theme:default', 'plone.app.registry',
+        run_dependencies=False)

@@ -244,4 +244,15 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="27">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.updateSMRegistry"
+      title="Update smtemplate.theme registry"
+      description="Update some registry settings."
+      />
+  </genericsetup:upgradeSteps>
+
 </configure>

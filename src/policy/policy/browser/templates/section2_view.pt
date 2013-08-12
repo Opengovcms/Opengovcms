@@ -16,28 +16,30 @@
             <!-- we don't want the dl -->
             <metal:entries fill-slot="entries" tal:define="items python:[i for i in batch if not i.exclude_from_nav]">
               <div class="tableWrapper">
-                <div class="table"
-                     tal:repeat="batch python:[items[x:x+3] for x in range(0,len(items),3)]">
-                <metal:block use-macro="context/folder_listing/macros/entries">
-                    <metal:entry fill-slot="entry">
-                    <div class="tableCell"
-                         tal:define="item_object item/getObject; 
-                                     index repeat/item/index; 
-                                     index python:index%3; 
-                                     pos python:'%s:3'%index if index else index">
-                        <a href="#"
-                           tal:attributes="title item_description;
-                                           href python: item_type in use_view_action and item_url+'/view' or item_url;">
-                            <h2 class="sstHeadline"
-                                metal:define-macro="listitem"
-                                tal:content="item_title_or_id">Title</h2>
-                        </a>
-                        <div class="sstDecription" 
-                             tal:condition="item_description"
-                             tal:content="item_description">Dummy Section Item Description</div>
-                    </div>
-                    </metal:entry>
-                </metal:block>
+                <div class="table">
+                  <div class="tableRow"
+                       tal:repeat="batch python:[items[x:x+3] for x in range(0,len(items),3)]">
+                  <metal:block use-macro="context/folder_listing/macros/entries">
+                      <metal:entry fill-slot="entry">
+                      <div class="tableCell"
+                           tal:define="item_object item/getObject; 
+                                       index repeat/item/index; 
+                                       index python:index%3; 
+                                       pos python:'%s:3'%index if index else index">
+                          <a href="#"
+                             tal:attributes="title item_description;
+                                             href python: item_type in use_view_action and item_url+'/view' or item_url;">
+                              <h2 class="sstHeadline"
+                                  metal:define-macro="listitem"
+                                  tal:content="item_title_or_id">Title</h2>
+                          </a>
+                          <div class="sstDecription" 
+                               tal:condition="item_description"
+                               tal:content="item_description">Dummy Section Item Description</div>
+                      </div>
+                      </metal:entry>
+                  </metal:block>
+                  </div>
                 </div>
               </div>
             </metal:entries>

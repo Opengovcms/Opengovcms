@@ -2191,7 +2191,8 @@ li:hover .globalSectionsLevel1 {
 .subSectionTile.position-0 {
   clear: both;
 }
-.subSectionTile a:hover {
+.subSectionTile a:hover,
+.tableCell a:hover {
   color: #087b8c;
   text-decoration: underline;
 }
@@ -2215,6 +2216,9 @@ li:hover .globalSectionsLevel1 {
   border-spacing: 30px 8px;
   display: table;
   width: 100%;
+}
+.tableRow {
+  display: table-row;
 }
 .tableCell {
   border-bottom: 1px solid #a7b0b5;
@@ -3424,6 +3428,7 @@ a.managePortletsFallback {
     margin: 0 ;
   }
   .table,
+  .tableRow,
   .tableCell {
     border-spacing: 0;
     display: block;

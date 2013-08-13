@@ -14,19 +14,15 @@ dl.portletError {
   background-color: #ffa500;
 }
 .portletHeader {
-  font-size: @baseFontSize / 0.778;
+  font-size: @baseFontSize / 0.777;
   font-weight: bold;
-  line-height: @baseLineHeight;
-  margin: @baseLineHeight 0 @baseLineHeight / 1.2;
+  line-height: @baseLineHeight * 1.223;
+  margin: @baseLineHeight/1.125 0 @baseLineHeight*0.723;
 }
 .largeHeader .portletHeader {
   font-size: @baseFontSize/0.583;
   line-height: @baseLineHeight/0.6;
-  margin-top: 5px;
-}
-.largeHeader .portletItemTitle {
-  font-size: @baseFontSize/0.583;
-  line-height: @baseLineHeight/0.6;
+  margin-top: 10px;
 }
 .portletItem {
   line-height: @baseLineHeight/0.9;
@@ -43,7 +39,6 @@ dl.portletError {
 }
 .portletFooter a:hover {
   background-color: @grayLight;
-  text-decoration: none;
 }
 .managedPortlet {
   margin: @baseLineHeight/2 0;
@@ -296,6 +291,19 @@ div.portletStaticText {
 // Portlet Rich
 .portletRich {
   padding: 0;
+}
+.richPortletTitle {
+  font-weight: bold;
+  margin-top: 15px;
+}
+.portletItemImageWrapper + .richPortletTitle {
+  margin: 0;
+  font-weight: normal;
+}
+.largeHeader .richPortletTitle {
+  font-size: @baseFontSize/0.583;
+  line-height: @baseLineHeight/0.6;
+  margin-top: 10px;
 }
 
 // Carousel

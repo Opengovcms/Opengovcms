@@ -2338,19 +2338,15 @@ dl.portletError {
   background-color: orange;
 }
 .portletHeader {
-  font-size: 17.994858612px;
+  font-size: 18.018018018px;
   font-weight: bold;
-  line-height: 18px;
-  margin: 18px 0 15px;
+  line-height: 22.014px;
+  margin: 16px 0 13.014px;
 }
 .largeHeader .portletHeader {
   font-size: 24.013722127px;
   line-height: 30px;
-  margin-top: 5px;
-}
-.largeHeader .portletItemTitle {
-  font-size: 24.013722127px;
-  line-height: 30px;
+  margin-top: 10px;
 }
 .portletItem {
   line-height: 20px;
@@ -2367,7 +2363,6 @@ dl.portletError {
 }
 .portletFooter a:hover {
   background-color: #a7b0b5;
-  text-decoration: none;
 }
 .managedPortlet {
   margin: 9px 0;
@@ -2591,6 +2586,19 @@ dl.portletError {
 }
 .portletRich {
   padding: 0;
+}
+.richPortletTitle {
+  font-weight: bold;
+  margin-top: 15px;
+}
+.portletItemImageWrapper + .richPortletTitle {
+  margin: 0;
+  font-weight: normal;
+}
+.largeHeader .richPortletTitle {
+  font-size: 24.013722127px;
+  line-height: 30px;
+  margin-top: 10px;
 }
 .portletCarousel {
   margin: 0 0 36px;

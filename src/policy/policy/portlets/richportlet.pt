@@ -5,10 +5,13 @@
        tal:condition="not:view/data/omit_border">
       <a tal:omit-tag="not:view/has_title_link"
          tal:attributes="href view/data/title_more_url">
-        <div class="portletItemImageWrapper">      
-          <img tal:replace="structure view/get_title_image_tag|nothing" />
+        <div class="portletItemImageWrapper"
+             tal:define="img view/get_title_image_tag|nothing"
+             tal:condition="img">
+          <img tal:replace="structure img" />
         </div>
-        <tal:content tal:content="view/data/title">Title</tal:content>
+        <div class="richPortletTitle"
+             tal:content tal:content="view/data/title">Title</div>
        </a>
   </div>
 

@@ -2339,7 +2339,7 @@ dl.portletError {
 }
 .portletHeader {
   font-size: 18.018018018px;
-  font-weight: bold;
+  font-family: "Swift Neue LT W01 Bold", serif;
   line-height: 22.014px;
   margin: 16px 0 13.014px;
 }
@@ -2588,12 +2588,12 @@ dl.portletError {
   padding: 0;
 }
 .richPortletTitle {
-  font-weight: bold;
+  font-family: "Swift Neue LT W01 Bold", serif;
   margin-top: 15px;
 }
 .portletItemImageWrapper + .richPortletTitle {
+  font-family: "Swift Neue LT W01 Light", serif;
   margin: 0;
-  font-weight: normal;
 }
 .largeHeader .richPortletTitle {
   font-size: 24.013722127px;

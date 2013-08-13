@@ -1984,12 +1984,13 @@ li:hover .globalSectionsLevel1 {
   margin: 0 0 3px;
 }
 #desktop-logo {
-  background-image: url(../images/logo.png);
   display: inline-block;
   height: 96px;
   overflow: hidden;
-  text-indent: -9999px;
   width: 290px;
+}
+#desktop-logo:before {
+  content: url(../images/logo.png);
 }
 #mobile-logo {
   display: none;
@@ -3377,12 +3378,13 @@ a.managePortletsFallback {
     padding: 20px 0 10px;
   }
   #mobile-logo {
-    background-image: url(../images/mobile-logo.png);
     display: inline-block;
     height: 54px;
     overflow: hidden;
-    text-indent: -9999px;
     width: 290px;
+  }
+  #mobile-logo:before {
+    content: url(../images/mobile-logo.png);
   }
   #desktop-logo,
   #portal-breadcrumbs,

@@ -16,12 +16,15 @@ div.cell,
   padding: 20px 0 10px;
 }
 #mobile-logo {
-  background-image: @mobileLogo;
+  // background-image: @mobileLogo;
   display: inline-block;
   height: @mobileLogoHeight;
   overflow: hidden;
-  text-indent: -9999px;
+  // text-indent: -9999px;
   width: @mobileLogoWidth;
+  &:before {
+    content: @mobileLogo;
+  }
 }
 #desktop-logo,
 #portal-breadcrumbs,

@@ -266,16 +266,20 @@ li:hover .globalSectionsLevel1 {
 
 // Portal Logo 
 #desktop-logo {
-  background-image: @desktopLogo;
+  // background-image: @desktopLogo;
   display: inline-block;
   height: @desktopLogoHeight;
   overflow: hidden;
-  text-indent: -9999px;
+  // text-indent: -9999px;
   width: @desktopLogoWidth;
+  &:before {
+    content: @desktopLogo;
+  }
 }
 #mobile-logo {
   display: none;
 }
+
 
 // Document Actions
 .documentActions {

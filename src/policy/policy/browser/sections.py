@@ -1,4 +1,5 @@
 from plone.app.layout.viewlets.common import GlobalSectionsViewlet as ViewletBase
+from plone.app.layout.viewlets.content import DocumentBylineViewlet as BylineBase
 from plone.app.layout.navigation.defaultpage import getDefaultPage
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Acquisition import aq_inner
@@ -37,3 +38,20 @@ class GlobalSectionsViewlet(ViewletBase):
             return tuple(manager)
         except TypeError:
             return tuple()
+
+class DocumentBylineViewlet(BylineBase):
+    index = ViewPageTemplateFile("templates/document_byline.pt")
+
+    def show(self):
+        is_portal_root = self.context_state.is_portal_root()
+        context = aq_inner(self.context)
+        try:
+            manager = PanelManager(context,
+                                   self.request,
+                                   context,
+                                   "plone.belowcontentbody"
+                                   ).__of__(context)
+            panels = len(tuple(manager)) > 0
+        except:
+            panels = False
+        return not is_portal_root and not panels

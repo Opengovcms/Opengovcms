@@ -64,7 +64,13 @@
       permission="zope2.View"
       layer="policy.interfaces.IBrowserLayer"
       />
-
+  <viewlet
+      name="plone.belowcontentbody.documentbyline"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+      class=".sections.DocumentBylineViewlet"
+      permission="zope2.View"
+      layer="policy.interfaces.IBrowserLayer"
+      />
   <page
       name="search"
       class=".search.Search"

@@ -3,7 +3,7 @@
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     i18n:domain="policy">
 
-    <portletmanager 
+    <portletmanager
         name="policy.SearchManager"
         type="policy.interfaces.ISearchPortlets"
         />
@@ -16,5 +16,6 @@
    <portlet addview="portlets.Search" remove="true" />
    <portlet addview="portlets.Language" remove="true" />
    <portlet addview="portlets.Review" remove="true" />
+   <portlet addview="plone.portlet.collection.Collection" remove="true" />
 
 </portlets>

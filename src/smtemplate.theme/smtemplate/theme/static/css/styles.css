@@ -3230,7 +3230,7 @@ a.managePortletsFallback {
 }
 /* @end */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (orientation: portrait), only screen and (max-width: 767px) {
   #visual-portal-wrapper,
   #portal-footer-inner {
     width: auto;
@@ -3426,7 +3426,7 @@ a.managePortletsFallback {
     width: auto;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 767px) {
   div.row {
     float: none;
     width: auto;

@@ -289,8 +289,15 @@ function smtoggleSelect(name, fid, formName) {
                                       </span>
                                       <div class="documentLocation link-location"
                                             tal:define="breadcrumbs python: view.breadcrumbs(item);
-                                                        is_rtl context/@@plone_portal_state/is_rtl;"
-                                            tal:condition='breadcrumbs'>
+                                                        is_rtl context/@@plone_portal_state/is_rtl;">
+                                          <span tal:attributes="dir python:is_rtl and 'rtl' or 'ltr';">
+                                            <a i18n:translate="tabs_home"
+                                            tal:attributes="href navigation_root_url">Home</a>
+                                            <span tal:condition="breadcrumbs" class="breadcrumbSeparator">
+                                                <tal:ltr condition="not: is_rtl">»</tal:ltr>
+                                                <tal:rtl condition="is_rtl">\</tal:rtl>
+                                            </span>
+                                          </span>
                                           <span tal:repeat="crumb breadcrumbs"
                                                 tal:attributes="dir python:is_rtl and 'rtl' or 'ltr';">
                                               <tal:item tal:define="is_last repeat/crumb/end;

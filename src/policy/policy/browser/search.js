@@ -191,7 +191,7 @@ jQuery(function ($) {
 
     // Handle clicks in the batch navigation bar. Load those with Ajax as
     // well.
-    $default_res_container.delegate('.listingBar a', 'click', function (e) {
+    $default_res_container.delegate('.listingBar a, .listingAmount a', 'click', function (e) {
         query = this.search.split('?')[1];
         $default_res_container.pullSearchResults(query);
         pushState(query);

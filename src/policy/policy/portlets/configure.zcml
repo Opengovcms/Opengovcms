@@ -20,4 +20,14 @@
       template="richportlet.pt"
       />
 
+  <plone:portletRenderer
+      portlet="plone.app.portlets.portlets.navigation.INavigationPortlet"
+      layer="policy.interfaces.IBrowserLayer"
+      class=".navigation.NavRenderer"
+      />
+
+  <adapter provides=".navigation.IPolicyNavigationQueryBuilder" factory=".navigation.PolicyQueryBuilder" />
+  <adapter provides=".navigation.IPolicyNavtreeStrategy" factory=".navigation.PolicyNavtreeStrategy" />
+
+
 </configure>

@@ -23,9 +23,9 @@ class GlobalSectionsViewlet(ViewletBase):
             item = site
         else:
             item = site.restrictedTraverse(tab['id'])
-        def_page = getDefaultPage(item)
-        if def_page:
-            item = item.restrictedTraverse(def_page)
+        #def_page = getDefaultPage(item)
+        #if def_page:
+            #item = item.restrictedTraverse(def_page)
         return item
 
     def getPanels(self, context):

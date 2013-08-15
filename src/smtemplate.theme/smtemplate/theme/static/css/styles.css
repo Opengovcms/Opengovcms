@@ -3266,6 +3266,10 @@ a.managePortletsFallback {
     margin: 5px 0 0;
     position: static;
   }
+  .jPanelMenu,
+  body {
+    overflow-x: hidden;
+  }
   .menu-trigger {
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAjCAYAAADv0ujUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAArdJREFUeNrUWE+LUnEU9f2fcv7VNDVEkBEMtRx4EMxGJFq7azeLNoL4ARQ/QBu/goE7wY20G1qULQIX4mqoKGaVQ5KRMppPff86v8f92cs+gHcuHN44q8N999xz7lMSf0sBVHpyqRAIYn9H5AQ0wKrX64epVOqB67rquplqmhZaluXbtv0WP2eAJ8nrwE6/338VMizHcT6C3y3AlG//GnA/ZFzNZvMEHLcFYfHqDWArwbgGg4HgZwmNqXJ+OROezWYmjW7U4UiJ4/H4J1fC3W73Ii44ob5puVx+mc/nX+i6vo2xWftqUxQlnM/nk1ardVqr1b7iX65orkLquwHcAw5ouPU172Px1n1gAvwAesAvwJE72CThbQIbDAxEGsYC+A2M5S5WVsxDpycHt5OkPep2IN3uSpWy8uSWJeKd/idLCPOwOp3OUyhT832fBWmRJRAZzrPZ7BfaEmI0IrI3J5NJm6Mte553WSgUDmkZRMYhNsRuMpl8wnFmkdq20un0cZywTuuMbQ2Hw6RMayoJzeRMGLoy5LpVSYFur9f7zJSsg8PiEwkusmbR7oMjVLFYfG4Yxh6XLGGa5rxarb5GfSB7vpQrbQe4DeyTRa87SySoo1NApMg+MBINl4enQZeHHG4OBhLQ7nUoT4hc4SsrF7PGyO2kwwVyfhNXseIdlt3l1OFwJamFkqiB1fEYjnLiuq7GZUvA5QJkife2bb8RgpNZQohsH4feBdcskcvlHtFSWJ75u0hGd7lmiUwmc0yX/ZJwkrPQRqPR9ThhOcdsC7rS5TJQaZAX7Xb7lOlXn2+NRuOMbrtoG4hhvgM8LJVKz6bT6WYQBGvvuKqqAXTlVCqVd/h5DnwX17MSy8N74vKgeeYwIgHZ8ojyhDj1F/Km02moN0iEKhPCHu3f5fdh7lfzf1/g/wgwAFmFTqLFY6FUAAAAAElFTkSuQmCC") no-repeat 0 50%;
     -webkit-background-size: 22px 18px;

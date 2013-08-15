@@ -2323,6 +2323,9 @@ form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
   display: block;
   overflow: hidden;
 }
+.belowContentNav {
+  display: none;
+}
 .portlet {
   border-bottom: 1px solid #a7b0b5;
   margin: 0 0 18px;
@@ -3288,7 +3291,10 @@ a.managePortletsFallback {
   #jPanelMenu-menu .navTreeTopNode a,
   #jPanelMenu-menu .navTreeLevel0 > li:not(.navTreeCurrentNode) > a {
     color: white !important;
-    padding: 10px 5px;
+    padding: 10px 5px 10px 10px;
+  }
+  #jPanelMenu-menu .navTreeTopNode a {
+    padding-left: 5px;
   }
   #jPanelMenu-menu {
     padding-left: 0;
@@ -3297,9 +3303,18 @@ a.managePortletsFallback {
     border-bottom: 3px solid #a7b0b5;
     display: block;
   }
+  #theme-globalnav span {
+    padding-left: 10px !important;
+  }
+  #portaltab-index_html span {
+    padding-left: 5px !important;
+  }
   #theme-globalnav li {
     border: 0;
     float: none;
+  }
+  #theme-globalnav .selected {
+    background-color: #087b8c;
   }
   #theme-globalnav > li:hover > a {
     background: none;
@@ -3334,7 +3349,7 @@ a.managePortletsFallback {
     color: white;
     display: block;
     margin: 0;
-    padding: 10px 5px;
+    padding: 10px 5px 10px 10px;
     text-transform: none;
   }
   #portal-siteactions a:hover {
@@ -3354,11 +3369,46 @@ a.managePortletsFallback {
   .navTreeLevel1 > .navTreeItemInPath {
     padding-left: 0;
   }
-  .navTreeLevel2 {
+  #jPanelMenu-menu .navTreeLevel1 > .navTreeItem > a {
+    padding-left: 15px;
+  }
+  #jPanelMenu-menu .navTreeLevel2 {
     padding-left: 10px;
   }
   .navMobileExclude {
     display: none;
+  }
+  .belowContentNav {
+    display: block;
+  }
+  .belowContentNav .portletNavigationTree {
+    border: 0;
+  }
+  .belowContentNav .navTreeItem {
+    border: 0;
+  }
+  .belowContentNav .navTreeItem a {
+    background-color: #60969f;
+    color: white;
+    font-size: 11.998px;
+    line-height: 16px;
+    padding: 5px;
+    margin: 0 0 5px;
+  }
+  .belowContentNav .navTreeItem,
+  .belowContentNav .navTreeCurrentNode.navTreeTopNode,
+  .belowContentNav .navTreeCurrentNode > a,
+  .belowContentNav .navTreeItemInPath > a {
+    display: none;
+  }
+  .belowContentNav .navTreeCurrentNode,
+  .belowContentNav .navTreeItemInPath,
+  .belowContentNav .navTreeCurrentNode .navTreeItem,
+  .belowContentNav .navTreeCurrentNode.navTreeTopNode ~ .navTreeItem {
+    display: block;
+  }
+  .belowContentNav .navTreeLevel2 {
+    padding: 0;
   }
   .template-search #portal-columns {
     min-height: 0;
@@ -3405,29 +3455,6 @@ a.managePortletsFallback {
   }
   #portal-searchbox .searchButton[type="submit"] {
     padding: 3px 5px;
-  }
-  #portal-column-one .portletNavigationTree {
-    border: 0;
-    display: block;
-  }
-  #portal-column-one .navTreeItem {
-    border: 0;
-  }
-  #portal-column-one .navTreeItem a {
-    background-color: #60969f;
-    color: white;
-    margin: 0 0 5px;
-  }
-  #portal-column-one .portletNavigationTree li:not(.navTreeCurrentNode),
-  #portal-column-one .portletNavigationTree .navTreeCurrentNode > a {
-    display: none;
-  }
-  #portal-column-one .portletNavigationTree .navTreeCurrentNode {
-    border: 0;
-    padding: 0;
-  }
-  #portal-column-one .portletNavigationTree .navTreeCurrentNode li {
-    display: block;
   }
   #portal-footer {
     border: 0;
@@ -3580,6 +3607,7 @@ a.managePortletsFallback {
   #foldercontents-order-column,
   input.context,
   .portletCarousel,
+  .belowContentNav,
   .visualNoPrint {
     display: none;
   }

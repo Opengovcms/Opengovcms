@@ -50,6 +50,15 @@
         </xsl:copy>
     </xsl:template>
 
+    <xsl:template css:match="#viewlet-below-content">
+        <div id="viewlet-below-content"> 
+            <xsl:apply-templates />
+            <div class="belowContentNav">
+                <xsl:copy-of select="//*[contains(concat(' ', normalize-space(@class), ' '), ' portletNavigationTree ')]/*[contains(concat(' ', normalize-space(@class), ' '), ' portletItem ')]" />
+            </div>
+        </div>
+    </xsl:template>
+
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
     

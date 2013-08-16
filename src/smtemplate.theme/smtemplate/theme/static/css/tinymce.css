@@ -480,6 +480,9 @@ pre {
 abbr[title] {
   border: 0;
 }
+iframe {
+  max-width: 100%;
+}
 /* @group Content Area */
 
 /* Editor styles */
@@ -843,6 +846,9 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 }
 .image-inline {
   float: none;
+}
+.captioned {
+  max-width: 100%;
 }
 .image-caption {
   margin: 0;

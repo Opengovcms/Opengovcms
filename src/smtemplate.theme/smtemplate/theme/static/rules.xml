@@ -54,7 +54,7 @@
         <div id="viewlet-below-content"> 
             <xsl:apply-templates />
             <div class="belowContentNav">
-                <xsl:copy-of select="//*[contains(concat(' ', normalize-space(@class), ' '), ' portletNavigationTree ')]/*[contains(concat(' ', normalize-space(@class), ' '), ' portletItem ')]" />
+                <xsl:copy-of select="//*[contains(concat(' ', normalize-space(@class), ' '), ' navTreeCurrentNode ')]/ul" />
             </div>
         </div>
     </xsl:template>

@@ -2437,13 +2437,12 @@ dl.portletError {
   margin-right: 4px;
 }
 .portletNavigationTree {
+  border: 0;
+  margin: 0;
   padding: 0;
 }
 .portletNavigationTree .portletItem {
   margin: 0;
-}
-.portletNavigationTree a {
-  color: #087b8c;
 }
 .navTree {
   margin: 0;
@@ -2453,71 +2452,89 @@ dl.portletError {
   border-top: 1px solid #a7b0b5;
   display: block;
 }
-.navTreeLevel0 > .navTreeCurrentNode,
-.navTreeLevel0 > .navTreeItemInPath {
-  background-color: #087b8c;
-  padding-left: 6px;
-}
-.navTreeTopNode {
-  background-color: transparent !important;
-  border: 0;
-  font-size: 17.994858612px;
-  font-weight: bold;
-  line-height: 18px;
-  margin: 18px 0 15px;
-  padding: 0 !important;
-}
 .navTreeItem a {
+  color: #087b8c;
   display: block;
   padding: 10px 0;
 }
 .navTreeItem a:hover {
   text-decoration: underline;
 }
-.navTreeLevel0 > .navTreeCurrentNode > a,
-.navTreeLevel0 > .navTreeItemInPath > a {
+.navTreeTopNode,
+.navTreeDesktopHide {
+  display: none;
+}
+.navTreeItemInPath,
+.navTreeDesktopTopNode .navTreeTopNode {
+  border: 0;
+  display: block;
+}
+.navTreeDesktopTopNode {
+  border-top: 0;
+  border-bottom: 1px solid #a7b0b5;
+  margin: 0 0 18px;
+}
+.navTreeDesktopTopNode > a,
+.navTreeDesktopTopNode .navTreeTopNode a {
+  font-size: 17.994858612px;
+  font-weight: bold;
+  line-height: 18px;
+  padding: 18px 0 15px;
+}
+.includeTopNodeFalse .navTreeDesktopTopNode > a {
+  display: none;
+}
+.navTreeItemInPath.navTreeDesktopHide > a {
+  display: none;
+}
+.navTreeDesktopTopNode > .navTree > .navTreeCurrentNode,
+.navTreeDesktopTopNode > .navTree > .navTreeItemInPath {
+  background-color: #087b8c;
+  padding-left: 6px;
+}
+.navTreeDesktopTopNode > .navTree > .navTreeCurrentNode > .navTreeCurrentItem,
+.navTreeDesktopTopNode > .navTree > .navTreeItemInPath > a {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAICAYAAAD0g6+qAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEhJREFUeNpi+P///1IgdgNiBiRsAsST0MTwYhDhAcTvkQwDGfIWiKNJNQiEPaGGFZJjCLJBIOwFxJeAOJJUQ2AGjYYRfgwQYAAgwsCAqBE6wwAAAABJRU5ErkJggg==) no-repeat 100% 50%;
   color: white;
   padding-right: 20px;
   padding-left: 9px;
 }
-.navTreeTopNode a {
-  color: #087b8c !important;
-  padding: 0;
-}
-.navTreeLevel1 {
+.navTreeDesktopTopNode .navTree .navTree {
   background-color: white;
   font-size: 11.998px;
   line-height: 16px;
 }
-.navTreeLevel1 > .navTreeCurrentNode,
-.navTreeLevel1 > .navTreeItemInPath {
+.navTreeDesktopTopNode > .navTree > .navTreeItem > .navTree > .navTreeCurrentNode,
+.navTreeDesktopTopNode > .navTree > .navTreeItem > .navTree > .navTreeItemInPath {
   background-color: #e9eff3;
   border: 0;
   padding-left: 6px;
 }
-.navTreeLevel1 a {
+.navTreeDesktopTopNode .navTree .navTree a {
   padding: 7px 0 7px 9px;
 }
-.navTreeLevel1 > .navTreeCurrentNode > a,
-.navTreeLevel1 > .navTreeItemInPath > a {
+.navTreeDesktopTopNode > .navTree > .navTreeItem > .navTree > .navTreeCurrentNode > a,
+.navTreeDesktopTopNode > .navTree > .navTreeItem > .navTree > .navTreeItemInPath > a {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAHCAYAAADu4qZ8AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIlJREFUeNpi5KjumcjAwLAHiDczQIA9ELt9bymuZiASMAHxMSDuBmIbINYD4mlAfJ+BBMACxCuB+AsQzwViNiAGuWAZqYb4A/FGIP4HxNxAvAaIHYD4ACmGBABxOBBHQcWmQQ0jyZAKIJ4H1fwDiDWAOIkU74AC9iUQRwOxMBCrQV30gBRDAAIMAAyfGKDIqHAOAAAAAElFTkSuQmCC) no-repeat 100% 50%;
   font-weight: bold;
   padding-left: 4px;
   padding-right: 20px;
 }
-.navTreeLevel2 {
+.navTreeDesktopTopNode .navTree .navTree .navTree {
   background-color: white;
   padding: 6px 0;
 }
-.navTreeLevel2 .navTreeItem {
+.navTreeDesktopTopNode .navTree .navTree .navTree .navTreeItem {
   border: 0;
 }
-.navTreeLevel2 .navTreeItem a {
+.navTreeDesktopTopNode .navTree .navTree .navTree .navTreeItem a {
   padding: 3px 0 3px 9px;
 }
-.navTreeLevel2 .navTreeCurrentNode {
+.navTreeDesktopTopNode .navTree .navTree .navTree a.navTreeCurrentNode {
   font-weight: bold;
+}
+.navTreeDesktopTopNode .navTree .navTree .navTree .navTree {
+  padding-left: 9px;
 }
 .ploneCalendar {
   width: 100%;
@@ -3289,45 +3306,69 @@ a.managePortletsFallback {
     color: white;
   }
   #jPanelMenu-menu .portletNavigationTree {
-    border-width: 3px;
-    margin: 0;
+    border-bottom: 3px solid #a7b0b5;
   }
-  #jPanelMenu-menu .navTreeTopNode {
+  .navTreeTopNode,
+  .navTreeDesktopHide {
+    display: block;
+  }
+  #jPanelMenu-menu a {
+    background: #60969f;
+    color: white;
+    display: block;
     font-size: 14px;
     font-weight: normal;
-    line-height: 18px;
-    margin: 0;
-  }
-  #jPanelMenu-menu .navTreeTopNode a,
-  #jPanelMenu-menu .navTreeLevel0 > li:not(.navTreeCurrentNode) > a {
-    color: white !important;
+    line-height: 20px;
     padding: 10px 5px 10px 10px;
   }
   #jPanelMenu-menu .navTreeTopNode a {
     padding-left: 5px;
   }
-  #jPanelMenu-menu {
-    padding-left: 0;
+  #jPanelMenu-menu .navTree {
+    padding: 0;
+  }
+  #jPanelMenu-menu .navTreeItem {
+    background: none;
+    border-top: 1px solid #a7b0b5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 0;
+  }
+  #jPanelMenu-menu .navTreeCurrentItem {
+    background: #087b8c;
+  }
+  #jPanelMenu-menu .navMobileExclude {
+    display: none;
+  }
+  #jPanelMenu-menu .navTreeLevel1 a {
+    padding-left: 15px;
+  }
+  #jPanelMenu-menu .navTreeLevel2 a {
+    padding-left: 20px;
+  }
+  #jPanelMenu-menu .navTreeLevel3 a {
+    padding-left: 25px;
+  }
+  #jPanelMenu-menu .navTreeLevel4 a {
+    padding-left: 30px;
   }
   #jPanelMenu-menu #theme-globalnav {
     border-bottom: 3px solid #a7b0b5;
     display: block;
   }
-  #theme-globalnav span {
-    padding-left: 10px !important;
-  }
-  #portaltab-index_html span {
-    padding-left: 5px !important;
-  }
   #theme-globalnav li {
     border: 0;
+    border-top: 1px solid #a7b0b5 !important;
     float: none;
   }
-  #theme-globalnav .selected {
-    background-color: #087b8c;
+  #theme-globalnav .selected a {
+    background-color: #087b8c !important;
   }
   #theme-globalnav > li:hover > a {
     background: none;
+  }
+  #portaltab-index_html a {
+    padding-left: 5px;
   }
   #theme-globalnav > li > a span,
   #theme-globalnav > li:hover > a span {
@@ -3335,14 +3376,10 @@ a.managePortletsFallback {
     border: 0;
     font-size: 14px;
     line-height: 18px;
-    padding: 10px 5px;
+    padding: 0;
   }
   .globalSectionsLevel1 {
     display: none !important;
-  }
-  #jPanelMenu-menu li:not(.navTreeItem) {
-    border-top: 1px solid #a7b0b5;
-    display: block;
   }
   #jPanelMenu-menu #portal-siteactions {
     display: block;
@@ -3366,33 +3403,9 @@ a.managePortletsFallback {
     border: 0;
     color: white;
   }
-  .navTreeLevel0 > .navTreeCurrentNode > a,
-  .navTreeLevel0 > .navTreeItemInPath > a,
-  .navTreeLevel1 > .navTreeCurrentNode > a,
-  .navTreeLevel1 > .navTreeItemInPath > a {
-    background-image: none;
-    padding-left: 10px;
-  }
-  .navTreeLevel0 > .navTreeCurrentNode,
-  .navTreeLevel0 > .navTreeItemInPath,
-  .navTreeLevel1 > .navTreeCurrentNode,
-  .navTreeLevel1 > .navTreeItemInPath {
-    padding-left: 0;
-  }
-  #jPanelMenu-menu .navTreeLevel1 > .navTreeItem > a {
-    padding-left: 15px;
-  }
-  #jPanelMenu-menu .navTreeLevel2 {
-    padding-left: 10px;
-  }
-  .navMobileExclude {
-    display: none;
-  }
-  .belowContentNav {
+  .belowContentNav,
+  .belowContentNav .navTreeDesktopHide {
     display: block;
-  }
-  .belowContentNav .portletNavigationTree {
-    border: 0;
   }
   .belowContentNav .navTreeItem {
     border: 0;
@@ -3400,25 +3413,10 @@ a.managePortletsFallback {
   .belowContentNav .navTreeItem a {
     background-color: #60969f;
     color: white;
-    font-size: 11.998px;
-    line-height: 16px;
-    padding: 5px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 7px 10px;
     margin: 0 0 5px;
-  }
-  .belowContentNav .navTreeItem,
-  .belowContentNav .navTreeCurrentNode.navTreeTopNode,
-  .belowContentNav .navTreeCurrentNode > a,
-  .belowContentNav .navTreeItemInPath > a {
-    display: none;
-  }
-  .belowContentNav .navTreeCurrentNode,
-  .belowContentNav .navTreeItemInPath,
-  .belowContentNav .navTreeCurrentNode .navTreeItem,
-  .belowContentNav .navTreeCurrentNode.navTreeTopNode ~ .navTreeItem {
-    display: block;
-  }
-  .belowContentNav .navTreeLevel2 {
-    padding: 0;
   }
   .template-search #portal-columns {
     min-height: 0;

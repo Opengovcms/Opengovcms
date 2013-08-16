@@ -110,13 +110,12 @@ dl.portletError {
 
 // Navigation portlet
 .portletNavigationTree {
+  border: 0;
+  margin: 0;
   padding: 0;
 }
 .portletNavigationTree .portletItem {
   margin: 0;
-}
-.portletNavigationTree a {
-  color: @linkColor;
 }
 .navTree {
   margin: 0;
@@ -126,79 +125,89 @@ dl.portletError {
   border-top: 1px solid @grayLight;
   display: block;
 }
-.navTreeLevel0 > .navTreeCurrentNode,
-.navTreeLevel0 > .navTreeItemInPath {
-  background-color: @secondary;
-  padding-left: 6px;
-}
-.navTreeTopNode {
-  background-color: transparent !important;
-  border: 0;
-  font-size: @baseFontSize / 0.778;
-  font-weight: bold;
-  line-height: @baseLineHeight;
-  margin: @baseLineHeight 0 @baseLineHeight / 1.2;
-  padding: 0 !important;
-}
-.navTreeItem a {
+.navTreeItem a {  
+  color: @linkColor;
   display: block;
   padding: 10px 0;
 }
 .navTreeItem a:hover  {
   text-decoration: underline;
 }
-.navTreeLevel0 > .navTreeCurrentNode > a,
-.navTreeLevel0 > .navTreeItemInPath > a {
+.navTreeTopNode,
+.navTreeDesktopHide {
+  display: none;
+}
+.navTreeItemInPath,
+.navTreeDesktopTopNode .navTreeTopNode {
+  border: 0;
+  display: block;
+}
+.navTreeDesktopTopNode {
+  border-top: 0;
+  border-bottom: 1px solid @grayLight;
+  margin: 0 0 @baseLineHeight;
+}
+.navTreeDesktopTopNode > a,
+.navTreeDesktopTopNode .navTreeTopNode a {
+  font-size: @baseFontSize / 0.778;
+  font-weight: bold;
+  line-height: @baseLineHeight;
+  padding: @baseLineHeight 0 @baseLineHeight / 1.2;
+}
+.includeTopNodeFalse .navTreeDesktopTopNode > a {
+  display: none;
+}
+.navTreeItemInPath.navTreeDesktopHide > a {
+  display: none;
+}
+.navTreeDesktopTopNode > .navTree > .navTreeCurrentNode,
+.navTreeDesktopTopNode > .navTree > .navTreeItemInPath {
+  background-color: @secondary;
+  padding-left: 6px;
+}
+.navTreeDesktopTopNode > .navTree > .navTreeCurrentNode > .navTreeCurrentItem,
+.navTreeDesktopTopNode > .navTree > .navTreeItemInPath > a {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAICAYAAAD0g6+qAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEhJREFUeNpi+P///1IgdgNiBiRsAsST0MTwYhDhAcTvkQwDGfIWiKNJNQiEPaGGFZJjCLJBIOwFxJeAOJJUQ2AGjYYRfgwQYAAgwsCAqBE6wwAAAABJRU5ErkJggg==) no-repeat 100% 50%;
   color: @white;
   padding-right: 20px;
   padding-left: 9px;
 }
-.navTreeTopNode a {
-  color: @linkColor !important;
-  padding: 0;
-}
-.navTreeLevel1 {
+.navTreeDesktopTopNode .navTree .navTree {
   background-color: @white;
   font-size: @baseFontSize * 0.857;  
   line-height: @baseLineHeight / 1.125;
 }
-.navTreeLevel1 > .navTreeCurrentNode,
-.navTreeLevel1 > .navTreeItemInPath {
+.navTreeDesktopTopNode > .navTree > .navTreeItem > .navTree > .navTreeCurrentNode,
+.navTreeDesktopTopNode > .navTree > .navTreeItem > .navTree > .navTreeItemInPath {
   background-color: @light;
   border: 0;
   padding-left: 6px; 
 }
-.navTreeLevel1 a {
+.navTreeDesktopTopNode .navTree .navTree a {
   padding: 7px 0 7px 9px;
 }
-.navTreeLevel1 > .navTreeCurrentNode > a,
-.navTreeLevel1 > .navTreeItemInPath > a {
+.navTreeDesktopTopNode > .navTree > .navTreeItem > .navTree > .navTreeCurrentNode > a,
+.navTreeDesktopTopNode > .navTree > .navTreeItem > .navTree > .navTreeItemInPath > a {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAHCAYAAADu4qZ8AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIlJREFUeNpi5KjumcjAwLAHiDczQIA9ELt9bymuZiASMAHxMSDuBmIbINYD4mlAfJ+BBMACxCuB+AsQzwViNiAGuWAZqYb4A/FGIP4HxNxAvAaIHYD4ACmGBABxOBBHQcWmQQ0jyZAKIJ4H1fwDiDWAOIkU74AC9iUQRwOxMBCrQV30gBRDAAIMAAyfGKDIqHAOAAAAAElFTkSuQmCC) no-repeat 100% 50%;
   font-weight: bold;
   padding-left: 4px;
   padding-right: 20px;
 }
-.navTreeLevel2 {
+.navTreeDesktopTopNode .navTree .navTree .navTree {
   background-color: @white;
   padding: 6px 0;
 }
-.navTreeLevel2 .navTreeItem {
+.navTreeDesktopTopNode .navTree .navTree .navTree .navTreeItem {
   border: 0;
 }
-.navTreeLevel2 .navTreeItem a {
+.navTreeDesktopTopNode .navTree .navTree .navTree .navTreeItem a {
   padding: 3px 0 3px 9px;
 }
-.navTreeLevel2 .navTreeCurrentNode {
+.navTreeDesktopTopNode .navTree .navTree .navTree a.navTreeCurrentNode {
   font-weight: bold;
 }
-
-// Static Text Portlet
-div.portletStaticText {
-  
-}
-.portletStaticText .portletItem {
-  
+.navTreeDesktopTopNode .navTree .navTree .navTree .navTree {
+  padding-left: 9px;
 }
 
 // Calendar Portlet 

@@ -57,46 +57,74 @@
 .menu-trigger:visited {
   color: @white;
 }
+
+// Portlet Navigation Tree
 #jPanelMenu-menu .portletNavigationTree {
-  border-width: 3px;
-  margin: 0;
+  border-bottom: 3px solid @grayLight;
 }
-#jPanelMenu-menu .navTreeTopNode {
+.navTreeTopNode,
+.navTreeDesktopHide {
+  display: block;
+}
+#jPanelMenu-menu a {
+  background: @body;
+  color: @white;
+  display: block;
   font-size: @baseFontSize;
   font-weight: normal;
-  line-height: @baseLineHeight;
-  margin: 0;
-}
-#jPanelMenu-menu .navTreeTopNode a,
-#jPanelMenu-menu .navTreeLevel0 > li:not(.navTreeCurrentNode) > a {
-  color: @white !important;
+  line-height: @baseLineHeight/0.9;
   padding: 10px 5px 10px 10px;
 }
 #jPanelMenu-menu .navTreeTopNode a {
   padding-left: 5px;
 }
-#jPanelMenu-menu {
-  padding-left: 0;
+#jPanelMenu-menu .navTree {
+  padding: 0;
 }
+#jPanelMenu-menu .navTreeItem {
+  background: none;
+  border-top: 1px solid @grayLight;
+  border-bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+#jPanelMenu-menu .navTreeCurrentItem {
+  background: @secondary;
+}
+#jPanelMenu-menu .navMobileExclude {
+  display: none;
+}
+#jPanelMenu-menu .navTreeLevel1 a {
+  padding-left: 15px;
+}
+#jPanelMenu-menu .navTreeLevel2 a {
+  padding-left: 20px;
+}
+#jPanelMenu-menu .navTreeLevel3 a {
+  padding-left: 25px;
+}
+#jPanelMenu-menu .navTreeLevel4 a {
+  padding-left: 30px;
+}
+
+// Theme Global Nav
 #jPanelMenu-menu #theme-globalnav {
   border-bottom: 3px solid @grayLight;
   display: block;
 }
-#theme-globalnav span {
-  padding-left: 10px !important;
-}
-#portaltab-index_html span {
-  padding-left: 5px !important;
-}
 #theme-globalnav li {
-  border: 0;
+  border: 0;  
+  border-top: 1px solid @grayLight !important;
   float: none;
 }
-#theme-globalnav .selected {
-  background-color: @secondary;
+#theme-globalnav .selected a {
+  background-color: @secondary !important;
 }
 #theme-globalnav > li:hover > a {
   background: none;
+}
+#portaltab-index_html a {
+  padding-left: 5px;
 }
 #theme-globalnav > li > a span,
 #theme-globalnav > li:hover > a span {
@@ -104,15 +132,13 @@
   border: 0;
   font-size: @baseFontSize;
   line-height: @baseLineHeight;
-  padding: 10px 5px;
+  padding: 0;
 }
 .globalSectionsLevel1 {
   display: none !important;
 }
-#jPanelMenu-menu li:not(.navTreeItem) {
-  border-top: 1px solid @grayLight;
-  display: block;
-}
+
+// Site Actions
 #jPanelMenu-menu #portal-siteactions {
   display: block;
   font-family: @serifFontFamily;
@@ -135,35 +161,11 @@
   border: 0;
   color: @white;
 }
-.navTreeLevel0 > .navTreeCurrentNode > a, 
-.navTreeLevel0 > .navTreeItemInPath > a,
-.navTreeLevel1 > .navTreeCurrentNode > a, 
-.navTreeLevel1 > .navTreeItemInPath > a {
-  background-image: none;
-  padding-left: 10px;
-}
-.navTreeLevel0 > .navTreeCurrentNode,
-.navTreeLevel0 > .navTreeItemInPath,
-.navTreeLevel1 > .navTreeCurrentNode, 
-.navTreeLevel1 > .navTreeItemInPath {
-  padding-left: 0;
-}
-#jPanelMenu-menu .navTreeLevel1 > .navTreeItem > a {
-  padding-left: 15px;
-}
-#jPanelMenu-menu .navTreeLevel2 {
-  padding-left: 10px;
-}
-.navMobileExclude {
-  display: none;
-}
 
 // Below Content Nav Portlet
-.belowContentNav {
+.belowContentNav,
+.belowContentNav .navTreeDesktopHide {
   display: block;
-}
-.belowContentNav .portletNavigationTree {
-  border: 0;
 }
 .belowContentNav .navTreeItem {
   border: 0;
@@ -171,25 +173,10 @@
 .belowContentNav .navTreeItem a {
   background-color: @body;
   color: @white;
-  font-size: @baseFontSize * 0.857;  
-  line-height: @baseLineHeight / 1.125;
-  padding: 5px;
+  font-size: @baseFontSize;  
+  line-height: @baseLineHeight;
+  padding: 7px 10px;
   margin: 0 0 5px;
-}
-.belowContentNav .navTreeItem,
-.belowContentNav .navTreeCurrentNode.navTreeTopNode,
-.belowContentNav .navTreeCurrentNode > a,
-.belowContentNav .navTreeItemInPath > a {
-  display: none;
-}
-.belowContentNav .navTreeCurrentNode,
-.belowContentNav .navTreeItemInPath,
-.belowContentNav .navTreeCurrentNode .navTreeItem,
-.belowContentNav .navTreeCurrentNode.navTreeTopNode ~ .navTreeItem {
-  display: block;
-}
-.belowContentNav .navTreeLevel2 {
-  padding: 0;
 }
 
 // Search REsults Page

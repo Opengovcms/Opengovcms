@@ -17,5 +17,10 @@
    <portlet addview="portlets.Language" remove="true" />
    <portlet addview="portlets.Review" remove="true" />
    <portlet addview="plone.portlet.collection.Collection" remove="true" />
+   <portlet addview="collective.chimpfeed.CampaignPortlet" remove="true" />
+   <portlet addview="collective.chimpfeed.ModerationPortlet" remove="true" />
+   <portlet addview="collective.chimpfeed.NewsletterPortlet" remove="true" />
+   <portlet addview="plone.portlet.static.Static" remove="true" />
+   <portlet addview="collective.flowplayer.Player" remove="true" />
 
 </portlets>

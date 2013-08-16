@@ -13,16 +13,17 @@
         <span class="portletTopRight"></span>
     </dt>
 
-    <dd class="portletItem lastItem">
+    <dd class="portletItem lastItem"
+        tal:define="t_node python:view.data.topLevel==0 and 'portletItem lastItem navTreeDesktopTopNode' or 'portletItem lastItem';"
+        tal:attributes="class string:$t_node includeTopNode${view/include_top}">
         <ul class="navTree navTreeLevel0">
             <li tal:define="selectedClass view/root_item_class;
                             li_class python:selectedClass and ' navTreeCurrentNode' or '';
-                            li_t_node python:view.include_top() and view.data.topLevel==0 and ' navTreeDesktopTopNode' or '';
                             normalizeString nocall:context/plone_utils/normalizeString;
                             section_title root/Title;
                             section python:normalizeString(section_title);"
                 tal:condition="view/include_top"
-                tal:attributes="class string:navTreeItem navTreeTopNode${li_class}${li_t_node} nav-section-${section}">
+                tal:attributes="class string:navTreeItem navTreeTopNode${li_class} nav-section-${section}">
                 <div tal:define="rootIsPortal view/root_is_portal;
                                  root_icon view/root_icon;
                                  root_type root/portal_type;

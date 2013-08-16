@@ -17,8 +17,8 @@
                 mnavexclude     node/item/exclude_from_mobile_nav|nothing;
                 li_mnav         python:mnavexclude and ' navMobileExclude' or '';
                 li_class        python:is_current and ' navTreeCurrentNode' or '';
-                li_t_node       python:(is_current or is_in_path) and view.include_top() and view.data.topLevel-1==level and ' navTreeDesktopTopNode' or '';
-                li_d_hidden     python:level &lt; view.data.topLevel and not li_t_node and  ' navTreeDesktopHide' or '';
+                li_t_node       python:(is_current or is_in_path) and view.data.topLevel==level and ' navTreeDesktopTopNode' or '';
+                li_d_hidden     python:level &lt;= view.data.topLevel and not li_t_node and  ' navTreeDesktopHide' or '';
                 li_extr_class   python:is_in_path and ' navTreeItemInPath' or '';
                 li_folder_class python:show_children and ' navTreeFolderish' or '';
                 normalizeString nocall: context/plone_utils/normalizeString;"

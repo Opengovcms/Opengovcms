@@ -22,6 +22,7 @@ class IPolicyNavigationQueryBuilder(INavigationQueryBuilder):
     pass
 
 class NavRenderer(Renderer):
+    _template = ViewPageTemplateFile('navigation.pt')
     recurse = ViewPageTemplateFile('navigation_recurse.pt')
 
     @memoize

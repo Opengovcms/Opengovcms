@@ -31,7 +31,7 @@
             <tal:content tal:content="item/title">Title</tal:content>
         </a>
         <div class="portletItemByline">
-              <tal:sub tal:condition="subs" tal:define="subs item/taxonomy_emneord|item/taxonomy_enmneord">
+              <tal:sub tal:condition="subs" tal:define="subs item/taxonomy_emneord">
                 <tal:loop tal:repeat="sub subs">
                   <tal:c tal:content="python: context.translate(sub, domain='collective.taxonomy.emneord')"></tal:c><tal:comma tal:condition="not: repeat/sub/end">,</tal:comma>
                 </tal:loop>

@@ -31,8 +31,10 @@
     <dependency>profile-collective.chimpfeed:default</dependency>
     <dependency>profile-collective.flowplayer:default</dependency>
     <dependency>profile-collective.taxonomy:default</dependency>
+    <dependency>profile-collective.person:default</dependency>
 
     <dependency>profile-policy:default</dependency>
+    <dependency>profile-policy:demo_content</dependency>
 
   </dependencies>
 </metadata>

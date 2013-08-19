@@ -11,7 +11,7 @@
           <li>
             <a href="#"
                class="ddl-item"
-               tal:attributes="href obj/getRemoteUrl|obj/getURL;"
+               tal:attributes="href python:obj.getRemoteUrl or obj.getURL()"
                tal:content="obj/Title">Title</a>
           </li>
         </tal:i>

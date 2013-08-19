@@ -10,7 +10,7 @@
    <element value="plone.app.versioningbehavior.behaviors.IVersionable" />
    <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer" />
    <element value="policy.content.exclfrommobilenav.IExcludeFromMobileNavigation"/>
-   <element value="collective.taxonomy.generated.enmneord"/>
+   <element value="collective.taxonomy.generated.emneord"/>
    <element value="collective.taxonomy.generated.sektion"/>
    <element value="collective.taxonomy.generated.sekundaertemneord"/>
  </property>

@@ -5,7 +5,7 @@
                 toLocalizedTime nocall:plone_view/toLocalizedTime;
                 getIcon nocall:plone_view/getIcon;">
     <dt class="portletHeader">
-        <a tal:attributes="href collection_url" 
+        <a tal:attributes="href collection_url"
            tal:omit-tag="not:view/data/show_more">
             <span tal:content="view/data/header"
                   tal:omit-tag="view/data/show_more">Portlet Header</span></a>
@@ -31,8 +31,12 @@
             <tal:content tal:content="item/title">Title</tal:content>
         </a>
         <div class="portletItemByline">
-              <tal:sub tal:condition="sub" tal:define="sub item/Subject; ss python:', '.join(sub)" tal:replace="string:$ss" />
-              <span class="separator">|</span>
+              <tal:sub tal:condition="subs" tal:define="subs item/taxonomy_emneord|item/taxonomy_enmneord">
+                <tal:loop tal:repeat="sub subs">
+                  <tal:c tal:content="python: context.translate(sub, domain='collective.taxonomy.emneord')"></tal:c><tal:comma tal:condition="not: repeat/sub/end">,</tal:comma>
+                </tal:loop>
+                <span class="separator">|</span>
+              </tal:sub>
               <tal:date tal:define="dd item/Date" tal:replace="python:toLocalizedTime(dd)" />
         </div>
         <div class="portletItemDescription"

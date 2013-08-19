@@ -255,4 +255,20 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="28">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.runDemoContentProfile"
+      title="Install three needed vocabularies."
+      description=""
+      />
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.importDefaultTypes"
+      title="Import types"
+      description="Update Folder views."
+      />
+  </genericsetup:upgradeSteps>
+
 </configure>

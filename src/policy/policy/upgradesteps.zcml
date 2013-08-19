@@ -271,4 +271,14 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="29">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.migrateRegistry"
+      title="Migrate some registry settings"
+      description=""
+      />
+  </genericsetup:upgradeSteps>
 </configure>

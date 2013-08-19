@@ -933,6 +933,7 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 .image-caption {
   margin: 0;
   font-style: italic;
+  max-width: 100%;
 }
 /* @end */
 

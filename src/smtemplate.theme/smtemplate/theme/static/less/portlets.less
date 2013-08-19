@@ -2,7 +2,7 @@
 .portlet {
   border-bottom: 1px solid @grayLight;
   margin: 0 0 @baseLineHeight;
-  padding: 0 0 @baseLineHeight * 1.5;
+  padding: 0 0 @baseLineHeight;
 }
 .panels .portlet {
   border: 0;
@@ -280,6 +280,9 @@ dl.portletError {
   text-transform: uppercase;
 }
 // twoColumnsNews
+.twoColumnsNews .portlet:after {
+  .clear;
+}
 .twoColumnsNews .portletItem {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -299,9 +302,9 @@ dl.portletError {
 }
 
 // Portlet Rich
-.portletRich {
-  padding: 0;
-}
+// .portletRich {
+//   padding: 0;
+// }
 .richPortletTitle {
   font-family: "Swift Neue LT W01 Bold", serif;
   margin-top: 15px;
@@ -572,7 +575,7 @@ dl.portletError {
 .portletDropDownLinks {
   background-color: @secondary;
   color: @white;
-  margin: 0 0 11px;
+  margin: 0 0 27px;
   padding: 14px 15px;
   }
 .pddl-header {

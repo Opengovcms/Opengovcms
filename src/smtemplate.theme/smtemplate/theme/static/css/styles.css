@@ -9,7 +9,7 @@
   src: url("../Fonts/92d019c7-8fca-4e90-ab09-a24ce97ebf2c.eot?#iefix") format("eot"), url("../Fonts/1bdb413e-0c6b-499b-a9fe-1667e4064ab7.woff") format("woff"), url("../Fonts/8e552c41-b0ce-44f2-8c35-92a1f91c4e83.ttf") format("truetype"), url("../Fonts/70bdef6f-9ac8-4d8c-92d9-6a45f14ce9a6.svg#70bdef6f-9ac8-4d8c-92d9-6a45f14ce9a6") format("svg");
 }
 .clear {
-  clear: left;
+  clear: both;
   content: "";
   display: table;
 }
@@ -1761,6 +1761,9 @@ body.template-new-user #content input {
 #portal-column-two {
   margin-top: 9px;
 }
+#content-core {
+  margin-bottom: 36px;
+}
 #portal-siteactions {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 11.06px;
@@ -2336,7 +2339,7 @@ form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
 .portlet {
   border-bottom: 1px solid #a7b0b5;
   margin: 0 0 18px;
-  padding: 0 0 27px;
+  padding: 0 0 18px;
 }
 .panels .portlet {
   border: 0;
@@ -2566,7 +2569,7 @@ dl.portletError {
   text-transform: uppercase;
 }
 .NGEvents .portletItem:after {
-  clear: left;
+  clear: both;
   content: "";
   display: table;
 }
@@ -2594,6 +2597,11 @@ dl.portletError {
   line-height: 1;
   text-transform: uppercase;
 }
+.twoColumnsNews .portlet:after {
+  clear: both;
+  content: "";
+  display: table;
+}
 .twoColumnsNews .portletItem {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2610,9 +2618,6 @@ dl.portletError {
   clear: left;
   float: left;
   margin: 0;
-}
-.portletRich {
-  padding: 0;
 }
 .richPortletTitle {
   font-family: "Swift Neue LT W01 Bold", serif;
@@ -2874,7 +2879,7 @@ dl.portletError {
 .portletDropDownLinks {
   background-color: #087b8c;
   color: white;
-  margin: 0 0 11px;
+  margin: 0 0 27px;
   padding: 14px 15px;
 }
 .pddl-header {
@@ -3404,7 +3409,10 @@ a.managePortletsFallback {
     border: 0;
     color: white;
   }
-  .belowContentNav,
+  .belowContentNav {
+    display: block;
+    margin: 0 0 18px;
+  }
   .belowContentNav .navTreeDesktopHide {
     display: block;
   }
@@ -3490,7 +3498,7 @@ a.managePortletsFallback {
     margin-bottom: 9px;
   }
   .portletCarousel {
-    margin: 0 0 18px;
+    margin: 0 0 27px;
     padding: 0 !important;
   }
   .carouselPortletItemImg,

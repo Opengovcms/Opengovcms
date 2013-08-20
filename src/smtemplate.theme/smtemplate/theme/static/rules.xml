@@ -150,6 +150,7 @@
         <drop css:content="#plone-contentmenu-factories li a img" />
         <drop css:content="#viewlet-below-content-body .documentActions" />
         <drop css:content=".fieldTextFormat" />
+        <drop attributes="frameborder" css:content="iframe" />
 
         <!-- Footer -->
         <replace css:content-children="#portal-footer-wrapper > .cell" css:theme-children="#portal-footer-inner" />

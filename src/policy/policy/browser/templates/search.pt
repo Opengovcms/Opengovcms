@@ -64,7 +64,7 @@ function smtoggleSelect(name, fid, formName) {
                       first_call not:request/advanced_search|nothing;
                       st python:request.get('SearchableText', '');
                       DateTime python:modules['DateTime'].DateTime;
-                      navigation_root_url view/navroot_url;"> 
+                      navigation_root_url view/navroot_url;">
       <h1 class="documentFirstHeading"
           i18n:translate=""
           tal:condition="not:st">
@@ -95,7 +95,7 @@ function smtoggleSelect(name, fid, formName) {
                      title="Search Site"
                      i18n:attributes="title title_search_title;"
                      tal:attributes="value st;" /></div>
-        </fieldset>             
+        </fieldset>
                 <p id="rss-subscription" i18n:domain="plone"
                    tal:define="syndication context/@@tools/syndication|nothing"
                    tal:condition="syndication/isSiteSyndicationAllowed|nothing">
@@ -259,7 +259,7 @@ function smtoggleSelect(name, fid, formName) {
                                                    show_about python:not isAnon or allowAnonymousViewAbout;">
                           <div class="searchResults">
                               <tal:results repeat="item batch">
-                                    <h2 class="searchResultsItemTitle">                                      
+                                    <h2 class="searchResultsItemTitle">
                                       <a href="#"
                                          tal:define="item_url item/getURL;
                                                      item_type item/PortalType"
@@ -270,23 +270,6 @@ function smtoggleSelect(name, fid, formName) {
                                                tal:content="python:item.getDataOrigin().pretty_title_or_id()">Content</span></a>
                                     </h2>
                                     <div class="searchResultsItem">
-                                      <span class="discreet" i18n:domain="plone"
-                                            tal:condition="show_about">
-                                        <span tal:define="categories item/Subject|nothing"
-                                              tal:condition="categories">
-                                          &mdash;
-                                          <tal:filedunder i18n:translate="">filed under:</tal:filedunder>
-                                          <span tal:repeat="category categories">
-                                            <a href=""
-                                               class="link-category"
-                                               rel="tag"
-                                               tal:content="category"
-                                               tal:attributes="href string:$navigation_root_url/@@search?Subject%3Alist=${category}">
-                                              Category
-                                            </a><tal:separator condition="not: repeat/category/end">,</tal:separator>
-                                          </span>
-                                        </span>
-                                      </span>
                                       <div class="documentLocation link-location"
                                             tal:define="breadcrumbs python: view.breadcrumbs(item);
                                                         is_rtl context/@@plone_portal_state/is_rtl;">

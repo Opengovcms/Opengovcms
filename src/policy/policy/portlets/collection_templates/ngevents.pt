@@ -11,7 +11,7 @@
             <span tal:content="view/data/header" />
         </a>
     </dt>
-    
+
     <tal:events tal:repeat="obj view/results">
     <dd class="portletItem"
         tal:define="oddrow repeat/obj/odd;
@@ -30,7 +30,14 @@
                   Mon
               </span>
             </span>
-            <div class="portletItemByline"><tal:sub tal:condition="sub" tal:define="sub obj/Subject; ss python:', '.join(sub)" tal:replace="string:$ss | " /><tal:location tal:replace="obj/location" /></div>
+            <div class="portletItemByline">
+              <tal:sub tal:condition="subs" tal:define="subs obj/taxonomy_emneord">
+                <tal:loop tal:repeat="sub subs">
+                  <tal:c tal:content="python: context.translate(sub, domain='collective.taxonomy.emneord')"></tal:c><tal:comma tal:condition="not: repeat/sub/end">,</tal:comma>
+                </tal:loop>
+                <span class="separator">|</span>
+              </tal:sub>
+              <tal:location tal:replace="obj/location" /></div>
             <a class="portletItemTitle"
                href="#"
                tal:attributes="href obj/getURL;

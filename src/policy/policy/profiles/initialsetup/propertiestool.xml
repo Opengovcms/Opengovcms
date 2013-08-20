@@ -126,6 +126,8 @@
  <object name="imaging_properties" meta_type="Plone Property Sheet">
   <property name="allowed_sizes" type="lines" purge="False">
    <element value="person_portlet 210:118"/>
+   <element value="person-portrait 210:1000"/>
+   <element value="rich 290:1000"/>
   </property>
  </object>
 

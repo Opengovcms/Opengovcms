@@ -15,4 +15,8 @@
            remove="true">
   </records>
 
+  <records interface="plone.app.querystring.interfaces.IQueryField"
+           prefix="plone.app.querystring.field.taxonomy_enmneord"
+           remove="true">
+  </records>
 </registry>

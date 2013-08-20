@@ -3577,6 +3577,11 @@ a.managePortletsFallback {
   .portletCarousel li a:before {
     display: none !important;
   }
+  .twoColumnsNews .portletItem {
+    float: none !important;
+    padding: 0 !important;
+    width: auto;
+  }
 }
 @media print {
   /* Removes certain elements when printing, and apply basic font styles

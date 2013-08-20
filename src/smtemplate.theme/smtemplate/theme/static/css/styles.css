@@ -3455,7 +3455,7 @@ a.managePortletsFallback {
   #sidebar {
     float: none;
     left: auto;
-    margin: 0 !important;
+    margin-left: 0 !important;
     width: auto !important;
   }
   #portal-header {

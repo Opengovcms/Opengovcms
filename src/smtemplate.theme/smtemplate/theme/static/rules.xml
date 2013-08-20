@@ -101,6 +101,7 @@
         <drop css:content="link[href*='mobile-cachekey']" />
         <drop css:content="link[href*='forms-cachekey']" />
         <drop css:content="link[href$='favicon.ico']" />
+        <drop css:content="link[rel='apple-touch-icon']" />
         <before content="/html/head/meta" css:theme="meta[name='viewport']" />
         <before content="/html/head/base" theme="/html/head/title" />
         <replace theme='/html/head/title' content='/html/head/title' />

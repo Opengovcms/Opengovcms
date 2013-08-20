@@ -1,0 +1,24 @@
+<div class="portletLinksList portletDropDownLinks"
+     tal:define="plone_view context/@@plone;
+                 viewActions here/portal_properties/site_properties/typesUseViewActionInListings|python:();">
+  <div class="pddl-header"
+       tal:content="view/data/header" />
+  <dl class="dropDownLinks">
+    <dt class="ddl-title">Vælg ...<span class="ddl-icon"></span></dt>
+
+    <dd class="ddl-body">
+      <ul class="ddl-list">
+        <tal:i tal:repeat="link view/links">
+          <li tal:define="useView python:link['portal_type'] in viewActions;
+                          itemUrl python:useView and link['url'] + '/view' or link['url']">
+            <a href="#"
+               class="ddl-item"
+               tal:attributes="href itemUrl;
+                               title link/description"
+               tal:content="link/description">Title</a>
+          </li>
+        </tal:i>
+      </ul>
+    </dd>
+  </dl>
+</div>

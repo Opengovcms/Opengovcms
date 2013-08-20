@@ -8,26 +8,42 @@
   <include package="collective.portlet.ngcollection" file="meta.zcml" />
 
   <plone:portletTemplates
-      interface="collective.portlet.ngcollection.ngcollection.INGCollection"
-      directory="collection_templates"
-      />
+    interface="collective.portlet.ngcollection.ngcollection.INGCollection"
+    directory="collection_templates"
+    />
 
   <include package="collective.portlet.rich" />
 
   <plone:portletRenderer
-      portlet="collective.portlet.rich.richportlet.IRichPortlet"
-      layer="policy.interfaces.IBrowserLayer"
-      template="richportlet.pt"
-      />
+    portlet="collective.portlet.rich.richportlet.IRichPortlet"
+    layer="policy.interfaces.IBrowserLayer"
+    template="richportlet.pt"
+    />
 
   <plone:portletRenderer
-      portlet="plone.app.portlets.portlets.navigation.INavigationPortlet"
-      layer="policy.interfaces.IBrowserLayer"
-      class=".navigation.NavRenderer"
-      />
+    portlet="plone.app.portlets.portlets.navigation.INavigationPortlet"
+    layer="policy.interfaces.IBrowserLayer"
+    class=".navigation.NavRenderer"
+    />
 
-  <adapter provides=".navigation.IPolicyNavigationQueryBuilder" factory=".navigation.PolicyQueryBuilder" />
-  <adapter provides=".navigation.IPolicyNavtreeStrategy" factory=".navigation.PolicyNavtreeStrategy" />
+  <adapter provides=".navigation.IPolicyNavigationQueryBuilder"
+    factory=".navigation.PolicyQueryBuilder" />
+  <adapter provides=".navigation.IPolicyNavtreeStrategy"
+    factory=".navigation.PolicyNavtreeStrategy" />
+
+  <plone:portlet
+    name="policy.LinksListPortlet"
+    interface=".links_list_portlet.ILinksListPortlet"
+    assignment=".links_list_portlet.Assignment"
+    renderer=".links_list_portlet.Renderer"
+    addview=".links_list_portlet.AddForm"
+    editview=".links_list_portlet.EditForm"
+    view_permission="zope2.View"
+    edit_permission="cmf.ManagePortal"
+    />
+
+  <adapter factory=".links_list_portlet.ExternalLinkFactory"
+    name="policy.portlets.links_list_portlet.IExternalLink" />
 
 
 </configure>

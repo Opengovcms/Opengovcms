@@ -281,4 +281,16 @@
       description=""
       />
   </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="30">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.runDefaultProfile"
+      title="Run policy profile"
+      description="Update types and portlets"
+      />
+  </genericsetup:upgradeSteps>
+
 </configure>

@@ -23,4 +23,12 @@
    <portlet addview="plone.portlet.static.Static" remove="true" />
    <portlet addview="collective.flowplayer.Player" remove="true" />
 
+ <portlet
+   addview="policy.LinksListPortlet"
+   title="Linksliste"
+   description="En portlet med en liste af interne eller eksterne links."
+   i18n:attributes="title;
+                    description"
+   />
+
 </portlets>

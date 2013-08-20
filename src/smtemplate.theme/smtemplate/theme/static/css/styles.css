@@ -563,6 +563,9 @@ abbr[title] {
 iframe {
   max-width: 100%;
 }
+#content iframe {
+  min-width: 100%;
+}
 /* @group Content Area */
 
 /* Editor styles */

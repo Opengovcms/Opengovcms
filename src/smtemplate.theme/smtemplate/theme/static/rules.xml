@@ -151,6 +151,7 @@
         <drop css:content="#viewlet-below-content-body .documentActions" />
         <drop css:content=".fieldTextFormat" />
         <drop attributes="frameborder" css:content="iframe" />
+        <drop css:content="label[for$='widgets-interests']" />
 
         <!-- Footer -->
         <replace css:content-children="#portal-footer-wrapper > .cell" css:theme-children="#portal-footer-inner" />

@@ -902,7 +902,7 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 /* for highlighting of search terms */
 
 .highlightedSearchTerm {
-  font-weight: bold;
+  font-family: "Swift Neue LT W01 Bold", serif;
 }
 /* for greying out inherited roles */
 

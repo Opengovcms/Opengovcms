@@ -99,8 +99,8 @@ class ILinksListPortlet(IPortletDataProvider):
             required=False,
         )
 
-    text = RichText(
-            title=u"Tekst",
+    text = schema.Text(
+            title=u"Beskrivelse",
             required=False,
         )
 

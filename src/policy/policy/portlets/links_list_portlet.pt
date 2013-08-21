@@ -3,16 +3,27 @@
                  viewActions here/portal_properties/site_properties/typesUseViewActionInListings|python:();">
   <div class="pddl-header"
        tal:content="view/data/header" />
+  <div class="pddl-text"
+       tal:condition="view/data/text"
+       tal:content="view/data/text" />
   <dl class="dropDownLinks">
     <dt class="ddl-title">Vælg ...<span class="ddl-icon"></span></dt>
 
     <dd class="ddl-body">
       <ul class="ddl-list">
         <tal:i tal:repeat="link view/links">
-          <li tal:define="useView python:link['portal_type'] in viewActions;
+          <li tal:define="link_type link/link_type;
+                          useView python:link['portal_type'] in viewActions;
                           itemUrl python:useView and link['url'] + '/view' or link['url']">
             <a href="#"
                class="ddl-item"
+               tal:condition="python: link_type=='internal'"
+               tal:attributes="href itemUrl;
+                               title link/description"
+               tal:content="link/description">Title</a>
+            <a href="#" target="_blank"
+               class="ddl-item"
+               tal:condition="python: link_type=='external'"
                tal:attributes="href itemUrl;
                                title link/description"
                tal:content="link/description">Title</a>

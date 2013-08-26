@@ -1,0 +1,2 @@
+msgid "Required input is missing."
+msgstr "Du skal udfylde feltet."

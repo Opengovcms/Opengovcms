@@ -5,8 +5,10 @@ msgid "Static text portlet"
 msgstr "Simpel editor portlet"
 
 msgid "Rich portlet"
-msgstr "Avanceret editor portlet"
+msgstr "Teksteditorportlet"
 
 msgid "NG Collection"
-msgstr "Stylet dynamisk liste portlet"
+msgstr "Dynamisk liste portlet"
 
+msgid "Required input is missing."
+msgstr "Du skal udfylde feltet."

@@ -2878,6 +2878,9 @@ dl.portletError {
 .portletSubscription .row:first-child + .row label {
   display: none;
 }
+.portletSubscription .fieldRequired {
+  display: none;
+}
 .portletPerson .portletItem {
   margin: 0;
 }

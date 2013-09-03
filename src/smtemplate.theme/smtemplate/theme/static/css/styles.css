@@ -1662,8 +1662,13 @@ body.template-new-user #content input {
   list-style: none;
   padding-left: 0;
 }
+.listTypeHyphen li {
+  margin-left: 10px;
+}
 .listTypeHyphen li:before {
   content: "- ";
+  float: left;
+  margin-left: -10px;
 }
 .listTypeMark > li {
   display: block;

@@ -33,6 +33,16 @@
       />
 
   <page
+      name="summary_view_without_dates"
+      for="plone.app.contenttypes.interfaces.ICollection"
+      layer="policy.interfaces.IBrowserLayer"
+      template="templates/summary_view_without_dates.pt"
+      permission="zope2.View"
+      menu="plone_displayviews"
+      title="Summary view without dates"
+      />
+
+  <page
       name="view"
       for="..content.publication.IPublication"
       template="templates/publication_view.pt"

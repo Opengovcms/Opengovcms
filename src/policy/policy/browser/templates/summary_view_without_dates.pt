@@ -1,0 +1,64 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+
+<metal:content-core fill-slot="content-core">
+<metal:block use-macro="context/standard_view/macros/content-core">
+
+    <metal:entries fill-slot="entries">
+    <metal:block use-macro="context/standard_view/macros/entries">
+    <metal:entry fill-slot="entry">
+
+        <div class="tileItem visualIEFloatFix"
+             tal:define="obj item/getObject">
+            <a href="#"
+                  tal:condition="python:getattr(obj.aq_explicit, 'image', None)"
+                  tal:attributes="href item/getURL">
+                  <div class="tileImage">
+                      <img src="" alt=""
+                           tal:define="scales obj/@@images;
+                                       scale python:scales.scale('image', 'thumb')"
+                           tal:replace="structure python:scale and scale.tag(css_class='tileImage') or None" />
+                  </div>
+            </a>
+
+            <h2 class="tileHeadline" metal:define-macro="listitem">
+                <a href="#"
+                   class="summary url"
+                   tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url;"
+                   tal:content="item/Title">
+                    Item Title
+                </a>
+            </h2>
+
+            <div class="documentByLine">
+              <tal:sub tal:condition="subs" tal:define="subs item/taxonomy_emneord">
+                <tal:loop tal:repeat="sub subs">
+                  <tal:c tal:content="python: context.translate(sub, domain='collective.taxonomy.emneord')"></tal:c><tal:comma tal:condition="not: repeat/sub/end">,</tal:comma>
+                </tal:loop>
+                <span class="separator">|</span>
+              </tal:sub>
+            </div>
+
+            <p class="tileBody" tal:condition="item_description">
+                <span class="description" tal:content="item_description">
+                    description
+                </span>
+            </p>
+        </div>
+
+    </metal:entry>
+    </metal:block>
+    </metal:entries>
+
+</metal:block>
+</metal:content-core>
+
+</body>
+</html>

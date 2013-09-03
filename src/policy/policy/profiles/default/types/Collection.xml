@@ -1,8 +1,13 @@
 <?xml version="1.0"?>
 <object name="Collection" meta_type="Dexterity FTI" i18n:domain="plone"
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
- <property name="view_methods" purge="False">
+ <property name="view_methods">
+  <element value="standard_view"/>
+  <element value="summary_view"/>
+  <element value="all_content"/>
+  <element value="tabular_view"/>
   <element value="events_view"/>
+  <element value="summary_view_without_dates"/>
  </property>
   <property name="behaviors">
     <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>

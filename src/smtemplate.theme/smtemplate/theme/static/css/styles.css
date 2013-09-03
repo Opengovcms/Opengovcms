@@ -1662,8 +1662,13 @@ body.template-new-user #content input {
   list-style: none;
   padding-left: 0;
 }
+.listTypeHyphen li {
+  margin-left: 10px;
+}
 .listTypeHyphen li:before {
   content: "- ";
+  float: left;
+  margin-left: -10px;
 }
 .listTypeMark > li {
   display: block;
@@ -1931,6 +1936,7 @@ li:hover .globalSectionsLevel1 {
 }
 .globalSectionsLevel1 a:hover {
   background-color: #c92f28;
+  text-decoration: none !important;
 }
 .globalSectionsLevel1 ul {
   padding: 0;

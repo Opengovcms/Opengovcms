@@ -20,12 +20,13 @@
            tal:attributes="href item/getURL;
                            title item/Description;">
             <div class="portletItemImageWrapper"
-                 tal:condition="repeat/item/start">
-                <img tal:define="obj item/getObject;
-                                 image nocall:obj/image|nothing;
-                                 scale obj/@@images|nothing"
-                     tal:condition="python: image and image.getSize()"
-                     src="dummy.png" width="60" height="60" alt="" class="imgLeft"
+                 tal:define="obj item/getObject;
+                             image nocall:obj/image|nothing;
+                             scale obj/@@images|nothing;
+                             repeatItem repeat/item/start;
+                             hasImage python: image and image.getSize()"
+                 tal:condition="python: repeatItem and hasImage">
+                <img src="dummy.png" width="60" height="60" alt="" class="imgLeft"
                      tal:replace="structure python:scale.scale('image', scale='large').tag()" />
             </div>
             <tal:content tal:content="item/title">Title</tal:content>

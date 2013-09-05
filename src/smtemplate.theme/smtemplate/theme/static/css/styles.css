@@ -2116,6 +2116,7 @@ li:hover .globalSectionsLevel1 {
 #portal-footer {
   border-top: 1px solid #a7b0b5;
   clear: both;
+  margin: 0 15px;
   padding: 18px 0 0;
 }
 #portal-footer a:hover {

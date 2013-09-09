@@ -902,11 +902,6 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 .label .fieldErrorBox {
   font-weight: normal;
 }
-/* for highlighting of search terms */
-
-.highlightedSearchTerm {
-  font-family: "Swift Neue LT W01 Bold", serif;
-}
 /* for greying out inherited roles */
 
 .noInheritedRoles {
@@ -2306,8 +2301,14 @@ li:hover .globalSectionsLevel1 {
 #search-results-wrapper {
   margin-top: 1em;
 }
-form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
-  background: transparent !important;
+.highlightedSearchTerm {
+  font-family: "Swift Neue LT W01 Bold", serif;
+}
+.documentFirstHeading .highlightedSearchTerm {
+  font-family: "Swift Neue LT W01 Light", serif;
+}
+#search-term .highlightedSearchTerm {
+  font-family: "Swift Neue LT W01 Bold", serif;
 }
 .searchResultsItemTitle {
   margin: 18px 0 6px;

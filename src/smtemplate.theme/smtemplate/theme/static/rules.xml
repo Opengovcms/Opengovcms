@@ -25,7 +25,7 @@
         <ul class="documentActions">
             <li id="document-action-plus">
                 <!-- AddThis Button BEGIN -->
-                    <a class="addthis_button_compact"><span>Bookmark or Share</span></a>
+                    <a class="addthis_button_compact" href="#" tabindex="-1"><span>Bookmark or Share</span></a>
                     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-516d25276505d88f"></script>
                 <!-- AddThis Button END -->
             </li>

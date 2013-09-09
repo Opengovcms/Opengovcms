@@ -304,4 +304,15 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="32">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.runDefaultProfile"
+      title="Run policy profile"
+      description="Added alt image text behavior"
+      />
+  </genericsetup:upgradeSteps>
+
 </configure>

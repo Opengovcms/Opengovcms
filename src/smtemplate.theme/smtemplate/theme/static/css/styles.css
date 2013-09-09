@@ -1947,12 +1947,17 @@ body.template-new-user #content input {
   background: linear-gradient(#ab1d17, #d5241c);
   color: white;
   display: none;
+  font-family: "Swift Neue LT W01 Light", serif;
+  font-size: 14px;
   left: 0;
   padding: 9px 0 18px;
   position: absolute;
   top: 100%;
   width: 100%;
   z-index: 3;
+}
+.globalSectionsLevel1 .richPortletTitle {
+  font-family: "Swift Neue LT W01 Light", serif;
 }
 .no-cssgradients .globalSectionsLevel1 {
   background-color: #c0211a;

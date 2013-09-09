@@ -14,9 +14,11 @@
         <div class="newsImageContainer"
              tal:define="image nocall:context/image"
              tal:condition="nocall:image">
-            <img tal:define="scale context/@@images"
+            <img tal:define="scale context/@@images;
+                             description context/Description;
+                             alt python:getattr(context, 'alt_image_text', nothing) or description;"
                  tal:replace="structure python: scale.scale('image',
-                              scale='mini').tag(css_class='newsImage')" />
+                              scale='mini').tag(css_class='newsImage', alt=alt)" />
             <p class="discreet" tal:condition="context/image_caption|nothing"
                tal:content="structure context/image_caption" >
             </p>

@@ -22,10 +22,11 @@
                        tal:condition="python:getattr(real_object, 'image', None)"
                        tal:attributes="href python: item_type in use_view_action and item_url+'/view' or item_url">
                         <img tal:define="images item_object/@@images;
+                                         alt python:getattr(obj, 'alt_image_text', nothing) or item_description;
                                          scale python: images.scale('image', scale='thumb')"
                              tal:condition="scale"
                              src="" alt=""
-                             tal:replace="structure python: scale.tag(css_class='tileImage')" />
+                             tal:replace="structure python: scale.tag(css_class='tileImage', alt=alt)" />
                     </a>
 
                     <h2 class="tileHeadline"

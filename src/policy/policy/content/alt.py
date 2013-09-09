@@ -20,7 +20,7 @@ class IAltImageText(model.Schema):
             u'help_alt_image_text',
             default=u'Alt text for image'
         ),
-        default=''
+        required=False
     )
 
     form.omitted('alt_image_text')

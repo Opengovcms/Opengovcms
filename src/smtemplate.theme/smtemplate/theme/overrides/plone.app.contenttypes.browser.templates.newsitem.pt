@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+<body>
+
+<metal:content-core fill-slot="content-core">
+    <metal:block define-macro="content-core"
+          tal:define="templateId template/getId;">
+
+        <div class="newsImageContainer"
+             tal:define="image nocall:context/image"
+             tal:condition="nocall:image">
+            <img tal:define="scale context/@@images"
+                 tal:replace="structure python: scale.scale('image',
+                              scale='mini').tag(css_class='newsImage')" />
+            <p class="discreet" tal:condition="context/image_caption|nothing"
+               tal:content="structure context/image_caption" >
+            </p>
+        </div>
+
+        <div id="parent-fieldname-text"
+             tal:condition="context/text"
+             tal:content="structure context/text/output" />
+
+    </metal:block>
+</metal:content-core>
+
+</body>
+</html>
+

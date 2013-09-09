@@ -3603,6 +3603,9 @@ a.managePortletsFallback {
     padding: 0 !important;
     width: auto;
   }
+  #document-action-print {
+    display: none;
+  }
 }
 @media print {
   /* Removes certain elements when printing, and apply basic font styles

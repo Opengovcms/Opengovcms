@@ -29,7 +29,7 @@
                             <div class="sstImageWrapper"
                                  tal:attributes="class python: scale and 'sstImageWrapper' or 'sstNoImage'"
                                  tal:define="images item_object/@@images;
-                                             alt python:getattr(item_object, 'alt_image_text', nothing) or item_description;
+                                             alt python:getattr(item_object, 'alt_image_text', nothing) or item_title_or_id;
                                              scale python: images.scale('image', scale='preview')">
                                 <img src="" alt="" tal:condition="scale"
                                      tal:replace="structure python: scale.tag(css_class='sstImage', alt=alt)" />

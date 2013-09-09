@@ -14,8 +14,8 @@
             <a class="discreet"
                tal:attributes="href string:${context/@@plone_context_state/object_url}/image_view_fullscreen"
                tal:define="scale context/@@images;
-                           description context/Description;
-                           alt python:getattr(context, 'alt_image_text', nothing) or description;
+                           title context/Title;
+                           alt python:getattr(context, 'alt_image_text', nothing) or title;
                            img_tag python:scale.scale('image', scale='preview').tag(alt=alt)"
                 tal:on-error="string: Image cannot be displayed">
                 <img tal:replace="structure img_tag" />

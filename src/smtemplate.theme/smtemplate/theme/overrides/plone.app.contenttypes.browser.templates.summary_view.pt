@@ -23,7 +23,8 @@
                   <div class="tileImage">
                       <img src="" alt=""
                            tal:define="scales obj/@@images;
-                                       alt python:getattr(obj, 'alt_image_text', nothing) or item_description;
+                                       item_title item/Title;
+                                       alt python:getattr(obj, 'alt_image_text', nothing) or item_title;
                                        scale python:scales.scale('image', 'thumb')"
                            tal:replace="structure python:scale and scale.tag(css_class='tileImage', alt=alt) or None" />
                   </div>

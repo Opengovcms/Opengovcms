@@ -14,18 +14,18 @@
     <dd class="portletItem"
         tal:define="oddrow repeat/item/odd;
                     number repeat/item/number;
-                    item_description item/Description;
+                    item_title item/Title;
                     item_icon python:getIcon(item);">
         <a href="#"
            class="portletItemTitle"
            tal:attributes="href item/getURL;
-                           title item_description;">
+                           title item/Description;">
             <div class="portletItemImageWrapper"
                  tal:define="obj item/getObject;
                              image nocall:obj/image|nothing;
                              scale obj/@@images|nothing;
                              repeatItem repeat/item/start;
-                             alt python:getattr(obj, 'alt_image_text', nothing) or item_description;
+                             alt python:getattr(obj, 'alt_image_text', nothing) or item_title;
                              hasImage python: image and image.getSize()"
                  tal:condition="python: repeatItem and hasImage">
                 <img src="dummy.png" width="60" height="60" alt="" class="imgLeft"

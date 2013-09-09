@@ -29,9 +29,10 @@
                             <div class="sstImageWrapper"
                                  tal:attributes="class python: scale and 'sstImageWrapper' or 'sstNoImage'"
                                  tal:define="images item_object/@@images;
+                                             alt python:getattr(item_object, 'alt_image_text', nothing) or item_description;
                                              scale python: images.scale('image', scale='preview')">
                                 <img src="" alt="" tal:condition="scale"
-                                     tal:replace="structure python: scale.tag(css_class='sstImage')" />
+                                     tal:replace="structure python: scale.tag(css_class='sstImage', alt=alt)" />
                             </div>
                             <h2 class="sstHeadline"
                                 metal:define-macro="listitem"

@@ -67,8 +67,10 @@ audio:not([controls]) {
 html {
   font-family: sans-serif;
   /* 1 */
+
   -ms-text-size-adjust: 100%;
   /* 2 */
+
   -webkit-text-size-adjust: 100%;
   /* 2 */
 
@@ -137,8 +139,8 @@ hr {
  * Address styling not present in IE 8/9.
  */
 mark {
-  background: yellow;
-  color: black;
+  background: #ff0;
+  color: #000;
 }
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
@@ -215,7 +217,7 @@ figure {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -226,6 +228,7 @@ fieldset {
 legend {
   border: 0;
   /* 1 */
+
   padding: 0;
   /* 2 */
 
@@ -241,8 +244,10 @@ select,
 textarea {
   font-family: inherit;
   /* 1 */
+
   font-size: 100%;
   /* 2 */
+
   margin: 0;
   /* 3 */
 
@@ -274,10 +279,11 @@ select {
  */
 button,
 html input[type="button"],
-/* 1 */ input[type="reset"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
+
   cursor: pointer;
   /* 3 */
 
@@ -297,6 +303,7 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
+
   padding: 0;
   /* 2 */
 
@@ -309,9 +316,11 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   /* 2 */
+
   box-sizing: content-box;
 }
 /**
@@ -337,6 +346,7 @@ input::-moz-focus-inner {
 textarea {
   overflow: auto;
   /* 1 */
+
   vertical-align: top;
   /* 2 */
 
@@ -351,14 +361,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
 /* ==========================================================================
      General Styles
      ========================================================================== */
-
 body {
   background: #60969f;
-  color: black;
+  color: #000000;
   font-family: "Swift Neue LT W01 Light", serif;
   font-size: 14px;
   line-height: 18px;
@@ -377,7 +385,7 @@ a:visited {
 h1,
 .documentFirstHeading {
   font-family: inherit;
-  font-size: 36.12px;
+  font-size: 36.120000000000005px;
   font-weight: normal;
   line-height: 42.12px;
   margin: 9px 0 15px;
@@ -389,7 +397,7 @@ h1,
 }
 h2 {
   font-family: inherit;
-  font-size: 18.06px;
+  font-size: 18.060000000000002px;
   font-weight: normal;
   line-height: 24.12px;
   margin: 27px 0 9px;
@@ -429,8 +437,8 @@ dd {
   margin: 0 0 0 27px;
 }
 pre {
-  background-color: #222222;
-  color: white;
+  background-color: #222;
+  color: #fff;
   font-size: 12px;
   font-family: monospace;
   margin-bottom: 1em;
@@ -448,15 +456,13 @@ iframe {
   min-width: 100%;
 }
 /* @group Content Area */
-
 /* Editor styles */
-
 .discreet {
-  font-size: 12.068965517px;
+  font-size: 12.06896551724138px;
   color: #6f7578;
 }
 .visualHighlight {
-  background-color: #ffffbb;
+  background-color: #ffb;
 }
 .pullquote {
   font-size: 17.9998px;
@@ -469,7 +475,7 @@ iframe {
   color: #a7b0b5;
   content: "”";
   display: block;
-  font-size: 100px;
+  font-size: 99.99999999999999px;
   font-style: normal;
   font-weight: bold;
   left: -50px;
@@ -485,12 +491,11 @@ iframe {
 }
 .callout {
   clear: both;
-  background-color: #eeeeee;
-  border-left: 1em solid #cccccc;
+  background-color: #eee;
+  border-left: 1em solid #ccc;
   padding: 1em;
 }
 /* Content layout styles */
-
 img.tileImage,
 div.newsImageContainer {
   float: right;
@@ -505,9 +510,7 @@ div.newsImageContainer {
   clear: both;
 }
 /* @end */
-
 /* @group Data tables */
-
 table.listing,
 table.plain {
   margin: 0 0 18px;
@@ -544,12 +547,11 @@ table.listing td {
 table.listing td.draggable,
 table.listing td.notDraggable {
   padding: 0 7.2px;
-  text-shadow: white 1px 1px 1px;
+  text-shadow: #fff 1px 1px 1px;
   text-align: center;
   vertical-align: middle;
 }
 /* Vertical table data listings */
-
 table.vertical th {
   text-align: right;
 }
@@ -557,22 +559,19 @@ table.vertical td {
   padding: 0.5em;
 }
 /* Grid table listings */
-
 table.grid td,
 table.grid th {
   border: 1px solid #a7b0b5;
   padding: 0.5em;
 }
 .dragindicator {
-  outline: 2px solid gold;
+  outline: 2px solid #ffd700;
 }
 #foldercontents-order-column {
   padding: 0;
 }
 /* @end */
-
 /* @group Status messages */
-
 dl.portalMessage,
 div.attention,
 div.caution,
@@ -584,7 +583,7 @@ div.note,
 div.tip,
 div.warning {
   margin: 1em 0;
-  border: 1px solid #999966;
+  border: 1px solid #996;
   background-color: #ffffe3;
   clear: both;
 }
@@ -608,12 +607,12 @@ div.warning a,
 #content div.note a,
 #content div.tip a,
 #content div.warning a {
-  color: black;
+  color: #000;
   text-decoration: underline;
 }
 dl.portalMessage dt,
 div > .admonition-title {
-  background-color: #999966;
+  background-color: #996;
   float: left;
   margin: 0 0.5em 0 0;
   padding: 0.5em 0.75em;
@@ -635,44 +634,42 @@ div.warning > .last {
   line-height: 1.25em;
 }
 .warning {
-  border-color: #dd8800;
+  border-color: #d80;
 }
 .warning > dt,
 .warning > .admonition-title {
-  background-color: #dd8800;
+  background-color: #d80;
 }
 .error {
-  border-color: #dd0000;
+  border-color: #d00;
 }
 .error > dt,
 .error > .admonition-title {
-  background-color: #dd0000;
+  background-color: #d00;
 }
 .warning {
-  border-color: #dd8800;
+  border-color: #d80;
 }
 .warning > dd,
 .warning > .last {
-  background-color: #ffdd77;
+  background-color: #fd7;
 }
 .error {
   border-color: red;
 }
 .error > dd,
 .error > .last {
-  background-color: #ffddcc;
+  background-color: #fdc;
 }
 /* @end */
-
 /* @group Collapsible */
-
 dl.collapsible {
   border: 1px solid #8cacbb;
   margin: 1em 0;
   padding: 0;
 }
 dl.collapsible dt.collapsibleHeader {
-  background-color: white;
+  background-color: #fff;
   float: left;
   display: block;
   line-height: 1.2em;
@@ -689,14 +686,13 @@ dl.collapsible dd.collapsibleContent {
   padding: 6px 12px 12px;
 }
 /* for IE the following isn't needed, that's why the css2 selector is used */
-
 dl.collapsible dd.collapsibleContent > dl {
   margin: 0;
   padding: 0;
 }
 dl.expandedInlineCollapsible dt.collapsibleHeader,
 dl.expandedBlockCollapsible dt.collapsibleHeader {
-  background: url(../images/treeExpanded.png) no-repeat 0.5em 50% white;
+  background: url(../images/treeExpanded.png) no-repeat 0.5em 50% #ffffff;
   cursor: pointer;
   padding: 0 0.5em 0 2em;
 }
@@ -707,7 +703,7 @@ dl.collapsedBlockCollapsible {
 }
 dl.collapsedInlineCollapsible dt.collapsibleHeader,
 dl.collapsedBlockCollapsible dt.collapsibleHeader {
-  background: url(../images/treeCollapsed.png) no-repeat 0.5em 50% white;
+  background: url(../images/treeCollapsed.png) no-repeat 0.5em 50% #ffffff;
   cursor: pointer;
   float: none;
   margin: 0 0 0 1em;
@@ -733,9 +729,7 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
   position: static;
 }
 /* @end */
-
 /* @group Comments */
-
 .comment {
   margin-top: 1.5em;
   font-size: 80%;
@@ -747,12 +741,12 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
   margin-left: 0;
 }
 .commentTime {
-  color: #666666;
+  color: #666;
 }
 .commentBody {
   padding: 1em;
   margin: 0.5em 0;
-  box-shadow: 0 0 1em 0 #888888;
+  box-shadow: 0 0 1em 0 #888;
 }
 .comment h1,
 .comment h2,
@@ -763,7 +757,6 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
   font-weight: normal;
 }
 /* @end */
-
 .reviewHistory,
 .contentHistory {
   display: inline;
@@ -779,27 +772,18 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 .label .fieldErrorBox {
   font-weight: normal;
 }
-/* for highlighting of search terms */
-
-.highlightedSearchTerm {
-  font-family: "Swift Neue LT W01 Bold", serif;
-}
 /* for greying out inherited roles */
-
 .noInheritedRoles {
   color: #a0a0a0;
 }
 /* for highlighting current items, like the language or today in the calendar */
-
 .currentItem {
   border-collapse: collapse;
-  border: 0.2em solid orange;
+  border: 0.2em solid #ffa500;
   padding: 0.1em;
 }
 /* @end */
-
 /* @group Image alignment classes */
-
 .image-left {
   float: left;
   margin: 0.5em 1em 0.5em 0;
@@ -820,11 +804,8 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
   max-width: 100%;
 }
 /* @end */
-
 /* @group Table of Contents */
-
 /*Table of Contents styling - essentially a portlet with smaller fonts and aligned right + limited in width*/
-
 dl.toc {
   float: right;
   width: 35%;
@@ -844,9 +825,7 @@ dl.toc dd ol {
   margin-left: 1.5em;
 }
 /* @end */
-
 /* @group Sitemap */
-
 #portal-sitemap {
   list-style: none;
   margin-left: 0;
@@ -862,7 +841,7 @@ dl.toc dd ol {
   display: block;
 }
 #portal-sitemap > li {
-  border-bottom: 0.1em dotted #dddddd;
+  border-bottom: 0.1em dotted #ddd;
   line-height: 1.8em;
   padding: 0.25em 1em;
   margin-bottom: 0;
@@ -875,9 +854,7 @@ dl.toc dd ol {
   padding: 0.25em 0;
 }
 /* @end */
-
 /* @group Album view classes */
-
 .photoAlbumVisual {
   background-color: #f9f9f9;
   border-bottom: 1px solid #ededed;
@@ -895,7 +872,7 @@ dl.toc dd ol {
 }
 .photoAlbumEntry {
   background-color: #ededed;
-  border-color: lightgray #e8e8e8;
+  border-color: #d3d3d3 #e8e8e8;
   border-radius: 8px;
   border-style: solid;
   border-width: 0 1px 1px 0;
@@ -935,7 +912,7 @@ dl.toc dd ol {
   text-align: center;
 }
 .photoAlbumEntry img {
-  border: 2px solid white;
+  border: 2px solid #fff;
 }
 .photoAlbumEntryTitle {
   color: #757373;
@@ -954,14 +931,13 @@ dl.toc dd ol {
   position: absolute;
 }
 /* @end */
-
 /* @group Invisibles */
-
 .hiddenStructure {
   display: block !important;
   background: transparent !important;
   background-image: none !important;
   /* safari bug */
+
   border: none !important;
   height: 0.1em !important;
   overflow: hidden !important;
@@ -978,9 +954,7 @@ dl.toc dd ol {
   clear: both;
 }
 /* @end */
-
 /* @group Accessibility elements, applied by JS */
-
 body.largeText {
   font-size: 125%;
 }
@@ -988,11 +962,8 @@ body.smallText {
   font-size: 85%;
 }
 /* @end */
-
 /* @group Overlay windows */
-
 /* styling for overlays (popups) */
-
 .overlay {
   display: none;
   height: auto;
@@ -1009,7 +980,6 @@ div.overlay-iframe {
   height: 60%;
 }
 /* default close button positioned on upper-left corner */
-
 div.overlaybg div.close,
 div.overlay div.close {
   background-image: url(../images/pb_close.png);
@@ -1026,10 +996,10 @@ div.overlay div.close {
 .pb-ajax,
 .pb-image,
 .overlay iframe {
-  background-color: white;
-  border: 1px solid #999999;
+  background-color: #fff;
+  border: 1px solid #999;
   white-space: normal;
-  box-shadow: 0 0 3em 0.5em #666666;
+  box-shadow: 0 0 3em 0.5em #666;
 }
 .pb-ajax > div {
   width: 92%;
@@ -1050,7 +1020,6 @@ div.overlay textarea {
   width: 100%;
 }
 /* Hide form elements that don't make sense within an overlay. */
-
 div.overlay .link-parent {
   display: none;
 }
@@ -1061,7 +1030,6 @@ div.overlay #createGroup fieldset {
   border: none;
 }
 /* lets play nice with paragraphs, links, tabbed pages in overlay e.g. when plone.openid is installed */
-
 div.overlay p {
   margin-bottom: 1em;
 }
@@ -1075,7 +1043,7 @@ div.overlay a:hover label {
   cursor: pointer;
 }
 div.overlay a.selected {
-  color: black;
+  color: #000000;
 }
 div.overlay .formTab {
   margin-right: 1em;
@@ -1089,9 +1057,7 @@ div.overlay .formControls a {
   margin: 0.75em;
 }
 /* @end */
-
 /* @group Content History */
-
 div.historyRecord {
   margin-bottom: 1em;
 }
@@ -1110,7 +1076,7 @@ div.historyTools form {
   display: inline;
 }
 .historyByLine {
-  background: #dddddd;
+  background: #ddd;
   padding: 0.5em;
 }
 div.historyLinks {
@@ -1120,14 +1086,14 @@ div.historyLinks {
 }
 div.historyComment {
   padding: 0.5em 1em;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
 }
 div.historyComment p {
   margin: 0;
   padding-top: 1px;
 }
 a.historyComparePrevious {
-  border-top: 1px dotted #cccccc;
+  border-top: 1px dotted #ccc;
   display: block;
   margin-top: 1.5em;
   margin-bottom: -0.5em;
@@ -1140,9 +1106,7 @@ a.historyComparePrevious span {
   padding: 0 0.5em;
 }
 /* @end */
-
 /* @group Core content type sprites */
-
 .icons-on .contenttype-folder {
   background: url(../images/icons-sprite.png) no-repeat 0 -1600px;
   display: inline-block;
@@ -1182,14 +1146,13 @@ a.historyComparePrevious span {
   margin-right: 3px;
 }
 /* Add new */
-
 #plone-contentmenu-factories li a {
   background: url(../images/icons-sprite.png) no-repeat 1px -1197px;
   display: block;
   padding-left: 17px;
 }
 #plone-contentmenu-factories li a:hover {
-  background-color: white;
+  background-color: #fff;
   background-position: 1px -2797px;
 }
 #plone-contentmenu-factories li .contenttype-folder {
@@ -1245,13 +1208,11 @@ a.historyComparePrevious span {
   padding: 0;
 }
 /* @end */
-
 /* @group jQuery Tag multiple selector */
-
 .optionsBox {
   overflow-y: auto;
   border: solid 1px #999999;
-  background: white;
+  background: #FFFFFF;
   height: 14em;
   width: 100%;
 }
@@ -1266,11 +1227,11 @@ a.historyComparePrevious span {
   margin: 1px 4px 4px 6px;
 }
 .optionsBox LABEL.checked {
-  background-color: #eeeeee;
+  background-color: #EEEEEE;
 }
 .optionsBox LABEL.hover {
   background-color: #777777;
-  color: white;
+  color: #FFFFFF;
 }
 #archetypes-fieldname-subject .formHelp {
   font-weight: normal;
@@ -1329,12 +1290,11 @@ a.historyComparePrevious span {
   margin-left: -10px;
 }
 /* @end */
-
 .section-home .documentFirstHeading {
   display: none;
 }
 .documentDescription {
-  font-size: 18.06px;
+  font-size: 18.060000000000002px;
   line-height: 24.12px;
   margin: 0 0 18px;
 }
@@ -1342,7 +1302,7 @@ a.historyComparePrevious span {
   background-color: #087b8c;
   background: -webkit-linear-gradient(#087b8c, #066270);
   background: linear-gradient(#087b8c, #066270);
-  color: white;
+  color: #ffffff;
   display: inline-block;
   padding: 6px 10px;
 }
@@ -1387,11 +1347,11 @@ a.historyComparePrevious span {
 }
 .factBox {
   background: #087b8c;
-  color: white;
+  color: #ffffff;
   padding: 10px;
 }
 .factBox .listTypeMark > li:before {
-  color: white;
+  color: #ffffff;
 }
 .imageContainer {
   float: left;

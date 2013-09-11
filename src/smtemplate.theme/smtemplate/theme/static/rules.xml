@@ -36,6 +36,12 @@
         </div>        
     </after>
 
+    <after css:theme="#globalnav-wrapper" if-content="$home_page">
+        <div id="portal-breadcrumbs" class="hiddenStructure">
+            <xsl:apply-templates css:select="#portal-breadcrumbs > span:not(#breadcrumbs-you-are-here)" mode="raw" />
+        </div>        
+    </after>
+
     <xsl:template css:match=".breadcrumbSeparator" mode="raw">
         <span class="breadcrumbSeparator"> » </span>
     </xsl:template>

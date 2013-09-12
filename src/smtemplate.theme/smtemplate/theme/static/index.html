@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
     <script src="js/jquery.jpanelmenu.min.js"></script>
     <script src="js/jquery.placeholder.min.js"></script>
-    <script>$(function(){if(!$('#jPanelMenu-menu').length){$.jPanelMenu({keyboardShortcuts:[{code:27,open:false,close:true},{code:37,open:false,close:true},{code:39,open:false,close:true},{code:77,open:false,close:true}],menu:($(".portletNavigationTree").length?$(".portletNavigationTree").clone():$("#theme-globalnav").clone().prepend($("#portaltab-index_html").length?'':$("#breadcrumbs-home a").wrap('<li class="'+($("#theme-globalnav > li.selected").length?'plain':'selected')+'" id="portaltab-index_html"></li>').parent())).add($("#portal-siteactions").clone()).wrapAll('<div />').parent()}).on()};$('input').placeholder()});
+    <script>$(function(){if(!$('#jPanelMenu-menu').length){$.jPanelMenu({keyboardShortcuts:[{code:27,open:false,close:true},{code:37,open:false,close:true},{code:39,open:false,close:true},{code:77,open:false,close:true}],menu:($(".portletNavigationTree").length?$(".portletNavigationTree").clone():$("#theme-globalnav").clone().prepend($("#portaltab-index_html").length?'':$("#breadcrumbs-home a").clone().wrap('<li class="'+($("#theme-globalnav > li.selected").length?'plain':'selected')+'" id="portaltab-index_html"></li>').parent())).add($("#portal-siteactions").clone()).wrapAll('<div />').parent()}).on()};$('input').placeholder()});
     var MTIProjectId='131a2bac-8aba-4848-b271-468bbb947398';
      (function() {
             var mtiTracking = document.createElement('script');

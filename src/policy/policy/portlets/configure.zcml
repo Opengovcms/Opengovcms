@@ -14,11 +14,22 @@
 
   <include package="collective.portlet.rich" />
 
-  <plone:portletRenderer
+<!--   <plone:portletRenderer
     portlet="collective.portlet.rich.richportlet.IRichPortlet"
     layer="policy.interfaces.IBrowserLayer"
     template="richportlet.pt"
     />
+ -->
+   <plone:portlet
+     name="policy.RichPortlet"
+     interface=".richportlet.IRichPortlet"
+     assignment=".richportlet.Assignment"
+     view_permission="zope2.View"
+     edit_permission="cmf.ManagePortal"
+     renderer=".richportlet.Renderer"
+     addview=".richportlet.AddForm"
+     editview=".richportlet.EditForm"
+     />
 
   <plone:portletRenderer
     portlet="plone.app.portlets.portlets.navigation.INavigationPortlet"

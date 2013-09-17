@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <portlets i18n:domain="plone" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <portlet addview="policy.portlets.Contact" remove="true" />
+ <portlet addview="collective.portlet.rich.RichPortlet" remove="true" />
  <portletmanager name="policy.SearchManager" type="policy.interfaces.ISearchPortlets" />
 </portlets>
 

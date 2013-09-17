@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from collective.portlet.rich import RichPortletMessageFactory as _
 from plone.app.portlets.browser import z3cformhelper

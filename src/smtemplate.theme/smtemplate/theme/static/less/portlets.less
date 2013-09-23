@@ -14,14 +14,14 @@ dl.portletError {
   background-color: #ffa500;
 }
 .portletHeader {
-  font-size: @baseFontSize / 0.777;
+  font-size: @largeFontSize;
   font-family: @boldFont;
   // font-weight: bold;
   line-height: @baseLineHeight * 1.223;
   margin: @baseLineHeight/1.125 0 @baseLineHeight*0.723;
 }
 .largeHeader .portletHeader {
-  font-size: @baseFontSize/0.583;
+  font-size: @largestFontSize;
   line-height: @baseLineHeight/0.6;
   margin-top: 10px;
 }
@@ -174,7 +174,7 @@ dl.portletError {
 }
 .navTreeDesktopTopNode .navTree .navTree {
   background-color: @white;
-  font-size: @baseFontSize * 0.857;  
+  font-size: @smallerFontSize;  
   line-height: @baseLineHeight / 1.125;
 }
 .navTreeDesktopTopNode > .navTree > .navTreeItem > .navTree > .navTreeCurrentNode,
@@ -314,7 +314,7 @@ dl.portletError {
   margin: 0;
 }
 .largeHeader .richPortletTitle {
-  font-size: @baseFontSize/0.583;
+  font-size: @largestFontSize;
   line-height: @baseLineHeight/0.6;
   margin-top: 10px;
 }
@@ -535,7 +535,7 @@ dl.portletError {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 0 none;
-  font-size: @baseFontSize * 1.14;
+  font-size: @largerFontSize;
   height: 30px;
   padding: 3px 10px;
   vertical-align: top;
@@ -561,7 +561,8 @@ dl.portletError {
   font-weight: normal;
 }
 .portletSubscription .row:first-child label,
-.portletSubscription .row:first-child + .row label {
+.portletSubscription .row:first-child + .row label,
+.portletSubscription .fieldRequired {
   display: none;
 }
 

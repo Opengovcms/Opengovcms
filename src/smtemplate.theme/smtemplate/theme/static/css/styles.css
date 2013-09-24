@@ -484,7 +484,7 @@ body {
   color: black;
   font-family: "Swift Neue LT W01 Light", serif;
   font-size: 0.875em;
-  line-height: 18px;
+  line-height: 1.28571;
 }
 .jPanelMenu-panel {
   background: #60969f !important;
@@ -502,7 +502,7 @@ h1,
   font-family: inherit;
   font-size: 2.5714285714em;
   font-weight: normal;
-  line-height: 42.12px;
+  line-height: 1.16667;
   margin: 9px 0 15px;
 }
 .template-summary_view .documentFirstHeading,
@@ -514,12 +514,12 @@ h2 {
   font-family: inherit;
   font-size: 1.28571em;
   font-weight: normal;
-  line-height: 24.12px;
+  line-height: 1.33333;
   margin: 27px 0 9px;
 }
 h3 {
   font-size: 1em;
-  line-height: 19.98px;
+  line-height: 1.42857;
   margin: 0;
 }
 p {
@@ -584,7 +584,7 @@ iframe {
 .pullquote {
   font-size: 1.28571em;
   font-style: italic;
-  line-height: 24px;
+  line-height: 1.33333;
   margin: 0 0 18px 50px;
   position: relative;
 }
@@ -604,7 +604,7 @@ iframe {
   font-size: 0.77778em;
   font-style: normal;
   font-weight: normal;
-  line-height: 18px;
+  line-height: 1.28571;
 }
 .callout {
   clear: both;
@@ -1501,7 +1501,7 @@ input#title {
   font-family: inherit;
   font-size: 2.5714285714em;
   font-weight: normal;
-  line-height: 42.12px;
+  line-height: 1.16667;
   margin: 9px 0 15px;
   margin: 0;
   width: 100%;
@@ -1511,7 +1511,7 @@ input#title {
 #content .field textarea[name$=".description"],
 #archetypes-fieldname-description textarea#description {
   font-size: 1.28571em;
-  line-height: 24.12px;
+  line-height: 1.33333;
   margin: 0 0 18px;
   margin: 0;
 }
@@ -1578,7 +1578,7 @@ dl.enableFormTabbing dd {
   display: block;
   font-size: 0.85714em;
   font-weight: normal;
-  line-height: 14.994px;
+  line-height: 1.33333;
   margin: 3px 0 6px;
 }
 .error .fieldRequired {
@@ -1679,7 +1679,7 @@ body.template-new-user #content input {
 }
 .documentDescription {
   font-size: 1.28571em;
-  line-height: 24.12px;
+  line-height: 1.33333;
   margin: 0 0 18px;
 }
 .linkButton a {
@@ -1732,6 +1732,7 @@ body.template-new-user #content input {
 .factBox {
   background: #087b8c;
   color: white;
+  margin-bottom: 18px;
   padding: 10px;
 }
 .factBox .listTypeMark > li:before {
@@ -1774,7 +1775,7 @@ body.template-new-user #content input {
 #portal-siteactions {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.78571em;
-  line-height: 15.12px;
+  line-height: 1.36364;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1928,7 +1929,7 @@ body.template-new-user #content input {
   color: white;
   display: inline-block;
   font-size: 1.28571em;
-  line-height: 23.94px;
+  line-height: 1.33333;
   padding: 11px 35px 11px 15px;
 }
 #theme-globalnav > li:hover > a span {
@@ -2050,7 +2051,7 @@ li:hover .globalSectionsLevel1 {
 #portal-breadcrumbs {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.78571em;
-  line-height: 14.1426px;
+  line-height: 1.27273;
   margin: 12px 0 0;
   text-transform: uppercase;
 }
@@ -2092,7 +2093,7 @@ li:hover .globalSectionsLevel1 {
 #portal-footer-wrapper .portletItem {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.85714em;
-  line-height: 16px;
+  line-height: 1.33333;
 }
 #portal-footer-wrapper .listTypeMark > li {
   margin: 0;
@@ -2136,7 +2137,7 @@ li:hover .globalSectionsLevel1 {
 .documentByLine {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.78571em;
-  line-height: 15px;
+  line-height: 1.36364;
   margin: 0 0 6px;
   text-transform: uppercase;
 }
@@ -2316,7 +2317,7 @@ li:hover .globalSectionsLevel1 {
 .documentLocation {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.78571em;
-  line-height: 14.1426px;
+  line-height: 1.36364;
   margin: 0 0 3px;
   text-transform: uppercase;
 }
@@ -2374,16 +2375,16 @@ dl.portletError {
 .portletHeader {
   font-size: 1.28571em;
   font-family: "Swift Neue LT W01 Bold", serif;
-  line-height: 22.014px;
+  line-height: 1.22222;
   margin: 16px 0 13.014px;
 }
 .largeHeader .portletHeader {
   font-size: 1.71429em;
-  line-height: 30px;
+  line-height: 1.25;
   margin-top: 10px;
 }
 .portletItem {
-  line-height: 20px;
+  line-height: 1.42857;
   margin: 0 0 18px;
 }
 .portletFooter {
@@ -2425,7 +2426,7 @@ dl.portletError {
 }
 .managedPortletActions {
   float: right;
-  font-size: 0.749978572em;
+  font-size: 1.14286em;
 }
 .managedPortletActions a,
 .managedPortletActions button {
@@ -2501,9 +2502,9 @@ dl.portletError {
 }
 .navTreeDesktopTopNode > a,
 .navTreeDesktopTopNode .navTreeTopNode a {
-  font-size: 1.124678663em;
+  font-size: 1.28571em;
   font-weight: bold;
-  line-height: 18px;
+  line-height: 1.22222;
   padding: 18px 0 15px;
 }
 .includeTopNodeFalse .navTreeDesktopTopNode > a {
@@ -2527,7 +2528,7 @@ dl.portletError {
 .navTreeDesktopTopNode .navTree .navTree {
   background-color: white;
   font-size: 0.85714em;
-  line-height: 16px;
+  line-height: 1.33333;
 }
 .navTreeDesktopTopNode > .navTree > .navTreeItem > .navTree > .navTreeCurrentNode,
 .navTreeDesktopTopNode > .navTree > .navTreeItem > .navTree > .navTreeItemInPath {
@@ -2570,8 +2571,8 @@ dl.portletError {
 }
 .portletItemTitle {
   display: block;
-  font-size: 1.124678663em;
-  line-height: 24px;
+  font-size: 1.14286em;
+  line-height: 1.5;
   margin: 0 0 6px;
 }
 .portletItemImageWrapper {
@@ -2584,8 +2585,8 @@ dl.portletError {
 }
 .portletItemByline {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 0.68775em;
-  line-height: 15px;
+  font-size: 0.78571em;
+  line-height: 1.36364;
   margin: 0 0 6px;
   text-transform: uppercase;
 }
@@ -2609,12 +2610,12 @@ dl.portletError {
 }
 .eventItemDay {
   display: block;
-  font-size: 2.24875em;
+  font-size: 36px;
   line-height: 1;
   margin: 10px 0 0;
 }
 .eventItemMon {
-  font-size: 0.749875em;
+  font-size: 12px;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -2650,7 +2651,7 @@ dl.portletError {
 }
 .largeHeader .richPortletTitle {
   font-size: 1.71429em;
-  line-height: 30px;
+  line-height: 1.25;
   margin-top: 10px;
 }
 .portletCarousel {
@@ -2683,14 +2684,14 @@ dl.portletError {
 }
 .carouselPortletItemTitle {
   display: block;
-  font-size: 2.625em;
-  line-height: 46.153846154px;
+  font-size: 3em;
+  line-height: 1.09524;
   margin: 0 0 18px;
 }
 .carouselPortletItemDescription {
   display: block;
-  font-size: 1em;
-  line-height: 22.222222222px;
+  font-size: 1.14286em;
+  line-height: 1.375;
   margin: 0 0 12px;
 }
 .carouselPortletItemCaption {
@@ -2699,8 +2700,8 @@ dl.portletError {
   background: linear-gradient(#087b8c, #066270);
   color: white;
   display: inline-block;
-  font-size: 1em;
-  line-height: 22.222222222px;
+  font-size: 1.14286em;
+  line-height: 1.375;
   padding: 6px 10px;
 }
 .carouselPortletItemCaption:hover {
@@ -2725,9 +2726,9 @@ dl.portletError {
   border-top: 1px solid #087b8c;
   color: white;
   display: block;
-  font-size: 1.124678663em;
+  font-size: 1.28571em;
   height: 86px;
-  line-height: 24px;
+  line-height: 1.33333;
   padding: 15px 10px 15px 15px;
   position: relative;
 }
@@ -2835,13 +2836,11 @@ dl.portletError {
 .horizontalCarousel .portletCarousel li a span {
   width: 95%;
 }
-.portletSubscription input[type="text"] {
-  width: 100%;
-}
 .portletSubscription .action {
   text-align: right;
 }
 .portletSubscription input[type="text"] {
+  -webkit-appearance: none;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -2851,6 +2850,7 @@ dl.portletError {
   height: 30px;
   line-height: 20px;
   padding: 5px 10px;
+  width: 100%;
 }
 .no-boxshadow .portletSubscription input[type="text"] {
   border: 1px solid;
@@ -3129,7 +3129,7 @@ span.required:after {
 #portal-personaltools {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.78571em;
-  line-height: 15.12px;
+  line-height: 1.36364;
   position: absolute;
   top: 40px;
   right: 14px;
@@ -3353,7 +3353,7 @@ a.managePortletsFallback {
     background: #60969f;
     color: white;
     display: block;
-    font-size: 0.875em;
+    font-size: 14px;
     font-weight: normal;
     line-height: 20px;
     padding: 10px 5px 10px 15px;
@@ -3411,7 +3411,7 @@ a.managePortletsFallback {
   #theme-globalnav > li:hover > a span {
     background: none;
     border: 0;
-    font-size: 0.875em;
+    font-size: 14px;
     line-height: 18px;
     padding: 0;
   }
@@ -3421,7 +3421,7 @@ a.managePortletsFallback {
   #jPanelMenu-menu #portal-siteactions {
     display: block;
     font-family: "Swift Neue LT W01 Light", serif;
-    font-size: 0.875em;
+    font-size: 14px;
     line-height: 18px;
     position: static;
   }
@@ -3453,7 +3453,7 @@ a.managePortletsFallback {
   .belowContentNav .navTreeItem a {
     background-color: #60969f;
     color: white;
-    font-size: 0.875em;
+    font-size: 14px;
     line-height: 18px;
     padding: 7px 10px;
     margin: 0 0 5px;
@@ -3565,7 +3565,7 @@ a.managePortletsFallback {
   .carouselPortletItemTitle {
     color: white;
     display: inline-block;
-    font-size: 1.124678663em;
+    font-size: 17.994858612px;
     line-height: 24px;
     margin: 0;
     padding: 15px 0;
@@ -3611,6 +3611,14 @@ a.managePortletsFallback {
     width: auto;
   }
   #document-action-print {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .jPanelMenu-panel {
+    left: 0 !important;
+  }
+  .jPanelMenu-menu {
     display: none;
   }
 }

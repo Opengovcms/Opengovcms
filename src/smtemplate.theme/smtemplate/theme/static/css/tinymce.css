@@ -404,7 +404,7 @@ body {
   color: black;
   font-family: "Swift Neue LT W01 Light", serif;
   font-size: 0.875em;
-  line-height: 18px;
+  line-height: 1.28571;
 }
 .jPanelMenu-panel {
   background: #60969f !important;
@@ -422,7 +422,7 @@ h1,
   font-family: inherit;
   font-size: 2.5714285714em;
   font-weight: normal;
-  line-height: 42.12px;
+  line-height: 1.16667;
   margin: 9px 0 15px;
 }
 .template-summary_view .documentFirstHeading,
@@ -434,12 +434,12 @@ h2 {
   font-family: inherit;
   font-size: 1.28571em;
   font-weight: normal;
-  line-height: 24.12px;
+  line-height: 1.33333;
   margin: 27px 0 9px;
 }
 h3 {
   font-size: 1em;
-  line-height: 19.98px;
+  line-height: 1.42857;
   margin: 0;
 }
 p {
@@ -504,7 +504,7 @@ iframe {
 .pullquote {
   font-size: 1.28571em;
   font-style: italic;
-  line-height: 24px;
+  line-height: 1.33333;
   margin: 0 0 18px 50px;
   position: relative;
 }
@@ -524,7 +524,7 @@ iframe {
   font-size: 0.77778em;
   font-style: normal;
   font-weight: normal;
-  line-height: 18px;
+  line-height: 1.28571;
 }
 .callout {
   clear: both;
@@ -1373,7 +1373,7 @@ a.historyComparePrevious span {
 }
 .documentDescription {
   font-size: 1.28571em;
-  line-height: 24.12px;
+  line-height: 1.33333;
   margin: 0 0 18px;
 }
 .linkButton a {
@@ -1426,6 +1426,7 @@ a.historyComparePrevious span {
 .factBox {
   background: #087b8c;
   color: white;
+  margin-bottom: 18px;
   padding: 10px;
 }
 .factBox .listTypeMark > li:before {

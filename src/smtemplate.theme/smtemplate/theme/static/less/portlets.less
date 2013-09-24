@@ -17,16 +17,16 @@ dl.portletError {
   font-size: @largeFontSize;
   font-family: @boldFont;
   // font-weight: bold;
-  line-height: @baseLineHeight * 1.223;
+  line-height: 1.22222;
   margin: @baseLineHeight/1.125 0 @baseLineHeight*0.723;
 }
 .largeHeader .portletHeader {
   font-size: @largestFontSize;
-  line-height: @baseLineHeight/0.6;
+  line-height: 1.25;
   margin-top: 10px;
 }
 .portletItem {
-  line-height: @baseLineHeight/0.9;
+  line-height: 1.42857;
   margin: 0 0 @baseLineHeight;
 }
 .portletFooter {
@@ -68,7 +68,7 @@ dl.portletError {
 }
 .managedPortletActions {
   float: right;
-  font-size: @baseFontSize/1.1667;
+  font-size: @largerFontSize;
 }
 .managedPortletActions a, 
 .managedPortletActions button {
@@ -149,9 +149,9 @@ dl.portletError {
 }
 .navTreeDesktopTopNode > a,
 .navTreeDesktopTopNode .navTreeTopNode a {
-  font-size: @baseFontSize / 0.778;
+  font-size: 1.28571em;
   font-weight: bold;
-  line-height: @baseLineHeight;
+  line-height: 1.22222;
   padding: @baseLineHeight 0 @baseLineHeight / 1.2;
 }
 .includeTopNodeFalse .navTreeDesktopTopNode > a {
@@ -175,7 +175,7 @@ dl.portletError {
 .navTreeDesktopTopNode .navTree .navTree {
   background-color: @white;
   font-size: @smallerFontSize;  
-  line-height: @baseLineHeight / 1.125;
+  line-height: 1.33333;
 }
 .navTreeDesktopTopNode > .navTree > .navTreeItem > .navTree > .navTreeCurrentNode,
 .navTreeDesktopTopNode > .navTree > .navTreeItem > .navTree > .navTreeItemInPath {
@@ -231,8 +231,8 @@ dl.portletError {
 // NG Collection
 .portletItemTitle {
   display: block;
-  font-size: @baseFontSize/0.778;
-  line-height: @baseLineHeight/0.75;
+  font-size: @largerFontSize;
+  line-height: 1.5;
   margin: 0 0 @baseLineHeight/3;
 }
 .portletItemImageWrapper {
@@ -245,8 +245,8 @@ dl.portletError {
 }
 .portletItemByline {
   font-family: @sansFontFamily;
-  font-size: @baseFontSize*0.786;
-  line-height: @baseLineHeight/1.2;
+  font-size: @smallFontSize;
+  line-height: 1.36364;
   margin: 0 0 @baseLineHeight/3;
   text-transform: uppercase;
 }
@@ -270,12 +270,12 @@ dl.portletError {
 }
 .eventItemDay {
   display: block;
-  font-size: @baseFontSize*2.57;
+  font-size: 36px;
   line-height: 1;
   margin: 10px 0 0;
 }
 .eventItemMon {
-  font-size: @baseFontSize*0.857;
+  font-size: 12px;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -302,9 +302,6 @@ dl.portletError {
 }
 
 // Portlet Rich
-// .portletRich {
-//   padding: 0;
-// }
 .richPortletTitle {
   font-family: @boldFont;
   margin-top: 15px;
@@ -315,7 +312,7 @@ dl.portletError {
 }
 .largeHeader .richPortletTitle {
   font-size: @largestFontSize;
-  line-height: @baseLineHeight/0.6;
+  line-height: 1.25;
   margin-top: 10px;
 }
 
@@ -350,14 +347,14 @@ dl.portletError {
 }
 .carouselPortletItemTitle {
   display: block;
-  font-size: @baseFontSize*3;
-  line-height: @baseLineHeight/0.39;
+  font-size: 3em;
+  line-height: 1.09524;
   margin: 0 0 @baseLineHeight;
 }
 .carouselPortletItemDescription {
   display: block;
-  font-size: @baseFontSize/0.875;
-  line-height: @baseLineHeight/0.81;
+  font-size: @largerFontSize;
+  line-height: 1.375;
   margin: 0 0 @baseLineHeight/1.5;
 }
 .carouselPortletItemCaption {
@@ -366,8 +363,8 @@ dl.portletError {
   background: linear-gradient(@secondary, @main);
   color: @white;
   display: inline-block;
-  font-size: @baseFontSize/0.875;
-  line-height: @baseLineHeight/0.81;
+  font-size: @largerFontSize;
+  line-height: 1.375;
   padding: 6px 10px;
 }
 .carouselPortletItemCaption:hover {
@@ -392,9 +389,9 @@ dl.portletError {
   border-top: 1px solid @secondary;
   color: @white;
   display: block;
-  font-size: @baseFontSize/0.778;
+  font-size: @largeFontSize;
   height: 86px;
-  line-height: @baseLineHeight/0.75;
+  line-height: 1.33333;
   padding: 15px 10px 15px 15px;
   position: relative;
 }
@@ -504,14 +501,12 @@ dl.portletError {
   width: 95%;
 }
 
-// portletSubscription 
-.portletSubscription input[type="text"] {
-  width: 100%;
-}
+// portletSubscription
 .portletSubscription .action {
   text-align: right;
 }
-.portletSubscription input[type="text"] {
+.portletSubscription input[type="text"] {  
+  -webkit-appearance: none;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -521,6 +516,7 @@ dl.portletError {
   height: 30px;
   line-height: 20px;
   padding: 5px 10px;
+  width: 100%;
 }
 .no-boxshadow .portletSubscription input[type="text"] {
   border: 1px solid;

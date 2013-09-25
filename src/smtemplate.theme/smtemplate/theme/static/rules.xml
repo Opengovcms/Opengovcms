@@ -49,7 +49,7 @@
     <xsl:template match="//*[contains(concat(' ', normalize-space(@class), ' '), ' template-edit ')]//form[@id='form']/@class">        
             <xsl:attribute name="class"><xsl:value-of select="." /> enableAutoFocus</xsl:attribute>
     </xsl:template>
-    <xsl:template css:match=".textline-field">
+    <xsl:template css:match=".portletSubscription input.textline-field">
         <xsl:copy>
             <xsl:apply-templates select="@*" />
             <xsl:attribute name="placeholder"><xsl:value-of select="../preceding-sibling::label/span" /></xsl:attribute>

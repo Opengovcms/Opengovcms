@@ -2315,6 +2315,9 @@ li:hover .globalSectionsLevel1 {
 .searchResultsItemTitle {
   margin: 18px 0 6px;
 }
+.searchResultsItemTitle a {
+  display: inline-block;
+}
 .documentLocation {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.78571em;

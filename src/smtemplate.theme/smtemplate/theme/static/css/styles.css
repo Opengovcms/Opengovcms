@@ -1944,16 +1944,13 @@ body.template-new-user #content input {
   color: white;
   display: none;
   font-family: "Swift Neue LT W01 Light", serif;
-  font-size: 0.875em;
+  font-size: 1em;
   left: 0;
   padding: 9px 0 18px;
   position: absolute;
   top: 100%;
   width: 100%;
   z-index: 3;
-}
-.globalSectionsLevel1 .richPortletTitle {
-  font-family: "Swift Neue LT W01 Light", serif;
 }
 .no-cssgradients .globalSectionsLevel1 {
   background-color: #c0211a;
@@ -1976,7 +1973,7 @@ li:hover .globalSectionsLevel1 {
 .globalSectionsLevel1 li > a {
   display: block;
   font-weight: bold;
-  padding: 7px 15px;
+  padding: 3px 15px;
 }
 .globalSectionsLevel1 a:hover {
   background-color: #c92f28;
@@ -2660,7 +2657,7 @@ dl.portletError {
   margin: 0;
 }
 .largeHeader .richPortletTitle {
-  font-size: 1.71429em;
+  font-size: 1.5em;
   line-height: 1.25;
   margin-top: 10px;
 }

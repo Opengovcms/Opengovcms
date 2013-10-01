@@ -342,4 +342,15 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="36">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.installChimpfeed"
+      title="upgrade chimpfeed"
+      description=""
+      />
+  </genericsetup:upgradeSteps>
+
 </configure>

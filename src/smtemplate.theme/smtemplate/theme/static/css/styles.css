@@ -2430,7 +2430,7 @@ dl.portletError {
 }
 .managedPortletActions {
   float: right;
-  font-size: 1.14286em;
+  font-size: 0.66667em;
 }
 .managedPortletActions a,
 .managedPortletActions button {
@@ -2644,6 +2644,9 @@ dl.portletError {
   clear: left;
   float: left;
   margin: 0;
+}
+#portal-column-two .portletRich {
+  padding: 0;
 }
 .richPortletTitle {
   font-family: "Swift Neue LT W01 Bold", serif;

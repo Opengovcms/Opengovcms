@@ -27,16 +27,11 @@ class IRichPortlet(IPortletDataProvider):
 
     target_title_image = RelationChoice(
         title=_(u"Portlet title image"),
-        description=_(u"Find the image"),
+        description=u"Find et billede. Som alt-tekst og titel anvendes billedets beskrivelse og titel.",
         required=False,
         source=ObjPathSourceBinder(
             portal_type=['Image']
         ),
-    )
-
-    image_alt_text = schema.TextLine(
-        title=u"Image alt tekst",
-        required=False
     )
 
     title_image_scale = schema.Choice(
@@ -118,7 +113,6 @@ class Assignment(base.Assignment):
     target_title_image = None
     title_more_url = None
     title = u"Rich portlet"
-    image_alt_text = None
 
 
     def __init__(
@@ -128,8 +122,7 @@ class Assignment(base.Assignment):
         title_more_url='', text=u"",
         omit_border=False,
         footer=u"", footer_more_url='',
-        header=None, target_header_image=None, header_more_url=None,
-        image_alt_text=None
+        header=None, target_header_image=None, header_more_url=None
     ):
         """Initialize all variables."""
 
@@ -143,7 +136,6 @@ class Assignment(base.Assignment):
         self.omit_border = omit_border
         self.footer = footer
         self.footer_more_url = footer_more_url
-        self.image_alt_text = image_alt_text
 
         # backwards compatibility
         if header is not None:
@@ -226,8 +218,10 @@ class Renderer(base.Renderer):
             try:
                 view = image.restrictedTraverse('@@images')
                 view = view.__of__(image)
-                return view.tag('image', scale=self.data.title_image_scale,
-                                alt=self.data.image_alt_text)
+                return view.tag('image',
+                                scale=self.data.title_image_scale,
+                                alt=image.description,
+                                title=image.title)
             except:
                 pass
 
@@ -262,8 +256,8 @@ class AddForm(z3cformhelper.AddForm):
     constructs the assignment that is being added.
     """
 
-    label = _(u"Add Rich Portlet")
-    description = _(u"This portlet ...")
+    label = u"Tilføj teksteditorportlet"
+    description = u""
 
     fields = field.Fields(IRichPortlet)
 
@@ -278,7 +272,7 @@ class EditForm(z3cformhelper.EditForm):
     zope.formlib which fields to display.
     """
 
-    label = _(u"Edit Rich Portlet")
-    description = _(u"This portlet ...")
+    label = u"Rediger teksteditorportlet"
+    description = u""
 
     fields = field.Fields(IRichPortlet)

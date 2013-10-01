@@ -2648,6 +2648,9 @@ dl.portletError {
 #portal-column-two .portletRich {
   padding: 0;
 }
+.portletRich img {
+  vertical-align: top;
+}
 .richPortletTitle {
   font-family: "Swift Neue LT W01 Bold", serif;
   margin-top: 15px;

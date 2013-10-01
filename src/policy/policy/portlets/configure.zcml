@@ -14,12 +14,12 @@
 
   <include package="collective.portlet.rich" />
 
-<!--   <plone:portletRenderer
+   <plone:portletRenderer
     portlet="collective.portlet.rich.richportlet.IRichPortlet"
     layer="policy.interfaces.IBrowserLayer"
     template="richportlet.pt"
     />
- -->
+
    <plone:portlet
      name="policy.RichPortlet"
      interface=".richportlet.IRichPortlet"

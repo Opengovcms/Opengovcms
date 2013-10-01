@@ -330,4 +330,38 @@
       description="Added project specific version of RichPortlet"
       />
   </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="35">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.runDefaultProfile"
+      title="Run policy profile"
+      description="Update types - image model file changed."
+      />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="36">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.installChimpfeed"
+      title="upgrade chimpfeed"
+      description=""
+      />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="*"
+     destination="37">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.runDefaultProfile"
+      title="Run policy profile"
+      description="Update types - image model file changed."
+      />
+  </genericsetup:upgradeSteps>
+
 </configure>

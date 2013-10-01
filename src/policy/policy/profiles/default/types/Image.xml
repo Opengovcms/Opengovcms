@@ -10,7 +10,6 @@
   <element value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>
   <element value="plone.app.relationfield.behavior.IRelatedItems"/>
   <element value="policy.content.exclfrommobilenav.IExcludeFromMobileNavigation"/>
-  <element value="policy.content.alt.IAltImageText"/>
   <element value="collective.taxonomy.generated.emneord"/>
   <element value="collective.taxonomy.generated.sektion"/>
   <element value="collective.taxonomy.generated.sekundaertemneord"/>

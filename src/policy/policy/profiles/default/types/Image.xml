@@ -15,4 +15,5 @@
   <element value="collective.taxonomy.generated.sektion"/>
   <element value="collective.taxonomy.generated.sekundaertemneord"/>
  </property>
+ <property name="model_file">policy.content.schema:image.xml</property>
 </object>

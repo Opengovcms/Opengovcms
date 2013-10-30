@@ -2584,6 +2584,9 @@ dl.portletError {
 .width-1\3a 3 .portletItemImageWrapper {
   max-height: 113px;
 }
+.width-1\3a 3 .largeHeader .portletItemImageWrapper {
+  max-height: 163px;
+}
 .portletItemByline {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.78571em;

@@ -7,10 +7,12 @@
     i18n_domain="policy">
 
   <five:registerPackage package="." initialize=".initialize" />
+
   <includeDependencies package="." />
 
   <include file="profiles.zcml" />
   <include file="upgradesteps.zcml" />
+
   <utility factory=".setuphandlers.HiddenProducts" name="policy" />
 
   <i18n:registerTranslations directory="locales" />

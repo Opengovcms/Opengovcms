@@ -25,6 +25,8 @@ setup(name='policy',
       install_requires=[
           'setuptools',
           'plone.app.dexterity',
+          'plone.app.portlets',
+          'plone.app.event',
           'plone.directives.form',
           'z3c.relationfield',
           'collective.dexteritytextindexer',

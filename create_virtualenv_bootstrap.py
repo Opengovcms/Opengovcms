@@ -12,9 +12,9 @@ def after_install(options, home_dir):
     # Run script example:
     #subprocess.call([join(home_dir, bin, 'my-package-script'),
     #                 'setup', home_dir])
-     if not os.path.exists(os.path.join(home_dir, 'buildout.cfg')):
-         shutil.copy(os.path.join(home_dir, 'buildout.cfg.example'),
-                     os.path.join(home_dir, 'buildout.cfg'))
+    if not os.path.exists(os.path.join(home_dir, 'buildout.cfg')):
+        shutil.copy(os.path.join(home_dir, 'buildout.cfg.example'),
+                    os.path.join(home_dir, 'buildout.cfg'))
     if os.path.exists('buildout-bootstrap.py'):
         logger.notify('Running buildout bootstrap')
         subprocess.call([os.path.join(home_dir, bin, 'python'),

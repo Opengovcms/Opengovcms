@@ -35,3 +35,6 @@ mr-developer-src
 *.sublime-workspace
 .ipython
 recorded_locales
+include
+lib
+local

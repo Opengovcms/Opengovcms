@@ -121,10 +121,14 @@ function smtoggleSelect(name, fid, formName) {
 
                 <div id="search-results-bar">
                     <div id="search-results-number-block" tal:condition="sequence_length">
-                        Din søgning gav
+                        <span i18n:domain="policy"
+                              i18n:translate="label_number_of_results"
+                              tal:omit-tag="">Your search gave</span>
                         <strong id="search-results-number"
                                 tal:content="sequence_length">234</strong>
-                        resultater
+                        <span i18n:domain="policy"
+                              i18n:translate="label_results"
+                              tal:omit-tag="">result(s)</span>
                     </div>
                     <div id="search-results-number-block"
                          tal:condition="not:sequence_length">
@@ -133,15 +137,18 @@ function smtoggleSelect(name, fid, formName) {
 
                     <div id="advanced-search">
                         <h2>
-                          <a href="#"
-                             tal:attributes="href view/advanced_search_trigger"
-                             id="search-filter-toggle">Afgræns søgning</a>
+                          <span
+                             id="search-filter-toggle"
+                             i18n:domain="policy"
+                             i18n:translate="label_filter_search">Filter search</span>
                         </h2>
                          <div id="search-filter" i18n:domain="plone">
 
                               <fieldset class="noborder">
 
-                                  <legend i18n:translate="">Sektion</legend>
+                                  <legend
+                                      i18n:domain="policy"
+                                      i18n:translate="label_section">Section</legend>
 
                                   <div class="field"
                                        tal:define="sections view/sections_list;
@@ -195,7 +202,9 @@ function smtoggleSelect(name, fid, formName) {
 
                                   <div class="field"
                                        tal:define="portal_types portal/portal_types;
-                                                   types_list python:('News Item', 'Document', 'Event');
+                                                   types_list python:(('News Item', 'News Item'),
+                                                                      ('Document', 'Page'),
+                                                                      ('Event', 'Event'));
                                                    all_checked python: not request.get('portal_type', []);">
 
                                       <div class="formHelp"></div>
@@ -219,7 +228,9 @@ function smtoggleSelect(name, fid, formName) {
                                       <br />
                                       <div style="float:left; margin-right: 2em;"
                                            tal:attributes="style python:isRTL and 'float: right;; margin-left: 2em;;' or 'float: left;; margin-right: 2em;;';">
-                                          <tal:items repeat="type types_list">
+                                          <tal:items repeat="type_tuple types_list">
+                                            <tal:block tal:define="type python:type_tuple[0];
+                                                                 label python:type_tuple[1]">
                                               <input type="checkbox"
                                                      name="portal_type:list"
                                                      value="#"
@@ -230,12 +241,13 @@ function smtoggleSelect(name, fid, formName) {
                                                                      onchange string:javascript:smtoggleSelect('pt', 'portal_type:list');
                                                                      checked python:((type in request.get('portal_type', []))) and 'checked' or ''"/>
                                               <label for=""
-                                                     i18n:domain="policy"
+                                                     i18n:domain="plone"
                                                      i18n:translate=""
                                                      tal:attributes="for string:portal_type_${repeat/type/number}"
-                                                     tal:content="type"
+                                                     tal:content="label"
                                                      />
                                               <br />
+                                            </tal:block>
                                           </tal:items>
                                       </div>
                                   </div>
@@ -297,7 +309,10 @@ function smtoggleSelect(name, fid, formName) {
                                                </tal:item>
                                           </span>
                                       </div>
-                                      <div tal:content="item/CroppedDescription">Cropped description</div>
+                                      <div tal:define="cropText nocall:context/@@plone/cropText"
+                                           tal:content="python:cropText(item.Description(), 200)">
+                                      Cropped description
+                                      </div>
                                     </div>
                               </tal:results>
                           </div>

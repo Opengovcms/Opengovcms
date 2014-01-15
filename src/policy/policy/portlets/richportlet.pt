@@ -11,7 +11,7 @@
           <img tal:replace="structure img" />
         </div>
         <div class="richPortletTitle"
-             tal:content tal:content="view/data/title">Title</div>
+             tal:content="view/data/title">Title</div>
        </a>
   </div>
 

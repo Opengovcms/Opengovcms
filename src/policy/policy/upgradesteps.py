@@ -2,6 +2,7 @@ from logging import getLogger
 
 log = getLogger('policy:upgrades')
 
+
 def runProfiles(site, profile_ids):
     """ """
     setup_tool = getattr(site, 'portal_setup')
@@ -16,40 +17,48 @@ def runProfiles(site, profile_ids):
             setup_tool.runAllImportSteps()
         log.info("Ran profile " + profile_id)
 
+
 def runDefaultProfile(tool):
     """ Run default profile """
     site = tool.aq_parent
     runProfiles(site, ('policy:default',))
+
 
 def runDemoContentProfile(tool):
     """  """
     site = tool.aq_parent
     runProfiles(site, ('policy:demo_content',))
 
+
 def installVocabManager(tool):
     """ Install ATVocabularyManager """
     site = tool.aq_parent
     runProfiles(site, ('Products.ATVocabularyManager:default',))
+
 
 def installVersioningBeh(tool):
     """ Install ATVocabularyManager """
     site = tool.aq_parent
     runProfiles(site, ('plone.app.versioningbehavior:default',))
 
+
 def installChimpfeed(tool):
     """ Install chimpfeed """
     site = tool.aq_parent
     runProfiles(site, ('collective.chimpfeed:default',))
+
 
 def installPerson(tool):
     """ """
     site = tool.aq_parent
     runProfiles(site, ('collective.person:default',))
 
+
 def installCTaxonomy(tool):
     """ """
     site = tool.aq_parent
     runProfiles(site, ('collective.taxonomy:default',))
+
 
 def importDefaultProfileRegistry(tool):
     """ """
@@ -59,6 +68,7 @@ def importDefaultProfileRegistry(tool):
         'profile-policy:default', 'plone.app.registry',
         run_dependencies=False)
 
+
 def importDefaultTypes(tool):
     """ """
     site = tool.aq_parent
@@ -66,6 +76,7 @@ def importDefaultTypes(tool):
     setup_tool.runImportStepFromProfile(
         'profile-policy:default', 'typeinfo',
         run_dependencies=False)
+
 
 def importTinySettings(tool):
     """ """
@@ -75,6 +86,7 @@ def importTinySettings(tool):
         'profile-policy:initialsetup', 'tinymce_settings',
         run_dependencies=False)
 
+
 def importPortalTransforms(tool):
     """ """
     site = tool.aq_parent
@@ -82,6 +94,7 @@ def importPortalTransforms(tool):
     setup_tool.runImportStepFromProfile(
         'profile-policy:initialsetup', 'policy.portal_transforms',
         run_dependencies=False)
+
 
 def migrateRegistry(tool):
     """ """
@@ -91,6 +104,7 @@ def migrateRegistry(tool):
         'profile-policy:migrate', 'plone.app.registry',
         run_dependencies=False)
 
+
 def importPortalproperties(tool):
     """ """
     site = tool.aq_parent
@@ -98,6 +112,7 @@ def importPortalproperties(tool):
     setup_tool.runImportStepFromProfile(
         'profile-policy:initialsetup', 'propertiestool',
         run_dependencies=False)
+
 
 def importActions(tool):
     """ """
@@ -107,6 +122,7 @@ def importActions(tool):
         'profile-policy:initialsetup', 'actions',
         run_dependencies=False)
 
+
 def removePersonPortlet(tool):
     """ """
     site = tool.aq_parent
@@ -114,6 +130,7 @@ def removePersonPortlet(tool):
     setup_tool.runImportStepFromProfile(
         'profile-policy:migrate', 'portlets',
         run_dependencies=False)
+
 
 def addSearchPortletsManager(tool):
     """ """
@@ -123,6 +140,7 @@ def addSearchPortletsManager(tool):
         'profile-policy:migrate', 'portlets',
         run_dependencies=False)
 
+
 def migratePortletsStep(tool):
     """ """
     site = tool.aq_parent
@@ -131,6 +149,7 @@ def migratePortletsStep(tool):
         'profile-policy:migrate', 'portlets',
         run_dependencies=False)
 
+
 def updateSMRegistry(tool):
     """ """
     site = tool.aq_parent
@@ -138,3 +157,5 @@ def updateSMRegistry(tool):
     setup_tool.runImportStepFromProfile(
         'profile-smtemplate.theme:default', 'plone.app.registry',
         run_dependencies=False)
+
+

@@ -364,4 +364,15 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+     profile="policy:default"
+     source="37"
+     destination="38">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.runProfilesForInitialSetup"
+      title="Run different profiles"
+      description="Run profiles for upgrade."
+      />
+  </genericsetup:upgradeSteps>
+
 </configure>

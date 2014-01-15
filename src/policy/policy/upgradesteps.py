@@ -159,3 +159,11 @@ def updateSMRegistry(tool):
         run_dependencies=False)
 
 
+def runProfilesForInitialSetup(tool):
+    """ """
+    site = tool.aq_parent
+    runProfiles(site, (
+        'policy:multilingual',
+        'policy:multilingual-initial',
+        'policy:publication-initial',
+    ))

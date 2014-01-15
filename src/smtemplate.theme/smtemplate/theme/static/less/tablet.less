@@ -60,20 +60,24 @@
 
 // Portlet Navigation Tree
 #jPanelMenu-menu .portletNavigationTree {
-  border-bottom: 3px solid @grayLight;
+  border-bottom: 3px solid @mobileMenuBorderColor;
 }
 .navTreeTopNode,
 .navTreeDesktopHide {
   display: block;
 }
 #jPanelMenu-menu a {
-  background: @body;
-  color: @white;
+  background: @mobileMenuBackground;
+  color: @mobileMenuColor;
   display: block;
   font-size: @pxBaseFontSize;
   font-weight: normal;
   line-height: @baseLineHeight/0.9;
   padding: 10px 5px 10px 15px;
+  &:hover {
+    color: @mobileMenuHoverColor;
+    background-color: @mobileMenuHoverBackground;
+  }
 }
 #jPanelMenu-menu .navTreeTopNode a {
   padding-left: 5px;
@@ -83,13 +87,14 @@
 }
 #jPanelMenu-menu .navTreeItem {
   background: none;
-  border-top: 1px solid @grayLight;
+  border-top: 1px solid @mobileMenuBorderColor;
   border-bottom: 0;
   margin: 0;
   padding: 0;
 }
 #jPanelMenu-menu .navTreeCurrentItem {
-  background: @secondary;
+  background: @mobileMenuSelectedBackground;
+  color: @mobileMenuSelectedColor;
 }
 #jPanelMenu-menu .navMobileExclude {
   display: none;
@@ -109,19 +114,21 @@
 
 // Theme Global Nav
 #jPanelMenu-menu #theme-globalnav {
-  border-bottom: 3px solid @grayLight;
+  border-bottom: 3px solid @mobileMenuBorderColor;
   display: block;
 }
 #theme-globalnav li {
   border: 0;  
-  border-top: 1px solid @grayLight !important;
+  border-top: 1px solid @mobileMenuBorderColor;
   float: none;
 }
 #theme-globalnav .selected a {
-  background-color: @secondary !important;
+  background-color: @mobileMenuSelectedBackground;
+  color: @mobileMenuSelectedColor;
 }
 #theme-globalnav > li:hover > a {
-  background: none;
+  background: @mobileMenuHoverBackground;
+  color: @mobileMenuHoverColor;
 }
 #portaltab-index_html a {
   padding-left: 5px;
@@ -147,11 +154,11 @@
   position: static;
 }
 #portal-siteactions li {
-  border-top: 1px solid @grayLight;
+  border-top: 1px solid @mobileMenuBorderColor;
   display: block;
 }
 #portal-siteactions a {
-  color: @white;
+  color: @mobileMenuColor;
   display: block;
   margin: 0;
   padding: 10px 5px 10px 10px;
@@ -159,7 +166,8 @@
 }
 #portal-siteactions a:hover {
   border: 0;
-  color: @white;
+  background: @mobileMenuHoverBackground;
+  color: @mobileMenuHoverColor;
 }
 
 // Below Content Nav Portlet

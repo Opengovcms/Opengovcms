@@ -1,14 +1,24 @@
 import logging
 import Globals
-from Products.CMFQuickInstallerTool.interfaces import INonInstallable
-from plone.app.contenttypes.migration import migration
-from zope.component import getMultiAdapter
-from zope.component.hooks import getSite
-from zope.interface import implements
+
 from Products.CMFCore.utils import getToolByName
+from Products.CMFQuickInstallerTool.interfaces import INonInstallable
 from Products.PortalTransforms.Transform import make_config_persistent
 
+from collective.multilingual.interfaces import IMultilingual
+from collective.multilingual.utils import dottedName
+
+from plone.app.contenttypes.migration import migration
+from plone.dexterity.interfaces import IDexterityFTI
+
+from zope.component import getMultiAdapter
+from zope.component import getSiteManager
+from zope.component.hooks import getSite
+from zope.interface import implements
+
+
 logger = logging.getLogger('policy.setuphandlers')
+
 
 class HiddenProducts(object):
     implements(INonInstallable)
@@ -267,3 +277,42 @@ def variousMigrateSteps(context):
     portal = context.getSite()
 
     # EMPTY SO FAR.
+
+
+def addMultilingualBehavior(context):
+    """ """
+
+    # XXX: A hack?
+    if not context._profile_path.endswith('policy/profiles/multilingual'):
+        return
+
+    site = context.getSite()
+    behavior_name = dottedName(IMultilingual)
+    sm = getSiteManager(site)
+
+    for fti in sm.getAllUtilitiesRegisteredFor(IDexterityFTI):
+        portal_type = fti.id
+
+        if portal_type in ['Link', 'Image', 'File']:
+            continue
+
+        if behavior_name in fti.behaviors:
+            continue
+
+        fti.behaviors = list(fti.behaviors) + [behavior_name]
+        print "Added multilingual behavior to the type '%s'.\n" % portal_type
+
+
+def markAllContentAsDanish(context):
+    # XXX: A hack?
+    if not context._profile_path.endswith('policy/profiles/multilingual-initial'):
+        return
+
+    site = context.getSite()
+    catalog = getToolByName(site, 'portal_catalog')
+    for brain in catalog.searchResults(path='/site/'):
+        obj = brain.getObject()
+        if obj.language == u'en':
+            obj.language = u'da'
+
+

@@ -70,4 +70,34 @@
       handler="policy.setuphandlers.variousMigrateSteps">
   </genericsetup:importStep>
 
+  <genericsetup:registerProfile
+      name="multilingual"
+      title="policy multilingual"
+      directory="profiles/multilingual"
+      description="Imports various settings used for multilingual"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:importStep
+      name="policy.add-multilingual-behavior"
+      title="policy: add multilingual behavior"
+      description="Various import steps that are not handled by GS import/export handlers."
+      handler="policy.setuphandlers.addMultilingualBehavior">
+  </genericsetup:importStep>
+
+  <genericsetup:registerProfile
+      name="multilingual-initial"
+      title="policy multilingual (initial setup)"
+      directory="profiles/multilingual-initial"
+      description="Imports various settings used for multilingual (initial setup)"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:importStep
+      name="policy.mark-all-content-as-danish"
+      title="policy: mark all content as danish"
+      description="Various import steps that are not handled by GS import/export handlers."
+      handler="policy.setuphandlers.markAllContentAsDanish">
+  </genericsetup:importStep>
+
 </configure>

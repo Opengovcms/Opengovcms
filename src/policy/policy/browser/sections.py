@@ -1,6 +1,8 @@
-from plone.app.layout.viewlets.common import GlobalSectionsViewlet as ViewletBase
-from plone.app.layout.viewlets.content import DocumentBylineViewlet as BylineBase
-from plone.app.layout.navigation.defaultpage import getDefaultPage
+from plone.app.layout.viewlets.common import GlobalSectionsViewlet as\
+    ViewletBase
+from plone.app.layout.viewlets.content import DocumentBylineViewlet as\
+    BylineBase
+from plone.app.layout.navigation.interfaces import INavigationRoot
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Acquisition import aq_inner
 from zope.component.hooks import getSite
@@ -12,20 +14,32 @@ from plone.app.theming.utils import isThemeEnabled
 class GlobalSectionsViewlet(ViewletBase):
     index = ViewPageTemplateFile('templates/sections.pt')
 
+    def getNavigationRoot(self):
+        site = getSite()
+        context = self.context
+        while True:
+            if INavigationRoot.providedBy(context):
+                return context
+
+            if context == site:
+                break
+
+            context = context.aq_parent
+
+        return None
+
     @property
     def isThemeEnabled(self):
         return isThemeEnabled(self.request)
 
     def getItem(self, tab):
-        site = getSite()
-        context = aq_inner(self.context)
+        navigation_root = self.getNavigationRoot()
+
         if tab.get('available'):
-            item = site
+            item = getSite()
         else:
-            item = site.restrictedTraverse(tab['id'])
-        #def_page = getDefaultPage(item)
-        #if def_page:
-            #item = item.restrictedTraverse(def_page)
+            item = navigation_root.restrictedTraverse(tab['id'])
+
         return item
 
     def getPanels(self, context):
@@ -38,6 +52,7 @@ class GlobalSectionsViewlet(ViewletBase):
             return tuple(manager)
         except TypeError:
             return tuple()
+
 
 class DocumentBylineViewlet(BylineBase):
     index = ViewPageTemplateFile("templates/document_byline.pt")

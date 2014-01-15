@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<object>
+  <hidden manager="plone.portalheader" skinname="Sunburst Theme">
+    <viewlet name="plone.app.i18n.locales.languageselector" />
+  </hidden>
+</object>

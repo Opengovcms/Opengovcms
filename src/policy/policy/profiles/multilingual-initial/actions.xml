@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool"
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+  <object name="site_actions" meta_type="CMF Action Category">
+
+    <object name="english" meta_type="CMF Action">
+      <property name="title">English</property>
+      <property name="description"></property>
+      <property name="url_expr">string:${portal_url}/en/</property>
+      <property name="link_target"></property>
+      <property name="icon_expr"></property>
+      <property
+          name="available_expr">python:context.restrictedTraverse("@@plone_portal_state").language() == 'da'</property>
+      <property name="permissions"/>
+      <property name="visible">True</property>
+    </object>
+    <object name="danish" meta_type="CMF Action">
+      <property name="title">Dansk</property>
+      <property name="description"></property>
+      <property name="url_expr">string:${portal_url}/</property>
+      <property name="link_target"></property>
+      <property name="icon_expr"></property>
+      <property
+          name="available_expr">python:context.restrictedTraverse("@@plone_portal_state").language() == 'en'</property>
+      <property name="permissions"/>
+      <property name="visible">True</property>
+    </object>
+  </object>
+</object>

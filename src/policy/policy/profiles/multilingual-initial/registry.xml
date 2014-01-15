@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<registry>
+  <record name="collective.multilingual.interfaces.ISettings.enable_catalog_patch" interface="collective.multilingual.interfaces.ISettings" field="enable_catalog_patch">
+    <field type="plone.registry.field.Bool">
+      <default>True</default>
+      <description>Select this to configure the catalog to return only content in the current language. Note that items that do not have a language setting are exempt from this rule.</description>
+      <required>False</required>
+      <title>Search current language only</title>
+    </field>
+    <value>True</value>
+  </record>
+  <record name="collective.multilingual.interfaces.ISettings.no_filter" interface="collective.multilingual.interfaces.ISettings" field="no_filter">
+    <field type="plone.registry.field.Set">
+      <default>
+        <element>path</element>
+        <element>translations</element>
+        <element>UID</element>
+        <element>getId</element>
+        <element>id</element>
+      </default>
+      <description>When a query contains a value for one of the indexes provided here, the current language will not be applied as a filter, even when the setting is enabled.</description>
+      <required>False</required>
+      <title>Indexes that cancel language filtering</title>
+      <value_type type="plone.registry.field.Choice">
+        <vocabulary>collective.multilingual.vocabularies.Indexes</vocabulary>
+      </value_type>
+    </field>
+    <value>
+      <element>path</element>
+      <element>translations</element>
+      <element>UID</element>
+      <element>getId</element>
+      <element>id</element>
+    </value>
+  </record>
+  <record name="collective.multilingual.interfaces.ISettings.use_nearest_translation" interface="collective.multilingual.interfaces.ISettings" field="use_nearest_translation">
+    <field type="plone.registry.field.Bool">
+      <default>True</default>
+      <description>Select this option to use the nearest translation of the current content. For each supported language, the items in the parent list are checked in reverse order for a translation. If not selected, the language home page is used (if available).</description>
+      <required>False</required>
+      <title>Contextual language selection</title>
+    </field>
+    <value>True</value>
+  </record>
+</registry>

@@ -31,4 +31,16 @@
       provides="plone.portlets.interfaces.IPortletManagerRenderer"
       />
 
+  <!-- Fixing escaped line feeds / carrige returns in html attributes -->
+  <adapter
+      name="policy.transform"
+      factory=".transform.FixLinefeedTransform"
+      />
+
+  <adapter
+      factory=".indexers.sortable_title"
+      name="sortable_title"
+      />
+
+
 </configure>

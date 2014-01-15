@@ -100,4 +100,19 @@
       handler="policy.setuphandlers.markAllContentAsDanish">
   </genericsetup:importStep>
 
+  <genericsetup:registerProfile
+      name="publication-initial"
+      title="policy publication (initial setup)"
+      directory="profiles/publication-initial"
+      description="Imports various settings used for sm.publication (initial setup)"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:importStep
+      name="policy.import-initial-publication-content"
+      title="policy: import initial publication content"
+      description="Various import steps that are not handled by GS import/export handlers."
+      handler="policy.setuphandlers.importInitialPublicationContent">
+  </genericsetup:importStep>
+
 </configure>

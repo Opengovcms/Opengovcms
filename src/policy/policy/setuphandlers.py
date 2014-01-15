@@ -1,3 +1,6 @@
+import os
+import shutil
+
 import logging
 import Globals
 
@@ -315,4 +318,23 @@ def markAllContentAsDanish(context):
         if obj.language == u'en':
             obj.language = u'da'
 
+    print "Altered content language to danish"
 
+def importInitialPublicationContent(context):
+    # XXX: A hack?
+    if not context._profile_path.endswith('policy/profiles/publication-initial'):
+        return
+
+    client_home = os.environ['CLIENT_HOME']
+
+    shutil.copyfile(
+        context._profile_path + '/publikationer.zexp',
+        client_home + '/import/publikationer.zexp'
+    )
+
+    site = context.getSite()
+    site.manage_importObject('publikationer.zexp')
+
+    os.remove(client_home + '/import/publikationer.zexp')
+
+    print "Imported publication initial content"

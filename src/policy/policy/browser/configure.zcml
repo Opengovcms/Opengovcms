@@ -113,4 +113,14 @@
       layer="policy.interfaces.IBrowserLayer"
       permission="plone.app.portlets.ManagePortlets"
       />
+
+  <!-- Override! -->
+  <page
+      name="overview-controlpanel"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".overview.OverriddenOverviewControlPanel"
+      permission="plone.app.controlpanel.Overview"
+      layer="policy.interfaces.IBrowserLayer"
+      />
+
 </configure>

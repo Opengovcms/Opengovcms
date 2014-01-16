@@ -16,10 +16,14 @@
     <span id="updated-search-term" tal:content="st">Search Term</span>
 
     <div id="updated-search-results-number-block" tal:condition="sequence_length">
-        Din søgning gav
-        <strong id="search-results-number"
-                tal:content="sequence_length">234</strong>
-        resultater
+      <span i18n:domain="policy"
+            i18n:translate="label_number_of_results"
+            tal:omit-tag="">Your search gave</span>
+      <strong id="search-results-number"
+              tal:content="sequence_length">234</strong>
+      <span i18n:domain="policy"
+            i18n:translate="label_results"
+            tal:omit-tag="">result(s)</span>
     </div>
     <div id="updated-search-results-number-block"
          tal:condition="not:sequence_length">

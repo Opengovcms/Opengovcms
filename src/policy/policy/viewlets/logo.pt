@@ -1,5 +1,5 @@
 <div id="portal-logo" i18n:domain="policy"
-     tal:define="portal_url context/portal_url">
+     tal:define="portal_url context/@@plone/navigationRootUrl">
   <a href="#"
      accesskey="1"
      title="Click on the logo to go to the front page"

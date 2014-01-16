@@ -1,0 +1,19 @@
+<div id="portal-logo" i18n:domain="policy"
+     tal:define="portal_url context/portal_url">
+  <a href="#"
+     accesskey="1"
+     title="Click on the logo to go to the front page"
+     id="desktop-logo"
+     tal:attributes="href portal_url"
+     i18n:attributes="title">
+   Logo
+  </a>
+  <a href="#"
+     accesskey="1"
+     title="Click on the logo to go to the front page"
+     id="mobile-logo"
+     tal:attributes="href portal_url"
+     i18n:attributes="title">
+    Logo
+  </a>
+</div>

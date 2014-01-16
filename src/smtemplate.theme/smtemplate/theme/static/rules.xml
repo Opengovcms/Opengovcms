@@ -126,9 +126,6 @@
         <drop css:content=".searchSection" />
         <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" method="raw" />
         <drop css:content="#portal-siteactions" />
-        <!-- <replace css:content="#portal-logo" css:theme="#portal-logo" /> -->
-        <copy attributes="href" css:content="#portal-logo" css:theme="#desktop-logo" />
-        <copy attributes="href" css:content="#portal-logo" css:theme="#mobile-logo" />
         <replace css:content-children="#portal-globalnav" css:theme-children="#theme-globalnav" />
 	    <after css:theme="#theme-globalnav" css:content="#portal-globalnav-mobile" />
 	    <merge attributes="class" css:content="#portal-globalnav" css:theme="#theme-globalnav" />
@@ -139,6 +136,7 @@
         <after css:theme="#portal-header" css:content="#portlets-in-header" />
         <after css:theme="#portal-header" css:content=".manageInHeaderPortletsLink" />
         <strip css:content=".globalSectionsLevel1 .panel, .globalSectionsLevel1 .content, .globalSectionsLevel1 .portletWrapper, .globalSectionsLevel1 .portletWrapper > div" />
+        <append css:content="#portal-logo" css:theme="#portal-header"/>
 
         <!-- Portlets -->
         <replace css:content="#portal-column-one" css:theme="#portal-column-one" />

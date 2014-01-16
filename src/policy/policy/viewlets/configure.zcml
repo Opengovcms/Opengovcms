@@ -11,4 +11,13 @@
         layer="policy.interfaces.IBrowserLayer"
         />
 
+    <!-- Override -->
+    <viewlet
+        name="plone.logo"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class="plone.app.layout.viewlets.common.LogoViewlet"
+        template="logo.pt"
+        layer="policy.interfaces.IBrowserLayer"
+        permission="zope2.View"
+        />
 </configure>

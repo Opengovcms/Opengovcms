@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-01-15 19:09+0000\n"
+"POT-Creation-Date: 2014-01-16 08:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,6 +28,10 @@ msgstr "Baggrundsplacering"
 #: policy/policy/portlets/richportlet.py:39
 msgid "Choose the image scale."
 msgstr "Vælg en billedescalering"
+
+#: policy/policy/viewlets/logo.pt:3
+msgid "Click on the logo to go to the front page"
+msgstr "Klik på logoet og gå til forsiden"
 
 #: policy/policy/browser/controlpanel.py:43
 msgid "Configure fly-out menu"

@@ -3339,6 +3339,7 @@ a.managePortletsFallback {
   }
   #portal-siteactions a:hover {
     border: 0;
+    background: #d5241c;
     color: #ffffff;
   }
   .belowContentNav {
@@ -3539,7 +3540,6 @@ a.managePortletsFallback {
 */
   /* Hide all the elements that are irrelevant for printing */
   div.top,
-  #portal-logo,
   #portal-siteactions,
   .hiddenStructure,
   #portal-searchbox,

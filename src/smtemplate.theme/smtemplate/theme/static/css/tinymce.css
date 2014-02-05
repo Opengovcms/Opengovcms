@@ -14,15 +14,12 @@
   display: table;
 }
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
-
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
-
 /**
  * Correct `block` display not defined in IE 8/9.
  */
-
 article,
 aside,
 details,
@@ -40,7 +37,6 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */
-
 audio,
 canvas,
 video {
@@ -50,7 +46,6 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -58,20 +53,17 @@ audio:not([controls]) {
 /**
  * Address styling not present in IE 8/9.
  */
-
 [hidden] {
   display: none;
 }
 /* ==========================================================================
    Base
    ========================================================================== */
-
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-
 html {
   font-family: sans-serif;
   /* 1 */
@@ -79,30 +71,25 @@ html {
   /* 2 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
-
 }
 /**
  * Remove default margin.
  */
-
 body {
   margin: 0;
 }
 /* ==========================================================================
    Links
    ========================================================================== */
-
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-
 a:focus {
   outline: thin dotted;
 }
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-
 a:active,
 a:hover {
   outline: 0;
@@ -110,12 +97,10 @@ a:hover {
 /* ==========================================================================
    Typography
    ========================================================================== */
-
 /**
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
-
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -123,14 +108,12 @@ h1 {
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
-
 abbr[title] {
   border-bottom: 1px dotted;
 }
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-
 b,
 strong {
   font-weight: bold;
@@ -138,14 +121,12 @@ strong {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-
 dfn {
   font-style: italic;
 }
 /**
  * Address differences between Firefox and other browsers.
  */
-
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -154,15 +135,13 @@ hr {
 /**
  * Address styling not present in IE 8/9.
  */
-
 mark {
-  background: yellow;
-  color: black;
+  background: #ff0;
+  color: #000;
 }
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
  */
-
 code,
 kbd,
 pre,
@@ -173,28 +152,24 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
-
 pre {
   white-space: pre-wrap;
 }
 /**
  * Set consistent quote types.
  */
-
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-
 small {
   font-size: 80%;
 }
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-
 sub,
 sup {
   font-size: 75%;
@@ -211,42 +186,35 @@ sub {
 /* ==========================================================================
    Embedded content
    ========================================================================== */
-
 /**
  * Remove border when inside `a` element in IE 8/9.
  */
-
 img {
   border: 0;
 }
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-
 svg:not(:root) {
   overflow: hidden;
 }
 /* ==========================================================================
    Figures
    ========================================================================== */
-
 /**
  * Address margin not present in IE 8/9 and Safari 5.
  */
-
 figure {
   margin: 0;
 }
 /* ==========================================================================
    Forms
    ========================================================================== */
-
 /**
  * Define consistent border, margin, and padding.
  */
-
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -254,20 +222,17 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-
 legend {
   border: 0;
   /* 1 */
   padding: 0;
   /* 2 */
-
 }
 /**
  * 1. Correct font family not being inherited in all browsers.
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
-
 button,
 input,
 select,
@@ -278,13 +243,11 @@ textarea {
   /* 2 */
   margin: 0;
   /* 3 */
-
 }
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-
 button,
 input {
   line-height: normal;
@@ -295,7 +258,6 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-
 button,
 select {
   text-transform: none;
@@ -307,21 +269,18 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-
 button,
 html input[type="button"],
-/* 1 */ input[type="reset"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
   /* 3 */
-
 }
 /**
  * Re-set default cursor for disabled elements.
  */
-
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -330,21 +289,18 @@ html input[disabled] {
  * 1. Address box sizing set to `content-box` in IE 8/9.
  * 2. Remove excess padding in IE 8/9.
  */
-
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
-
 }
 /**
  * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -357,7 +313,6 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -365,7 +320,6 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -375,22 +329,18 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-
 textarea {
   overflow: auto;
   /* 1 */
   vertical-align: top;
   /* 2 */
-
 }
 /* ==========================================================================
    Tables
    ========================================================================== */
-
 /**
  * Remove most spacing between table cells.
  */
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -398,10 +348,9 @@ table {
 /* ==========================================================================
      General Styles
      ========================================================================== */
-
 body {
   background: #60969f;
-  color: black;
+  color: #000000;
   font-family: "Swift Neue LT W01 Light", serif;
   font-size: 0.875em;
   line-height: 1.28571;
@@ -455,7 +404,6 @@ img {
   max-width: 100%;
   width: auto\9;
   /*fix to IE8*/
-
 }
 menu,
 ol,
@@ -472,8 +420,8 @@ dd {
   margin: 0 0 0 27px;
 }
 pre {
-  background-color: #222222;
-  color: white;
+  background-color: #222;
+  color: #fff;
   font-size: 12px;
   font-family: monospace;
   margin-bottom: 1em;
@@ -491,15 +439,13 @@ iframe {
   min-width: 100%;
 }
 /* @group Content Area */
-
 /* Editor styles */
-
 .discreet {
   font-size: 0.85714em;
   color: #6f7578;
 }
 .visualHighlight {
-  background-color: #ffffbb;
+  background-color: #ffb;
 }
 .pullquote {
   font-size: 1.28571em;
@@ -528,12 +474,11 @@ iframe {
 }
 .callout {
   clear: both;
-  background-color: #eeeeee;
-  border-left: 1em solid #cccccc;
+  background-color: #eee;
+  border-left: 1em solid #ccc;
   padding: 1em;
 }
 /* Content layout styles */
-
 img.tileImage,
 div.newsImageContainer {
   float: right;
@@ -548,9 +493,7 @@ div.newsImageContainer {
   clear: both;
 }
 /* @end */
-
 /* @group Data tables */
-
 table.listing,
 table.plain {
   margin: 0 0 18px;
@@ -587,12 +530,11 @@ table.listing td {
 table.listing td.draggable,
 table.listing td.notDraggable {
   padding: 0 7.2px;
-  text-shadow: white 1px 1px 1px;
+  text-shadow: #fff 1px 1px 1px;
   text-align: center;
   vertical-align: middle;
 }
 /* Vertical table data listings */
-
 table.vertical th {
   text-align: right;
 }
@@ -600,22 +542,19 @@ table.vertical td {
   padding: 0.5em;
 }
 /* Grid table listings */
-
 table.grid td,
 table.grid th {
   border: 1px solid #a7b0b5;
   padding: 0.5em;
 }
 .dragindicator {
-  outline: 2px solid gold;
+  outline: 2px solid #ffd700;
 }
 #foldercontents-order-column {
   padding: 0;
 }
 /* @end */
-
 /* @group Status messages */
-
 dl.portalMessage,
 div.attention,
 div.caution,
@@ -627,7 +566,7 @@ div.note,
 div.tip,
 div.warning {
   margin: 1em 0;
-  border: 1px solid #999966;
+  border: 1px solid #996;
   background-color: #ffffe3;
   clear: both;
 }
@@ -651,12 +590,12 @@ div.warning a,
 #content div.note a,
 #content div.tip a,
 #content div.warning a {
-  color: black;
+  color: #000;
   text-decoration: underline;
 }
 dl.portalMessage dt,
 div > .admonition-title {
-  background-color: #999966;
+  background-color: #996;
   float: left;
   margin: 0 0.5em 0 0;
   padding: 0.5em 0.75em;
@@ -678,44 +617,42 @@ div.warning > .last {
   line-height: 1.25em;
 }
 .warning {
-  border-color: #dd8800;
+  border-color: #d80;
 }
 .warning > dt,
 .warning > .admonition-title {
-  background-color: #dd8800;
+  background-color: #d80;
 }
 .error {
-  border-color: #dd0000;
+  border-color: #d00;
 }
 .error > dt,
 .error > .admonition-title {
-  background-color: #dd0000;
+  background-color: #d00;
 }
 .warning {
-  border-color: #dd8800;
+  border-color: #d80;
 }
 .warning > dd,
 .warning > .last {
-  background-color: #ffdd77;
+  background-color: #fd7;
 }
 .error {
   border-color: red;
 }
 .error > dd,
 .error > .last {
-  background-color: #ffddcc;
+  background-color: #fdc;
 }
 /* @end */
-
 /* @group Collapsible */
-
 dl.collapsible {
   border: 1px solid #8cacbb;
   margin: 1em 0;
   padding: 0;
 }
 dl.collapsible dt.collapsibleHeader {
-  background-color: white;
+  background-color: #fff;
   float: left;
   display: block;
   line-height: 1.2em;
@@ -732,14 +669,13 @@ dl.collapsible dd.collapsibleContent {
   padding: 6px 12px 12px;
 }
 /* for IE the following isn't needed, that's why the css2 selector is used */
-
 dl.collapsible dd.collapsibleContent > dl {
   margin: 0;
   padding: 0;
 }
 dl.expandedInlineCollapsible dt.collapsibleHeader,
 dl.expandedBlockCollapsible dt.collapsibleHeader {
-  background: url(../images/treeExpanded.png) no-repeat 0.5em 50% white;
+  background: url(../images/treeExpanded.png) no-repeat 0.5em 50% #ffffff;
   cursor: pointer;
   padding: 0 0.5em 0 2em;
 }
@@ -750,7 +686,7 @@ dl.collapsedBlockCollapsible {
 }
 dl.collapsedInlineCollapsible dt.collapsibleHeader,
 dl.collapsedBlockCollapsible dt.collapsibleHeader {
-  background: url(../images/treeCollapsed.png) no-repeat 0.5em 50% white;
+  background: url(../images/treeCollapsed.png) no-repeat 0.5em 50% #ffffff;
   cursor: pointer;
   float: none;
   margin: 0 0 0 1em;
@@ -776,9 +712,7 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
   position: static;
 }
 /* @end */
-
 /* @group Comments */
-
 .comment {
   margin-top: 1.5em;
   font-size: 80%;
@@ -790,12 +724,12 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
   margin-left: 0;
 }
 .commentTime {
-  color: #666666;
+  color: #666;
 }
 .commentBody {
   padding: 1em;
   margin: 0.5em 0;
-  box-shadow: 0 0 1em 0 #888888;
+  box-shadow: 0 0 1em 0 #888;
 }
 .comment h1,
 .comment h2,
@@ -806,7 +740,6 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
   font-weight: normal;
 }
 /* @end */
-
 .reviewHistory,
 .contentHistory {
   display: inline;
@@ -823,21 +756,17 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
   font-weight: normal;
 }
 /* for greying out inherited roles */
-
 .noInheritedRoles {
   color: #a0a0a0;
 }
 /* for highlighting current items, like the language or today in the calendar */
-
 .currentItem {
   border-collapse: collapse;
-  border: 0.2em solid orange;
+  border: 0.2em solid #ffa500;
   padding: 0.1em;
 }
 /* @end */
-
 /* @group Image alignment classes */
-
 .image-left {
   float: left;
   margin: 0.5em 1em 0.5em 0;
@@ -858,11 +787,8 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
   max-width: 100%;
 }
 /* @end */
-
 /* @group Table of Contents */
-
 /*Table of Contents styling - essentially a portlet with smaller fonts and aligned right + limited in width*/
-
 dl.toc {
   float: right;
   width: 35%;
@@ -882,9 +808,7 @@ dl.toc dd ol {
   margin-left: 1.5em;
 }
 /* @end */
-
 /* @group Sitemap */
-
 #portal-sitemap {
   list-style: none;
   margin-left: 0;
@@ -900,7 +824,7 @@ dl.toc dd ol {
   display: block;
 }
 #portal-sitemap > li {
-  border-bottom: 0.1em dotted #dddddd;
+  border-bottom: 0.1em dotted #ddd;
   line-height: 1.8em;
   padding: 0.25em 1em;
   margin-bottom: 0;
@@ -913,9 +837,7 @@ dl.toc dd ol {
   padding: 0.25em 0;
 }
 /* @end */
-
 /* @group Album view classes */
-
 .photoAlbumVisual {
   background-color: #f9f9f9;
   border-bottom: 1px solid #ededed;
@@ -933,7 +855,7 @@ dl.toc dd ol {
 }
 .photoAlbumEntry {
   background-color: #ededed;
-  border-color: lightgray #e8e8e8;
+  border-color: #d3d3d3 #e8e8e8;
   border-radius: 8px;
   border-style: solid;
   border-width: 0 1px 1px 0;
@@ -973,7 +895,7 @@ dl.toc dd ol {
   text-align: center;
 }
 .photoAlbumEntry img {
-  border: 2px solid white;
+  border: 2px solid #fff;
 }
 .photoAlbumEntryTitle {
   color: #757373;
@@ -992,9 +914,7 @@ dl.toc dd ol {
   position: absolute;
 }
 /* @end */
-
 /* @group Invisibles */
-
 .hiddenStructure {
   display: block !important;
   background: transparent !important;
@@ -1016,9 +936,7 @@ dl.toc dd ol {
   clear: both;
 }
 /* @end */
-
 /* @group Accessibility elements, applied by JS */
-
 body.largeText {
   font-size: 125%;
 }
@@ -1026,11 +944,8 @@ body.smallText {
   font-size: 85%;
 }
 /* @end */
-
 /* @group Overlay windows */
-
 /* styling for overlays (popups) */
-
 .overlay {
   display: none;
   height: auto;
@@ -1047,7 +962,6 @@ div.overlay-iframe {
   height: 60%;
 }
 /* default close button positioned on upper-left corner */
-
 div.overlaybg div.close,
 div.overlay div.close {
   background-image: url(../images/pb_close.png);
@@ -1064,10 +978,10 @@ div.overlay div.close {
 .pb-ajax,
 .pb-image,
 .overlay iframe {
-  background-color: white;
-  border: 1px solid #999999;
+  background-color: #fff;
+  border: 1px solid #999;
   white-space: normal;
-  box-shadow: 0 0 3em 0.5em #666666;
+  box-shadow: 0 0 3em 0.5em #666;
 }
 .pb-ajax > div {
   width: 92%;
@@ -1088,7 +1002,6 @@ div.overlay textarea {
   width: 100%;
 }
 /* Hide form elements that don't make sense within an overlay. */
-
 div.overlay .link-parent {
   display: none;
 }
@@ -1099,7 +1012,6 @@ div.overlay #createGroup fieldset {
   border: none;
 }
 /* lets play nice with paragraphs, links, tabbed pages in overlay e.g. when plone.openid is installed */
-
 div.overlay p {
   margin-bottom: 1em;
 }
@@ -1113,7 +1025,7 @@ div.overlay a:hover label {
   cursor: pointer;
 }
 div.overlay a.selected {
-  color: black;
+  color: #000000;
 }
 div.overlay .formTab {
   margin-right: 1em;
@@ -1127,9 +1039,7 @@ div.overlay .formControls a {
   margin: 0.75em;
 }
 /* @end */
-
 /* @group Content History */
-
 div.historyRecord {
   margin-bottom: 1em;
 }
@@ -1148,7 +1058,7 @@ div.historyTools form {
   display: inline;
 }
 .historyByLine {
-  background: #dddddd;
+  background: #ddd;
   padding: 0.5em;
 }
 div.historyLinks {
@@ -1158,14 +1068,14 @@ div.historyLinks {
 }
 div.historyComment {
   padding: 0.5em 1em;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
 }
 div.historyComment p {
   margin: 0;
   padding-top: 1px;
 }
 a.historyComparePrevious {
-  border-top: 1px dotted #cccccc;
+  border-top: 1px dotted #ccc;
   display: block;
   margin-top: 1.5em;
   margin-bottom: -0.5em;
@@ -1178,9 +1088,7 @@ a.historyComparePrevious span {
   padding: 0 0.5em;
 }
 /* @end */
-
 /* @group Core content type sprites */
-
 .icons-on .contenttype-folder {
   background: url(../images/icons-sprite.png) no-repeat 0 -1600px;
   display: inline-block;
@@ -1220,14 +1128,13 @@ a.historyComparePrevious span {
   margin-right: 3px;
 }
 /* Add new */
-
 #plone-contentmenu-factories li a {
   background: url(../images/icons-sprite.png) no-repeat 1px -1197px;
   display: block;
   padding-left: 17px;
 }
 #plone-contentmenu-factories li a:hover {
-  background-color: white;
+  background-color: #fff;
   background-position: 1px -2797px;
 }
 #plone-contentmenu-factories li .contenttype-folder {
@@ -1283,13 +1190,11 @@ a.historyComparePrevious span {
   padding: 0;
 }
 /* @end */
-
 /* @group jQuery Tag multiple selector */
-
 .optionsBox {
   overflow-y: auto;
   border: solid 1px #999999;
-  background: white;
+  background: #FFFFFF;
   height: 14em;
   width: 100%;
 }
@@ -1304,11 +1209,11 @@ a.historyComparePrevious span {
   margin: 1px 4px 4px 6px;
 }
 .optionsBox LABEL.checked {
-  background-color: #eeeeee;
+  background-color: #EEEEEE;
 }
 .optionsBox LABEL.hover {
   background-color: #777777;
-  color: white;
+  color: #FFFFFF;
 }
 #archetypes-fieldname-subject .formHelp {
   font-weight: normal;
@@ -1367,7 +1272,6 @@ a.historyComparePrevious span {
   margin-left: -10px;
 }
 /* @end */
-
 .section-home .documentFirstHeading {
   display: none;
 }
@@ -1380,7 +1284,7 @@ a.historyComparePrevious span {
   background-color: #087b8c;
   background: -webkit-linear-gradient(#087b8c, #066270);
   background: linear-gradient(#087b8c, #066270);
-  color: white;
+  color: #ffffff;
   display: inline-block;
   padding: 6px 10px;
 }
@@ -1425,12 +1329,12 @@ a.historyComparePrevious span {
 }
 .factBox {
   background: #087b8c;
-  color: white;
+  color: #ffffff;
   margin-bottom: 18px;
   padding: 10px;
 }
 .factBox .listTypeMark > li:before {
-  color: white;
+  color: #ffffff;
 }
 .imageContainer {
   float: left;

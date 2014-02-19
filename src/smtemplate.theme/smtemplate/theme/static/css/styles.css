@@ -3339,6 +3339,7 @@ a.managePortletsFallback {
   }
   #portal-siteactions a:hover {
     border: 0;
+    background: #d5241c;
     color: #ffffff;
   }
   .belowContentNav {

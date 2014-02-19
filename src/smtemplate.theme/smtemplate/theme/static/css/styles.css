@@ -1974,7 +1974,7 @@ li:hover .globalSectionsLevel1 {
   background: linear-gradient(#e9eff3, #ffffff);
 }
 .no-cssgradients #portal-footer-wrapper {
-  background-color: #ffffff;
+  background-color: #e9eff3;
 }
 #portal-footer-inner {
   margin: auto;
@@ -3339,7 +3339,6 @@ a.managePortletsFallback {
   }
   #portal-siteactions a:hover {
     border: 0;
-    background: #d5241c;
     color: #ffffff;
   }
   .belowContentNav {

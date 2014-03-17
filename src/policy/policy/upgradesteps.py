@@ -1,4 +1,5 @@
 from logging import getLogger
+from Products.GenericSetup.upgrade import _upgrade_registry
 
 log = getLogger('policy:upgrades')
 
@@ -17,6 +18,45 @@ def runProfiles(site, profile_ids):
             setup_tool.runAllImportSteps()
         log.info("Ran profile " + profile_id)
 
+
+def isInstalled(site, product_name):
+    qi = getattr(site, 'portal_quickinstaller')
+
+    installed_ids = [p['id'] for p in qi.listInstalledProducts()]
+    if product_name in installed_ids:
+        return True
+    return False
+
+# adapted from Products/GenericSetup/tool/manage_doUpgrades
+def runUpgradeSteps(site, profile_id, product_name, check_installed=True):
+    """Perform all available upgrade steps for profile_id.
+    """
+    log.info("Running available upgrade steps for profile " + profile_id)
+
+    if check_installed and not isInstalled(site, product_name):
+        log.info("Product %s is not installed in site" % str(product_name))
+        return
+
+    setup_tool = getattr(site, 'portal_setup')
+    # These have not been run:
+    steps_to_run = setup_tool.listUpgrades(u'Products.TinyMCE:TinyMCE')
+
+    step = None
+    for step_info in steps_to_run:
+        step = _upgrade_registry.getUpgradeStep(profile_id, step_info['id'])
+        if step is not None:
+            step.doStep(setup_tool)
+            msg = "Ran upgrade step '%s' for profile %s. Source: %s, dest: %s" % (
+                                                step.title,
+                                                profile_id,
+                                                str(step.source),
+                                                str(step.dest))
+            log.info(msg)
+
+    # We update the profile version to the last one we have reached
+    # with running an upgrade step.
+    if step and step.dest is not None and step.checker is None:
+        setup_tool.setLastVersionForProfile(profile_id, step.dest)
 
 def runDefaultProfile(tool):
     """ Run default profile """
@@ -167,3 +207,16 @@ def runProfilesForInitialSetup(tool):
         'policy:multilingual-initial',
         'policy:publication-initial',
     ))
+
+def runUpgradeStepsTiny(tool):
+    """ """
+    site = tool.aq_parent
+    profile_id = u'Products.TinyMCE:TinyMCE'
+    product_name = u'Products.TinyMCE'
+    # Products installed at site creation time
+    # like TinyMCE are not listed as installed in quickinstaller.
+    # But for others it is best to be precautious and check if it is
+    # installed before running an upgrade step. Use check_installed=True
+    # in the normal case.
+    runUpgradeSteps(site, profile_id, product_name, check_installed=False)
+

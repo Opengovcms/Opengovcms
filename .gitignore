@@ -31,6 +31,7 @@ mr-developer-src
 *.sublime-project
 *.sublime-workspace
 .ipython
+recorded_locales
 include
 lib
 local

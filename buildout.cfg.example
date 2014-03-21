@@ -5,5 +5,4 @@
 #extends = profiles/testserver.cfg
 #extends = profiles/devserver.cfg
 extends = profiles/development.cfg
-#extends = profiles/development_zeo_client.cfg
 

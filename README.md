@@ -1,6 +1,3 @@
-headnet.plone.project.sm-template
+Opengovcms
 =================================
 
-SM site template
-
-SUNEW TEST

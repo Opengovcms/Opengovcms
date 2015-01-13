@@ -1925,10 +1925,10 @@ li:hover .globalSectionsLevel1 {
 }
 .documentActions a {
   display: block;
-  height: 18px;
+  height: 0;
   margin-left: 12px;
   overflow: hidden;
-  text-indent: -9999px;
+  padding-top: 18px;
   width: 18px;
 }
 #document-action-print a {

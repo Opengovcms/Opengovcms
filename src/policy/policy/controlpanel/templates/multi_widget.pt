@@ -30,6 +30,9 @@
              tal:replace="structure widget/error/render">error</div>
 
         <div class="widget">
+         <table>
+          <tr>
+          <td>
           <div class="multi-widget-checkbox">
             <input id="" name=""
                    class="multi-widget-checkbox checkbox-widget"
@@ -37,20 +40,24 @@
                    tal:attributes="id string:${widget/id}-remove;
                                    name string:${widget/name}.remove" />
           </div>
+          </td><td>
           <div class="multi-widget-input"
                tal:content="structure widget/render">
             <input size="24" value="" type="text" />
           </div>
+           </td>
+          </tr>
+         </table>
         </div>
       </metal:block>
-
     </div>
   </tal:block>
+
   <div class="buttons">
     <input tal:repeat="action view/actions/values"
            tal:replace="structure action/render"
            />
    </div>
-</div>
 <input type="hidden" tal:replace="structure view/counterMarker" />
+</div>
 </html>

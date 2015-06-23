@@ -26,6 +26,7 @@
 	    });
 		*/
 	    $(".multi-widget").sortable({
+                        items: "> tr",
 			placeholder: "ui-state-highlight", 
 			helper:'clone',
 			stop: function( event, ui ) {
@@ -56,6 +57,7 @@
 
     <div id="content-core">
         <div id="layout-contents">
+            <table width="82%"><tr align="center"><td align="left">Priority</td><td>Url</td><td>Visible</td><td>Icon</td><td>Icon hover</td><td>Danish Alt</td><td>English Alt</td></tr></table>
             <span tal:replace="structure view/contents" />
         </div>
     </div>

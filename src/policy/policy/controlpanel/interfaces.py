@@ -24,7 +24,7 @@ class ISocialShareItem(Interface):
     
     url = schema.TextLine(
             title=_("URL"),
-            required=False,
+            required=True,
             default=u''
     )
     

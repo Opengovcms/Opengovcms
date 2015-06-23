@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/browser"
+    i18n_domain="policy">
+	
+  <page
+      name="socialshare-settings"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".socialshare.SocialShareSettingsControlPanel"
+      permission="cmf.ManagePortal"
+      layer="policy.interfaces.IBrowserLayer"
+      />
+
+  <page
+      name="socialshare-icons"
+      for="*"
+      class=".browser.SocialshareIcons"
+	  template="templates/social_icons.pt"
+      permission="zope2.View"
+      layer="policy.interfaces.IBrowserLayer"
+      />
+
+</configure>

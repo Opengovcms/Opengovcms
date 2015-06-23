@@ -1,0 +1,3 @@
+<registry>
+    <records interface="policy.controlpanel.interfaces.ISocialShareSettings" />
+</registry>

@@ -24,10 +24,11 @@
     <after css:theme="#globalnav-wrapper" if-not-content="$home_page">
         <ul class="documentActions">
             <li id="document-action-plus">
-                <!-- AddThis Button BEGIN -->
-                    <a class="addthis_button_compact" href="#" tabindex="-1"><span>Bookmark or Share</span></a>
-                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-516d25276505d88f"></script>
-                <!-- AddThis Button END -->
+                <!-- CUSTOM SHARE BEGIN -->
+                <li id="socialshare-icons">
+                  <script type="text/javascript">$("#socialshare-icons").load("socialshare-icons")</script>
+                </li>
+                <!-- CUSTOM SHARE END -->
             </li>
             <xsl:apply-templates css:select=".documentActions li" mode="raw" />   
         </ul>

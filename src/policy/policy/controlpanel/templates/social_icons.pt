@@ -1,0 +1,48 @@
+<tal:list condition="not:result/dropdown" tal:define="result view/get_icons">
+  <ul id="socialshare-icons-list">
+    <li tal:repeat="item result/icons">
+        <a tal:define="icon_id string:socialicon_${repeat/item/number};
+                    icon1 item/icon_1;
+                    icon2 item/icon_2;"
+           tal:attributes="href item/url; id icon_id; title item/dk_alt">
+          <img tal:attributes="src icon1;
+                             alt item/dk_alt;
+                             onmouseover string:this.src='${icon2}';
+                             onmouseout  string:this.src='${icon1}'" 
+               width="18px" height="18px" />
+        </a>
+    </li>
+  </ul>
+</tal:list>
+
+<tal:dropdown condition="result/dropdown"  tal:define="result view/get_icons">
+
+	<script type="text/javascript">
+		$(function() {
+		    $( "#socialshare-icons-dropdown" ).menu(
+			  {
+			    position: { my: "center top", at: "center top+30"},
+			  }
+			);
+		  });
+	</script>
+
+  <ul id="socialshare-icons-dropdown">
+    <li> <img tal:attributes="src result/button_1;
+                              onmouseover string:this.src='${result/button_2}';
+                              onmouseout string:this.src='${result/button_1}'"
+               style="width:80px;height:20px">
+     <ul style="z-index: 9999;">
+      <li tal:repeat="item result/icons">
+        <a tal:attributes="href item/url">
+        
+	        <span tal:content="item/dk_alt" tal:condition="view/is_danish">alt text</span>
+	        <span tal:content="item/uk_alt" tal:condition="not:view/is_danish">alt text</span>
+        <img tal:attributes="src item/icon_1" style="float:right" class="submenu-icon"
+               width="18px" height="18px" />
+        </a>
+    </li>
+  </ul>
+</li>
+</ul>
+</tal:dropdown>

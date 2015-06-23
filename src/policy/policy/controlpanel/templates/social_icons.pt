@@ -19,12 +19,10 @@
 
 	<script type="text/javascript">
 		$(function() {
-		    $( "#socialshare-icons-dropdown" ).menu(
-			  {
-			    position: { my: "center top", at: "center top+30"},
-			  }
-			);
-		  });
+		    $( "#socialshare-icons-dropdown" ).menu({
+                        position: { my: "center top", at: "center top+30"}
+                    });
+		 });
 	</script>
 
   <ul id="socialshare-icons-dropdown">
@@ -41,8 +39,9 @@
         <img tal:attributes="src item/icon_1" style="float:right" class="submenu-icon"
                width="18px" height="18px" />
         </a>
+      </li>
+     </ul>
     </li>
   </ul>
-</li>
-</ul>
+
 </tal:dropdown>

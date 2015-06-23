@@ -14,7 +14,8 @@ class SocialshareIcons(BrowserView):
         registry = queryUtility(IRegistry)
         settings = registry.forInterface(ISocialShareSettings, check=False)
         #Only visible items
-        icons = [item for item in settings.social_share_items if item.visible]
+        items = settings.social_share_items or []
+        icons = [item for item in items if item.visible]
         #Sort on priority
         icons.sort(key=lambda x: x.priority)
         

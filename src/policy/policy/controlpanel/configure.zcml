@@ -11,7 +11,7 @@
       />
 
   <page
-      name="socialshare-icons"
+      name="socialshare-icons.html"
       for="*"
       class=".browser.SocialshareIcons"
 	  template="templates/social_icons.pt"

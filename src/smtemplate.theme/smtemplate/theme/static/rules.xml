@@ -25,9 +25,7 @@
         <ul class="documentActions">
             <li id="document-action-plus">
                 <!-- CUSTOM SHARE BEGIN -->
-                <li id="socialshare-icons">
-                  <script type="text/javascript">$("#socialshare-icons").load("socialshare-icons")</script>
-                </li>
+                  <script type="text/javascript">$("#document-action-plus").load("socialshare-icons.html");</script>
                 <!-- CUSTOM SHARE END -->
             </li>
             <xsl:apply-templates css:select=".documentActions li" mode="raw" />   

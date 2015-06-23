@@ -45,7 +45,7 @@ class SocialShareSettingsEditForm(RegistryEditForm):
             widget.template = multi_widget_field_tpl
             widget.subform.widgets['icon_1'].template = img_tmpl
             widget.subform.widgets['icon_2'].template = img_tmpl
-            if idx < len(settings.social_share_items):
+            if idx < len(settings.social_share_items or []):
                 widget.subform.widgets['icon_1'].icon_data = settings.social_share_items[idx].icon_1 or ''
                 widget.subform.widgets['icon_2'].icon_data = settings.social_share_items[idx].icon_2  or ''
 
@@ -64,15 +64,22 @@ class SocialShareSettingsEditForm(RegistryEditForm):
         if settings.button_2 and not data['button_2']:
             data['button_2'] = settings.button_2
 
-        for idx, item in enumerate(data['social_share_items']):
-            try:
-                if settings.social_share_items[idx].icon_1 and not item.icon_1:
-                    data['social_share_items'][idx].icon_1 = settings.social_share_items[idx].icon_1
+        items = settings.social_share_items
+        if items:
+            for idx, item in enumerate(data['social_share_items']):
+                obj =  items[idx]
+                if not obj:
+                    continue
+                item_icon_1 = obj.icon_1 or None
+                item_icon_2 = obj.icon_2 or None
+                try:
+                    if item_icon_1 and not item.icon_1:
+                        data['social_share_items'][idx].icon_1 = item_icon_1 
                 
-                if settings.social_share_items[idx].icon_2 and not item.icon_2:
-                    data['social_share_items'][idx].icon_2 = settings.social_share_items[idx].icon_2
-            except IndexError:
-                pass
+                    if item_icon_2 and not item.icon_2:
+                        data['social_share_items'][idx].icon_2 = item_icon_2
+                except IndexError:
+                    pass
         data = self._extract_image_urls(data)
         return data, errors
 
@@ -92,8 +99,10 @@ class SocialShareSettingsEditForm(RegistryEditForm):
 
             if icn1_ctype.startswith('image'):
                 data['social_share_items'][idx].icon_1 = 'data:'+ icn1_ctype + ';base64,' + data['social_share_items'][idx].icon_1.encode('base64')
+
             if icn2_ctype.startswith('image'):
-                data['social_share_items'][idx].icon_2 = 'data:'+ icn1_ctype + ';base64,' + data['social_share_items'][idx].icon_2.encode('base64')
+                data['social_share_items'][idx].icon_2 = 'data:'+ icn2_ctype + ';base64,' + data['social_share_items'][idx].icon_2.encode('base64')
+
         return data
 
 class SocialShareSettingsControlPanel(layout.FormWrapper):

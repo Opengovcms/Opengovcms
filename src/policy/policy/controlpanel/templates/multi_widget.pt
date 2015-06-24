@@ -16,19 +16,6 @@
         <tal:condition tal:condition="key_widget/id|nothing">
 
 
-          <div tal:condition="key_widget/error"
-               tal:replace="structure key_widget/error/render">error</div>
-          <div class="widget">
-              <div class="multi-widget-input-key"
-                   tal:content="structure key_widget/render">
-                <input size="24" value="" type="text" />
-              </div>
-          </div>
-        </tal:condition>
-
-        <div tal:condition="widget/error"
-             tal:replace="structure widget/error/render">error</div>
-
         <div class="widget">
          <table>
           <tr>

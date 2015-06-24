@@ -87,24 +87,26 @@ class SocialShareSettingsEditForm(RegistryEditForm):
         return data, errors
 
     def _extract_image_urls(self, data):
+        url = 'data:%s;base64,%s' 
+
         bt1_ctype = self.request.get('form.widgets.button_1').headers['Content-Type']
         bt2_ctype = self.request.get('form.widgets.button_2').headers['Content-Type']
 
         if bt1_ctype.startswith('image'):
-            data['button_1'] = 'data:'+ bt1_ctype + ';base64,' + data['button_1'].encode('base64').encode()
+            data['button_1'] = url % (bt1_ctype, data['button_1'].encode('base64').encode())
 
         if bt2_ctype.startswith('image'):
-            data['button_2'] = 'data:'+ bt2_ctype + ';base64,' + data['button_2'].encode('base64').encode()
+            data['button_2'] = url % (bt2_ctype, data['button_2'].encode('base64').encode())
 
         for idx, item in enumerate(data['social_share_items']):
             icn1_ctype = self.request.get('form.widgets.social_share_items.%d.widgets.icon_1' % idx).headers['Content-Type']
             icn2_ctype = self.request.get('form.widgets.social_share_items.%d.widgets.icon_2' % idx).headers['Content-Type']
 
             if icn1_ctype.startswith('image'):
-                data['social_share_items'][idx].icon_1 = 'data:'+ icn1_ctype + ';base64,' + data['social_share_items'][idx].icon_1.encode('base64').encode()
+                data['social_share_items'][idx].icon_1 = url % (icn1_ctype, data['social_share_items'][idx].icon_1.encode('base64').encode())
 
             if icn2_ctype.startswith('image'):
-                data['social_share_items'][idx].icon_2 = 'data:'+ icn2_ctype + ';base64,' + data['social_share_items'][idx].icon_2.encode('base64').encode()
+                data['social_share_items'][idx].icon_2 = url % (icn2_ctype, data['social_share_items'][idx].icon_2.encode('base64').encode())
 
         return data
 

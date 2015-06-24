@@ -1,16 +1,15 @@
 <tal:list condition="not:result/dropdown" tal:define="result view/get_icons">
   <ul id="socialshare-icons-list">
     <li tal:repeat="item result/icons">
-        <a tal:define="icon_id string:socialicon_${repeat/item/number};
-                    icon1 item/icon_1;
-                    icon2 item/icon_2;
-                    icon1 python:icon1 and icon1.decode() or '';
-                    icon2 python:icon2 and icon2.decode() or '';"
-           tal:attributes="href item/url; id icon_id; title item/dk_alt">
-          <img tal:attributes="src icon1;
-                             alt item/dk_alt;
-                             onmouseover string:this.src='${icon2}';
-                             onmouseout  string:this.src='${icon1}'" 
+        <a class=""
+           tal:define="icon_id string:socialicon_${repeat/item/number};"
+           tal:attributes="href item/url; 
+                           id icon_id; 
+                           title item/alt">
+          <img tal:attributes="src item/icon_1;
+                               alt item/alt;
+                               onmouseover string:this.src='${item/icon_2}';
+                               onmouseout  string:this.src='${item/icon_1}'" 
                width="18px" height="18px" />
         </a>
     </li>
@@ -28,22 +27,16 @@
 	</script>
 
   <ul id="socialshare-icons-dropdown">
-    <li> <img tal:define="button_1 result/button_1; 
-                          button_2 result/button_2;
-                          button_1 python:button_1 and button_1.decode() or '';
-                          button_2 python:button_2 and button_2.decode() or '';" 
-              tal:attributes="src button_1;
-                              onmouseover string:this.src='${button_2}';
-                              onmouseout string:this.src='${button_1}'"
-               style="width:80px;height:20px">
+    <li> <img tal:attributes="src result/button_1;
+                              onmouseover string:this.src='${result/button_2}';
+                              onmouseout string:this.src='${result/button_1}'"
+               class="socialshare-button">
      <ul style="z-index: 9999;">
       <li tal:repeat="item result/icons">
         <a tal:attributes="href item/url">
         
-	        <span tal:content="item/dk_alt" tal:condition="view/is_danish">alt text</span>
-	        <span tal:content="item/uk_alt" tal:condition="not:view/is_danish">alt text</span>
-        <img tal:define="icon_1 item/icon_1" tal:attributes="src python:icon_1.decode()" style="float:right" class="submenu-icon"
-               width="18px" height="18px" />
+	   <span tal:content="item/alt">alt text</span>
+           <img tal:attributes="src item/icon_1" style="float:right" class="submenu-icon" width="17px" height="17px" />
         </a>
       </li>
      </ul>

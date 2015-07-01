@@ -7,41 +7,14 @@
       i18n:domain="plone">
 
 <body>
-
   <div metal:fill-slot="top_slot">
             <tal:defines tal:define="dummy python:request.set('disable_border',1);
                                      disable_column_one python:request.set('disable_plone.leftcolumn', 1);
                                      disable_column_two python:request.set('disable_plone.rightcolumn',1);"/>
 </div>
-
 <div metal:fill-slot="prefs_configlet_main" tal:define="dummy python:request.set('disable_plone.leftcolumn', 1)">
-  <script>
-	$(document).ready(function(){
-		/*
-	    $("tr.widget-table-row").sort(
-			function(a, b){ 
-				return $("input.int-field", $(a)).val() - $("input.int-field", $(b)).val() ;
-		}).each(function (index, value) {
-	        $(".multi-widget").append(value);
-	    });
-		*/
-	    $(".multi-widget").sortable({
-                        items: "> tr",
-			placeholder: "ui-state-highlight", 
-			helper:'clone',
-			stop: function( event, ui ) {
-				var i = 0;
-				$("input.int-field").each(function(){
-					if (this.id.match(/form-widgets-social_share_items-\d+-widgets-priority/)){
-					    $(this).val(i);
-					    i++;
-					}
-				});
-			}
-		});
-    });
-  </script>
-  
+
+<div id="social-icons-configlet-content">
     <a href=""
        id="setup-link"
        tal:attributes="href string:$portal_url/plone_control_panel"
@@ -49,19 +22,26 @@
         Site Setup
     </a>
 
-    <h1 class="documentFirstHeading" tal:content="view/label">View Title</h1>
+    <h1 class="documentFirstHeading"> 
+      <tal:title tal:content="view/label" />
+        <a class="social-help" style="color:#FFFFFF" href="/@@socialshare.help" onclick="window.open(this.href, 'Hjælp', 'left=20,top=20,width=680,height=400,toolbar=1,resizable=0'); return false;" >Har du bruge for hjælp?</a>
+   </h1>
 
-    <div metal:use-macro="context/global_statusmessage/macros/portal_message">
-      Portal status message
-    </div>
 
     <div id="content-core">
         <div id="layout-contents">
-            <table width="82%"><tr align="center"><td align="left">Priority</td><td>Url</td><td>Visible</td><td>Icon</td><td>Icon hover</td><td>Danish Alt</td><td>English Alt</td></tr></table>
+            <table width="82%"><tr align="center"><td>&nbsp;</td><td align="left">Priority</td><td>Url</td><td>Visible</td><td>Icon (17x17 px)</td><td>Icon hover (17x17 px)</td><td>Danish Alt</td><td>English Alt</td></tr></table>
             <span tal:replace="structure view/contents" />
         </div>
     </div>
+<script type="text/javascript">
+   jQuery(document).ready(function(){
+     jQuery('.z3cformInlineValidation').removeClass('z3cformInlineValidation');
+     jQuery('div.fieldErrorBox').remove();
+  });
+</script>
 
+</div>
 </div>
 </body>
 </html>

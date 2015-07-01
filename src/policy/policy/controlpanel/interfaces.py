@@ -78,11 +78,13 @@ class ISocialShareSettings(Interface):
     
     button_1 = schema.Bytes(
         title=_("Default button"),
+        description=_('(25x20 px)'),
         required=False,
     )
 
     button_2 = schema.Bytes(
         title=_("Rollover button"),
+        description=_('(25x20 px)'),
         required=False,
     )
     

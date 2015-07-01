@@ -19,4 +19,12 @@
       layer="policy.interfaces.IBrowserLayer"
       />
 
+  <page
+      name="socialshare.help"
+      for="*"
+      template="templates/help.pt"
+      permission="zope2.View"
+      layer="policy.interfaces.IBrowserLayer"
+      />
+
 </configure>

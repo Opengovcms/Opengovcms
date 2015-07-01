@@ -27,4 +27,9 @@
       layer="policy.interfaces.IBrowserLayer"
       />
 
+   <resource
+      name = "socialshare.css"
+      file = "socialshare.css"
+    />
+
 </configure>

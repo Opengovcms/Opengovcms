@@ -1,0 +1,267 @@
+input[type='file'] {width: 88px;}
+input[id$="-widgets-priority"] {width: 20px;}
+
+#formfield-form-widgets-social_share_items label { display:none}
+
+.socialshare-placeholder {
+    border: 1px dotted black;
+    margin: 0 1em 1em 0;
+    height: 50px;
+}
+
+#document-action-plus a {
+  background: none;
+}
+
+#document-action-plus a:hover {
+  background-image: none;
+}
+
+#socialshare-icons-list a {
+  display: block;
+  height: 18px;
+  margin-left: 12px;
+  margin-top: -25px;
+  overflow: hidden;
+  text-indent: 0px;
+}
+#socialshare-icons-list img{
+  width: 17px;
+  height: 17px;
+}
+
+/* ******************************** */
+#socialshare-icons-dropdown a {
+  display: block;
+  margin-left: 0px;
+  text-indent: 0px;
+  height: 18px;
+  width: 200px;
+  backgoroud-color: #FF0000;
+}
+
+#socialshare-icons-dropdown img {
+  width: 17px;
+  height: 17px;
+}
+
+.ui-widget-content {
+  border: 0;
+}
+
+ul#socialshare-icons-dropdown ul.ui-menu {
+    margin-left: -64px;
+    border: 2px solid #cccccc;
+}
+.socialshare-button {
+    width:25px !important;
+    height:20px !important;
+    border: 0px !important;
+}
+
+.social-help {
+  color:#FFFFFF;
+  font-size:14px;
+  float:right;
+  text-decoration: underline;
+}
+/*=======================*/
+#social-icons-configlet-content h1 {
+  background: #bf252e;
+  margin-bottom: 1px;
+  font-size: 20px;
+  padding: 20px 40px;
+  color: #fff;
+}
+#social-icons-configlet-content table {
+  width: 930px;
+  text-align: center;
+  table-layout: fixed !important;
+}
+#social-icons-configlet-content tr {
+  background: #bf252e;
+}
+#social-icons-configlet-content input[type="text"] {
+  width: 75%;
+  padding: 10px 5px;
+  text-align: center;
+}
+#social-icons-configlet-content input[type="text"] ::-webkit-input-placeholder,
+#social-icons-configlet-content input[type="text"] :-moz-placeholder,
+#social-icons-configlet-content input[type="text"] ::-moz-placeholder,
+#social-icons-configlet-content input[type="text"] :-ms-input-placeholder {
+  color: #797979;
+}
+#social-icons-configlet-content input[type="file"] {
+  margin-left: 7px;
+  width: 130px;
+  color: #000;
+  margin-top: 8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+}
+#social-icons-configlet-content input[type="checkbox"] {
+  margin-top: 12px;
+}
+#social-icons-configlet-content img {
+  vertical-align: middle;
+}
+#social-icons-configlet-content td {
+  color: #fff;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  float: left;
+  text-align: center;
+  padding: 10px 0;
+  border-right: 1px solid #fff;
+}
+#social-icons-configlet-content td:nth-child(1) {
+  width: 30px;
+}
+#social-icons-configlet-content td:nth-child(2) {
+  width: 60px;
+}
+#social-icons-configlet-content td:nth-child(3) {
+  width: 160px;
+}
+#social-icons-configlet-content td:nth-child(4) {
+  width: 60px;
+}
+#social-icons-configlet-content td:nth-child(5) {
+  width: 200px;
+}
+#social-icons-configlet-content td:nth-child(6) {
+  width: 200px;
+}
+#social-icons-configlet-content td:nth-child(7) {
+  width: 100px;
+}
+#social-icons-configlet-content td:nth-child(8) {
+  width: 100px;
+  border-right: none;
+}
+#social-icons-configlet-content #form .row {
+  border-top: 1px solid #fff;
+}
+#social-icons-configlet-content #form .row tr {
+  background: #d4d5d6;
+}
+#social-icons-configlet-content #form .widget-table-row {
+  border-left: 1px solid #fff;
+}
+#social-icons-configlet-content #form .multi-widget-checkbox {
+  margin: 5px 0 0 0;
+  width: auto;
+}
+#social-icons-configlet-content #form td {
+  position: relative;
+  padding: 0;
+}
+#social-icons-configlet-content #form td:nth-child(1) {
+  padding: 10px 0;
+  border-right: none;
+}
+#social-icons-configlet-content #form td:nth-child(2) {
+  width: 900px;
+  border-right: none;
+}
+#social-icons-configlet-content #form td:nth-child(2) table {
+  width: 900px;
+}
+#social-icons-configlet-content #form #widget-table td {
+  height: 37px;
+  padding: 10px 0;
+  border-right: 1px solid #fff;
+}
+#social-icons-configlet-content #form #widget-table td:nth-child(1) {
+  width: 60px;
+}
+#social-icons-configlet-content #form #widget-table td:nth-child(1) input[type="text"] {
+  width: 20px;
+}
+#social-icons-configlet-content #form #widget-table td:nth-child(2) {
+  width: 160px;
+}
+#social-icons-configlet-content #form #widget-table td:nth-child(3) {
+  width: 60px;
+}
+#social-icons-configlet-content #form #widget-table td:nth-child(4) {
+  width: 200px;
+}
+#social-icons-configlet-content #form #widget-table td:nth-child(5) {
+  width: 200px;
+}
+#social-icons-configlet-content #form #widget-table td:nth-child(6) {
+  width: 100px;
+}
+#social-icons-configlet-content #form #widget-table td:nth-child(7) {
+  width: 100px;
+  border-right: none;
+}
+#social-icons-configlet-content #form .error {
+  color: #000;
+  font-size: 10px;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#social-icons-configlet-content #form-widgets-social_share_items-buttons-add,
+#social-icons-configlet-content #form-buttons-save {
+  background: #bf252e;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 9px 17px 6px 17px;
+  margin: 15px 10px 0 0;
+}
+#social-icons-configlet-content #form-widgets-social_share_items-buttons-remove,
+#social-icons-configlet-content #form-buttons-cancel {
+  background: #fff;
+  color: #000;
+  text-transform: uppercase;
+  padding: 9px 17px 6px 17px;
+  margin: 15px 10px 0 0;
+}
+
+#social-icons-configlet-content #formfield-form-widgets-button_1 input[type="file"],
+#social-icons-configlet-content #formfield-form-widgets-button_2 input[type="file"] {
+  width: auto;
+  vertical-align: middle;
+}
+
+#social-icons-configlet-content .portalMessage.error {
+  display: none;
+}
+#social-icons-configlet-content #form > .error {
+  white-space: normal !important;
+  position: relative !important;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: inherit !important;
+  top: 0 !important;
+}
+
+#socialshare-icons-dropdown .ui-menu {
+  border: 1px solid #666666 !important;
+  padding: 5px 10px 0 10px;
+  margin-left: -105px !important;
+  -moz-border-radius: 0 !important;
+  -webkit-border-radius: 0;
+  border-radius: 0 !important;
+}
+#socialshare-icons-dropdown li a {
+  min-width: 130px;
+  max-width: 230px;
+  width: auto !important;
+  padding: 3px 5px;
+}

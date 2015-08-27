@@ -110,8 +110,9 @@
         <before content="/html/head/meta" css:theme="meta[name='viewport']" />
         <before content="/html/head/base" theme="/html/head/title" />
         <replace theme='/html/head/title' content='/html/head/title' />
-        <before css:content="head link:not([href*='ploneCustom'])" css:theme="link[href$='styles.css']" />
+        <before css:content="head link:not([href*='ploneCustom']):not([href*='socialshare'])" css:theme="link[href$='styles.css']" />
         <before content="/html/head/style | /html/head/script" css:theme="link[href$='styles.css']" />
+        <after css:content="head link[href*='socialshare']" theme-children="/html/head" />
         <after css:content="head link[href*='ploneCustom']" theme-children="/html/head" />
 
         <!-- Body-->

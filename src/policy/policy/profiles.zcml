@@ -115,4 +115,11 @@
       handler="policy.setuphandlers.importInitialPublicationContent">
   </genericsetup:importStep>
 
+  <genericsetup:registerProfile
+      name="policy.import-initial-socialshare"
+      title="policy: import initial socialshare"
+      directory="profiles/socialshare-initial"
+      description="Imports various settings (initial setup)"
+      provides="Products.GenericSetup.interfaces.EXTENSION" />
+
 </configure>

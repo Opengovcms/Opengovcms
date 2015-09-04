@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Hjælp</title>
+<style>
+
+#list ul { font-style:italic; font-family:Georgia, Times, serif; font-size:14px; color:#000000;  }
+#list ul li { padding:8px; font-style:normal; font-family:Arial; font-size:12px; color:#000000; border-left: 0px solid #999; }
+#list ul li p { font-style:italic }
+
+</style>
+</head>
+<body>
+
+<div id="list">
+  <ul>
+    <p><strong>Her er nogle eksempler af URL'er du kan bruge</strong></p>
+    <li>
+       <strong>Facebook i popup:</strong>
+        <p>
+         javascript:window.open('https://www.facebook.com/sharer.php?u='+document.location.href,'FacebookShare','status=0,toolbar=0,menubar=1,resizable=1,width=480,height=240')
+       </p>
+    </li>
+    <li>
+       <strong>Twitter i popup:</strong>
+       <p>
+        javascript:javascript:window.open('https://twitter.com/intent/tweet?original_referer=' + document.location.href + '&url=' + document.location.href + '&text=' + document.title, 'TwitterShare','status=0,toolbar=0,menubar=1,resizable=1,width=480,height=240')
+       </p>
+    </li>
+   <li>
+      <strong>Tip en vend:</strong>
+       <p>
+       sendto_form
+       </p>
+   </li>
+      <li>
+      <strong>Udskriv:</strong>
+       <p>
+      javascript:this.print() 
+       </p>
+   </li>
+  </ul>
+</div>
+</body>
+</html>

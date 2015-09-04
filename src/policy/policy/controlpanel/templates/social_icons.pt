@@ -1,0 +1,54 @@
+<tal:list condition="not:result/dropdown" tal:define="result view/get_icons">
+        <script type="text/javascript">
+                $(function() {
+                    $('ul#socialshare-icons-list li').mouseenter(function(){$('img', this).toggle();});
+                    $('ul#socialshare-icons-list li').mouseleave(function(){$('img', this).toggle();});
+                 });
+        </script>
+
+  <ul id="socialshare-icons-list">
+    <li tal:repeat="item result/icons">
+        <a class=""
+           tal:define="icon_id string:socialicon_${repeat/item/number};"
+           tal:attributes="href item/url; 
+                           id icon_id; 
+                           title item/alt">
+           <img tal:attributes="src item/icon_1; alt item/alt;" width="18px" height="18px" />
+           <img tal:attributes="src item/icon_2; alt item/alt;" style="display:none;" width="18px" height="18px" />
+        </a>
+    </li>
+  </ul>
+</tal:list>
+
+<tal:dropdown condition="result/dropdown"  tal:define="result view/get_icons">
+
+	<script type="text/javascript">
+		$(function() {
+		    $( "#socialshare-icons-dropdown" ).menu({
+                        position: { my: "center top", at: "center top+30"}
+                    });
+                    $('ul#socialshare-icons-dropdown > li').mouseenter(function(){$(this).children('img').toggle();});
+                    $('ul#socialshare-icons-dropdown > li').mouseleave(function(){$(this).children('img').toggle();});
+
+                    $('ul#socialshare-icons-dropdown li > ul > li').mouseenter(function(){$('img', this).toggle();});
+                    $('ul#socialshare-icons-dropdown li > ul > li').mouseleave(function(){$('img', this).toggle();});
+		 });
+	</script>
+
+  <ul id="socialshare-icons-dropdown">
+    <li> 
+         <img tal:attributes="src result/button_1;" class="socialshare-button" />
+         <img tal:attributes="src result/button_2;" class="socialshare-button" style="display:none"/>
+     <ul style="z-index: 9999;">
+      <li tal:repeat="item result/icons">
+        <a tal:attributes="href item/url">
+	   <span tal:content="item/alt">alt text</span>
+           <img tal:attributes="src item/icon_1; alt item/alt;" style="float:right" class="submenu-icon" width="17px" height="17px" />
+           <img tal:attributes="src item/icon_2; alt item/alt;" style="float:right;display:none;" class="submenu-icon" width="17px" height="17px" />
+        </a>
+      </li>
+     </ul>
+    </li>
+  </ul>
+
+</tal:dropdown>

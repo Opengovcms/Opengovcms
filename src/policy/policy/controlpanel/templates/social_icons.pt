@@ -24,6 +24,12 @@
 
 	<script type="text/javascript">
 		$(function() {
+                   var el = $.fn.hide;
+                   $.fn.hide = function() {
+                       this.trigger('hiddenCallback');
+                       return el.apply(this, arguments);
+                   };
+
 		    $( "#socialshare-icons-dropdown" ).menu({
                         position: { my: "center top", at: "center top+30"}
                     });
@@ -32,6 +38,8 @@
 
                     $('ul#socialshare-icons-dropdown li > ul > li').mouseenter(function(){$('img', this).toggle();});
                     $('ul#socialshare-icons-dropdown li > ul > li').mouseleave(function(){$('img', this).toggle();});
+                    $('ul#socialshare-icons-dropdown li > ul').on('hiddenCallback', function(){$('img.icon_1').css('display', 'block');$('img.icon_2').css('display', 'none')});
+                   
 		 });
 	</script>
 
@@ -43,8 +51,8 @@
       <li tal:repeat="item result/icons">
         <a tal:attributes="href item/url">
 	   <span tal:content="item/alt">alt text</span>
-           <img tal:attributes="src item/icon_1; alt item/alt;" style="float:right" class="submenu-icon" width="17px" height="17px" />
-           <img tal:attributes="src item/icon_2; alt item/alt;" style="float:right;display:none;" class="submenu-icon" width="17px" height="17px" />
+           <img tal:attributes="src item/icon_1; alt item/alt;" style="float:right" class="submenu-icon icon_1" width="17px" height="17px" />
+           <img tal:attributes="src item/icon_2; alt item/alt;" style="float:right;display:none;" class="submenu-icon icon_2" width="17px" height="17px" />
         </a>
       </li>
      </ul>

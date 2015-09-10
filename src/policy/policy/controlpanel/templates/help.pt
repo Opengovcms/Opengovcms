@@ -17,13 +17,13 @@
     <li>
        <strong>Facebook i popup:</strong>
         <p>
-         javascript:window.open('https://www.facebook.com/sharer.php?u='+document.location.href,'FacebookShare','status=0,toolbar=0,menubar=1,resizable=1,width=480,height=240')
+         javascript:window.open('https://www.facebook.com/sharer.php?u='+document.location.href,'FacebookShare','status=0,toolbar=0,menubar=1,resizable=1,width=480,height=240');return false;
        </p>
     </li>
     <li>
        <strong>Twitter i popup:</strong>
        <p>
-        javascript:javascript:window.open('https://twitter.com/intent/tweet?original_referer=' + document.location.href + '&url=' + document.location.href + '&text=' + document.title, 'TwitterShare','status=0,toolbar=0,menubar=1,resizable=1,width=480,height=240')
+        javascript:window.open('https://twitter.com/intent/tweet?original_referer=' + document.location.href + '&url=' + document.location.href + '&text=' + encodeURIComponent(document.title), 'TwitterShare','status=0,toolbar=0,menubar=1,resizable=1,width=480,height=240');return false;
        </p>
     </li>
    <li>

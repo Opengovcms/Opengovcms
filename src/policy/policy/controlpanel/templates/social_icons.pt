@@ -10,7 +10,8 @@
     <li tal:repeat="item result/icons">
         <a class=""
            tal:define="icon_id string:socialicon_${repeat/item/number};"
-           tal:attributes="href item/url; 
+           tal:attributes="href item/href; 
+                           onclick item/onclick;
                            id icon_id; 
                            title item/alt">
            <img tal:attributes="src item/icon_1; alt item/alt;" width="18px" height="18px" />
@@ -49,7 +50,7 @@
          <img tal:attributes="src result/button_2;" class="socialshare-button" style="display:none"/>
      <ul style="z-index: 9999;">
       <li tal:repeat="item result/icons">
-        <a tal:attributes="href item/url">
+        <a tal:attributes="href item/href;onclick item/onclick;">
 	   <span tal:content="item/alt">alt text</span>
            <img tal:attributes="src item/icon_1; alt item/alt;" style="float:right" class="submenu-icon icon_1" width="17px" height="17px" />
            <img tal:attributes="src item/icon_2; alt item/alt;" style="float:right;display:none;" class="submenu-icon icon_2" width="17px" height="17px" />

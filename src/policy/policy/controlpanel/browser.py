@@ -26,10 +26,12 @@ class SocialshareIcons(BrowserView):
         danish = self.is_danish()
         icns = []
         for icon in icons:
+            onclick = icon.url.lower().startswith('javascript:')
             icns.append({'icon_1': icon.icon_1 and icon.icon_1.encode() or None,
                          'icon_2': icon.icon_1 and icon.icon_2.encode() or None,
                          'alt': danish and icon.dk_alt or icon.uk_alt,
-                         'url': icon.url
+                         'href': (not onclick) and icon.url or '',
+                         'onclick': onclick and icon.url or ''
                         })
 
         return {'icons':icns, 

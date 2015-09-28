@@ -1,5 +1,5 @@
-input[type='file'] {width: 88px;}
-input[id$="-widgets-priority"] {width: 20px;}
+#social-icons-configlet-content input[type='file'] {width: 88px;}
+#social-icons-configlet-content input[id$="-widgets-priority"] {width: 20px;}
 
 #formfield-form-widgets-social_share_items label { display:none}
 

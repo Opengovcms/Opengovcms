@@ -123,4 +123,20 @@
       layer="policy.interfaces.IBrowserLayer"
       />
 
+  <!-- collective.panel templates -->
+
+  <panel
+      name="leftthirds"
+      title="B3"
+      description="Split on thirds, then down on the left side"
+      template="templates/panelleftthirds.pt"
+      />
+
+  <panel
+      name="rightthirds"
+      title="B4"
+      description="Split on thirds, then down on the right side"
+      template="templates/panelrightthirds.pt"
+      />
+
 </configure>

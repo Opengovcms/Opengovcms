@@ -25,3 +25,24 @@ def renderForValue(self, value):
     return template(self, item)
 
 RadioWidget.renderForValue = renderForValue
+
+
+from plone.formwidget.contenttree.source import PathSource, ObjPathSource
+
+def fixGetBrainByValue(func):
+    def _getBrainByValue(self, value):
+        try:
+            return func(self, value)
+        except AttributeError:
+            return None
+    return _getBrainByValue
+
+def fixPlaceholderTerm(func):
+    def _placeholderTerm(self, value):
+        if '<NO_VALUE>' == str(value):
+            value = 'NO_VALUE'
+        return func(self, value)
+    return _placeholderTerm
+
+ObjPathSource._getBrainByValue = fixGetBrainByValue(ObjPathSource._getBrainByValue)
+PathSource._placeholderTerm = fixPlaceholderTerm(PathSource._placeholderTerm)

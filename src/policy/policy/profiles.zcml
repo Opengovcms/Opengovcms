@@ -122,4 +122,11 @@
       description="Imports various settings (initial setup)"
       provides="Products.GenericSetup.interfaces.EXTENSION" />
 
+  <genericsetup:registerProfile
+      name="policy.import-gallery-page"
+      title="policy: import initial gallery page"
+      directory="profiles/gallery-page"
+      description="Imports various settings (initial setup)"
+      provides="Products.GenericSetup.interfaces.EXTENSION" />
+
 </configure>

@@ -4,6 +4,24 @@
     i18n_domain="policy">
 
   <plone:behavior
+    title="Bottom Text"
+    description="Adds bottom text behavior"
+    provides=".gallery_page.IBottomText"
+    factory=".gallery_page.BottomText"
+    for="plone.dexterity.interfaces.IDexterityContent"
+    marker=".gallery_page.IBottomText"
+    />
+
+  <plone:behavior
+    title="Related Gallery"
+    description="Adds related gallery behavior"
+    provides=".gallery_page.IRelatedGallery"
+    factory=".gallery_page.RelatedGallery"
+    for="plone.dexterity.interfaces.IDexterityContent"
+    marker=".gallery_page.IRelatedGallery"
+    />
+
+  <plone:behavior
         title="Exclude From mobile navigation"
         description="Allow items to be excluded from mobile navigation"
         provides=".exclfrommobilenav.IExcludeFromMobileNavigation"

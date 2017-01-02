@@ -3,6 +3,24 @@
     i18n_domain="policy">
 
   <include package="plone.app.contentmenu" />
+
+
+   <page
+        name="gallery_page_view"
+        permission="zope2.View"
+        for="policy.content.gallery_page.IGalleryPage"
+        class=".gallery_page.GalleryPageView"
+        template="templates/gallery_page.pt"
+   />
+
+   <page
+        name="gallery_folder_view"
+        permission="zope2.View"
+        for="collective.plonetruegallery.interfaces.IGallery"
+        class=".gallery_page.GalleryFolderView"
+        template="templates/gallery_folder_view.pt"
+   />
+
   <page
       name="section_view"
       for="plone.app.contenttypes.interfaces.IFolder"

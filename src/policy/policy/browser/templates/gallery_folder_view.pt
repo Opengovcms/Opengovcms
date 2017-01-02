@@ -1,0 +1,3 @@
+<tal:gallery tal:define="macros nocall:context/@@collective.plonetruegallery.macros;">
+    <p metal:use-macro="macros/main|macros/content-core" />
+</tal:gallery>

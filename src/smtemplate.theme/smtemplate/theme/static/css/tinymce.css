@@ -350,7 +350,7 @@ table {
      ========================================================================== */
 body {
   background: #60969f;
-  color: #000000;
+  color: #000;
   font-family: "Swift Neue LT W01 Light", serif;
   font-size: 0.875em;
   line-height: 1.28571;
@@ -675,7 +675,7 @@ dl.collapsible dd.collapsibleContent > dl {
 }
 dl.expandedInlineCollapsible dt.collapsibleHeader,
 dl.expandedBlockCollapsible dt.collapsibleHeader {
-  background: url(../images/treeExpanded.png) no-repeat 0.5em 50% #ffffff;
+  background: url(../images/treeExpanded.png) no-repeat 0.5em 50% #fff;
   cursor: pointer;
   padding: 0 0.5em 0 2em;
 }
@@ -686,7 +686,7 @@ dl.collapsedBlockCollapsible {
 }
 dl.collapsedInlineCollapsible dt.collapsibleHeader,
 dl.collapsedBlockCollapsible dt.collapsibleHeader {
-  background: url(../images/treeCollapsed.png) no-repeat 0.5em 50% #ffffff;
+  background: url(../images/treeCollapsed.png) no-repeat 0.5em 50% #fff;
   cursor: pointer;
   float: none;
   margin: 0 0 0 1em;
@@ -1284,7 +1284,7 @@ a.historyComparePrevious span {
   background-color: #087b8c;
   background: -webkit-linear-gradient(#087b8c, #066270);
   background: linear-gradient(#087b8c, #066270);
-  color: #ffffff;
+  color: #fff;
   display: inline-block;
   padding: 6px 10px;
 }
@@ -1329,12 +1329,12 @@ a.historyComparePrevious span {
 }
 .factBox {
   background: #087b8c;
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 18px;
   padding: 10px;
 }
 .factBox .listTypeMark > li:before {
-  color: #ffffff;
+  color: #fff;
 }
 .imageContainer {
   float: left;

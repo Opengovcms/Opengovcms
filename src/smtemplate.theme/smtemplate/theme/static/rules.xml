@@ -35,6 +35,21 @@
         </div>        
     </after>
 
+    <xsl:template css:match="form[name=sendto_form] .formControls">
+        <script>
+            <xsl:attribute name="src">https://www.google.com/recaptcha/api.js?hl=<xsl:value-of select="$language" /></xsl:attribute>
+        </script>
+        <div class="g-recaptcha">
+            <xsl:attribute name="data-sitekey">
+                <xsl:value-of select="$google_recaptcha_site_key" />
+            </xsl:attribute>
+        </div>
+        <div>
+            <xsl:copy-of select="@*" />
+            <xsl:apply-templates />
+        </div>
+    </xsl:template>
+
     <after css:theme="#globalnav-wrapper" if-content="$home_page">
         <div id="portal-breadcrumbs" class="hiddenStructure">
             <xsl:apply-templates css:select="#portal-breadcrumbs > span:not(#breadcrumbs-you-are-here)" mode="raw" />

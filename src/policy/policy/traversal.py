@@ -6,6 +6,7 @@ import json
 import logging
 
 from Products.statusmessages.interfaces import IStatusMessage
+from Products.Five import BrowserView
 from .i18n import MessageFactory as _
 
 pk = os.environ.get("GOOGLE_RECAPTCHA_PUBLIC")

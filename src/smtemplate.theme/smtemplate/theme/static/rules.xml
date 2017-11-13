@@ -36,9 +36,7 @@
     </after>
 
     <xsl:template css:match="form[name=sendto_form] .formControls">
-        <script>
-            <xsl:attribute name="src">https://www.google.com/recaptcha/api.js?hl=<xsl:value-of select="$language" /></xsl:attribute>
-        </script>
+        <script src="https://www.google.com/recaptcha/api.js" />
         <div class="g-recaptcha">
             <xsl:attribute name="data-sitekey">
                 <xsl:value-of select="$google_recaptcha_site_key" />

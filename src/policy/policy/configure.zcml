@@ -51,7 +51,7 @@
 
   <browser:page
       name="google-recaptcha-site-key"
-      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      for="*"
       class=".traversal.PublicKeyView"
       permission="zope2.View"
       layer=".interfaces.IBrowserLayer"

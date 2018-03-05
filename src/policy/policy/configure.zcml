@@ -44,4 +44,17 @@
       />
 
 
+  <subscriber
+    for="ZPublisher.interfaces.IPubAfterTraversal"
+    handler=".traversal.recaptcha"
+    />
+
+  <browser:page
+      name="google-recaptcha-site-key"
+      for="*"
+      class=".traversal.PublicKeyView"
+      permission="zope2.View"
+      layer=".interfaces.IBrowserLayer"
+      />
+
 </configure>

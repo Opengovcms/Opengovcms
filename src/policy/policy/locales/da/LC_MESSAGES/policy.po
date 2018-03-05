@@ -189,3 +189,10 @@ msgstr "resultat(er)"
 msgid "label_section"
 msgstr "Sektion"
 
+#: policy/policy/traversal.py
+msgid "Recaptcha failed."
+msgstr "Recaptcha kunne ikke godkendes."
+
+#: policy/policy/traversal.py
+msgid "Recaptcha missing."
+msgstr "Du skal sætte et kryds i feltet 'Jeg er ikke en robot'."

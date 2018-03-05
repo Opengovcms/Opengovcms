@@ -6,3 +6,7 @@
 #extends = profiles/devserver.cfg
 extends = profiles/development.cfg
 
+[instance]
+# environment-vars +=
+#    GOOGLE_RECAPTCHA_PUBLIC <site-key>
+#    GOOGLE_RECAPTCHA_SECRET <secret>

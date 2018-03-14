@@ -1,0 +1,17 @@
+version: "3"
+services:
+  plonedev:
+    build: .
+    image: opengovcms:dev
+    volumes:
+      - "./src/smtemplate.theme:/plone/instance/src/smtemplate.theme"
+      - "./src/policy:/plone/instance/src/policy"
+      - "./resources:/plone/instance/resources"
+      - "./locales:/plone/instance/locales"
+      - "data:/data"
+    ports:
+      - "8080:8080"
+    # start in debug mode
+    command: "fg"
+volumes:
+  data:

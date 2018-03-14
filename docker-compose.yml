@@ -1,29 +1,50 @@
-version: "2"
+version: "3"
 services:
-  haproxy:
-    image: eeacms/haproxy
+  traefik:
+    image: library/traefik:latest
+    command: --docker --docker.swarmmode --docker.domain=traefik --docker.watch --web
     ports:
-    - 8080:5000
-    - 1936:1936
-    depends_on:
-    - plone
-    environment:
-      BACKENDS: "plone"
-      BACKENDS_PORT: "8080"
-      DNS_ENABLED: "True"
-
+      - "80:80"
+      - "8080:8080"
+    networks:
+      - traefik-net
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      mode: global
+      placement:
+        constraints:
+          - node.role == manager
   plone:
     image: opengovcms
     depends_on:
     - zeoserver
     environment:
     - ZEO_ADDRESS=zeoserver:8100
+    networks:
+    - traefik-net
+    - zeo-net
+    deploy:
+      replicas: 2
+      labels:
+        traefik.docker.network: traefik-net
+        traefik.port: "8080"
+        traefik.frontend.rule: Host:sm-template.headprod.dk;AddPrefix:/VirtualHostBase/http/sm-template.headprod.dk:80/site/VirtualHostRoot
+        traefik.backend.loadbalancer.method: drr
 
   zeoserver:
-    image: plone
+    image: plone:4.3.7
     command: zeoserver
     volumes:
     - data:/data
+    networks:
+    - zeo-net
+    deploy:
+      mode: global
 
 volumes:
   data:
+
+networks:
+  traefik-net:
+  zeo-net:

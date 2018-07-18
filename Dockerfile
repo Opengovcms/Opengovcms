@@ -6,20 +6,19 @@ RUN useradd --system -m -d /plone -U -u 500 plone && \
 WORKDIR /plone/instance
 
 RUN buildDeps="swig git-core ssh-client wget build-essential libc6-dev libpcre3-dev libssl-dev libxml2-dev libxslt1-dev libbz2-dev libjpeg62-turbo-dev libtiff5-dev libopenjp2-7-dev zlib1g-dev virtualenv" && \
+    runDeps="pdftohtml poppler-utils wv rsync lynx netcat libxml2 libxslt1.1 libjpeg62 libtiff5 libopenjp2-7 node-less" && \
     apt-get update && \
-    apt-get install -y --no-install-recommends $buildDeps
+    apt-get install -y --no-install-recommends $buildDeps $runDeps && \
+    ssh-keyscan github.com > /root/.ssh/known_hosts && \
+    pip install pip setuptools==1.3 zc.buildout==2.2.1
 
 ADD profiles/base/base.cfg profiles/base/base.cfg
 ADD profiles/versions profiles/versions
 
-RUN runDeps="pdftohtml poppler-utils wv rsync lynx netcat libxml2 libxslt1.1 libjpeg62 libtiff5 libopenjp2-7" && \
-    apt-get install -y --no-install-recommends $runDeps && \
-    ssh-keyscan github.com > /root/.ssh/known_hosts && \
-    pip install pip setuptools==1.3 zc.buildout==2.2.1 && \
-    echo "[buildout]\nextends = profiles/base/base.cfg" > buildout.cfg && \
+RUN echo "[buildout]\nextends = profiles/base/base.cfg" > buildout.cfg && \
     buildout bootstrap && \
     bin/buildout && \
-    rm -rf buildout.cfg profiles /var/lib/apt/lists/* && \
+    rm -rf profiles /var/lib/apt/lists/* && \
     apt-get purge -y --auto-remove $buildDeps
 
 ADD . .
